@@ -36,7 +36,7 @@ const FAQ = ({ faqList }: FAQProps) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="#fff"
-              className="iconPointer randomBG1 grid h-7 w-7 rounded-full font-bold shadow-md shadow-black hover:animate-pulse"
+              className="iconPointer bgColor grid h-7 w-7 rounded-full font-bold shadow-md shadow-black hover:animate-pulse"
             >
               <path
                 strokeLinecap="round"
@@ -47,7 +47,7 @@ const FAQ = ({ faqList }: FAQProps) => {
           </label>
 
           <div className="answer relative col-span-8 grid w-full max-w-lg place-items-center justify-items-center px-2">
-            <div className="bgTeal m-2 w-full rounded-md px-4 py-2 text-justify text-base text-slate-100 shadow-md shadow-black/50">
+            <div className=" m-2 w-full rounded-md px-4 py-2 text-justify text-base text-slate-100 shadow-md shadow-black/50 bg-teal-700">
               {faq.comment}
             </div>
           </div>

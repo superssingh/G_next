@@ -111,6 +111,11 @@
   background-size: cover;
 }
 
+.menuColor {
+  background-size: cover;
+  background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
+}
+
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .randomBG {
@@ -313,14 +318,14 @@
     width: fit-content;
     height: wrap;
     top: 0;
-    background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
+    background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
   }
   .mobile-open .mobile-menus .mobileMenu {
     width: 100%;
   }
   .mobile-open .mobile-menus .mobileMenu:hover {
     background: linear-gradient(180deg, rgba(17, 173, 139, 0.859) 0%, rgba(12, 143, 115, 0.859) 100%);
-    box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);
+    box-shadow: 0px 2px 6px 1px rgba(43, 4, 64, 0.729);
   }
   .mobile-open .social {
     width: 100%;
@@ -371,7 +376,7 @@
   }
 }
 #signin {
-  background: linear-gradient(90deg, rgba(9, 18, 11, 0.7607843137), #02fb02, rgba(5, 9, 6, 0.7607843137));
+  background: linear-gradient(90deg, rgba(34, 86, 125, 0.7607843137), #1da66f, rgba(29, 91, 117, 0.7607843137));
   font-weight: 500;
   color: rgb(255, 255, 255);
   padding: 1em;
@@ -460,7 +465,7 @@
 .underLine::after {
   content: "";
   position: absolute;
-  background: linear-gradient(90deg, rgba(9, 18, 11, 0.7607843137), #02fb02, rgba(5, 9, 6, 0.7607843137));
+  background: linear-gradient(90deg, rgba(34, 86, 125, 0.7607843137), #1da66f, rgba(29, 91, 117, 0.7607843137));
   width: 100%;
   height: 0.15rem;
   left: 0;
@@ -869,7 +874,7 @@ body {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
   background-attachment: fixed;
   background-size: cover;
   color: rgb(9, 9, 9);
@@ -893,7 +898,7 @@ body {
 }
 
 .bgColor {
-  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
 }
 
 .cardColor {
@@ -903,7 +908,7 @@ body {
 
 .leafButton,
 #signin {
-  background: linear-gradient(90deg, rgba(9, 18, 11, 0.7607843137), #02fb02, rgba(5, 9, 6, 0.7607843137));
+  background: linear-gradient(90deg, rgba(34, 86, 125, 0.7607843137), #1da66f, rgba(29, 91, 117, 0.7607843137));
   font-weight: 400;
   font-size: 1rem;
   font-weight: 500;
@@ -993,10 +998,11 @@ body {
 }
 
 .customShadow {
-  box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
+  box-shadow: 0px 6px 12px 1px rgb(2, 2, 2);
+  transition: 0.5s ease;
 }
-.customShadow:focus {
-  box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
+.customShadow:hover, .customShadow:focus {
+  box-shadow: 0px 0px 1px 1px rgb(2, 2, 2);
 }
 
 .widget {
@@ -1004,7 +1010,7 @@ body {
 }
 
 .gradientbg {
-  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
 }
 
 .contactbox {
@@ -1069,7 +1075,6 @@ body {
     width: 100%;
     padding: 10px 14px;
     animation: 0.7s ease-out 0s 1 slideInBottom;
-    background: linear-gradient(180deg, rgba(17, 173, 139, 0.859) 0%, rgba(12, 143, 115, 0.859) 100%);
     border-radius: 10px;
     box-shadow: 0px 3px 5px 0px rgba(24, 24, 24, 0.55);
   }
@@ -1077,19 +1082,15 @@ body {
     display: grid;
     transition: all 0.5s ease;
     overflow: hidden;
-  }
-  .courseCard:hover {
-    background: rgba(45, 7, 77, 0.643);
+    box-shadow: 0px 3px 5px 0px rgba(24, 24, 24, 0.55);
   }
   .courseCard:hover * {
-    fill: rgb(94, 246, 198);
+    fill: rgb(231, 246, 241);
   }
   .courseCard:hover .courseDesc {
-    width: 100%;
-    padding: 10px 14px;
-    animation: 0.7s ease-out 0s 1 slideInBottom;
     display: block;
-    background: linear-gradient(180deg, rgb(15, 155, 124) 0%, rgb(17, 145, 117) 100%);
+    width: 100%;
+    animation: 0.7s ease-out 0s 1 slideInBottom;
   }
 }
 @media (max-width: 767px) {
@@ -1101,16 +1102,16 @@ body {
     display: grid;
     padding: 10px 0;
     border-radius: 10px;
-    border: 2px solid rgba(215, 212, 212, 0.119);
     transition: all 0.5s ease;
     overflow: hidden;
+    box-shadow: 0px 3px 5px 0px rgba(24, 24, 24, 0.55);
   }
   .courseCard:hover {
-    border: 2px solid rgb(59, 221, 81);
+    background-color: rgba(78, 136, 191, 0.9176470588);
   }
   .courseCard:hover .courseDesc {
+    display: none;
     width: 100%;
-    display: block;
   }
   .serviceCard {
     width: 100%;
@@ -1164,16 +1165,25 @@ body {
 
 h1 {
   will-change: transform;
-  background: linear-gradient(-45deg, #fff9ee, #fca8f3, #ad89ff, #a593f6);
+  background: linear-gradient(-45deg, #fbf9f5, #fca8f3, #bea6f5, #baadf5);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+h2 {
+  will-change: transform;
+  background: linear-gradient(-45deg, #fbf9f5, #fca8f3);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hoverEffect {
   color: rgba(252, 252, 252, 0.981);
-  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(208, 84%, 17%) 0%, hsl(208, 76%, 21%) 11%, hsl(213, 68%, 26%) 22%, hsl(217, 54%, 36%) 44%, hsl(217, 48%, 42%) 56%, hsl(216, 43%, 48%) 67%, hsl(213, 51%, 61%) 89%, rgb(124, 167, 222) 100%);
   outline: 1;
   transition: all 0.3s ease-in-out;
 }

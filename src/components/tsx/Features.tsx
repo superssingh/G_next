@@ -31,7 +31,7 @@ const Features = () => {
                           legacyBehavior
                           passHref
                         >
-                          <div className="customShadow animate mx-2 my-4 w-fit rounded-full  p-4 font-bold text-white hoverEffect ">
+                          <div className="customShadow randomBG1 animate mx-2 my-4 w-fit rounded-full p-4 font-bold text-white">
                             {`Let's Started`}
                           </div>
                         </Link>
@@ -70,7 +70,7 @@ const Features = () => {
                             passHref
                             legacyBehavior
                           >
-                            <div className="customShadow animate mx-2 my-4 w-fit rounded-full p-4 font-bold text-white hoverEffect ">
+                            <div className="customShadow randomBG1 animate mx-2 my-4 w-fit rounded-full p-4 font-bold text-white">
                               {`Let's Started`}
                             </div>
                           </Link>

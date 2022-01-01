@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menus">
+              <div className="flex space-x-1 place-items-center menus ">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}
@@ -47,7 +47,7 @@ const Navbar = () => {
                     onClick={() => setActiveTab(tab.name)}
                     className={`${
                       activeTab === tab.name ? '' : 'hover:text-white/70'
-                    }  relative rounded-full p-3 text-sm font-medium text-white outline-slate-100 transition animate focus-visible:outline-2  `}
+                    }  relative rounded-full p-3 text-sm font-medium text-white outline-slate-100 transition animate focus-visible:outline-0 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',
                     }}
@@ -55,7 +55,7 @@ const Navbar = () => {
                     {activeTab === tab.name && (
                       <motion.div
                         layoutId="bubble"
-                        className="absolute py-2 inset-0 z-10 mix-blend-difference bgColor fancyRadius1 shadow-black hover:animate-pulse shadow-md  "
+                        className="absolute py-2 inset-0 z-10 mix-blend-difference menuColor fancyRadius1 shadow-black hover:animate-pulse shadow-md active:stroke-white "
                         transition={{
                           type: 'spring',
                           bounce: 0.3,
@@ -97,7 +97,7 @@ const Navbar = () => {
               >
                 <div
                   onClick={handleClicked}
-                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
+                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-blue-400 hover:shadow-lg"
                 >
                   {m.icon}
                   <div className="w-full pl-4 text-base ">{m.name}</div>
