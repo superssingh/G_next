@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./breakpoints";
+@import "./variables";
+@import "./navbar";
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 5rem;
+}
