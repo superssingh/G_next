@@ -1,64 +1,42 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import * as TagNames from "../../components/constants";
+import React, { useState, useEffect } from "react";
+import moment from "moment";
+import _ from "lodash";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import { PostCard, PostWidget, Categories } from "../../components";
 
-const Home = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const URL = "";
-  if (loading) <p>Loading...</p>;
+const Home = ({ posts }) => {
+  const [recentPosts, setRecentPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  if (error) return <p>{"Error: " + error}</p>;
-
-  useEffect(() => {
-    const abortController = new AbortController();
-    if (loading) {
-      async function fetchData(URL, { signal }) {
-        try {
-          const { data } = await axios.get(URL);
-          setData(data);
-          setLoading(false);
-        } catch (e) {
-          console.log("Error on DataFetch: ", e);
-        }
-      }
-      fetchData(TagNames.getPosts(), abortController.signal);
-      return function cleanup() {
-        abortController.abort();
-      };
+  useEffect(async () => {
+    if (posts) {
+      const recent = await _.orderBy(
+        posts.edges,
+        (a) => moment(a.node.createdAt).format("YYYYMMDD"),
+        "desc"
+      );
+      setRecentPosts(recent);
     }
-    console.log(data);
-  }, [data]);
+  }, [posts]);
 
   return (
     <div>
       <ToastContainer />
-      <ul className="posts">
-        <div>
-          {data.map((d) => {
-            return (
-              <li className="card" key={d.id}>
-                <img src={"http://localhost:1337" + d.cover.url} />
-                <div>
-                  <h3>{d.title}</h3>
-                  <p>{d.body}...</p>
-                </div>
-                <Link className="btn-read" key={d.id} href="#">
-                  Read
-                </Link>
-              </li>
-            );
-          })}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="lg:col-span-8 col-span-1 ">
+          {recentPosts.map((p) => (
+            <PostCard post={p.node} key={p.node.id} />
+          ))}
         </div>
-      </ul>
+        <div className="lg:col-span-4 col-span-1">
+          <div className="lg:sticky relative top-8">
+            <PostWidget recentposts={recentPosts} />
+            <Categories />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-
 export default Home;

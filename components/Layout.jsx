@@ -4,13 +4,13 @@ import { Navbar } from "./";
 
 const Layout = ({ children }) => {
   return (
-    <div className="base-container">
+    <div className="container">
       <Head>
         <title>Gogixer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="container mx-auto px-10 mb-8"> {children} </div>
+      <div className="container mx-auto mt-24 mb-8 px-6"> {children} </div>
     </div>
   );
 };

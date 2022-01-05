@@ -12,28 +12,28 @@ const Posts = () => {
 
   if (error) return <p>{"Error: " + error}</p>;
 
-  useEffect(() => {
-    const abortController = new AbortController();
-    if (!posts) {
-      async function fetchData(URL, QUERY, { signal }) {
-        try {
-          const { data } = await axios.get("http://localhost:1337/blogs/");
-          if (!data) {
-            setError("Error on fetching posts!");
-          } else {
-            setPosts(data);
-          }
-        } catch (e) {
-          console.log("Error on DataFetch: ", e);
-        }
-      }
-      fetchData(TagNames.getPosts(), abortController.signal);
-      return function cleanup() {
-        abortController.abort();
-      };
-    }
-    console.log(Posts);
-  }, []);
+  // useEffect(() => {
+  //   const abortController = new AbortController();
+  //   if (!posts) {
+  //     async function fetchData(URL, QUERY, { signal }) {
+  //       try {
+  //         const { data } = await axios.get("http://localhost:1337/blogs/");
+  //         if (!data) {
+  //           setError("Error on fetching posts!");
+  //         } else {
+  //           setPosts(data);
+  //         }
+  //       } catch (e) {
+  //         console.log("Error on DataFetch: ", e);
+  //       }
+  //     }
+  //     fetchData(TagNames.getPosts(), abortController.signal);
+  //     return function cleanup() {
+  //       abortController.abort();
+  //     };
+  //   }
+  //   console.log(Posts);
+  // }, []);
 
   return (
     <div>

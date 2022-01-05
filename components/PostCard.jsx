@@ -2,42 +2,42 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
+import _ from "lodash";
 import calendarIcon from "./assets/cal.png";
 
 const PostCard = ({ post }) => {
-  console.log(post);
   return (
-    <div className=" bg-slate-100 shadow-lg rounded-lg p-0 lg:p-6 pb-6 mb-8">
+    <div className="card">
       <div className="relative overflow-hidden shadow-lg pb-80 mb-6">
         <img
           src={post.featured_image[0].url}
           alt={post.title}
-          className="object-top absolute h-80 w-full object-cover shadow-lg lg:rounded-lg"
+          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-lg lg:rounded-lg"
         />
       </div>
-      <h1 className="transition duration-500 text-center mb-8 cursor-pointer hover:text-cyan-500 text-3xl font-semibold">
+      <h1 className="transition duration-500 text-center mb-8 cursor-pointer hover:text-teal-500 text-3xl font-semibold">
         {post.title}
       </h1>
       <div className="grid place-content-center lg: mb-4 w-full">
         <div className="flex items-center transition duration-700  bg-white shadow-lg mb-2 rounded-full hover:bg-teal-200">
           <img
             alt={post.author.name}
-            height="35px"
-            width="35px"
+            height="40px"
+            width="40px"
             className="shadow-xl bg-teal-200 rounded-full"
             src={post.author.photo.url}
           />
           <p className="inline pl-2 pr-2 cursor-pointer">{post.author.name}</p>
         </div>
 
-        <span className="flex  place-self-center place-content-center text-sm">
+        <span className="flex place-self-center place-content-center text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
             height="17"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#03cae1"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -52,13 +52,16 @@ const PostCard = ({ post }) => {
           </div>
         </span>
       </div>
-      <div className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
-        {post.excerpt}
+      <div>
+        <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+          {post.excerpt}
+        </p>
       </div>
       <div className="flex text-center place-content-center ">
         <Link href={`/post/${post.slug}`}>
-          <div className="transition duration-700 bg-pink-700 text-white shadow-lg px-4 py-2 rounded-3xl cursor-pointer hover:bg-teal-500">
-            Continue Reading
+          <div className="leafButton">
+            {/* <div className="transition duration-700 bg-teal-600 text-white shadow-lg px-4 py-2 rounded-3xl cursor-pointer hover:bg-pink-600"> */}
+            Read...
           </div>
         </Link>
       </div>

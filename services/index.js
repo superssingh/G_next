@@ -37,5 +37,5 @@ export const getPosts = async () => {
   `;
 
   const results = await request(graphAPI, query);
-  return results.postsConnection.edges;
+  return results.postsConnection;
 };
