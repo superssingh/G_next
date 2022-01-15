@@ -5,7 +5,7 @@
   height: wrap;
   position: fixed;
   top: 0;
-
+  transition: all 1s ease;
   div {
     width: inherit;
     position: -webkit-sticky;
@@ -27,6 +27,7 @@
   padding: 1em;
   position: fixed;
   top: 0;
+  transition: all 1s ease;
   .brandLogo {
     width: wrap;
     display: flex;
@@ -94,15 +95,13 @@
       padding: 1em;
       margin: 0 1px;
       border-radius: 0.5em;
-      color: $menusTextColors;
       backdrop-filter: blur(1rem);
       outline: 0;
       &:hover,
       &:focus,
       &:active {
         background: $menusColors;
-        color: $blackColor;
-        box-shadow: 0px 2px 10px 1px rgba(46, 46, 46, 0.822);
+        box-shadow: 0px 0px 10px 0px rgba(46, 46, 46, 0.884);
       }
     }
   }
@@ -162,11 +161,10 @@
     transform: translateY(0vh);
     box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
     li {
-      width: 300px;
+      width: 240px;
       height: 100%;
       backdrop-filter: blur(1rem);
       background: $navBarColor;
-      // background: $transparentWhiteColor;
       padding: 10px;
       box-shadow: -1px 0px 0px 0px rgba(19, 19, 19, 0.39);
       a {
@@ -179,7 +177,9 @@
         width: 100%;
         &:hover,
         &:focus {
-          box-shadow: -5px 0px 0px 0px rgba(0, 215, 0, 0.92);
+          border-radius: 0.5rem;
+          background: $menusColors;
+          box-shadow: 0px 0px 5px 1px rgba(52, 53, 52, 0.92);
         }
       }
     }

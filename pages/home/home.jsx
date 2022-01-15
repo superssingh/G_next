@@ -7,7 +7,12 @@ import { PostCard, PostWidget, Categories } from "../../components";
 
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const categories = [
+    { name: "Programming", image: "", id: "1" },
+    { name: "Productivity", image: "", id: "2" },
+    { name: "Technology", image: "", id: "3" },
+    { name: "Top / Best", image: "", id: "4" },
+  ];
 
   useEffect(async () => {
     if (posts) {
@@ -23,16 +28,20 @@ const Home = ({ posts }) => {
   return (
     <div>
       <ToastContainer />
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        <div className="lg:col-span-8 col-span-1 ">
+      <div className="grid align-middle grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="lg:col-span-8 col-span-3 ">
           {recentPosts.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <PostWidget recentposts={recentPosts} />
-            <Categories />
+        <div className="h-auto w-fit md:col-span-4 col-span-1">
+          <div className="w-fit md:sticky relative top-8">
+            <div className="mx-2">
+              <PostWidget recentposts={recentPosts} />
+            </div>
+            <div className="mx-2">
+              <Categories categories={categories} />
+            </div>
           </div>
         </div>
       </div>

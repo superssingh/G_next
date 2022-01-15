@@ -2,35 +2,21 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
-import _ from "lodash";
-import calendarIcon from "./assets/cal.png";
 
 const PostCard = ({ post }) => {
   return (
     <div className="card">
-      <div className="relative overflow-hidden shadow-lg pb-80 mb-6">
-        <img
+      <div className="relative shadow-lg pb-60 mb-0 md:flex md:shrink-0 ">
+        <Image
           src={post.featured_image[0].url}
           alt={post.title}
-          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-lg lg:rounded-lg"
+          layout="fill"
+          priority
+          className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
         />
       </div>
-      <h1 className="transition duration-500 text-center mb-8 cursor-pointer hover:text-teal-500 text-3xl font-semibold">
-        {post.title}
-      </h1>
-      <div className="grid place-content-center lg: mb-4 w-full">
-        <div className="flex items-center transition duration-700  bg-white shadow-lg mb-2 rounded-full hover:bg-teal-200">
-          <img
-            alt={post.author.name}
-            height="40px"
-            width="40px"
-            className="shadow-xl bg-teal-200 rounded-full"
-            src={post.author.photo.url}
-          />
-          <p className="inline pl-2 pr-2 cursor-pointer">{post.author.name}</p>
-        </div>
-
-        <span className="flex place-self-center place-content-center text-sm">
+      <div className="px-6">
+        <div className="flex h-fit w-fit text-sm pt-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
@@ -47,23 +33,25 @@ const PostCard = ({ post }) => {
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <div className="pl-1">
-            {moment(post.createdAt).format("MMM DD, YYYY")}
-          </div>
-        </span>
-      </div>
-      <div>
-        <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
-          {post.excerpt}
-        </p>
-      </div>
-      <div className="flex text-center place-content-center ">
-        <Link href={`/post/${post.slug}`}>
-          <div className="leafButton">
-            {/* <div className="transition duration-700 bg-teal-600 text-white shadow-lg px-4 py-2 rounded-3xl cursor-pointer hover:bg-pink-600"> */}
-            Read...
-          </div>
+          <div>{moment(post.createdAt).format("MMM DD, YYYY")}</div>
+        </div>
+
+        <Link href={`/posts/${post.slug}`}>
+          <h1 className=" text-center transition duration-500 p-2 mt-2 mb-1 cursor-pointer hover:text-green-600 text-2xl font-semibold">
+            {post.title}
+          </h1>
         </Link>
+
+        <div>
+          <p className="line-clamp-3 text-md text-justify leading-5 tracking-tighter text-gray-600 px-2 mb-2">
+            {post.excerpt}
+          </p>
+        </div>
+        <div className="flex relative place-content-center my-3">
+          <Link href={`/posts/${post.slug}`}>
+            <div className="leafButton">Read</div>
+          </Link>
+        </div>
       </div>
     </div>
   );

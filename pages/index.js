@@ -1,4 +1,4 @@
-import Home from "../pages/home/home";
+import Home from "./home/home.jsx";
 import { getPosts } from "../services";
 
 export default function Index({ posts }) {
