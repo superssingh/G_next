@@ -1,5 +1,3 @@
-// import Home from "./home/home.jsx";
-
 import React, { useState, useEffect } from "react";
 import { getPosts } from "../services";
 import moment from "moment";
