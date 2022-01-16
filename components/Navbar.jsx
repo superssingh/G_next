@@ -37,12 +37,15 @@ const Navbar = () => {
             </li>
           </ul>
           <div
+            id="hamburger"
             onClick={handleClicked}
             className={
               clicked ? TagName.HAMBURGER_OPEN : TagName.HAMBURGER_CLOSE
             }
           >
-            <div className="hamburger_lines"></div>
+            <div>
+              <div className="hamburger_lines"></div>
+            </div>
           </div>
         </header>
       </div>
