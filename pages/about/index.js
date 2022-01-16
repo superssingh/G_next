@@ -1,10 +1,10 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 const About = () => {
   return (
     <div>
       Author :
-      <div className="flex items-center bg-white shadow-lg rounded-full">
+      {/* <div className="flex items-center bg-white shadow-lg rounded-full">
         <Image
           alt={post.author.name}
           height="30px"
@@ -15,7 +15,7 @@ const About = () => {
         <p className="inline pl-2 pr-2 text-blue-700 cursor-pointer">
           {post.author.name}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
