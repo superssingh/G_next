@@ -5,7 +5,6 @@ import _ from "lodash";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { PostCard, PostWidget, Categories } from "../components";
-import "../styles/globals.css";
 
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([]);
