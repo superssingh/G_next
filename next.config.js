@@ -3,6 +3,6 @@ module.exports = {
     domains: ["media.graphcms.com"],
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, "../styles/")],
   },
 };
