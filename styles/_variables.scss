@@ -9,7 +9,7 @@ $GradientGreen: linear-gradient(90deg, #04532c, #00ff62e9, #044d3a);
 $GradientGoldenColor: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
 
 $whiteColor: rgba(252, 252, 252, 0.981);
-$GlassColor: rgba(255, 255, 255, 0.582);
+$GlassColor: rgba(34, 33, 33, 0.604);
 $grayColor: rgb(75, 75, 75);
 $blackColor: rgb(9, 9, 9);
 $MintColor: rgb(238, 246, 250);
@@ -22,6 +22,7 @@ $transparentWhiteColor: linear-gradient(45deg, #ffffffcf, #ffffffc2, #d2d2d2de);
 $GradientWhiteColor: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
 $GradientGreenColor: linear-gradient(-45deg, #08164f, #08d57c, #15086b);
 $GradientGreenReverse: linear-gradient(45deg, #08164f, #00eb89, #08164f);
+
 $GradientRedColor: linear-gradient(90deg, #1b1b1b, #c70a92, #1b1b1b);
 $bgColor: linear-gradient(45deg, #5c5b5b, #858582, #3d3d3be9 100%);
 
@@ -52,5 +53,5 @@ $background1: linear-gradient(
 
 $navBarColor: $GlassColor;
 $menusColors: $GradientGoldenColor;
-$menusTextColors: $grayColor;
+$menusTextColors: $whiteColor;
 $bodyColor: rgb(73, 73, 73);
