@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "webpack": "^5.67.0",
     "@mui/icons-material": "^5.2.5",
     "@tailwindcss/line-clamp": "^0.3.1",
     "axios": "^0.24.0",
@@ -19,8 +20,7 @@
     "react-dom": "^17.0.2",
     "react-multi-carousel": "^2.6.5",
     "react-toastify": "^8.1.0",
-    "sass": "^1.45.1",
-    "webpack": "^5.67.0"
+    "sass": "^1.45.1"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^3.2.2",
