@@ -20,8 +20,8 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(5em);
-  // background: $transparentGlassColor;
+  backdrop-filter: blur(1em);
+  background: $transparentGlassColor;
   // box-shadow: 0px 0.5px 0px 0px rgba(70, 69, 69, 0.164);
   padding: 0.5rem 1rem;
   position: fixed;
@@ -100,12 +100,12 @@
       color: $menusTextColors;
       outline: 0;
       &:hover {
-        background: $menusColors;
+        background: $GradientPurple;
         box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
       }
       &:focus,
       &:active {
-        background: $menusColors;
+        background: $GradientPurple;
         box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
       }
     }
