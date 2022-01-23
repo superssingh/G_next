@@ -4,7 +4,7 @@ import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Posts = () => {
+const Posts = ({ blogs }) => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState("");
 

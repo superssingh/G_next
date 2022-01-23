@@ -7,7 +7,7 @@
 
 @layer components {
   .card {
-    @apply grid min-w-full max-w-md transition-all duration-700 bg-white bg-opacity-60 shadow-lg drop-shadow-lg rounded-lg mb-6 hover:bg-opacity-80 md:grid md:grid-cols-2;
+    @apply grid min-w-full max-w-md transition-all duration-700 bg-white bg-opacity-50 shadow-lg drop-shadow-lg rounded-lg mb-6 hover:bg-opacity-80 md:grid md:grid-cols-2;
   }
 }
 

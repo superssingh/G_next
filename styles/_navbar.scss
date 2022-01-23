@@ -101,12 +101,12 @@
       outline: 0;
       &:hover {
         background: $menusColors;
-        box-shadow: 0px 10px 8px 0px rgba(28, 27, 27, 0.884);
+        box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
       }
       &:focus,
       &:active {
         background: $menusColors;
-        box-shadow: 0px 15px 8px 0px rgba(252, 252, 219, 0.884);
+        box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
       }
     }
   }

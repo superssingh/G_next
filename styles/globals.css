@@ -140,14 +140,14 @@
   .menus li a:hover {
     background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
     background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
-    -webkit-box-shadow: 0px 10px 8px 0px rgba(28, 27, 27, 0.884);
-            box-shadow: 0px 10px 8px 0px rgba(28, 27, 27, 0.884);
+    -webkit-box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
+            box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
   }
   .menus li a:focus, .menus li a:active {
     background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
     background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
-    -webkit-box-shadow: 0px 15px 8px 0px rgba(252, 252, 219, 0.884);
-            box-shadow: 0px 15px 8px 0px rgba(252, 252, 219, 0.884);
+    -webkit-box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+            box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
   }
 }
 
@@ -354,7 +354,7 @@
 
 @layer components {
   .card {
-    @apply grid min-w-full max-w-md transition-all duration-700 bg-white bg-opacity-60 shadow-lg drop-shadow-lg rounded-lg mb-6 hover:bg-opacity-80 md:grid md:grid-cols-2;
+    @apply grid min-w-full max-w-md transition-all duration-700 bg-white bg-opacity-50 shadow-lg drop-shadow-lg rounded-lg mb-6 hover:bg-opacity-80 md:grid md:grid-cols-2;
   }
 }
 

@@ -3,7 +3,6 @@ import { getPosts } from "../services/getPosts";
 import moment from "moment";
 import _ from "lodash";
 import { PostCard, PostWidget, Categories } from "../components";
-
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([]);
   const categories = [

@@ -30,7 +30,7 @@ const Navbar = () => {
           <ul className={TagName.MENU_DEFAULT}>
             <li>
               {menus.map((m) => (
-                <Link key={m.name} href={m.path} tabIndex={1}>
+                <Link key={m.name} href={m.path}>
                   <a tabIndex={1}>{m.name}</a>
                 </Link>
               ))}
