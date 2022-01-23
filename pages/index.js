@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getPosts } from "../services";
+import { getPosts } from "../services/getPosts";
 import moment from "moment";
 import _ from "lodash";
 import { toast, ToastContainer } from "react-toastify";
