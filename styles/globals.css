@@ -35,10 +35,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-backdrop-filter: blur(1em);
-          backdrop-filter: blur(1em);
-  background: rgba(105, 103, 103, 0.125);
-  padding: 1em;
+  -webkit-backdrop-filter: blur(5em);
+          backdrop-filter: blur(5em);
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
 }
