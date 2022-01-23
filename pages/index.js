@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getPosts } from "../services/getPosts";
 import moment from "moment";
 import _ from "lodash";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { PostCard, PostWidget, Categories } from "../components";
 
 const Home = ({ posts }) => {
@@ -28,7 +26,6 @@ const Home = ({ posts }) => {
 
   return (
     <div>
-      <ToastContainer />
       <div className="grid align-middle grid-cols-1 lg:grid-cols-12 gap-10">
         <div className="lg:col-span-8 col-span-3 ">
           {recentPosts.map((p) => (
