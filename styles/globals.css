@@ -138,14 +138,14 @@
     outline: 0;
   }
   .menus li a:hover {
-    background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
-    background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+    background: -webkit-gradient(linear, left top, right top, from(#0b010e), color-stop(#b30efae9), to(#07010a));
+    background: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
     -webkit-box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
             box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
   }
   .menus li a:focus, .menus li a:active {
-    background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
-    background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+    background: -webkit-gradient(linear, left top, right top, from(#0b010e), color-stop(#b30efae9), to(#07010a));
+    background: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
     -webkit-box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
             box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
   }
@@ -176,18 +176,18 @@
     width: wrap;
     height: wrap;
     border-radius: 2em 0;
-    background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
-    background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+    background: -webkit-gradient(linear, left top, right top, from(#0b010e), color-stop(#b30efae9), to(#07010a));
+    background: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
     padding: 1.5rem 1rem 1.5rem 1.2rem;
-    -webkit-box-shadow: 0px 10px 5px 1px rgba(121, 67, 5, 0.584);
-            box-shadow: 0px 10px 5px 1px rgba(121, 67, 5, 0.584);
+    -webkit-box-shadow: 0px 10px 5px 1px rgba(18, 19, 19, 0.584);
+            box-shadow: 0px 10px 5px 1px rgba(18, 19, 19, 0.584);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   #hamburger:hover, #hamburger:focus, #hamburger:active {
     border-radius: 0 2em;
-    background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
-    background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+    background: -webkit-gradient(linear, left top, right top, from(#0b010e), color-stop(#b30efae9), to(#07010a));
+    background: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
   }
   .hamburger-close {
     position: relative;
@@ -257,8 +257,8 @@
             backdrop-filter: blur(1rem);
     background: rgba(34, 33, 33, 0.604);
     padding: 10px;
-    -webkit-box-shadow: 0px 0px 1px 1px rgba(19, 19, 19, 0.808);
-            box-shadow: 0px 0px 1px 1px rgba(19, 19, 19, 0.808);
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
+            box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
   }
   .mobile-open li a {
     padding: 10px;
@@ -275,8 +275,8 @@
   }
   .mobile-open li a:hover, .mobile-open li a:focus {
     border-radius: 0.5rem;
-    background: -webkit-gradient(linear, left top, right top, from(#724605), color-stop(#ffc01fe9), to(#724605));
-    background: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+    background: -webkit-gradient(linear, left top, right top, from(#0b010e), color-stop(#b30efae9), to(#07010a));
+    background: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
     -webkit-box-shadow: 0px 0px 2px 0.5px rgba(33, 33, 32, 0.92);
             box-shadow: 0px 0px 2px 0.5px rgba(33, 33, 32, 0.92);
   }

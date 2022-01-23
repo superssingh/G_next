@@ -50,9 +50,9 @@ $background1: linear-gradient(
   #040443
 );
 
-$transparentGlassColor: linear-gradient(0deg, #dddddd04, #3837373d, #3838387a);
-
+$transparentGlassColor: linear-gradient(0deg, #dddddd38, #38373762, #3838387a);
+$GradientGreen: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
 $navBarColor: $GlassColor;
-$menusColors: $GradientGoldenColor;
+$menusColors: $GradientGreen;
 $menusTextColors: $whiteColor;
 $bodyColor: rgb(73, 73, 73);
