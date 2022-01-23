@@ -6,7 +6,7 @@ $primaryDarkColor: linear-gradient(90deg, #ffffffd3, #dfdfdfea, #555454bf);
 $secondaryColor: linear-gradient(-90deg, #044322, #09b84c, #044322);
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
 $GradientGreen: linear-gradient(90deg, #04532c, #00ff62e9, #044d3a);
-$GradientGoldenColor: linear-gradient(90deg, #724605, #ffc01fe9, #724605);
+$GradientGoldenColor: linear-gradient(90deg, #332003de, #f0b00f, #291903e7);
 
 $whiteColor: rgba(252, 252, 252, 0.981);
 $GlassColor: rgba(34, 33, 33, 0.604);
@@ -51,7 +51,8 @@ $background1: linear-gradient(
 );
 
 $transparentGlassColor: linear-gradient(0deg, #dddddd38, #38373762, #3838387a);
-$GradientGreen: linear-gradient(90deg, #0b010e, #b30efae9, #07010a);
+$GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #04491f);
+$GradientPurple: linear-gradient(90deg, #48044e, #ff4affe9, #5c065f);
 $navBarColor: $GlassColor;
 $menusColors: $GradientGreen;
 $menusTextColors: $whiteColor;
