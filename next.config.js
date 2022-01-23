@@ -1,6 +1,6 @@
 module.exports = {
-  future: { webpack5: true },
   images: {
     domains: ["media.graphcms.com"],
   },
+  future: { webpack5: true },
 };
