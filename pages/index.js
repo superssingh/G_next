@@ -25,18 +25,18 @@ const Home = ({ posts }) => {
 
   return (
     <div>
-      <div className="grid align-middle grid-cols-1 lg:grid-cols-12 gap-10">
-        <div className="lg:col-span-8 col-span-3 ">
+      <div className=" grid-cols-1 md:grid content-center lg:grid-cols-12 gap-4">
+        <div className="grid place-self-center justify-items-center place-items-center content-center md:col-span-8 col-span-8 ">
           {recentPosts.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
-        <div className="h-auto w-fit md:col-span-4 col-span-1">
-          <div className="w-fit md:sticky relative top-8">
-            <div className="mx-2">
+        <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
+          <div className="flex w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
+            <div className="w-full mx-1 md:w-72 ">
               <PostWidget recentposts={recentPosts} />
             </div>
-            <div className="mx-2">
+            <div className="w-fit mx-1 md:w-72">
               <Categories categories={categories} />
             </div>
           </div>

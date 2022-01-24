@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const Post = () => {
+const Post = ({ post }) => {
   const router = useRouter();
   const { id } = router.query;
 
