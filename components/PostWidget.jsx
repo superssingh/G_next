@@ -15,8 +15,8 @@ const PostWidget = ({ recentposts, categories, slug }) => {
   }, [slug]);
 
   return (
-    <div className="bg-white bg-opacity-50 shadow-lg drop-shadow-lg rounded-lg p-4 mb-6">
-      <h3 className=" text-lg text-gray-800 border-b pb-2">
+    <div className="bg-white bg-opacity-50 shadow-lg drop-shadow-lg rounded-lg p-6 mb-6">
+      <h3 className=" text-md text-gray-800 border-b pb-2">
         {slug ? "Related Posts" : "Recent Posts"}
       </h3>
       {recentposts.map((m) => (
@@ -31,8 +31,10 @@ const PostWidget = ({ recentposts, categories, slug }) => {
               className="align-middle  justify-self-stretch object-cover rounded-lg"
             ></Image>
             <div className="w-fit pl-2 pr-2">
-              <div className="text-gray-800 font-semibold">{m.node.title}</div>
-              <div className="text-gray-700 text-sm">
+              <div className="text-gray-800 text-md font-semibold">
+                {m.node.title}
+              </div>
+              <div className="text-gray-700 text-xs">
                 {moment(m.node.createdAt).format("MMM DD, YYYY")}
               </div>
             </div>

@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { Layout } from "../components";
+import { getPosts } from "../services/getPosts";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -42,3 +43,8 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return { props: { posts } };
+}

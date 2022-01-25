@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
         />
       </div>
       <div class="h-52 w-full text-justify px-8 py-2">
-        <div class="flex uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        <div class=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
@@ -33,14 +33,14 @@ const PostCard = ({ post }) => {
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <div className="ml-1 ">
+          <div className="pl-1 ">
             {moment(post.createdAt).format("MMM DD, YYYY")}
           </div>
         </div>
         <Link href={`/posts/${post.slug}`}>
-          <p class="grid mt-2 text-lg font-semibold text-blue">{post.title}</p>
+          <p class="grid mt-2 text-xl font-semibold text-blue">{post.title}</p>
         </Link>
-        <p class="line-clamp-3 mt-2 text-slate-500">{post.excerpt}</p>
+        <p class="line-clamp-3 mt-2 text-slate-500 ">{post.excerpt}</p>
       </div>
 
       <div class="absolute bottom-0 right-0 p-2 ">

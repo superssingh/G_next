@@ -3,6 +3,7 @@ import { getPosts } from "../services/getPosts";
 import moment from "moment";
 import _ from "lodash";
 import { PostCard, PostWidget, Categories } from "../components";
+
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([]);
   const categories = [
@@ -25,8 +26,8 @@ const Home = ({ posts }) => {
 
   return (
     <div>
-      <div className=" grid-cols-1 md:grid content-center lg:grid-cols-12 gap-4">
-        <div className="grid place-self-center justify-items-center place-items-center content-center md:col-span-8 col-span-8 ">
+      <div className="w-full md:grid lg:grid-cols-12 gap-4">
+        <div className="grid w-full place-self-start content-center md:col-span-8  ">
           {recentPosts.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}

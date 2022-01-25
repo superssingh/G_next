@@ -1,21 +1,54 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { getPosts } from "../../services/getPosts";
+import moment from "moment";
+import _ from "lodash";
+import { PostCard, PostWidget, Categories } from "../../components";
 
-const Posts = ({ post }) => {
-  const [posts, setPosts] = useState([]);
-  const [error, setError] = useState("");
+const Home = ({ posts }) => {
+  const [recentPosts, setRecentPosts] = useState([]);
+  const categories = [
+    { name: "Programming", image: "", id: "1" },
+    { name: "Productivity", image: "", id: "2" },
+    { name: "Technology", image: "", id: "3" },
+    { name: "Top / Best", image: "", id: "4" },
+  ];
 
-  if (error) return <p>{"Error: " + error}</p>;
+  useEffect(async () => {
+    if (posts) {
+      const recent = await _.orderBy(
+        posts.edges,
+        (a) => moment(a.node.createdAt).format("YYYYMMDD"),
+        "desc"
+      );
+      setRecentPosts(recent);
+    }
+  }, [posts]);
 
   return (
     <div>
-      <ToastContainer />
-      <div className="posts"></div>
+      <div className="w-full md:grid lg:grid-cols-12 gap-4">
+        <div className="grid w-full place-self-start content-center md:col-span-8  ">
+          {recentPosts.map((p) => (
+            <PostCard post={p.node} key={p.node.id} />
+          ))}
+        </div>
+        <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
+          <div className="flex w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
+            <div className="w-full mx-1 md:w-72 ">
+              <PostWidget recentposts={recentPosts} />
+            </div>
+            <div className="w-fit mx-1 md:w-72">
+              <Categories categories={categories} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+export default Home;
 
-export default Posts;
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return { props: { posts } };
+}

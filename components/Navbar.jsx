@@ -50,7 +50,7 @@ const Navbar = () => {
         </header>
       </div>
       <ul className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}>
-        <li>
+        <li className="mobile-menus">
           {menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a onClick={handleClicked}>{m.name}</a>
