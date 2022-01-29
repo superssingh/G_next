@@ -7,4 +7,5 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  schema: "https://localhost:8000",
 };

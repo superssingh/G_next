@@ -30,7 +30,6 @@
     display: flex;
     position: relative;
     justify-content: center;
-    margin-left: 2rem;
     overflow: hidden;
   }
 }
@@ -74,6 +73,31 @@
   transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
 }
 
+.menus {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  height: inherit;
+  li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 1px;
+    border-radius: 2em 2em 0 0;
+    transition: all 0.3s ease;
+    color: $menusTextColors;
+    outline: 0;
+    &:hover {
+      background: $GradientPurple;
+      box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
+    }
+    &:focus,
+    &:active {
+      background: $GradientPurple;
+      box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+    }
+  }
+}
+
 @include media(">tablet") {
   #hamburger {
     display: none;
@@ -82,34 +106,12 @@
   .hamburger-open {
     display: none;
   }
-  .mobile-open,
-  .mobile-menus {
+  .mobile-open {
     opacity: 0;
   }
 
-  .menus {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    height: inherit;
-    li a {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      margin: 0 1px;
-      border-radius: 2em 2em 0 0;
-      transition: all 0.3s ease;
-      color: $menusTextColors;
-      outline: 0;
-      &:hover {
-        background: $GradientPurple;
-        box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
-      }
-      &:focus,
-      &:active {
-        background: $GradientPurple;
-        box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
-      }
-    }
+  .mobile-menus {
+    display: none;
   }
 }
 
@@ -117,9 +119,11 @@
   .menus {
     display: none;
   }
-  .mobile-open,
-  .mobile-menus {
+  .mobile-open {
     opacity: 1;
+  }
+  .mobile-menus {
+    display: block;
   }
   .Navbar {
     width: auto;
@@ -139,6 +143,7 @@
     border-radius: 2em 0;
     background: $menusColors;
     padding: 1.5rem 1rem 1.5rem 1.2rem;
+    margin-right: 0.5rem;
     box-shadow: 0px 10px 5px 1px rgba(18, 19, 19, 0.584);
     transition: all 0.5s ease-in-out;
     &:hover,

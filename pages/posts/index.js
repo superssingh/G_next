@@ -16,7 +16,7 @@ const Home = ({ posts }) => {
   useEffect(async () => {
     if (posts) {
       const recent = await _.orderBy(
-        posts.edges,
+        posts,
         (a) => moment(a.node.createdAt).format("YYYYMMDD"),
         "desc"
       );
@@ -33,11 +33,11 @@ const Home = ({ posts }) => {
           ))}
         </div>
         <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
-          <div className="flex w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
+          <div className="grid w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
             <div className="w-full mx-1 md:w-72 ">
               <PostWidget recentposts={recentPosts} />
             </div>
-            <div className="w-fit mx-1 md:w-72">
+            <div className="w-full mx-1 md:w-72">
               <Categories categories={categories} />
             </div>
           </div>

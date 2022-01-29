@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 
-const PostCard = ({ post }) => {
+const PostDetail = ({ post }) => {
   return (
-    <div className="card ">
-      <div className="relative h-56 w-full shadow-lg md:w-56 md:shrink-0 ">
+    <div className="grid h-fit w-full">
+      <div className="relative h-86 w-full shadow-lg md:w-56 md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
           alt={post.title}
@@ -15,8 +15,8 @@ const PostCard = ({ post }) => {
           className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
         />
       </div>
-      <div className="h-52 w-full text-justify px-8 py-2">
-        <div className="text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+      <div class="h-52 w-full text-justify px-8 py-2">
+        <div class=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
@@ -37,15 +37,16 @@ const PostCard = ({ post }) => {
             {moment(post.createdAt).format("MMM DD, YYYY")}
           </div>
         </div>
-        <Link href={`/posts/${post.slug}`}>
-          <p className="grid mt-2 text-xl font-semibold text-blue">
-            {post.title}
-          </p>
-        </Link>
-        <p className="line-clamp-3 mt-2 text-slate-500 ">{post.excerpt}</p>
+
+        <div className="text-center uppercase text-3xl font-bold my-6">
+          {post.title}
+        </div>
+        <div className="text-justify text-md text-gray-800">
+          {post.description}
+        </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 p-2 ">
+      <div class="absolute bottom-0 right-0 p-2 ">
         <Link href={`/posts/${post.slug}`}>
           <div className="leafButton">Read</div>
         </Link>
@@ -54,4 +55,4 @@ const PostCard = ({ post }) => {
   );
 };
 
-export default PostCard;
+export default PostDetail;

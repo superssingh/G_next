@@ -53,7 +53,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 2rem;
   overflow: hidden;
 }
 
@@ -109,6 +108,42 @@
           transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
 }
 
+.menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+  height: inherit;
+}
+
+.menus li a {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1px;
+  border-radius: 2em 2em 0 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(252, 252, 252, 0.981);
+  outline: 0;
+}
+
+.menus li a:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
+  background: linear-gradient(90deg, #130113, #d503d5, #130113);
+  -webkit-box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
+          box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
+}
+
+.menus li a:focus, .menus li a:active {
+  background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
+  background: linear-gradient(90deg, #130113, #d503d5, #130113);
+  -webkit-box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+          box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+}
+
 @media (min-width: 921px) {
   #hamburger {
     display: none;
@@ -116,41 +151,11 @@
   .hamburger-open {
     display: none;
   }
-  .mobile-open,
-  .mobile-menus {
+  .mobile-open {
     opacity: 0;
   }
-  .menus {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 2rem;
-    height: inherit;
-  }
-  .menus li a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    margin: 0 1px;
-    border-radius: 2em 2em 0 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: rgba(252, 252, 252, 0.981);
-    outline: 0;
-  }
-  .menus li a:hover {
-    background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
-    background: linear-gradient(90deg, #130113, #d503d5, #130113);
-    -webkit-box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
-            box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
-  }
-  .menus li a:focus, .menus li a:active {
-    background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
-    background: linear-gradient(90deg, #130113, #d503d5, #130113);
-    -webkit-box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
-            box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+  .mobile-menus {
+    display: none;
   }
 }
 
@@ -158,9 +163,11 @@
   .menus {
     display: none;
   }
-  .mobile-open,
-  .mobile-menus {
+  .mobile-open {
     opacity: 1;
+  }
+  .mobile-menus {
+    display: block;
   }
   .Navbar {
     width: auto;
@@ -186,6 +193,7 @@
     background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
     background: linear-gradient(90deg, #130113, #d503d5, #130113);
     padding: 1.5rem 1rem 1.5rem 1.2rem;
+    margin-right: 0.5rem;
     -webkit-box-shadow: 0px 10px 5px 1px rgba(18, 19, 19, 0.584);
             box-shadow: 0px 10px 5px 1px rgba(18, 19, 19, 0.584);
     -webkit-transition: all 0.5s ease-in-out;

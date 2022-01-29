@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="Navigation">
       <div>
         <header className="Navbar">
-          <a className="w-48 center-center mx-10" href="/">
+          <a className="w-48 center-center mx-8" href="/">
             <Image src={Logo} alt={TagName.COMPANY_NAME} />
           </a>
 
