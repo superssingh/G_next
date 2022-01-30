@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
+import HTML_Parser from "html-react-parser";
+import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
+  const content = post.content;
+  console.log(post);
   return (
-    <div className="grid absolute place-content-center w-xs md:w-md mr-6 text-lg ">
+    <div className="grid absolute place-content-center text-lg ">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
@@ -15,9 +19,9 @@ const PostDetail = ({ post }) => {
           className="object-cover shadow-lg rounded-t-lg"
         />
       </div>
-      <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg py-4 px-4 mb-6">
+      <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-6 mb-6">
         <div className="PostDetail">
-          <div className="text-center uppercase text-3xl font-bold mx-6 mb-6">
+          <div className="text-violet-900 text-center uppercase text-3xl font-bold mx-6 mb-6">
             {post.title}
           </div>
           <div class="relative text-justify px-8 pb-2">
@@ -45,8 +49,16 @@ const PostDetail = ({ post }) => {
 
             {/* <p className="border-b border-gray-500/[.50] mt-2 mb-4"></p> */}
 
-            <div className="text-justify text-md text-gray-800">
-              {post.excerpt}
+            <div className="text-justify text-md text-gray-700">
+              {post.content.map((c) => {
+                {
+                  return (
+                    <div className="my-8" key={c.key}>
+                      <Markdown>{c.html}</Markdown>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
         </div>

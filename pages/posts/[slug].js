@@ -9,7 +9,9 @@ const Blog = ({ post }) => {
   return (
     <div>
       <HeadTag post={post} />
-      <PostDetail post={post} />
+      <div className="relative w-full max-w-3xl ">
+        <PostDetail post={post} />
+      </div>
     </div>
   );
 };

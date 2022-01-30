@@ -7,7 +7,7 @@ const HeadTag = ({ post }) => {
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>{post.title}</title>
-      <meta name="description" content={post.excerpt} />
+      <meta name="description" content={post.description} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
   );

@@ -16,6 +16,7 @@ export const getPosts = async () => {
             }
             id
             title
+            description
             excerpt
             slug
             tags
@@ -52,6 +53,13 @@ export const getPostDetail = async (slug) => {
         }
         id
         title
+        description
+        content {
+          json
+          html
+          markdown
+          text
+        }
         excerpt
         slug
         tags
