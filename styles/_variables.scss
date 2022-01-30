@@ -41,21 +41,21 @@ $background1: linear-gradient(
   #004d8e,
   #00699a,
   #0084a2,
-  #00829f,
-  #00819c,
-  #007f99,
+  #0da3c5,
+  #07a4c4,
+  #0f8299,
   #00618a,
   #004478,
-  #002661,
-  #040443
+  #07367c,
+  #0a0a6d
 );
 
 $transparentGlassColor: linear-gradient(0deg, #dddddd00, #38373762, #383838a6);
 $GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #404140);
 $GradientPurple: linear-gradient(90deg, #130113, #d503d5, #130113);
-
-$bgImage: radial-gradient(at 10% 20%, rgb(233, 42, 185) 0, transparent 60%),
-  radial-gradient(at 85% 65%, hsl(300, 71%, 44%) 0, transparent 75%);
+$GradientPurple1: linear-gradient(0deg, #300230c7, #9b089b98, #420542c5);
+$bgImage: radial-gradient(at 10% 20%, rgb(80, 7, 62) 0, transparent 60%),
+  radial-gradient(at 85% 65%, hsl(300, 92%, 25%) 0, transparent 55%);
 
 $mobileMenu: linear-gradient(45deg, #13121336, #d8d7d848, #1414143a);
 $navBarColor: $GlassColor;

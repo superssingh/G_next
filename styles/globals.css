@@ -270,7 +270,8 @@
     height: 100%;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-    background: rgba(24, 24, 24, 0.733);
+    background: -webkit-gradient(linear, left bottom, left top, from(#300230c7), color-stop(#9b089b98), to(#420542c5));
+    background: linear-gradient(0deg, #300230c7, #9b089b98, #420542c5);
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 10px;
     -webkit-box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
@@ -370,21 +371,53 @@
   display: none;
 }
 
+.PostDetail {
+  display: flexbox;
+  margin-top: -5em;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(253, 245, 255, 0.89);
+  border-radius: 1em;
+  padding: 1.2rem 0.3rem;
+}
+
+.author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: rgba(113, 25, 201, 0.76);
+  border-radius: 2rem 2rem;
+}
+
+.author .authorPic {
+  border-radius: 2rem;
+  background: rgba(28, 7, 61, 0.76);
+}
+
 @layer components {
   .card {
-    @apply w-full place-self-center bg-white bg-opacity-70  md:flex md:max-w-3xl transition-all duration-700 shadow-xl drop-shadow-lg overflow-hidden rounded-xl mb-6 hover:bg-opacity-100;
+    @apply w-full place-self-center bg-white bg-opacity-80  md:flex md:max-w-3xl transition-all duration-700 shadow-xl drop-shadow-lg overflow-hidden rounded-xl mb-6 hover:bg-opacity-100;
   }
 }
 
 body {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  height: 100vh;
+  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #474474;
   background-color: #10b7b5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23091ade'/%3E%3Cstop offset='1' stop-color='%23091ade' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232274b1'/%3E%3Cstop offset='1' stop-color='%232274b1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23601dd6'/%3E%3Cstop offset='1' stop-color='%23601dd6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2310B7B5'/%3E%3Cstop offset='1' stop-color='%2310B7B5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DC09FF'/%3E%3Cstop offset='1' stop-color='%23DC09FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233646A9'/%3E%3Cstop offset='1' stop-color='%233646A9' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: repeat;
 }
 
 .leafButton,
@@ -413,6 +446,40 @@ body {
   border-radius: 20em 0;
 }
 
+#backLeaf {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  top: 0;
+  margin-top: -1.5rem;
+  margin-left: 1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#666565b7), color-stop(#ffffff), to(#646262d5));
+  background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
+  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #252526;
+  padding: 1.3rem 1rem;
+  border-radius: 20em;
+  height: wrap;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(17, 17, 17, 0.808);
+          box-shadow: 0px 0px 5px 1px rgba(17, 17, 17, 0.808);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#backLeaf:hover, #backLeaf:focus {
+  border-radius: 0 20em 20em 20em;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
 #signup {
   background: -webkit-gradient(linear, left top, right top, from(#1b1b1b), color-stop(#c70a92), to(#1b1b1b));
   background: linear-gradient(90deg, #1b1b1b, #c70a92, #1b1b1b);
@@ -434,27 +501,28 @@ body {
   background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
 }
 
-.shareButton {
-  background: linear-gradient(-45deg, #08164f, #08d57c, #15086b);
-  color: white;
-  border-radius: 10em;
-  width: wrap;
+#shareButton {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  margin-top: 10em;
+  margin-right: 1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#666565b7), color-stop(#ffffff), to(#646262d5));
+  background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
+  padding: 0.8rem;
+  border-radius: 2em;
   height: wrap;
   overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
-          box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-box-shadow: 0px 2px 8px 2px rgba(39, 38, 38, 0.781);
+          box-shadow: 0px 2px 8px 2px rgba(39, 38, 38, 0.781);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
-.shareButton:hover, .shareButton:focus {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  color: white;
-  border-radius: 20em 0;
+#shareButton:hover, #shareButton:focus {
+  border-radius: 2em 0 2em 2em;
 }
 /*# sourceMappingURL=globals.css.map */

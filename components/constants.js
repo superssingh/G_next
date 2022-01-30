@@ -1,9 +1,5 @@
 "use strict";
 
-const postsUrl = "http://localhost:1337/blogs";
-const graphURL = "http://localhost:1337/graphql";
-const imageURL = "http://localhost:1337";
-
 export const menus = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/posts" },
@@ -12,7 +8,7 @@ export const menus = [
   { name: "Contact Us", path: "/contact" },
 ];
 
-export const COMPANY_NAME = "GOGIXER";
+export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";
 

@@ -7,32 +7,32 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/Montserrat-Light.ttf"
+            href="/fonts/Sora-Light.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Montserrat-Regular.ttf"
+            href="/fonts/Sora-Regular.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Montserrat-Medium.ttf"
+            href="/fonts/Sora-Medium.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
 
           <link
             rel="preload"
-            href="/fonts/Montserrat-SemiBold.ttf"
+            href="/fonts/Sora-SemiBold.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Montserrat-Bold.ttf"
+            href="/fonts/Sora-Bold.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>

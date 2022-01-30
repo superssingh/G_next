@@ -1,0 +1,22 @@
+.PostDetail {
+  display: flexbox;
+  margin-top: -5em;
+  backdrop-filter: blur(10px);
+  background: rgba(253, 245, 255, 0.89);
+  border-radius: 1em;
+  padding: 1.2rem 0.3rem;
+}
+
+.author {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: -2.5rem;
+  width: fit-content;
+  background: rgba(113, 25, 201, 0.76);
+  border-radius: 2rem 2rem;
+  .authorPic {
+    border-radius: 2rem;
+    background: rgba(28, 7, 61, 0.76);
+  }
+}
