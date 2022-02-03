@@ -373,11 +373,12 @@
 
 .PostDetail {
   display: flexbox;
+  position: relative;
   margin-top: -5em;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background: rgba(253, 245, 255, 0.89);
-  border-radius: 1em;
+  border-radius: 0.5em;
   padding: 1.2rem 0.3rem;
 }
 
@@ -446,20 +447,19 @@ body {
   border-radius: 20em 0;
 }
 
-#backLeaf {
+#backButton {
   display: -ms-grid;
   display: grid;
   position: absolute;
   top: 0;
   margin-top: -1.5rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
   background: -webkit-gradient(linear, left top, right top, from(#666565b7), color-stop(#ffffff), to(#646262d5));
   background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
-  font-weight: 400;
-  font-size: 1rem;
-  font-weight: 500;
   color: #252526;
-  padding: 1.3rem 1rem;
+  padding: 1rem;
   border-radius: 20em;
   height: wrap;
   overflow: hidden;
@@ -468,16 +468,16 @@ body {
           justify-content: center;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(17, 17, 17, 0.808);
-          box-shadow: 0px 0px 5px 1px rgba(17, 17, 17, 0.808);
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(17, 17, 17, 0.865);
+          box-shadow: 0px 2px 10px 1px rgba(17, 17, 17, 0.865);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-#backLeaf:hover, #backLeaf:focus {
-  border-radius: 0 20em 20em 20em;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+#backButton:hover, #backButton:focus {
+  border-radius: 20em 20em 20em 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 #signup {
@@ -501,28 +501,35 @@ body {
   background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
 }
 
-#shareButton {
+#shareButton,
+#LikeButton {
   display: -ms-grid;
   display: grid;
   position: absolute;
   margin-top: 10em;
   margin-right: 1rem;
-  background: -webkit-gradient(linear, left top, right top, from(#666565b7), color-stop(#ffffff), to(#646262d5));
-  background: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
+  background: -webkit-gradient(linear, right top, left top, from(#340434d7), color-stop(#9b0d96d8), to(#2e032ed7));
+  background: linear-gradient(-90deg, #340434d7, #9b0d96d8, #2e032ed7);
   padding: 0.8rem;
   border-radius: 2em;
+  width: wrap;
   height: wrap;
-  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0px 2px 8px 2px rgba(39, 38, 38, 0.781);
-          box-shadow: 0px 2px 8px 2px rgba(39, 38, 38, 0.781);
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+  border: none;
+  -webkit-box-shadow: 0px 5px 5px 1px rgba(47, 17, 53, 0.918);
+          box-shadow: 0px 5px 5px 1px rgba(47, 17, 53, 0.918);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
-#shareButton:hover, #shareButton:focus {
-  border-radius: 2em 0 2em 2em;
+#shareButton:hover, #shareButton:focus,
+#LikeButton:hover,
+#LikeButton:focus {
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(187, 21, 187, 0.856);
+          box-shadow: 0px 0px 12px 0px rgba(187, 21, 187, 0.856);
+  background: -webkit-gradient(linear, right top, left top, from(#340434d7), color-stop(#d114cbb8), to(#2e032ed7));
+  background: linear-gradient(-90deg, #340434d7, #d114cbb8, #2e032ed7);
 }
 /*# sourceMappingURL=globals.css.map */

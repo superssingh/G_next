@@ -1,7 +1,7 @@
 $height: 4rem;
 //-------color
-$primaryColor: linear-gradient(-90deg, #313131d9, #19ff8c, #303030ee);
-
+$primaryColor: linear-gradient(-90deg, #340434d7, #9b0d96d8, #2e032ed7);
+$primaryColor1: linear-gradient(-90deg, #340434d7, #d114cbb8, #2e032ed7);
 $primaryDarkColor: linear-gradient(90deg, #ffffffd3, #dfdfdfea, #555454bf);
 $secondaryColor: linear-gradient(-90deg, #044322, #09b84c, #044322);
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
@@ -20,7 +20,7 @@ $cardColor: linear-gradient(0deg, #c2c2c2, #fffffff1, #fffffff3);
 $transparentWhiteColor: linear-gradient(45deg, #383838cf, #ffffffc2, #d2d2d2de);
 $GradientWhiteColor: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
 $GradientGreenColor: linear-gradient(-45deg, #08164f, #08d57c, #15086b);
-$GradientGreenReverse: linear-gradient(45deg, #08164f, #00eb89, #08164f);
+$GradientGreenReverse: linear-gradient(-45deg, #043a19, #00eb89, #053f1b);
 
 $GradientRedColor: linear-gradient(90deg, #1b1b1b, #c70a92, #1b1b1b);
 $bgColor: linear-gradient(45deg, #5c5b5b, #858582, #3d3d3be9 100%);
@@ -49,6 +49,12 @@ $background1: linear-gradient(
   #07367c,
   #0a0a6d
 );
+$background2: radial-gradient(at 47% 33%, hsl(300, 92%, 78%) 0, transparent 59%),
+  radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+
+$background3: radial-gradient(at 2% 63%, hsl(266, 100%, 51%) 0, transparent 59%),
+  radial-gradient(at 47% 33%, hsl(300, 100%, 51%) 0, transparent 59%),
+  radial-gradient(at 78% 55%, hsl(252, 82%, 15%) 0, transparent 55%);
 
 $transparentGlassColor: linear-gradient(0deg, #dddddd00, #38373762, #383838a6);
 $GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #404140);

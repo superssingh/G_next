@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { Layout } from "../components";
-import { getPosts } from "../services/getPosts";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -37,6 +36,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+
       <Component className="container" {...pageProps} />
     </Layout>
   );

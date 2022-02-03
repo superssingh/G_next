@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { getPosts } from "../../services/getPosts";
+import React, { useState, useEffect, useContext } from "react";
+import { getCategories, getPosts } from "../../services/getData";
+import BlogContext from "../../components/contexts/blogContext";
 import moment from "moment";
 import _ from "lodash";
 import { PostCard, PostWidget, Categories } from "../../components";
+import * as TagName from "../../components/constants";
 
-const Home = ({ posts }) => {
-  const [recentPosts, setRecentPosts] = useState([]);
-  const categories = [
-    { name: "Programming", image: "", id: "1" },
-    { name: "Productivity", image: "", id: "2" },
-    { name: "Technology", image: "", id: "3" },
-    { name: "Top / Best", image: "", id: "4" },
-  ];
-
+const Home = ({ posts, categories }) => {
+  const { blogs, setBlogs, setCategories } = useContext(BlogContext);
   useEffect(async () => {
     if (posts) {
       const recent = await _.orderBy(
@@ -20,22 +15,23 @@ const Home = ({ posts }) => {
         (a) => moment(a.node.createdAt).format("YYYYMMDD"),
         "desc"
       );
-      setRecentPosts(recent);
+      setBlogs(recent);
+      setCategories(categories);
     }
-  }, [posts]);
+  }, []);
 
   return (
     <div>
       <div className="w-full md:grid lg:grid-cols-12 gap-4">
-        <div className="grid w-full place-self-start content-center md:col-span-8  ">
-          {recentPosts.map((p) => (
+        <div className="grid w-full place-self-start content-center md:col-span-8">
+          {blogs.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
         <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
           <div className="grid w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
             <div className="w-full mx-1 md:w-72 ">
-              <PostWidget recentposts={recentPosts} />
+              <PostWidget recentposts={blogs} category={""} slug={""} />
             </div>
             <div className="w-full mx-1 md:w-72">
               <Categories categories={categories} />
@@ -50,5 +46,6 @@ export default Home;
 
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
-  return { props: { posts } };
+  const categories = (await getCategories()) || [];
+  return { props: { posts, categories }, revalidate: 60 };
 }

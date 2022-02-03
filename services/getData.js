@@ -17,6 +17,12 @@ export const getPosts = async () => {
             id
             title
             description
+            content {
+              json
+              html
+              markdown
+              text
+            }
             excerpt
             slug
             tags
@@ -37,6 +43,20 @@ export const getPosts = async () => {
 
   const results = await request(graphAPI, query);
   return results.postsConnection.edges;
+};
+
+export const getCategories = async () => {
+  const query = gql`
+    query getCategories {
+      categories {
+        id
+        name
+      }
+    }
+  `;
+
+  const results = await request(graphAPI, query);
+  return results.categories;
 };
 
 export const getPostDetail = async (slug) => {

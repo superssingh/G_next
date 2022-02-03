@@ -2,14 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
-import HTML_Parser from "html-react-parser";
+
 import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
-  const content = post.content;
   console.log(post);
   return (
-    <div className="grid absolute place-content-center text-lg ">
+    <div className="grid relative place-content-center text-lg ">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
@@ -24,7 +23,7 @@ const PostDetail = ({ post }) => {
           <div className="text-violet-900 text-center uppercase text-3xl font-bold mx-6 mb-6">
             {post.title}
           </div>
-          <div class="relative text-justify px-8 pb-2">
+          <div class="relative text-justify px-4 pb-2">
             <div class=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-6  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,20 +63,38 @@ const PostDetail = ({ post }) => {
         </div>
       </div>
       <Link href={`/posts`}>
-        <div id="backLeaf" className="top-0 w-fit h-fit">
-          {`Back`}
+        <div id="backButton" className=" top-0 w-fit h-fit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#000000"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
         </div>
       </Link>
-      <Link href={`/share`}>
-        <div id="shareButton" className="top- right-5   w-fit h-fit">
+      <Link href="#">
+        <div id="LikeButton" className="right-5">
           <svg
-            fill="#000000"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="#ff19f7"
             viewBox="0 0 24 24"
-            width="24px"
-            height="24px"
+            stroke="#ab185a"
           >
-            <path d="M 16.707031 2.2929688 L 15.292969 3.7070312 L 17.585938 6 L 17 6 C 10.936593 6 6 10.936593 6 17 L 6 18 L 8 18 L 8 17 C 8 12.017407 12.017407 8 17 8 L 17.585938 8 L 15.292969 10.292969 L 16.707031 11.707031 L 21.414062 7 L 16.707031 2.2929688 z M 2 8 L 2 9 L 2 19 C 2 20.64497 3.3550302 22 5 22 L 19 22 C 20.64497 22 22 20.64497 22 19 L 22 18 L 22 17 L 20 17 L 20 18 L 20 19 C 20 19.56503 19.56503 20 19 20 L 5 20 C 4.4349698 20 4 19.56503 4 19 L 4 9 L 4 8 L 2 8 z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
           </svg>
         </div>
       </Link>

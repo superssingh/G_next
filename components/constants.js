@@ -8,6 +8,13 @@ export const menus = [
   { name: "Contact Us", path: "/contact" },
 ];
 
+export const categories = [
+  { name: "Programming", image: "", id: "1" },
+  { name: "Productivity", image: "", id: "2" },
+  { name: "Technology", image: "", id: "3" },
+  { name: "Top / Best", image: "", id: "4" },
+];
+
 export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";
@@ -25,26 +32,4 @@ export const getPosts = () => {
 
 export const getImagePath = () => {
   return imageURL;
-};
-
-export const getVideoKey = (movie_id) => {
-  const videoURL = videoPath1 + movie_id + videoPath2 + apiKey + videoLanguage;
-  return videoURL;
-};
-
-export const getVideoLink = (videoKey) => {
-  const videoURL = youtubePath + videoKey;
-  return videoURL;
-};
-
-export const apiURL = () => {
-  return apiPath;
-};
-
-export const apiURL_id = (id) => {
-  return apiPath + id;
-};
-
-export const getGraphURL = () => {
-  return graphURL;
 };
