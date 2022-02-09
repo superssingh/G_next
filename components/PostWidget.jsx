@@ -3,12 +3,12 @@ import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
 
-const PostWidget = ({ recentposts, category, slug }) => {
+const PostWidget = ({ recentPosts, slug }) => {
   const [relevantPost, setRelevantPost] = useState([]);
 
   useEffect(async () => {
-    setRelevantPost(recentposts);
-  }, [recentposts]);
+    setRelevantPost(recentPosts);
+  }, [recentPosts]);
 
   return (
     <div className="relative place-self-center bg-white bg-opacity-50 shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6">

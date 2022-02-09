@@ -99,3 +99,44 @@ export const getPostDetail = async (slug) => {
   const results = await request(graphAPI, query, { slug });
   return results.post;
 };
+
+export const getPostsByCategory = async (category) => {
+  const query = gql`
+    query getPost($category: String!) {
+      posts(where: { slug: $category }) {
+        author {
+          id
+          name
+          bio
+          photo {
+            url
+          }
+        }
+        id
+        title
+        description
+        content {
+          json
+          html
+          markdown
+          text
+        }
+        excerpt
+        slug
+        tags
+        featured_image {
+          url
+        }
+        description
+        categories {
+          id
+          name
+        }
+        createdAt
+      }
+    }
+  `;
+
+  const results = await request(graphAPI, query, { category });
+  return results.posts;
+};

@@ -6,9 +6,8 @@ import moment from "moment";
 import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
-  console.log(post);
   return (
-    <div className="grid relative place-content-center text-lg ">
+    <div className="grid relative place-content-center text-md ">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
@@ -81,7 +80,7 @@ const PostDetail = ({ post }) => {
         </div>
       </Link>
       <Link href="#">
-        <div id="LikeButton" className="right-5">
+        <div id="LikeButton" className="top-10 right-5 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

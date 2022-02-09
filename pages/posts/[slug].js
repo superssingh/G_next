@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { getPosts, getPostDetail } from "../../services/getData";
+import { getPosts, getPostDetail, getCategories } from "../../services/getData";
 import { HeadTag, PostDetail, PostWidget, Categories } from "../../components";
 
-const Blog = ({ post }) => {
-  const [similarPost, setSimilarPost] = useState([]);
-  const [categories, setCategories] = useState([]);
+const Blog = ({ post, categories, relatedPosts }) => {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(post);
+  console.log(relatedPosts);
 
   return (
     <div className="">
@@ -23,7 +21,11 @@ const Blog = ({ post }) => {
           <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
             <div className="grid w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
               <div className="w-full md:w-72 ">
-                {/* <PostWidget recentposts={post} category={""} slug={""} /> */}
+                <PostWidget
+                  recentposts={relatedPosts}
+                  category={post.categories[0].name}
+                  slug={post.slug}
+                />
               </div>
               <div className="w-full md:w-72">
                 <Categories categories={categories} />
@@ -40,10 +42,15 @@ export default Blog;
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-  const data = await getPostDetail(params.slug);
+  const post = (await getPostDetail(params.slug)) || [];
+  const categories = (await getCategories()) || [];
+  // const relatedPosts = (await getPostsByCategory(params.category)) || [];
+  const relatedPosts = [];
   return {
     props: {
-      post: data,
+      post,
+      categories,
+      relatedPosts,
     },
     revalidate: 60,
   };
