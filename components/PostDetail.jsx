@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
-
 import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
@@ -22,8 +21,8 @@ const PostDetail = ({ post }) => {
           <div className="text-violet-900 text-center uppercase text-3xl font-bold mx-6 mb-6">
             {post.title}
           </div>
-          <div class="relative text-justify px-4 pb-2">
-            <div class=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-6  ">
+          <div className="relative text-justify px-4 pb-2">
+            <div className=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-6  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -45,18 +44,12 @@ const PostDetail = ({ post }) => {
               </div>
             </div>
 
-            {/* <p className="border-b border-gray-500/[.50] mt-2 mb-4"></p> */}
-
             <div className="text-justify text-md text-gray-700">
-              {post.content.map((c) => {
-                {
-                  return (
-                    <div className="my-8" key={c.key}>
-                      <Markdown>{c.html}</Markdown>
-                    </div>
-                  );
-                }
-              })}
+              {post.content.map((c, idx) => (
+                <div className="my-8" key={c.idx}>
+                  <Markdown>{c.html}</Markdown>
+                </div>
+              ))}
             </div>
           </div>
         </div>

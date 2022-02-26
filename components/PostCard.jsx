@@ -24,7 +24,7 @@ const PostCard = ({ post }) => {
               height="17"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#000000"
+              stroke="#333333"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -39,13 +39,11 @@ const PostCard = ({ post }) => {
             </div>
           </div>
 
-          <p className="grid mt-2 text-xl font-semibold text-blue">
+          <p className="grid mt-2 text-xl font-semibold text-gray-700 uppercase">
             {post.title}
           </p>
 
-          <p className="line-clamp-3 mt-2 text-slate-500 ">
-            {post.description}
-          </p>
+          <p className="line-clamp-3 mt-2 text-gray-600 ">{post.description}</p>
         </div>
 
         {/* <div className="absolute bottom-0 right-0 p-2 ">

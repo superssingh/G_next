@@ -6,7 +6,7 @@ import * as TagName from "./constants";
 const menus = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/posts" },
-  { name: "Courses", path: "/courses" },
+  // { name: "Courses", path: "/courses" },
   { name: "Shop", path: "/shop" },
   { name: "About Us", path: "/about" },
   { name: "Contact Us", path: "/contact" },
