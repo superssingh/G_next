@@ -405,7 +405,7 @@
 
 @layer components {
   .card {
-    @apply w-full place-self-center bg-white bg-opacity-80  md:flex md:max-w-3xl transition-all duration-700 shadow-xl drop-shadow-lg overflow-hidden rounded-xl mb-6 hover:bg-opacity-100;
+    @apply min-w-0 w-full place-self-center bg-white bg-opacity-80  md:flex md:max-w-3xl transition-all duration-700 shadow-xl drop-shadow-lg overflow-hidden rounded-xl mb-6 hover:bg-opacity-100;
   }
 }
 
@@ -423,7 +423,7 @@ body {
 
 .leafButton,
 #signin {
-  background: linear-gradient(-45deg, #08164f, #08d57c, #15086b);
+  background-image: linear-gradient(-45deg, #043a19, #00eb89, #053f1b);
   font-weight: 400;
   font-size: 1rem;
   font-weight: 500;
@@ -439,6 +439,8 @@ body {
           box-shadow: 0px 5px 5px 0px rgba(1, 26, 16, 0.692);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
 }
 
 .leafButton:hover, .leafButton:focus,

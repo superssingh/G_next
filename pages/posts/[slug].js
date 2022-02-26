@@ -14,22 +14,18 @@ const Blog = ({ post, categories, relatedPosts }) => {
       {/* <div className="relative w-full max-w-3xl "></div> */}
 
       <div className="">
-        <div className="grid relative w-full pb-4 lg:grid-cols-12 gap-6 place-content-center ">
+        <div className="grid relative w-full pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
           <div className="grid w-full place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
           </div>
-          <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
-            <div className="grid w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
-              <div className="w-full md:w-72 ">
-                <PostWidget
-                  recentposts={relatedPosts}
-                  category={post.categories[0].name}
-                  slug={post.slug}
-                />
-              </div>
-              <div className="w-full md:w-72">
-                <Categories categories={categories} />
-              </div>
+          <div className="grid w-full md:col-span-8 lg:col-span-4 ">
+            <div className="grid w-full place-self-start  md:flex lg:grid lg:sticky lg:w-72 top-8 ">
+              <PostWidget
+                recentposts={relatedPosts}
+                category={post.categories[0].name}
+                slug={post.slug}
+              />
+              <Categories categories={categories} />
             </div>
           </div>
         </div>

@@ -5,37 +5,37 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
+          {/* <link
             rel="preload"
-            href="/fonts/Sora-Light.ttf"
+            href="/fonts/Montserrat-Light.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Sora-Regular.ttf"
+            href="/fonts/Montserrat-Regular.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Sora-Medium.ttf"
+            href="/fonts/Montserrat-Medium.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
 
           <link
             rel="preload"
-            href="/fonts/Sora-SemiBold.ttf"
+            href="/fonts/Montserrat-SemiBold.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Sora-Bold.ttf"
+            href="/fonts/Montserrat-Bold.ttf"
             as="font"
             crossOrigin="anonymous"
-          ></link>
+          ></link> */}
         </Head>
         <body>
           <Main></Main>

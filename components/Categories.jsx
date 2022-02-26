@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Categories = ({ categories }) => {
   return (
-    <div className="w-full place-self-center bg-white bg-opacity-50 shadow-xl drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6">
+    <div className="relative w-full  place-self-start bg-white bg-opacity-50 shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6 md:mx-2">
       <h3 className=" text-md text-gray-800 border-b border-slate-50/[.50] pb-2">
         Categories
       </h3>

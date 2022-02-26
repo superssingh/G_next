@@ -28,14 +28,10 @@ const Home = ({ posts, categories }) => {
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
-        <div className="w-84 place-items-center place-content-center w-full md:col-span-4 ">
-          <div className="grid w-84 md:flex place-self-center lg:grid lg:sticky relative top-8">
-            <div className="w-full mx-1 md:w-72 ">
-              <PostWidget recentposts={blogs} category={""} slug={""} />
-            </div>
-            <div className="w-full mx-1 md:w-72">
-              <Categories categories={categories} />
-            </div>
+        <div className="grid w-full md:col-span-8 lg:col-span-4 ">
+          <div className="grid w-full place-self-start  md:flex lg:grid lg:sticky lg:w-72 top-8 ">
+            <PostWidget recentposts={blogs} category={""} slug={""} />
+            <Categories categories={categories} />
           </div>
         </div>
       </div>
