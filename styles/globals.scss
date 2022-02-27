@@ -6,6 +6,10 @@
 @import "./navbar";
 @import "./post_detail";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .card {
     @apply min-w-0 w-full place-self-center bg-white bg-opacity-70  md:flex md:max-w-3xl transition-all duration-700 shadow-xl drop-shadow-lg overflow-hidden rounded-xl mb-6 hover:bg-opacity-90;

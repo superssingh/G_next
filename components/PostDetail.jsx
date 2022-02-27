@@ -45,8 +45,8 @@ const PostDetail = ({ post }) => {
             </div>
 
             <div className="text-justify text-md text-gray-700">
-              {post.content.map((c, idx) => (
-                <div className="my-8" key={c.idx}>
+              {post.content.map((c, id) => (
+                <div className="my-8" key={id}>
                   <Markdown>{c.html}</Markdown>
                 </div>
               ))}

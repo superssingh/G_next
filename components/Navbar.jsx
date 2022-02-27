@@ -8,8 +8,8 @@ const menus = [
   { name: "Blog", path: "/posts" },
   // { name: "Courses", path: "/courses" },
   { name: "Shop", path: "/shop" },
-  { name: "About Us", path: "/about" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -31,7 +31,9 @@ const Navbar = () => {
             <li>
               {menus.map((m) => (
                 <Link key={m.name} href={m.path}>
-                  <a tabIndex={1}>{m.name}</a>
+                  <a tabIndex={1} data-text={m.name}>
+                    {m.name}
+                  </a>
                 </Link>
               ))}
             </li>
@@ -53,7 +55,9 @@ const Navbar = () => {
         <li className="mobile-menus">
           {menus.map((m) => (
             <Link href={m.path} key={m.name}>
-              <a onClick={handleClicked}>{m.name}</a>
+              <a onClick={handleClicked} data-text={m.name}>
+                &nbsp;{m.name}&nbsp;
+              </a>
             </Link>
           ))}
 

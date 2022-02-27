@@ -20,23 +20,7 @@ const Home = ({ posts, categories }) => {
     }
   }, []);
 
-  return (
-    <div>
-      <div className="w-full md:grid lg:grid-cols-12 gap-4">
-        <div className="grid w-full place-self-start content-center md:col-span-8  ">
-          {blogs.map((p) => (
-            <PostCard post={p.node} key={p.node.id} />
-          ))}
-        </div>
-        <div className="grid w-full md:col-span-8 lg:col-span-4 ">
-          <div className="grid w-full place-self-start  md:flex lg:grid lg:sticky lg:w-72 top-8 ">
-            <PostWidget recentPosts={blogs} />
-            <Categories categories={categories} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 // // ISR- Intcremental Statice  pages- best for blog and ecommerce.
@@ -69,5 +53,5 @@ export default Home;
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   const categories = (await getCategories()) || [];
-  return { props: { posts, categories } };
+  return { props: { posts, categories, revalidate: 36000 } };
 }

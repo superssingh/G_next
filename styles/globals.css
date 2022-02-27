@@ -122,10 +122,10 @@
 .menus li a {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  margin: 0 1px;
+  margin: 0 0.2rem;
   border-radius: 2em 2em 0 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   color: rgba(252, 252, 252, 0.981);
   outline: 0;
 }
@@ -266,7 +266,7 @@
     outline: 0;
   }
   .mobile-open li {
-    width: 240px;
+    width: 100%;
     height: 100%;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -276,21 +276,44 @@
     padding: 10px;
     -webkit-box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
             box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
+    place-content: center;
+    place-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .mobile-open li a {
-    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    font-size: 1rem;
-    color: rgba(252, 252, 252, 0.981);
-    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    overflow: hidden;
     width: 100%;
+    font-size: 1rem;
+    color: transparent;
+    padding: 1rem 1rem 1rem 3.5rem;
+    font-size: 2.5em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
   }
-  .mobile-open li a:hover, .mobile-open li a:focus {
+  .mobile-open li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    border-right: 8px solid #fff;
+    overflow: hidden;
+  }
+  .mobile-open li a:hover::before {
+    width: 90%;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.897);
+  }
+  .mobile-open li a:focus {
     border-radius: 0.5rem;
     background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
     background: linear-gradient(90deg, #130113, #d503d5, #130113);
@@ -401,6 +424,10 @@
 .author .authorPic {
   border-radius: 2rem;
   background: rgba(28, 7, 61, 0.76);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer components {

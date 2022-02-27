@@ -12,6 +12,7 @@ import { HeadTag, PostDetail, PostWidget, Categories } from "../../components";
 const Blog = ({ post, categories, posts }) => {
   const router = useRouter();
   const { slug } = router.query;
+  console.log(post);
 
   return (
     <div className="">

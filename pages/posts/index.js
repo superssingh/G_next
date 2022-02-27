@@ -43,5 +43,5 @@ export default Home;
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   const categories = (await getCategories()) || [];
-  return { props: { posts, categories }, revalidate: 60 };
+  return { props: { posts, categories }, revalidate: 36000 };
 }
