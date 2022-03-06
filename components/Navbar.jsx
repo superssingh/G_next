@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "./assets/gogixer.png";
 import * as TagName from "./constants";
+import SocialWidget from "./SocialWidget";
 const menus = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/posts" },
@@ -67,6 +68,9 @@ const Navbar = () => {
           <Link to="/signup" key="signup" id="signup" onClick={handleClicked}>
             Sign Up
           </Link> */}
+        </li>
+        <li className="social">
+          <SocialWidget />
         </li>
       </ul>
     </div>

@@ -15,6 +15,22 @@ export const categories = [
   { name: "Top / Best", image: "", id: "4" },
 ];
 
+export const social = [
+  { name: "Instagram", link: "https://www.instagram.com/gogixer/", logo: "" },
+  {
+    name: "Youtube",
+    link: "https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA",
+    logo: "",
+  },
+  { name: "Twitter", link: "https://twitter.com/gogixer", logo: "" },
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/company/gogixer",
+    logo: "",
+  },
+  { name: "Facebook", link: "https://www.facebook.com/gogixer", logo: "" },
+];
+
 export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";
