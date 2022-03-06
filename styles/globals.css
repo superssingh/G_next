@@ -273,7 +273,7 @@
     background: -webkit-gradient(linear, left bottom, left top, from(#300230c2), color-stop(#9b089bbd), to(#420542bb));
     background: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
     border: 1px solid rgba(255, 255, 255, 0.125);
-    padding: 10px;
+    padding: 10px 5px;
     -webkit-box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
             box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
     place-content: center;
@@ -291,9 +291,8 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    font-size: 1rem;
+    padding: 0.5em 1em;
     color: transparent;
-    padding: 1rem 1rem 1rem 3.5rem;
     font-size: 2.5em;
     line-height: 1em;
     letter-spacing: 2px;
@@ -302,16 +301,17 @@
   .mobile-open li a::before {
     content: attr(data-text);
     position: absolute;
-    color: #fff;
+    color: #f0fef5;
     width: 0;
     -webkit-transition: all 1s;
     transition: all 1s;
-    border-right: 8px solid #fff;
+    border-right: 8px solid rgba(255, 255, 255, 0);
     overflow: hidden;
   }
   .mobile-open li a:hover::before {
     width: 90%;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.897);
+    -webkit-text-stroke: 2px white;
+    border-right: 8px solid #fff;
   }
   .mobile-open li a:focus {
     border-radius: 0.5rem;

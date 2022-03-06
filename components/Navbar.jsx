@@ -56,7 +56,7 @@ const Navbar = () => {
           {menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a onClick={handleClicked} data-text={m.name}>
-                &nbsp;{m.name}&nbsp;
+                {m.name}
               </a>
             </Link>
           ))}
