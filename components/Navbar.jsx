@@ -70,7 +70,13 @@ const Navbar = () => {
           </Link> */}
         </li>
         <li className="social">
-          <SocialWidget />
+          <li>
+            <SocialWidget />
+          </li>
+          <li className="copyright">
+            <p>Copyright &copy;2022 gogixer.com</p>
+            <p>Made by Santosh [superssingh@gmail.com]</p>
+          </li>
         </li>
       </ul>
     </div>

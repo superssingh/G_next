@@ -157,6 +157,9 @@
   .mobile-menus {
     display: none;
   }
+  .social {
+    display: none;
+  }
 }
 
 @media (max-width: 919px) {
@@ -240,44 +243,32 @@
   }
   .mobile-open {
     z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    display: -ms-grid;
+    display: grid;
     position: absolute;
     width: 100%;
     height: 100vh;
-    -webkit-backdrop-filter: blur(0.5rem);
-            backdrop-filter: blur(0.5rem);
-    background: linear-gradient(45deg, #13121336, #d8d7d848, #1414143a);
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    background: -webkit-gradient(linear, left bottom, left top, from(#300230c2), color-stop(#9b089bbd), to(#420542bb));
+    background: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
     -webkit-transform: translateY(0vh);
             transform: translateY(0vh);
     -webkit-box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
             box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
     outline: 0;
   }
-  .mobile-open li {
+  .mobile-open .mobile-menus {
     width: 100%;
-    height: 100%;
+    height: wrap;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-    background: -webkit-gradient(linear, left bottom, left top, from(#300230c2), color-stop(#9b089bbd), to(#420542bb));
-    background: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 10px 5px;
     -webkit-box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
             box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
   }
-  .mobile-open li a {
+  .mobile-open .mobile-menus a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -290,7 +281,7 @@
     letter-spacing: 2px;
     -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
   }
-  .mobile-open li a::before {
+  .mobile-open .mobile-menus a::before {
     content: attr(data-text);
     position: absolute;
     color: #f0fef5;
@@ -300,17 +291,55 @@
     border-right: 8px solid rgba(255, 255, 255, 0);
     overflow: hidden;
   }
-  .mobile-open li a:hover::before {
+  .mobile-open .mobile-menus a:hover::before {
     width: 90%;
     -webkit-text-stroke: 2px white;
     border-right: 8px solid #fff;
   }
-  .mobile-open li a:focus {
+  .mobile-open .mobile-menus a:focus {
     border-radius: 0.5rem;
     background: -webkit-gradient(linear, left top, right top, from(#130113), color-stop(#d503d5), to(#130113));
     background: linear-gradient(90deg, #130113, #d503d5, #130113);
     -webkit-box-shadow: 0px 0px 2px 0.5px rgba(33, 33, 32, 0.92);
             box-shadow: 0px 0px 2px 0.5px rgba(33, 33, 32, 0.92);
+  }
+  .mobile-open .social {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: wrap;
+    background: radial-gradient(at 2% 63%, #9120a7 0, transparent 59%), radial-gradient(at 47% 33%, rgba(171, 13, 118, 0.973) 0, transparent 59%), radial-gradient(at 80% 55%, rgba(169, 61, 145, 0.767) 0, transparent 55%);
+    -webkit-backdrop-filter: blur(10rem);
+            backdrop-filter: blur(10rem);
+    place-content: center;
+    place-items: center;
+  }
+  .mobile-open .social div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    width: wrap;
+    height: 48px;
+    place-content: center;
+  }
+  .mobile-open .social div a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: inherit;
+    padding: 0.5rem;
+    color: transparent;
+    place-content: center;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    top: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .mobile-open .social div a :hover {
+    top: -2rem;
+    padding-bottom: 2rem;
   }
   .mobile-close {
     display: none;
@@ -386,41 +415,61 @@
   display: none;
 }
 
-.social {
-  padding: 0;
-  margin: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0707077e), color-stop(#d503d5e8), to(#51067c49));
-  background: linear-gradient(0deg, #0707077e, #d503d5e8, #51067c49);
+.copyright {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: wrap;
+  place-content: center;
+}
+
+.copyright p {
+  text-align: center;
+  color: #111111;
 }
 
 .instagram svg,
 .youtube svg,
 .twitter svg,
 .linkedin svg {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  justify-self: flex-start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
-  top: 0rem;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.instagram svg:hover,
-.youtube svg:hover,
-.twitter svg:hover,
+.instagram svg:hover {
+  fill: #fc07b6;
+  border-bottom: 2px solid #fc07b6;
+}
+
+.youtube svg:hover {
+  fill: red;
+  border-bottom: 2px solid red;
+}
+
+.twitter svg:hover {
+  fill: #06eeff;
+  border-bottom: 2px solid #06eeff;
+}
+
 .linkedin svg:hover {
-  fill: #fde8f4;
-  top: -2rem;
-  padding-bottom: 2rem;
-  -webkit-box-shadow: 0px 5px 0px 0px rgba(255, 251, 253, 0.789);
-          box-shadow: 0px 5px 0px 0px rgba(255, 251, 253, 0.789);
+  fill: #98beff;
+  border-bottom: 2px solid #98beff;
 }
 
 .PostDetail {
@@ -467,7 +516,7 @@ html {
 
 body {
   height: 100vh;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  font-family: "nonito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #10b7b5;
