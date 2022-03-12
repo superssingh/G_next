@@ -1,37 +1,31 @@
 .policy,
 .terms {
-  background: rgba(255, 255, 255, 0.705);
-  padding: 1rem;
+  background: rgba(255, 255, 255, 0.87);
+  padding: 0.5rem;
 
   h2,
   h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: rgb(6, 136, 49);
+    color: rgb(12, 12, 12);
     border-top: 2px solid rgb(6, 136, 49);
   }
 
   p,
   ul {
-    margin: 12px 0;
+    margin: 10px 0;
     padding: 0 10px;
     text-align: justify;
-    font-size: 0.875rem;
+    font-size: 14px;
   }
   .PolicyLink {
-    background: rgb(82, 6, 143);
+    background: rgb(3, 184, 9);
     color: #fff;
     padding: 0 10px;
     border-radius: 1rem;
   }
+  li:before,
   p:before {
-    content: "✅";
-    padding: 10px 10px 10px 0;
-    font-weight: 500;
-    color: rgb(7, 180, 56);
-  }
-
-  li:before {
     content: "✅";
     padding: 10px 10px 10px 0;
     font-weight: 500;
