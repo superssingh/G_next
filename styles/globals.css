@@ -454,39 +454,13 @@
   fill: #0e63f5;
 }
 
-.policy {
-  background: rgba(255, 255, 255, 0.705);
-  padding: 1rem;
-}
-.policy h2,
-.policy h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #068831;
-  border-top: 2px solid #068831;
-}
-.policy p,
-.policy ul {
-  margin: 12px 0;
-  padding: 0 10px;
-  text-align: justify;
-}
-.policy p:before {
-  content: "✅";
-  padding: 10px 10px 10px 0;
-  font-weight: 500;
-  color: #07b438;
-}
-.policy li:before {
-  content: "✅";
-  padding: 10px 10px 10px 0;
-  font-weight: 500;
-}
-
+.policy,
 .terms {
   background: rgba(255, 255, 255, 0.705);
   padding: 1rem;
 }
+.policy h2,
+.policy h3,
 .terms h2,
 .terms h3 {
   font-size: 1.2rem;
@@ -494,24 +468,29 @@
   color: #068831;
   border-top: 2px solid #068831;
 }
+.policy p,
+.policy ul,
 .terms p,
 .terms ul {
   margin: 12px 0;
   padding: 0 10px;
   text-align: justify;
 }
+.policy .PolicyLink,
 .terms .PolicyLink {
   background: #52068f;
   color: #fff;
   padding: 0 10px;
   border-radius: 1rem;
 }
+.policy p:before,
 .terms p:before {
   content: "✅";
   padding: 10px 10px 10px 0;
   font-weight: 500;
   color: #07b438;
 }
+.policy li:before,
 .terms li:before {
   content: "✅";
   padding: 10px 10px 10px 0;
