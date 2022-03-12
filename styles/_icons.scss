@@ -3,34 +3,32 @@
 .twitter,
 .linkedin {
   svg {
-    display: flex;
-    position: relative;
-    justify-self: flex-start;
     width: fit-content;
     height: fit-content;
+    border-radius: 0.5em;
     padding: 0;
     margin: 0;
     top: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s;
+    fill: rgb(220, 222, 226);
+    &:hover {
+      background: rgba(255, 255, 255, 0.938);
+    }
   }
 }
 
 .instagram svg:hover {
-  fill: rgb(252, 7, 182);
-  border-bottom: 2px solid rgb(252, 7, 182);
+  fill: #f75371;
 }
 
 .youtube svg:hover {
   fill: rgb(255, 0, 0);
-  border-bottom: 2px solid rgb(255, 0, 0);
 }
 
 .twitter svg:hover {
-  fill: rgb(6, 238, 255);
-  border-bottom: 2px solid rgb(6, 238, 255);
+  fill: rgb(45, 201, 248);
 }
 
 .linkedin svg:hover {
-  fill: rgb(152, 190, 255);
-  border-bottom: 2px solid rgb(152, 190, 255);
+  fill: rgb(14, 99, 245);
 }

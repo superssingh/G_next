@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlogContext from "./contexts/blogContext";
-import { Navbar } from "./";
+import { Navbar, Footer } from "./";
 
 const Layout = ({ children, posts }) => {
   const [blogs, setBlogs] = useState([]);
@@ -15,7 +15,7 @@ const Layout = ({ children, posts }) => {
   };
 
   return (
-    <div className="container">
+    <div className="containerBox flex flex-col w-full min-h-screen">
       <BlogContext.Provider
         value={{
           blogs: blogs,
@@ -25,7 +25,7 @@ const Layout = ({ children, posts }) => {
         }}
       >
         <Navbar />
-        <div className="container place mt-24 mb-8 px-6">{children}</div>
+        <div>{children}</div>
       </BlogContext.Provider>
     </div>
   );

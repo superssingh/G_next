@@ -29,7 +29,7 @@ const Home = ({ posts, categories }) => {
           ))}
         </div>
         <div className="grid w-full md:col-span-8 lg:col-span-4 ">
-          <div className="grid w-full place-self-start  md:flex lg:grid lg:sticky lg:w-72 top-8 ">
+          <div className="grid w-full place-self-center md:flex md:w-4/5 lg:grid lg:sticky lg:w-4/5 top-8 ">
             <PostWidget recentPosts={blogs} />
             <Categories categories={categories} />
           </div>

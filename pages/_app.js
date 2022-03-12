@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { Layout } from "../components";
+import { Layout, Footer } from "../components";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,6 +9,12 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Gogixer</title>
+        <meta
+          name="description"
+          content="An online learning platform for web developers and entrepreneurs."
+        />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -36,8 +42,13 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <div className="flex flex-col min-h-screen">
+        <div className="containerBox flex-grow mt-24 mb-10 px-4">
+          <Component {...pageProps} />
+        </div>
 
-      <Component className="container" {...pageProps} />
+        <Footer />
+      </div>
     </Layout>
   );
 }

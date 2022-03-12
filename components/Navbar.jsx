@@ -4,14 +4,6 @@ import Image from "next/image";
 import Logo from "./assets/gogixer.png";
 import * as TagName from "./constants";
 import SocialWidget from "./SocialWidget";
-const menus = [
-  { name: "Home", path: "/" },
-  { name: "Blog", path: "/posts" },
-  // { name: "Courses", path: "/courses" },
-  { name: "Shop", path: "/shop" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
-];
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -30,7 +22,7 @@ const Navbar = () => {
 
           <ul className={TagName.MENU_DEFAULT}>
             <li>
-              {menus.map((m) => (
+              {TagName.menus.map((m) => (
                 <Link key={m.name} href={m.path}>
                   <a tabIndex={1} data-text={m.name}>
                     {m.name}
@@ -54,7 +46,7 @@ const Navbar = () => {
       </div>
       <ul className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}>
         <li className="mobile-menus">
-          {menus.map((m) => (
+          {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a onClick={handleClicked} data-text={m.name}>
                 {m.name}
@@ -74,7 +66,7 @@ const Navbar = () => {
             <SocialWidget />
           </li>
           <li className="copyright">
-            <p>Copyright &copy;2022 gogixer.com</p>
+            <p>&copy;2022 Gogixer.com | All right reserved.</p>
             <p>Made by Santosh [superssingh@gmail.com]</p>
           </li>
         </li>

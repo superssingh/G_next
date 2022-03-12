@@ -20,7 +20,19 @@ const Home = ({ posts, categories }) => {
     }
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <div className="description">
+        <span className="hidden">
+          <em>
+            <b>Gogixer </b>
+          </em>
+          is an online learning platform for web developers and entrepreneurs to
+          learn web development skills.
+        </span>
+      </div>
+    </div>
+  );
 };
 
 // // ISR- Intcremental Statice  pages- best for blog and ecommerce.

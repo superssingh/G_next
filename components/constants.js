@@ -3,9 +3,20 @@
 export const menus = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/posts" },
-  { name: "Courses", path: "/courses" },
+  // { name: "Courses", path: "/courses" },
+  { name: "Shop", path: "/shop" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
+
+export const footermenus = [
   { name: "About Us", path: "/about" },
+  { name: "Blog", path: "/posts" },
   { name: "Contact Us", path: "/contact" },
+  { name: "Courses", path: "/courses" },
+  { name: "Terms of Service", path: "/terms" },
+  { name: "Shop", path: "/shop" },
+  { name: "Privacy Policy", path: "/privacy" },
 ];
 
 export const categories = [
