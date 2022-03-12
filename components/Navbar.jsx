@@ -62,10 +62,22 @@ const Navbar = () => {
             Sign Up
           </Link> */}
         </li>
+
         <li className="social">
           <li>
             <SocialWidget />
           </li>
+        </li>
+
+        <li className="navLogo ">
+          <Link href="/">
+            <Image
+              src={gogixerLogo}
+              alt={TagName.COMPANY_NAME}
+              width={100}
+              height={100}
+            />
+          </Link>
         </li>
       </ul>
     </div>
