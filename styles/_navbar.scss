@@ -275,10 +275,12 @@
       }
     }
     .navLogo {
+      align-items: center;
+      align-self: center;
       justify-self: center;
       transition: all 0.3s;
       :hover {
-        filter: hue-rotate(80deg);
+        box-shadow: 0 0 10px 0 rgba(237, 237, 237, 0.808);
       }
     }
   }
