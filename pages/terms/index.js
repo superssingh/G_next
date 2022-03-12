@@ -1,8 +1,8 @@
 import Link from "next/link";
 const Terms = () => {
   return (
-    <div className="grid relative max-w-3xl place-items-center text-sm ">
-      <div className="  bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6 md:mx-2">
+    <div className="grid relative w-full place-items-center place-content-center text-sm ">
+      <div className="max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6 md:mx-2">
         <h1 className=" text-xl font-bold text-center p-2 mb-2 uppercase  text-white">
           Website Terms and Conditions of Use
         </h1>

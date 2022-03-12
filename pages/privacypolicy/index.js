@@ -1,11 +1,14 @@
-const PrivacyPolicy = () => {
+import Link from "next/link";
+const Policy = () => {
   return (
-    <div className="grid relative max-w-3xl place-items-center text-sm ">
-      <div className=" max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-4 mb-6">
-        <h1 className=" text-xl font-bold text-center p-2 mb-2 uppercase  text-white">
+    <div className="grid relative w-full place-items-center place-content-center text-sm ">
+      <div className="max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-6 mb-6 md:mx-2">
+        <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-white">
           Privacy Policy
         </h1>
-        <div className="policy rounded-lg">
+        <div className="terms rounded-lg">
+          <h2>1. Terms</h2>
+
           <p>
             At gogixer.com, accessible from https://www.gogixer.com, one of our
             main priorities is the privacy of our visitors. This Privacy Policy
@@ -268,4 +271,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Policy;
