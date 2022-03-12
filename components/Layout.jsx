@@ -15,7 +15,7 @@ const Layout = ({ children, posts }) => {
   };
 
   return (
-    <div className="containerBox flex flex-col w-full min-h-screen">
+    <div className="containerBox flex flex-col min-w-screen min-h-screen">
       <BlogContext.Provider
         value={{
           blogs: blogs,

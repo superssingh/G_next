@@ -203,18 +203,17 @@
     .mobile-menus {
       place-self: top;
       width: 100%;
-      height: wrap;
+      height: fit-content;
       padding: 1rem;
       top: 0;
       a {
         display: flex;
         position: relative;
         width: 100%;
-        height: wrap;
         padding: 0.8rem 2rem;
         color: transparent;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
         letter-spacing: 2px;
         -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
 
