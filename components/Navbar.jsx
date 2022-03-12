@@ -61,23 +61,21 @@ const Navbar = () => {
           <Link to="/signup" key="signup" id="signup" onClick={handleClicked}>
             Sign Up
           </Link> */}
-        </li>
 
-        <li className="social">
-          <li>
+          <li className="social">
             <SocialWidget />
           </li>
-        </li>
 
-        <li className="navLogo ">
-          <Link href="/">
-            <Image
-              src={gogixerLogo}
-              alt={TagName.COMPANY_NAME}
-              width={100}
-              height={100}
-            />
-          </Link>
+          <li className="navLogo">
+            <Link href="/">
+              <Image
+                src={gogixerLogo}
+                alt={TagName.COMPANY_NAME}
+                width={100}
+                height={100}
+              />
+            </Link>
+          </li>
         </li>
       </ul>
     </div>
