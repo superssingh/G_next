@@ -1,10 +1,13 @@
 .Navigation {
   z-index: 5;
-  display: flexbox;
+  display: grid;
   width: 100%;
   height: wrap;
-  position: fixed;
+  position: absolute;
+  backdrop-filter: blur(1rem);
+
   top: 0;
+  transition: 0.3s ease-in-out;
   div {
     width: inherit;
     position: -webkit-sticky;
@@ -187,31 +190,34 @@
 
   .mobile-open {
     z-index: 2;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(1rem);
+    min-height: 100vh;
+    height: 100%;
     background: $GradientPurple1;
     box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
     outline: 0;
     .mobile-menus {
       width: 100%;
-      height: wrap;
-      backdrop-filter: blur(10px);
+      height: fit-content;
+      backdrop-filter: blur(1rem);
       border: 1px solid rgba(255, 255, 255, 0.125);
-      padding: 10px 5px;
+      padding: 1.5rem 0.5px;
       box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
       a {
         display: flex;
         position: relative;
         width: 100%;
-        padding: 0.5rem 2rem;
+        height: fit-content;
+        padding: 0.8rem 2rem;
         color: transparent;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        letter-spacing: 2.5px;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        letter-spacing: 2px;
         -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+
         &::before {
           content: attr(data-text);
           position: absolute;
@@ -234,16 +240,17 @@
       display: grid;
       position: relative;
       width: 100%;
-      height: 50vh;
-      background: $background3;
-      backdrop-filter: blur(1em);
+      height: fit-content;
+      margin-top: 1rem;
       li {
         width: inherit;
+        height: fit-content;
+        top: 0;
         div {
           display: flex;
           position: relative;
           width: inherit;
-          height: 48px;
+          height: inherit;
           place-content: center;
           a {
             width: fit-content;
@@ -255,8 +262,8 @@
             top: 0;
             transition: all 0.3s;
             :hover {
-              top: -2rem;
-              padding-bottom: 2rem;
+              top: -2.5rem;
+              padding-bottom: 2.5rem;
             }
 
             svg {

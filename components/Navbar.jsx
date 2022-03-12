@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "./assets/gogixer.png";
 import * as TagName from "./constants";
 import SocialWidget from "./SocialWidget";
+import gogixerLogo from "./../public/images/gogixer.png";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -64,10 +65,6 @@ const Navbar = () => {
         <li className="social">
           <li>
             <SocialWidget />
-          </li>
-          <li className="copyright">
-            <p>&copy;2022 Gogixer.com | All right reserved.</p>
-            <p>Made by Santosh [superssingh@gmail.com]</p>
           </li>
         </li>
       </ul>

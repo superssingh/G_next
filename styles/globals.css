@@ -9,11 +9,14 @@
 **/
 .Navigation {
   z-index: 5;
-  display: flexbox;
+  display: grid;
   width: 100%;
   height: wrap;
-  position: fixed;
+  position: absolute;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   top: 0;
+  transition: 0.3s ease-in-out;
 }
 .Navigation div {
   width: inherit;
@@ -203,34 +206,39 @@
 
   .mobile-open {
     z-index: 2;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
-    height: 100vh;
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
+    min-height: 100vh;
+    height: 100%;
     background: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
     box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
     outline: 0;
   }
   .mobile-open .mobile-menus {
     width: 100%;
-    height: wrap;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
     border: 1px solid rgba(255, 255, 255, 0.125);
-    padding: 10px 5px;
+    padding: 1.5rem 0.5px;
     box-shadow: 0px 0px 1px 1px rgba(133, 131, 131, 0.267);
   }
   .mobile-open .mobile-menus a {
     display: flex;
     position: relative;
     width: 100%;
-    padding: 0.5rem 2rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0.8rem 2rem;
     color: transparent;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    letter-spacing: 2.5px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
     -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
   }
   .mobile-open .mobile-menus a::before {
@@ -251,19 +259,23 @@
     display: grid;
     position: relative;
     width: 100%;
-    height: 50vh;
-    background: radial-gradient(at 2% 63%, #9120a7 0, transparent 59%), radial-gradient(at 47% 33%, rgba(171, 13, 118, 0.973) 0, transparent 59%), radial-gradient(at 80% 55%, rgba(169, 61, 145, 0.767) 0, transparent 55%);
-    -webkit-backdrop-filter: blur(1em);
-            backdrop-filter: blur(1em);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 1rem;
   }
   .mobile-open .social li {
     width: inherit;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 0;
   }
   .mobile-open .social li div {
     display: flex;
     position: relative;
     width: inherit;
-    height: 48px;
+    height: inherit;
     place-content: center;
   }
   .mobile-open .social li div a {
@@ -279,8 +291,8 @@
     transition: all 0.3s;
   }
   .mobile-open .social li div a :hover {
-    top: -2rem;
-    padding-bottom: 2rem;
+    top: -2.5rem;
+    padding-bottom: 2.5rem;
   }
   .mobile-open .social li div a svg {
     display: flex;
