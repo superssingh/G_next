@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div className="flex flex-col min-h-screen">
+      <div className="w-full flex flex-col min-h-screen">
         <div className="containerbox flex-grow mt-24 mb-10 px-4">
           <Component {...pageProps} />
         </div>
