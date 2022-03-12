@@ -2,7 +2,7 @@ import Link from "next/link";
 const Policy = () => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm ">
-      <div className="sm:w-64 md:w-3xl max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-2 mb-6 mx-1 ">
+      <div className="max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-2 mb-6 mx-1 ">
         <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-white">
           Privacy Policy
         </h1>
@@ -28,7 +28,7 @@ const Policy = () => {
             applicable to any information collected offline or via channels
             other than this website. Our Privacy Policy was created with the
             help of the{" "}
-            <a href="https://www.privacypolicygenerator.info">
+            <a href="https://privacypolicygenerator.info">
               Free Privacy Policy Generator
             </a>
             .
@@ -109,7 +109,7 @@ const Policy = () => {
 
           <p>
             For more general information on cookies, please read
-            <a href="https://www.generateprivacypolicy.com/#cookies">
+            <a href="https://generateprivacypolicy.com/#cookies">
               the Cookies article on Generate Privacy Policy website
             </a>
           </p>
@@ -123,8 +123,8 @@ const Policy = () => {
             internet. However, visitors may choose to decline the use of DART
             cookies by visiting the Google ad and content network Privacy Policy
             at the following URL –{" "}
-            <a href="https://policies.google.com/technologies/ads">
-              https://policies.google.com/technologies/ads
+            <a href="policies.google.com/technologies/ads">
+              policies.google.com/technologies/ads
             </a>
           </p>
 
@@ -142,7 +142,7 @@ const Policy = () => {
             <p>Google</p>
             <p>
               <a href="https://policies.google.com/technologies/ads">
-                https://policies.google.com/technologies/ads
+                policies.google.com/technologies/ads
               </a>
             </p>
           </ul>
