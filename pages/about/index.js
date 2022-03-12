@@ -2,10 +2,9 @@
 
 const About = () => {
   return (
-    <div>
-      Author :
-      {/* <div className="flex items-center bg-white shadow-lg rounded-full">
-        <Image
+    <div className=" w-full items-center bg-white/20 shadow-lg p-4 rounded-md">
+      <div>Page under process...</div>
+      {/* <Image
           alt={post.author.name}
           height="30px"
           width="30px"
@@ -14,8 +13,7 @@ const About = () => {
         />
         <p className="inline pl-2 pr-2 text-blue-700 cursor-pointer">
           {post.author.name}
-        </p>
-      </div> */}
+        </p> */}
     </div>
   );
 };

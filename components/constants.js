@@ -16,7 +16,7 @@ export const footermenus = [
   { name: "Courses", path: "/courses" },
   { name: "Terms of Service", path: "/terms" },
   { name: "Shop", path: "/shop" },
-  { name: "Privacy Policy", path: "/privacy" },
+  { name: "Privacy Policy", path: "/privacypolicy" },
 ];
 
 export const categories = [

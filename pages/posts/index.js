@@ -22,14 +22,14 @@ const Home = ({ posts, categories }) => {
 
   return (
     <div>
-      <div className="w-full md:grid lg:grid-cols-12 gap-4">
-        <div className="grid w-full place-self-start content-center md:col-span-8">
+      <div className="grid relative w-full lg:grid-cols-12 gap-4">
+        <div className="grid w-full place-self-start content-center md:w-full md:col-span-8">
           {blogs.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
         <div className="grid w-full md:col-span-8 lg:col-span-4 ">
-          <div className="grid w-full place-self-center md:flex md:w-4/5 lg:grid lg:sticky lg:w-4/5 top-8 ">
+          <div className="grid w-full place-self-center md:flex md:full lg:grid lg:sticky lg:w-4/5 top-8 ">
             <PostWidget recentPosts={blogs} />
             <Categories categories={categories} />
           </div>

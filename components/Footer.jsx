@@ -6,7 +6,7 @@ import SocialWidget from "./SocialWidget";
 import gogixerLogo from "./../public/images/gogixer.png";
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full h-fit bottom-0 border-t-2 border-white/[.30] bg-gray-900 bg-opacity-80 p-4 ">
+    <div className="flex flex-col w-full h-fit bottom-0 transition-all duration-700 bg-gray-900 bg-opacity-50 p-4 hover:bg-opacity-80 ">
       <div className="grid w-full place-items-center top-0 px-2 md:grid-cols-3">
         <div className="grid grid-cols-2 w-full p-4 place-items-start md:place-items-start md:w-full ">
           {TagName.footermenus.map((m) => (
@@ -14,7 +14,7 @@ const Footer = () => {
               <a
                 tabIndex={1}
                 data-text={m.name}
-                className="w-full text-sm py-0.5 mx-1 transition-all duration-300 hover:text-white text-gray-300"
+                className="underLine relative w-fit text-sm py-1 mx-1 transition-all duration-300 hover:text-white text-gray-300"
               >
                 {m.name}
               </a>

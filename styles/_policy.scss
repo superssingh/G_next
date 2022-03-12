@@ -1,0 +1,69 @@
+.policy {
+  background: rgba(255, 255, 255, 0.705);
+  padding: 1rem;
+
+  h2,
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(6, 136, 49);
+    border-top: 2px solid rgb(6, 136, 49);
+  }
+
+  p,
+  ul {
+    margin: 12px 0;
+    padding: 0 10px;
+    text-align: justify;
+  }
+  p:before {
+    content: "✅";
+    padding: 10px 10px 10px 0;
+    font-weight: 500;
+    color: rgb(7, 180, 56);
+  }
+
+  li:before {
+    content: "✅";
+    padding: 10px 10px 10px 0;
+    font-weight: 500;
+  }
+}
+
+.terms {
+  background: rgba(255, 255, 255, 0.705);
+  padding: 1rem;
+
+  h2,
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(6, 136, 49);
+    border-top: 2px solid rgb(6, 136, 49);
+  }
+
+  p,
+  ul {
+    margin: 12px 0;
+    padding: 0 10px;
+    text-align: justify;
+  }
+  .PolicyLink {
+    background: rgb(82, 6, 143);
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 1rem;
+  }
+  p:before {
+    content: "✅";
+    padding: 10px 10px 10px 0;
+    font-weight: 500;
+    color: rgb(7, 180, 56);
+  }
+
+  li:before {
+    content: "✅";
+    padding: 10px 10px 10px 0;
+    font-weight: 500;
+  }
+}
