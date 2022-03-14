@@ -533,7 +533,7 @@ html {
 
 @layer components {
   .card {
-    @apply w-full transition-all duration-500 place-self-center bg-white bg-opacity-70  md:flex md:max-w-2xl lg:grid lg:relative lg:w-80 xl:w-96 2xl:w-80 shadow-lg overflow-hidden rounded-lg mb-6 hover:bg-opacity-90;
+    @apply w-full transition-all duration-500 place-self-center bg-white bg-opacity-70  md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 shadow-lg overflow-hidden rounded-lg mb-6 hover:bg-opacity-90;
   }
 }
 body {

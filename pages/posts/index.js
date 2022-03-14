@@ -23,7 +23,7 @@ const Home = ({ posts, categories }) => {
   return (
     <div>
       <div className="grid relative w-full lg:grid-cols-12 gap-4">
-        <div className="grid w-full place-self-start content-center md:w-full md:col-span-8 lg:grid-cols-2 2xl:grid-cols-3">
+        <div className="grid w-full place-self-start content-center md:w-full md:col-span-8 xl:grid-cols-2 2xl:grid-cols-3">
           {blogs.map((p) => (
             <PostCard post={p.node} key={p.node.id} />
           ))}
