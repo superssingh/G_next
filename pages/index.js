@@ -31,6 +31,12 @@ const Home = ({ posts, categories }) => {
           learn web development skills.
         </span>
       </div>
+
+      <div className="hero-section">
+        <div>
+          <span>Hi, I'm Santosh Singh</span>
+        </div>
+      </div>
     </div>
   );
 };
