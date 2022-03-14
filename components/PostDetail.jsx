@@ -6,7 +6,7 @@ import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
   return (
-    <div className="grid relative place-content-center text-md ">
+    <div className="grid relative place-content-center  ">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
@@ -16,13 +16,13 @@ const PostDetail = ({ post }) => {
           className="object-cover shadow-lg rounded-t-lg"
         />
       </div>
-      <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-6 mb-6">
+      <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
         <div className="PostDetail">
-          <div className="text-gray-700 text-3xl font-semibold mx-4 mb-6 ">
+          <div className="text-gray-700 text-4xl font-semibold p-4 mb-4 ">
             {post.title}
           </div>
           <div className="relative text-justify px-4 pb-2">
-            <div className=" text-center align-middle flex uppercase tracking-wide text-sm font-semibold mb-6  ">
+            <div className="flex text-center align-middle uppercase tracking-wide text-sm font-semibold mb-2  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -44,9 +44,9 @@ const PostDetail = ({ post }) => {
               </div>
             </div>
 
-            <div className="text-justify text-md text-gray-700">
+            <div className="text-justify text-lg text-gray-600">
               {post.content.map((c, id) => (
-                <div className="my-8" key={id}>
+                <div className="my-6" key={id}>
                   <Markdown>{c.html}</Markdown>
                 </div>
               ))}

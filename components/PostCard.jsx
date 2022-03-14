@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
       <div className="card ">
-        <div className="relative h-56 w-full shadow-lg md:w-48 md:h-48 md:shrink-0">
+        <div className="relative h-56 w-full md:w-48 md:h-48 md:shrink-0 lg:h-56 lg:w-full shadow-lg ">
           <Image
             src={post.featured_image[0].url}
             alt={post.title}
