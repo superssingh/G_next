@@ -28,8 +28,8 @@ const Home = ({ posts, categories }) => {
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
-        <div className="grid w-full md:col-span-8 lg:col-span-4 ">
-          <div className="grid w-full place-self-center md:flex md:full lg:grid lg:sticky lg:w-4/5 top-8 ">
+        <div className="grid w-full md:col-span-8 lg:col-span-4">
+          <div className="grid w-full bg-slate-300 md:flex lg:grid lg:sticky place-content-center">
             <PostWidget recentPosts={blogs} />
             <Categories categories={categories} />
           </div>
