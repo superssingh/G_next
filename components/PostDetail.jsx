@@ -18,11 +18,11 @@ const PostDetail = ({ post }) => {
       </div>
       <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-6 mb-6">
         <div className="PostDetail">
-          <div className="text-violet-900 text-center uppercase text-3xl font-bold mx-6 mb-6">
+          <div className="text-gray-700 text-3xl font-semibold mx-4 mb-6 ">
             {post.title}
           </div>
           <div className="relative text-justify px-4 pb-2">
-            <div className=" text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-6  ">
+            <div className=" text-center align-middle flex uppercase tracking-wide text-sm font-semibold mb-6  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"

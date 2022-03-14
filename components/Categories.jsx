@@ -10,8 +10,8 @@ const Categories = ({ categories }) => {
         {categories &&
           categories.map((m) => (
             <Link href={`/categories/${m.name}`} key={m.id}>
-              <div className="text-center transition-all duration-700 bg-teal-50 shadow-lg shadow-slate-700/[.30] bg-opacity-30 place-content-start items-center rounded-lg mt-2 mx-1  hover:bg-opacity-80">
-                <div className="w-fit px-5 py-2">
+              <div className="text-center transition-all duration-700 bg-teal-50 shadow-lg shadow-slate-700/[.30] bg-opacity-30 place-content-start items-center rounded-lg mt-2 mx-1 hover:bg-opacity-80">
+                <div className="w-fit pl-4 py-2">
                   <span className="text-gray-800">{m.name}</span>
                 </div>
               </div>

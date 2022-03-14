@@ -5,6 +5,7 @@
   height: wrap;
   position: fixed;
   backdrop-filter: blur(1rem);
+
   top: 0;
   transition: 0.3s ease-in-out;
   div {
@@ -22,8 +23,9 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(10px);
-  background: $transparentGlassColor;
+
+  background: $navBarColor;
+  backdrop-filter: blur(10rem);
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
@@ -89,13 +91,16 @@
     color: $menusTextColors;
     outline: 0;
     &:hover {
-      background: $GradientPurple;
+      background: $menusColors;
       box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
     }
     &:focus,
     &:active {
-      background: $GradientPurple;
-      box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+      // background: $GradientPurple;
+      // color: $blackColor;
+      background: $menusColors;
+      // box-shadow: 0px 10px 8px 0px rgba(255, 255, 255, 0.746);
+      box-shadow: 0px 15px 8px 0px rgba(28, 27, 27, 0.884);
     }
   }
 }
@@ -196,7 +201,7 @@
     min-height: 100vh;
     height: 100%;
     backdrop-filter: blur(10em);
-    background: rgba(18, 0, 22, 0.947);
+    background: $mobileNavColor;
     box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.173);
     outline: 0;
     place-self: top;
@@ -281,6 +286,7 @@
       position: relative;
       justify-content: center;
       margin-top: 5rem;
+      transition: all 0.5s ease;
       :hover {
         filter: hue-rotate(90deg);
       }

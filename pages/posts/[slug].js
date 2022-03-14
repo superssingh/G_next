@@ -20,7 +20,7 @@ const Blog = ({ post, categories, posts }) => {
 
       <div className="">
         <div className="grid relative w-full pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
-          <div className="grid w-full place-self-center content-center md:col-span-8">
+          <div className="grid max-w-3xl place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
           </div>
           <div className="grid w-full md:col-span-8 lg:col-span-4 ">

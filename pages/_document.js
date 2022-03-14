@@ -7,17 +7,17 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/Nunito-Light.ttf"
+            href="/fonts/Muli-Light.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Nunito-Regular.ttf"
+            href="/fonts/Muli-Regular.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
-          <link
+          {/* <link
             rel="preload"
             href="/fonts/Nunito-Medium.ttf"
             as="font"
@@ -35,7 +35,7 @@ class MyDocument extends Document {
             href="/fonts/Nunito-Bold.ttf"
             as="font"
             crossOrigin="anonymous"
-          ></link>
+          ></link> */}
         </Head>
         <body>
           <Main></Main>
