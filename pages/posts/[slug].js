@@ -24,7 +24,7 @@ const Blog = ({ post, categories, posts }) => {
             <PostDetail post={post} />
           </div>
           <div className="grid w-full md:col-span-8 lg:col-span-4">
-            <div className=" place-content-center  md:flex lg:grid lg:sticky lg:place-content-start">
+            <div className="place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
               <PostWidget
                 recentPosts={posts}
                 category={post.categories[0].name}
