@@ -13,8 +13,8 @@
   width: 100%;
   height: wrap;
   position: fixed;
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(10rem);
+          backdrop-filter: blur(10rem);
   top: 0;
   transition: 0.3s ease-in-out;
 }
@@ -32,9 +32,9 @@
   height: 4rem;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(0deg, #5f5e5e1f, #0808088f, #080808c4);
-  -webkit-backdrop-filter: blur(10rem);
-          backdrop-filter: blur(10rem);
+  background: linear-gradient(0deg, #5f5e5e14, #3115478f, #080808c4);
+  -webkit-backdrop-filter: blur(10em);
+          backdrop-filter: blur(10em);
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
@@ -524,6 +524,10 @@
 .author .authorPic {
   border-radius: 2rem;
   background: rgba(28, 7, 61, 0.76);
+}
+
+.postContent {
+  font-size: 18px;
 }
 
 html {

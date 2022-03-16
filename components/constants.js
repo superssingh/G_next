@@ -1,7 +1,10 @@
 "use strict";
 
 export const menus = [
-  { name: "Home", path: "/" },
+  {
+    name: "Home",
+    path: "/",
+  },
   { name: "Blog", path: "/posts" },
   // { name: "Courses", path: "/courses" },
   { name: "Shop", path: "/shop" },

@@ -4,8 +4,7 @@
   width: 100%;
   height: wrap;
   position: fixed;
-  backdrop-filter: blur(1rem);
-
+  backdrop-filter: blur(10rem);
   top: 0;
   transition: 0.3s ease-in-out;
   div {
@@ -23,9 +22,8 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-
   background: $navBarColor;
-  backdrop-filter: blur(10rem);
+  backdrop-filter: blur(10em);
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;

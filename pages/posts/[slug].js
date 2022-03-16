@@ -19,7 +19,7 @@ const Blog = ({ post, categories, posts }) => {
       <HeadTag post={post} />
 
       <div className="">
-        <div className="grid relative w-full pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
+        <div className="grid relative w-full px-4 pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
           <div className="grid max-w-3xl place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
           </div>

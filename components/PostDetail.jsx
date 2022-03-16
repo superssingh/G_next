@@ -21,7 +21,7 @@ const PostDetail = ({ post }) => {
           <div className="text-gray-700 text-4xl font-semibold p-4 mb-4 ">
             {post.title}
           </div>
-          <div className="relative text-justify px-4 pb-2">
+          <div className="relative px-4 pb-2">
             <div className="flex text-center align-middle uppercase tracking-wide text-sm font-semibold mb-2  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const PostDetail = ({ post }) => {
               </div>
             </div>
 
-            <div className="text-justify text-lg text-gray-600">
+            <div className=" text-lg text-gray-600">
               {post.content.map((c, id) => (
                 <div className="my-6" key={id}>
                   <Markdown>{c.html}</Markdown>

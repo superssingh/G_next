@@ -32,9 +32,9 @@ const Home = ({ posts, categories }) => {
         </span>
       </div>
 
-      <div className="hero-section">
-        <div>
-          <span>Hi, I'm Santosh Singh</span>
+      <div className="hero-section transition-all duration-500 bg-black bg-opacity-10 p-8 hover:bg-opacity-50">
+        <div className="underLine">
+          <span className=" text-4xl text-white">Welcome to Gogixer...</span>
         </div>
       </div>
     </div>

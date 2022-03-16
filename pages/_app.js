@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <div className="w-full flex flex-col min-h-screen">
-        <div className="containerbox flex-grow mt-24 mb-10 px-4">
+        <div className="containerbox flex-grow mt-24 mb-10 ">
           <Component {...pageProps} />
         </div>
 
