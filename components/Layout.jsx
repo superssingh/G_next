@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlogContext from "./contexts/blogContext";
-import { Navbar, Footer } from "./";
+import { Navbar } from "./";
 
 const Layout = ({ children, posts }) => {
   const [blogs, setBlogs] = useState([]);
@@ -15,26 +15,22 @@ const Layout = ({ children, posts }) => {
   };
 
   return (
-    <div className="containerBox flex flex-col min-w-screen min-h-screen ">
-      <BlogContext.Provider
-        value={{
-          blogs: blogs,
-          categories: categories,
-          setBlogs: handleBlogs,
-          setCategories: handleCategory,
-        }}
-      >
-        <Navbar />
-        <div>{children}</div>
-      </BlogContext.Provider>
-    </div>
+    <React.StrictMode>
+      <div className="containerBox flex flex-col min-w-screen min-h-screen ">
+        <BlogContext.Provider
+          value={{
+            blogs: blogs,
+            categories: categories,
+            setBlogs: handleBlogs,
+            setCategories: handleCategory,
+          }}
+        >
+          <Navbar />
+          <div>{children}</div>
+        </BlogContext.Provider>
+      </div>
+    </React.StrictMode>
   );
 };
 
 export default Layout;
-
-// static build page generator
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return { props: { posts } };
-}

@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { Layout, Footer } from "../components";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, posts, categories }) {
   return (
     <Layout>
       <Head>
@@ -54,8 +54,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return { props: { posts } };
-}

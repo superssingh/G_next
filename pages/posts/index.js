@@ -18,7 +18,7 @@ const Home = ({ posts, categories }) => {
       setBlogs(recent);
       setCategories(categories);
     }
-  }, []);
+  }, [posts]);
 
   return (
     <div>
