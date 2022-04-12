@@ -21,7 +21,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="gogixerLogo top-0 w-fit  place-items-center ">
+        <div className=" top-0 w-fit  place-items-center ">
           <Link className="w-48 center-center mx-8" href="/">
             <Image
               src={gogixerLogo}

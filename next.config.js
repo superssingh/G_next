@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   BASE_URL: process.env.BASE_URL,
   images: {
-    domains: ["media.graphcms.com"],
+    domains: ["media.graphcms.com", "media.graphassets.com"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
