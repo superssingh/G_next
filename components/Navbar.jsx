@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="Navigation">
       <div>
-        <header className="Navbar">
+        <header className="Navbar border-b border-slate-500/[.0]">
           <a className="w-48 center-center mx-8" href="/">
             <Image src={Logo} alt={TagName.COMPANY_NAME} />
           </a>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <li>
               {TagName.menus.map((m) => (
                 <Link key={m.name} href={m.path}>
-                  <a tabIndex={1} data-text={m.name}>
+                  <a tabIndex={1} data-text={m.name} className="uppercase">
                     {m.name}
                   </a>
                 </Link>

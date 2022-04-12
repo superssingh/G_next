@@ -4,7 +4,6 @@
   width: 100%;
   height: wrap;
   position: fixed;
-  backdrop-filter: blur(10rem);
   top: 0;
   transition: 0.3s ease-in-out;
   div {
@@ -22,8 +21,8 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-  background: $navBarColor;
   backdrop-filter: blur(10em);
+  background: $mobileNavColor;
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
@@ -91,7 +90,7 @@
   height: inherit;
   li a {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     margin: 0 0.2rem;
     border-radius: 1.5em;
     transition: 0.3s ease-in-out;
