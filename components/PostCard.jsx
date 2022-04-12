@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
       <div className="card ">
-        <div className="relative h-56 w-full md:w-48 md:h-48 md:shrink-0 xl:h-56 xl:w-full shadow-lg ">
+        <div className="relative h-56 w-full md:w-48 md:h-48 md:shrink-0 xl:h-56 xl:w-full">
           <Image
             src={post.featured_image[0].url}
             alt={post.title}
@@ -16,15 +16,15 @@ const PostCard = ({ post }) => {
             className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
-        <div className="h-36 w-full text-justify px-8 py-2">
-          <div className="text-center align-middle flex uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        <div className="h-36 w-full  px-8 py-2">
+          <div className="text-center align-middle flex uppercase tracking-wide text-xs text-blue-600 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
+              width="15"
+              height="15"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#333333"
+              stroke="#3468f7"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -43,14 +43,10 @@ const PostCard = ({ post }) => {
             {post.title}
           </p>
 
-          <p className="line-clamp-3 mt-2 text-gray-600 ">{post.description}</p>
+          <p className="line-clamp-2 text-l mt-2 mb-2 text-gray-500 ">
+            {post.description}
+          </p>
         </div>
-
-        {/* <div className="absolute bottom-0 right-0 p-2 ">
-          <Link href={`/posts/${post.slug}`}>
-            <div className="leafButton">Read</div>
-          </Link>
-        </div> */}
       </div>
     </Link>
   );
