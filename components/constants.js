@@ -6,8 +6,8 @@ export const menus = [
     path: "/",
   },
   { name: "Blog", path: "/posts" },
-  // { name: "Courses", path: "/courses" },
   { name: "Shop", path: "/shop" },
+  { name: "Courses", path: "/courses" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
