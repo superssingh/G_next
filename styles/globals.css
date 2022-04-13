@@ -282,9 +282,6 @@
     top: 0;
     transition: all 0.3s;
   }
-  .mobile-open .social div a :hover {
-    padding: 0.5rem;
-  }
   .mobile-open .social div a svg {
     display: flex;
     position: relative;
