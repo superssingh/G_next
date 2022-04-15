@@ -44,7 +44,7 @@ const PostWidget = ({ recentPosts, category, id }) => {
                   width={70}
                   height={70}
                   layout="fixed"
-                  className="align-middle  justify-self-stretch object-cover rounded-lg"
+                  className="align-middle  justify-self-stretch object-cover rounded-l-lg"
                 ></Image>
                 <div className="w-fit pl-2 pr-2">
                   <div className="text-gray-800 text-md font-semibold">
