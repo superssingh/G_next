@@ -16,7 +16,7 @@ const Home = () => {
 
       <div className="transition-all duration-500 p-8 hover:bg-opacity-50">
         <div>
-          <span className=" text-4xl ">Welcome to Gogixer...</span>
+          <span className=" text-4xl ">Hi, Welcome to Gogixer...</span>
         </div>
       </div>
     </div>
