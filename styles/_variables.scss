@@ -16,7 +16,7 @@ $MintColor: rgb(238, 246, 250);
 $YellowColor: rgba(237, 181, 0, 0.981);
 $blackGlassColor: linear-gradient(-90deg, #010101c6, #0c0c0cdd, #090909ad);
 $wineGlassColor: linear-gradient(-90deg, #180816cb, #090909cb, #180816cb);
-$transparentWhiteColor: linear-gradient(45deg, #383838cf, #ffffffc2, #d2d2d2de);
+$transparentWhiteColor: linear-gradient(45deg, #545454d4, #ffffffc2, #545454d4);
 $GradientWhiteColor: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
 $GradientGreenColor: linear-gradient(90deg, #020c06, #b8fccf, #030a05);
 $GradientGreenReverse: linear-gradient(-45deg, #043a19, #e7fbf3, #053f1b);
@@ -55,7 +55,7 @@ $background3: radial-gradient(at 2% 63%, hsl(290, 68%, 39%) 0, transparent 59%),
   radial-gradient(at 47% 33%, hsla(320, 86%, 36%, 0.973) 0, transparent 59%),
   radial-gradient(at 80% 55%, hsla(313, 47%, 45%, 0.767) 0, transparent 55%);
 
-$transparentGlassColor: linear-gradient(0deg, #5f5e5e14, #3115478f, #080808c4);
+$transparentGlassColor: linear-gradient(0deg, #eeeaea64, #f7f6f68f, #d8d7d7c4);
 $GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #044e23);
 $GradientPurple: linear-gradient(90deg, #130113, #d503d5, #130113);
 $GradientPurple1: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
@@ -70,6 +70,7 @@ $PurpleDark: rgba(18, 0, 22, 0.947);
 $GreenDark: rgba(0, 22, 4, 0.947);
 $Gradientblack: linear-gradient(-90deg, #010101d2, #373737dd, #010101d2);
 $GradientWhite: linear-gradient(-90deg, #c0bfbfd2, #d6d5d5dd, #e7dad2d2);
+$GradientWhite: linear-gradient(-90deg, #c0bfbfd2, #d6d5d5dd, #e7dad2d2);
 
 // $mobileMenu: $GlassColor;
 $navBarColor: $whiteColor;
@@ -77,6 +78,6 @@ $navMenuColor: $grayColor;
 $menusColors: $GradientWhiteColor;
 $menusTextColors: $grayColor;
 
-$mobileNavColor: rgb(197, 208, 222);
-$bodyColor: $mobileNavColor;
+$mobileNavColor: rgb(22, 22, 23);
+$bodyColor: rgb(225, 224, 224);
 $fontColor: $grayColor;

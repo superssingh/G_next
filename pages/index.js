@@ -15,7 +15,7 @@ const Home = () => {
       </div>
 
       <div className="hero-section transition-all duration-500 p-8 hover:bg-opacity-50">
-        <div className="underLine">
+        <div>
           <span className=" text-4xl ">Welcome to Gogixer...</span>
         </div>
       </div>

@@ -21,8 +21,9 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(10em);
-  background: $mobileNavColor;
+  backdrop-filter: blur(0.8em);
+  background: rgba(247, 247, 247, 0.677);
+  box-shadow: 0px 1px 0px 0px rgba(215, 215, 215, 0.291);
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
@@ -195,7 +196,7 @@
     min-height: 100vh;
     height: 100%;
     background: $mobileNavColor;
-    box-shadow: 0px 0px 0px 1px rgba(221, 221, 221, 0.441);
+
     outline: 0;
     place-self: top;
     .mobile-menus {
@@ -212,7 +213,7 @@
         font-size: 1.2rem;
         line-height: 1.2rem;
         letter-spacing: 2px;
-        -webkit-text-stroke: 2px rgba(182, 178, 178, 0.342);
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.342);
         color: $menusTextColors;
         &::before {
           content: attr(data-text);
@@ -224,9 +225,9 @@
         }
 
         &:hover::before {
-          width: 90%;
-          -webkit-text-stroke: 1px rgb(8, 169, 89);
-          border-right: 6px solid rgb(9, 172, 91);
+          width: 80%;
+          -webkit-text-stroke: 1px rgb(241, 242, 242);
+          border-right: 6px solid rgb(255, 255, 255);
         }
       }
       li {

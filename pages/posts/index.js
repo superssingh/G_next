@@ -17,8 +17,9 @@ const Home = ({ posts, categories }) => {
       );
       setBlogs(recent);
       setCategories(categories);
+      console.log("data from first");
     }
-  }, [posts]);
+  }, []);
 
   return (
     <div>
@@ -30,7 +31,7 @@ const Home = ({ posts, categories }) => {
         </div>
         <div className="grid w-full md:col-span-8 lg:col-span-4 ">
           <div className=" place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
-            <PostWidget recentPosts={blogs} />
+            {blogs && <PostWidget recentPosts={blogs} />}
             <Categories categories={categories} />
           </div>
         </div>
