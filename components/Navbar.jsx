@@ -45,12 +45,20 @@ const Navbar = () => {
           </div>
         </header>
       </div>
-      <ul className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}>
-        <li className="mobile-menus">
+      <ul
+        className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
+        onClick={handleClicked}
+      >
+        <li className="mobile-menus" tabIndex={2}>
           {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
-              <a onClick={handleClicked} data-text={m.name}>
-                {m.name}
+              <a
+                className="hover:bg-green-300/80"
+                onClick={handleClicked}
+                data-text={m.name}
+              >
+                <div className="icon w-auto">{m.icon}</div>
+                <div className="menuname w-fit">{m.name}</div>
               </a>
             </Link>
           ))}
@@ -73,6 +81,7 @@ const Navbar = () => {
                 alt={TagName.COMPANY_NAME}
                 width={80}
                 height={80}
+                onClick={handleClicked}
               />
             </Link>
           </li>

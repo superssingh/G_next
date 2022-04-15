@@ -17,7 +17,6 @@ const Home = ({ posts, categories }) => {
       );
       setBlogs(recent);
       setCategories(categories);
-      console.log("data from first");
     }
   }, []);
 
