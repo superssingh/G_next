@@ -8,8 +8,8 @@ import { PostCard, PostWidget, Categories } from "../../components";
 import * as TagName from "../../components/constants";
 
 const Category = () => {
-  const { blogs, categories, setBlogs, setCategories } =
-    useContext(BlogContext);
+  // const { blogs, categories, setBlogs, setCategories } =
+  //   useContext(BlogContext);
   const router = useRouter();
   const { id } = router.query;
 
