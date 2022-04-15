@@ -30,11 +30,10 @@
   height: 4rem;
   justify-content: space-between;
   align-items: center;
-  -webkit-backdrop-filter: blur(0.8em);
-          backdrop-filter: blur(0.8em);
-  background: rgba(247, 247, 247, 0.677);
-  box-shadow: 0px 1px 0px 0px rgba(215, 215, 215, 0.291);
-  padding: 0.5rem 1rem;
+  -webkit-backdrop-filter: blur(1em);
+          backdrop-filter: blur(1em);
+  background: rgba(233, 231, 231, 0.371);
+  padding: 1rem;
   position: fixed;
   top: 0;
 }
@@ -43,6 +42,7 @@
   display: flex;
   position: relative;
   justify-content: center;
+  place-items: center;
   overflow: hidden;
 }
 
@@ -54,8 +54,8 @@
   align-self: center;
   z-index: 1;
   cursor: pointer;
-  width: 1.5rem;
-  height: 0.1rem;
+  width: 1rem;
+  height: 2px;
   right: 0;
   background-color: rgb(75, 75, 75);
   transition: all 0.3s ease-in-out;
@@ -64,10 +64,10 @@
 .hamburger_lines::before,
 .hamburger_lines::after {
   align-self: center;
-  z-index: 1;
+  z-index: 1.5;
   cursor: pointer;
   width: 2rem;
-  height: 0.1rem;
+  height: 2px;
   right: 0;
   background-color: rgb(75, 75, 75);
   transition: all 0.3s ease-in-out;
@@ -214,29 +214,31 @@
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    background: rgb(22, 22, 23);
+    -webkit-backdrop-filter: blur(1.5em);
+            backdrop-filter: blur(1.5em);
+    background: rgba(233, 231, 231, 0.371);
     outline: 0;
     place-self: top;
+    justify-content: end;
   }
   .mobile-open .mobile-menus {
     place-self: top;
-    width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    width: 20em;
+    height: 100%;
     padding: 1rem;
     top: 0;
+    background: rgba(233, 231, 231, 0.371);
+    box-shadow: -1px 0px 1px 0px rgb(164, 163, 163);
   }
   .mobile-open .mobile-menus a {
     display: flex;
     position: relative;
     width: 100%;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     line-height: 1.2rem;
     letter-spacing: 2px;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.342);
-    color: rgb(75, 75, 75);
+    -webkit-text-stroke: 1px rgb(144, 141, 141);
   }
   .mobile-open .mobile-menus a::before {
     content: attr(data-text);
@@ -248,8 +250,8 @@
   }
   .mobile-open .mobile-menus a:hover::before {
     width: 80%;
-    -webkit-text-stroke: 1px rgb(241, 242, 242);
-    border-right: 6px solid rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(10, 150, 98);
+    border-right: 6px solid rgb(10, 150, 98);
   }
   .mobile-open .mobile-menus li {
     width: 100%;
@@ -306,7 +308,7 @@
   }
 }
 #signin {
-  background: linear-gradient(90deg, #020c06, #b8fccf, #030a05);
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   font-weight: 500;
   color: rgb(255, 255, 255);
   padding: 1em;
@@ -416,7 +418,7 @@
   margin: 0;
   top: 0;
   transition: all 0.3s;
-  fill: rgb(255, 255, 255);
+  fill: rgb(15, 173, 83);
 }
 .instagram svg:hover,
 .youtube svg:hover,
@@ -519,7 +521,7 @@ html {
 
 @layer components {
   .card {
-    @apply w-full transition-all duration-500 place-self-center bg-white  md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 shadow-lg overflow-hidden rounded-lg mb-6 hover:bg-opacity-90;
+    @apply w-full transition-all duration-500 place-self-center  md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 shadow-lg overflow-hidden rounded-lg mb-6;
   }
 }
 body {
@@ -530,7 +532,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat;
-  background: rgb(225, 224, 224);
+  background: rgb(238, 235, 235);
   color: rgb(75, 75, 75);
   font-family: Poppins;
 }
@@ -550,6 +552,11 @@ body {
   margin-top: 6rem;
   min-height: 100%;
   transition: all 0.5s ease-in-out;
+}
+
+.card {
+  background: linear-gradient(90deg, rgba(172, 208, 190, 0.831372549), rgba(228, 254, 235, 0.7607843137), rgba(172, 208, 190, 0.831372549));
+  transition: 0.5s ease-in-out;
 }
 
 .leafButton,
@@ -626,10 +633,14 @@ body {
   justify-content: center;
   border: none;
   box-shadow: 0px 5px 5px 1px rgba(47, 17, 53, 0.318);
-  transition: all 0.8s ease;
+  transition: 0.8s ease;
 }
 #shareButton:hover, #shareButton:focus,
 #LikeButton:hover,
 #LikeButton:focus {
   box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+}
+
+.widget {
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
 }/*# sourceMappingURL=globals.css.map */

@@ -6,7 +6,7 @@ import moment from "moment";
 const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
-      <div className="card ">
+      <div className="card hover:-hue-rotate-180">
         <div className="relative h-56 w-full md:w-48 md:h-48 md:shrink-0 xl:h-56 xl:w-full">
           <Image
             src={post.featured_image[0].url}
@@ -17,14 +17,14 @@ const PostCard = ({ post }) => {
           />
         </div>
         <div className="h-36 w-full  px-8 py-2">
-          <div className="text-center align-middle flex uppercase tracking-wide text-xs text-blue-600 ">
+          <div className="text-center align-middle flex uppercase tracking-wide text-xs text-gray-600 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#3468f7"
+              stroke="#5a5c5a"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -5,7 +5,7 @@ const SocialWidget = () => {
   return (
     <div>
       <Link href="https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA">
-        <a className="youtube">
+        <a className="youtube ">
           <svg
             fill="#000000"
             xmlns="http://www.w3.org/2000/svg"
