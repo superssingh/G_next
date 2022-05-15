@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
       <div className="grid place-items-center  text-sm mt-6 text-gray-300">
         <p> &copy;2022 Gogixer.com | All right reserved.</p>
-        <p>Made by Santosh [superssingh@gmail.com]</p>
+        <p>Made by Santosh Singh [superssingh@gmail.com]</p>
       </div>
     </div>
   );

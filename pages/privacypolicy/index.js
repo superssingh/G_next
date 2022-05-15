@@ -2,8 +2,8 @@ import Link from "next/link";
 const Policy = () => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm ">
-      <div className="min-w-screen max-w-3xl bg-white/[0.35] shadow-lg drop-shadow-md border-y-2 border-slate-100/[.45] rounded-lg p-2 mb-6  ">
-        <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-white">
+      <div className="gradientbg max-w-3xl shadow-lg drop-shadow-md border-y-2 border-slate-200/[.65] rounded-lg p-6 mb-6 md:mx-2">
+        <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-gray-500">
           Privacy Policy
         </h1>
         <div className="policy rounded-lg">
