@@ -1,9 +1,11 @@
 $height: 4rem;
 //-------color
-$primaryColor: linear-gradient(-90deg, #340434d7, #9b0d96d8, #2e032ed7);
+$primaryColor: rgb(249, 253, 249);
+$primaryDarkColor: rgba(10, 10, 10, 0.757);
+$secondaryColor: rgb(60, 175, 60);
+
 $primaryColor1: linear-gradient(-90deg, #340434d7, #d114cbb8, #2e032ed7);
-$primaryDarkColor: linear-gradient(90deg, #ffffffd3, #dfdfdfea, #555454bf);
-$secondaryColor: linear-gradient(-90deg, #044322, #09b84c, #044322);
+
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
 $GradientGreen: linear-gradient(90deg, #04532c, #00ff62e9, #044d3a);
 $GradientGoldenColor: linear-gradient(90deg, #332003de, #ff5100, #352003e7);

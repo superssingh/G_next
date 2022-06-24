@@ -10,7 +10,7 @@
     margin: 0;
     top: 0;
     transition: all 0.3s;
-    fill: rgb(23, 188, 34);
+    fill: $secondaryColor;
     &:hover {
       background: rgb(255, 255, 255);
     }
