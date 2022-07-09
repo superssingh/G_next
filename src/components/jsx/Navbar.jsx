@@ -1,10 +1,7 @@
 import React, { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "./assets/gogixer.png";
-import * as TagName from "./constants";
-import SocialWidget from "./SocialWidget";
-import gogixerLogo from "./../public/images/gogixer.png";
+import { TagName, BrandName, Logo, SocialWidget } from "../";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -18,7 +15,7 @@ const Navbar = () => {
       <div>
         <header className="Navbar border-b border-slate-500/[.0]">
           <a className="w-48 center-center mx-8" href="/">
-            <Image src={Logo} alt={TagName.COMPANY_NAME} />
+            <Image src={BrandName} alt={TagName.COMPANY_NAME} />
           </a>
 
           <ul className={TagName.MENU_DEFAULT}>
@@ -77,7 +74,7 @@ const Navbar = () => {
           <li className="navLogo">
             <Link href="/">
               <Image
-                src={gogixerLogo}
+                src={Logo}
                 alt={TagName.COMPANY_NAME}
                 width={80}
                 height={80}

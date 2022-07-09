@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { getCategories, getPosts } from "../../services/getData";
+import { getCategories, getPosts } from "../../services/getBlogData";
 import BlogContext from "../../components/contexts/blogContext";
 import moment from "moment";
 import _ from "lodash";
-import { PostCard, PostWidget, Categories } from "../../components";
-import * as TagName from "../../components/constants";
+import { TagName, PostCard, PostWidget, Categories } from "../../components";
 
 const Home = ({ posts, categories }) => {
   const { blogs, setBlogs, setCategories } = useContext(BlogContext);

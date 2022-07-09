@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import * as TagName from "../components/constants";
+import * as TagName from "../components/js/constants";
 
 const Home = () => {
   return (

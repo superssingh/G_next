@@ -1,6 +1,5 @@
-import React, { ReactDOM, useState, useEffect } from "react";
-import BlogContext from "./contexts/blogContext";
-import { Navbar } from "./";
+import React, { useState } from "react";
+import { Navbar, BlogContext } from "../";
 
 const Layout = ({ children, posts }) => {
   const [blogs, setBlogs] = useState([]);

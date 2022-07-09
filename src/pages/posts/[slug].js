@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
-import BlogContext from "../../components/contexts/blogContext";
 import {
   getPosts,
   getPostDetail,
   getCategories,
   getPostsByCategory,
-} from "../../services/getData";
-import { HeadTag, PostDetail, PostWidget, Categories } from "../../components";
+} from "../../services/getBlogData";
+import {
+  BlogContext,
+  HeadTag,
+  PostDetail,
+  PostWidget,
+  Categories,
+} from "../../components";
 import moment from "moment";
 
 const Blog = ({ post }) => {

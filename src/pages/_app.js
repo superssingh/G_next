@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { Layout, Footer } from "../components";
+import { Layout, Footer } from "../components/";
 
 function MyApp({ Component, pageProps, posts, categories }) {
   return (

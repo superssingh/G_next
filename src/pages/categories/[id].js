@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { getCategories, getPosts } from "../../services/getData";
-import BlogContext from "../../components/contexts/blogContext";
+import { getCategories, getPosts } from "../../services/getBlogData";
 import moment from "moment";
 import _ from "lodash";
-import { PostCard, PostWidget, Categories } from "../../components";
-import * as TagName from "../../components/constants";
+import {
+  BlogContext,
+  PostCard,
+  PostWidget,
+  Categories,
+} from "../../components";
 
 const Category = () => {
   const { blogs, categories, setBlogs, setCategories } =

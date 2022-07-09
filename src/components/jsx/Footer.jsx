@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import * as TagName from "./constants";
-import SocialWidget from "./SocialWidget";
-import gogixerLogo from "./../public/images/gogixer.png";
+import { TagName, SocialWidget, Logo } from "../";
+
 const Footer = () => {
   return (
     <div className="flex flex-col w-full h-fit bottom-0 transition-all duration-700 p-4 bg-gray-900 text-gray-300">
@@ -24,7 +23,7 @@ const Footer = () => {
         <div className=" top-0 w-fit  place-items-center ">
           <Link className="w-48 center-center mx-8" href="/">
             <Image
-              src={gogixerLogo}
+              src={Logo}
               alt={TagName.COMPANY_NAME}
               width={100}
               height={100}
