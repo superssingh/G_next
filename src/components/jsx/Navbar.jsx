@@ -15,7 +15,7 @@ const Navbar = () => {
       <div>
         <header className="Navbar border-b border-slate-500/[.0]">
           <a className="w-48 center-center mx-8" href="/">
-            <Image src={BrandName} alt={TagName.COMPANY_NAME} />
+            <Image src={BrandName} alt={TagName.COMPANY_NAME} priority />
           </a>
 
           <ul className={TagName.MENU_DEFAULT}>
