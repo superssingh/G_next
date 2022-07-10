@@ -501,6 +501,103 @@
   font-size: 18px;
 }
 
+@-webkit-keyframes slideInTop {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInBottom {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slowShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slowShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -511,6 +608,23 @@ html {
     @apply w-full transition-all duration-500 place-self-center  md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 shadow-lg overflow-hidden rounded-lg mb-6;
   }
 }
+header,
+.card,
+.showFromTop {
+  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
+          animation: 0.7s ease-out 0s 1 slideInTop;
+}
+
+.showFromBottom {
+  -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
+          animation: 0.7s ease-out 0s 1 slideInBottom;
+}
+
+.showSlow {
+  -webkit-animation: 0.7s ease-out 0s 1 slowShow;
+          animation: 0.7s ease-out 0s 1 slowShow;
+}
+
 body {
   font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -634,4 +748,9 @@ body {
 
 .gradientbg {
   background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+}
+
+.contactbox {
+  background: linear-gradient(90deg, rgba(172, 208, 190, 0.831372549), rgba(228, 254, 235, 0.7607843137), rgba(172, 208, 190, 0.831372549));
+  transition: 0.5s ease-in-out;
 }/*# sourceMappingURL=globals.css.map */

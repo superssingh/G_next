@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SocialWidget = () => {
   return (
-    <div>
+    <div className="showSlow">
       <Link href="https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA">
         <a className="youtube ">
           <svg

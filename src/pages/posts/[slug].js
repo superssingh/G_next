@@ -49,7 +49,7 @@ const Blog = ({ post }) => {
   }
 
   return (
-    <div className="">
+    <div className="showSlow">
       <HeadTag post={post} />
 
       <div className="">

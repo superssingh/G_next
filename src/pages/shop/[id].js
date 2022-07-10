@@ -4,7 +4,11 @@ const Product = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return <p>Product: {id}</p>;
+  return (
+    <div className="showSlow">
+      <p>Product: {id}</p>;
+    </div>
+  );
 };
 
 export default Product;

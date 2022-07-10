@@ -1,5 +1,5 @@
 const categories = () => {
-  return <div>Categories </div>;
+  return <div className="showSlow">Categories </div>;
 };
 
 export default categories;

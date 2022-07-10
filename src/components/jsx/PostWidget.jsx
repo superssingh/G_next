@@ -29,7 +29,7 @@ const PostWidget = ({ recentPosts, category, id }) => {
   }, [recentPosts]);
 
   return (
-    <div className="widget relative  w-auto md:w-80 place-self-start  shadow-lg drop-shadow-md  rounded-lg p-6 mb-6 md:mx-2">
+    <div className="showSlow widget relative  w-auto md:w-80 place-self-start  shadow-lg drop-shadow-md  rounded-lg p-6 mb-6 md:mx-2">
       <h3 className=" text-md text-gray-800 border-b border-slate-500/[.50] pb-2">
         {similar ? "Relevant Posts" : "Recent Posts"}
       </h3>

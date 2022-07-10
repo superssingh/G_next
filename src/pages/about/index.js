@@ -2,7 +2,7 @@
 
 const About = () => {
   return (
-    <div className=" w-full items-center bg-white/20 shadow-lg p-4 rounded-md">
+    <div className=" w-full items-center bg-white/20 shadow-lg p-4 rounded-md showSlow">
       <div>About Us</div>
       <div className="relative ">
         Hello, welcome to gogixer. An online tech and web development website

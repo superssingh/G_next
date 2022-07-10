@@ -6,7 +6,7 @@ import Markdown from "markdown-to-jsx";
 
 const PostDetail = ({ post }) => {
   return (
-    <div className="grid relative place-content-center  ">
+    <div className="grid relative place-content-center showSlow">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
