@@ -20,8 +20,8 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className=" top-0 w-fit  place-items-center ">
-          <Link className="w-48 center-center mx-8" href="/">
+        <div className=" top-0 w-fit">
+          <Link href="/">
             <Image
               src={Logo}
               alt={TagName.COMPANY_NAME}
@@ -35,8 +35,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="grid place-items-center  text-sm mt-6 text-gray-300">
-        <p> &copy;2022 Gogixer.com | All right reserved.</p>
-        <p>Made by Santosh Singh [superssingh@gmail.com]</p>
+        <div> &copy;2022 Gogixer.com | All right reserved.</div>
+        <div>Made by Santosh Singh [superssingh@gmail.com]</div>
       </div>
     </div>
   );

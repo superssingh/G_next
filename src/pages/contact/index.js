@@ -38,7 +38,7 @@ const Contact = () => {
         </div>
         <div className="grid place-content-center m-2">
           <button type="submit" className="leafButton">
-            Submit
+            Send
           </button>
         </div>
       </div>

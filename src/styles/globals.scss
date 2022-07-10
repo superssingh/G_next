@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./keyframes";
 @import "./breakpoints";
 @import "./variables";
 @import "./navbar";
@@ -8,59 +9,6 @@
 @import "./icons";
 @import "./policy";
 @import "./post_detail";
-
-@keyframes slideInTop {
-  0% {
-    transform: translateY(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInBottom {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slowShow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -135,21 +83,24 @@ body {
 
 .leafButton,
 #signin {
-  background: linear-gradient(-45deg, #08164f, #08d57c, #08164f);
+  background: $GradientLightGreen;
+
   font-weight: 400;
   font-size: 1rem;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: rgb(47, 47, 47);
   padding: 1rem 1.7rem;
   border-radius: 0 20em;
   height: wrap;
   overflow: hidden;
   justify-content: center;
-  box-shadow: 0px 5px 5px 0px rgba(1, 26, 16, 0.692);
+  box-shadow: 0px 5px 5px 0px rgba(1, 26, 16, 0.321);
   transition: all 1s;
   &:hover,
   &:focus {
     border-radius: 20em 0;
+    // background: $menusColors;
+    box-shadow: 0px 10px 8px 0px rgba(77, 77, 77, 0.884);
   }
 }
 
@@ -160,7 +111,7 @@ body {
   margin-top: -1.5rem;
   margin-left: 0.5rem;
   backdrop-filter: blur(2rem);
-  background: $GradientWhiteColor;
+  background: $GradientLightGreen;
   color: rgb(37, 37, 38);
   padding: 1rem;
   border-radius: 20em;
@@ -168,7 +119,7 @@ body {
   overflow: hidden;
   justify-content: center;
   transform: rotate(0deg);
-  box-shadow: 0px 2px 10px 1px rgba(17, 17, 17, 0.865);
+  box-shadow: 0px 10px 5px 1px rgba(36, 36, 36, 0.865);
   transition: all 1s ease;
   &:hover,
   &:focus {
@@ -205,8 +156,7 @@ body {
   width: wrap;
   height: wrap;
   justify-content: center;
-  border: none;
-  box-shadow: 0px 5px 5px 1px rgba(47, 17, 53, 0.318);
+  box-shadow: 0px 15px 3px 1px rgba(30, 29, 30, 0.952);
   transition: 0.8s ease;
   &:hover,
   &:focus {
@@ -225,4 +175,8 @@ body {
 .contactbox {
   background: $cardColor;
   transition: 0.5s ease-in-out;
+}
+
+.bgDefault {
+  background: $cardColor;
 }

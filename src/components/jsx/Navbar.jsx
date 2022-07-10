@@ -22,7 +22,7 @@ const Navbar = () => {
             <li>
               {TagName.menus.map((m) => (
                 <Link key={m.name} href={m.path}>
-                  <a tabIndex={1} data-text={m.name} className="uppercase">
+                  <a tabIndex={1} data-text={m.name} className="">
                     {m.name}
                   </a>
                 </Link>
@@ -50,9 +50,9 @@ const Navbar = () => {
           {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a
-                className="hover:bg-green-300/80"
                 onClick={handleClicked}
                 data-text={m.name}
+                className="hoverEffect"
               >
                 <div className="icon w-auto">{m.icon}</div>
                 <div className="menuname w-fit">{m.name}</div>
