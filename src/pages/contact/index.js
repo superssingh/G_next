@@ -1,33 +1,65 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { TextField } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useForm, FormProvider } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import ContactForm from "../../components/jsx/ContactForm";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const schema = yup.object({
+  from_name: yup.string().min(3).max(24).required(),
+  from_email: yup.string().email().required(),
+  message: yup.string().min(25).max(200).required(),
+});
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
-  const service_ID = process.env.EMAIL_SERVICE_ID + "";
-  const private_Key = process.env.EMAIL_PRIVATE_KEY + "";
-  const template_ID = process.env.EMAIL_TEMPLATE_ID + "";
+  const EMAIL_SERVICE_ID = "service_qgsohfe";
+  const EMAIL_TEMPLATE_ID = "template_yfvxx4s";
   const publicKey = "1IbTNiS-_C1i67RVo";
   const form = useRef();
+  const methods = useForm({ resolver: yupResolver(schema) });
 
-  const EMAIL_SERVICE_ID = "service_qgsohfe";
-  const EMAIL_PRIVATE_KEY = "kQiHiz5OXbsXFSGG3NE1D";
-  const EMAIL_TEMPLATE_ID = "template_yfvxx4s";
-
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
     if (success) return;
 
-    emailjs.init(publicKey);
+    if (form.current.from_name.value.trim() == "") {
+      alert("Your name required.");
+      return;
+    }
+
+    if (form.current.message.value.trim() == "") {
+      alert("Your message required.");
+      return;
+    }
+
     emailjs
       .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, form.current, publicKey)
       .then(
         (result) => {
           setSuccess(true);
+          toast.success("📧 Message sent! 🤩", {
+            position: "bottom-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         },
         (error) => {
-          alert("Error:\n", error.text);
+          toast.warn("Error : " + error.text, {
+            position: "bottom-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         }
       );
   };
@@ -47,48 +79,32 @@ const Contact = () => {
         )) || (
           <div>
             <div className="mx-2 text-center">Contact us</div>
-            <form ref={form} onSubmit={sendEmail}>
-              <div className=" md:flex p-2 ">
-                <div className="m-2 ">
-                  <TextField
-                    name="from_name"
-                    id="outlined-basic"
-                    label="Name"
-                    variant="outlined"
-                    className="m-2"
-                    fullWidth
-                  />
+            <FormProvider {...methods}>
+              <form
+                ref={form}
+                onSubmit={methods.handleSubmit(sendEmail)}
+                error={methods.error || null}
+              >
+                <ContactForm />
+                <div className="grid place-content-center m-2">
+                  <input type="submit" value="Send" className="leafButton" />
                 </div>
-                <div className="m-2 ">
-                  <TextField
-                    name="from_email"
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                    type="email"
-                    className="m-2"
-                    fullWidth
-                  />
-                </div>
-              </div>
-              <div className=" mx-4 ">
-                <TextField
-                  name="message"
-                  id="outlined-multiline-static"
-                  label="Message"
-                  multiline
-                  rows={4}
-                  fullWidth
-                  className="m-2"
-                />
-              </div>
-              <div className="grid place-content-center m-2">
-                <input type="submit" value="Send" className="leafButton" />
-              </div>
-            </form>
+              </form>
+            </FormProvider>
           </div>
         )}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
