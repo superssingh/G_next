@@ -7,35 +7,28 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/Muli-Light.ttf"
+            href="/fonts/Poppins-Light.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Muli-Regular.ttf"
-            as="font"
-            crossOrigin="anonymous"
-          ></link>
-          {/* <link
-            rel="preload"
-            href="/fonts/Nunito-Medium.ttf"
-            as="font"
-            crossOrigin="anonymous"
-          ></link>
-
-          <link
-            rel="preload"
-            href="/fonts/Nunito-SemiBold.ttf"
+            href="/fonts/Poppins-Regular.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
           <link
             rel="preload"
-            href="/fonts/Nunito-Bold.ttf"
+            href="/fonts/Poppins-Medium.ttf"
             as="font"
             crossOrigin="anonymous"
-          ></link> */}
+          ></link>
+          <link
+            rel="preload"
+            href="/fonts/Poppins-Bold.ttf"
+            as="font"
+            crossOrigin="anonymous"
+          ></link>
         </Head>
         <body>
           <Main></Main>

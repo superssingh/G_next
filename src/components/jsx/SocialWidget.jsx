@@ -1,13 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const SocialWidget = () => {
   return (
-    <div className="showSlow">
+    <div className="showSlow z-10">
       <Link href="https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA">
         <a className="youtube ">
           <svg
-            fill="#000000"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
             width="48px"
@@ -20,7 +19,7 @@ const SocialWidget = () => {
       <Link href="https://twitter.com/gogixer">
         <a className="twitter">
           <svg
-            fill="#000000"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
             width="48px"
@@ -33,7 +32,7 @@ const SocialWidget = () => {
       <Link href="https://www.linkedin.com/company/gogixer">
         <a className="linkedin">
           <svg
-            fill="#000000"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
             width="48px"
@@ -46,7 +45,7 @@ const SocialWidget = () => {
       <Link href="https://www.instagram.com/gogixer/">
         <a className="instagram">
           <svg
-            fill="#000000"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
             width="48px"

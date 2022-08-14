@@ -1,6 +1,6 @@
 const Shop = () => {
   return (
-    <div className="showSlow">
+    <div className="showSlow text-white">
       <div>Coming soon... </div>
     </div>
   );

@@ -66,7 +66,7 @@ const Contact = () => {
 
   return (
     <div className="grid place-content-center ">
-      <div className="contactbox grid place-content-center m-2 p-4 shadow-black/[0.30] transition-all duration-700 text-gray-500 rounded-lg shadow-lg showFromBottom">
+      <div className="contactbox grid place-content-center m-2 p-4 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
             <div className=" text-green-600 pr-2">
@@ -78,7 +78,7 @@ const Contact = () => {
           </div>
         )) || (
           <div>
-            <div className="mx-2 text-center">Contact us</div>
+            <div className="contactLabel mx-2 text-center">Contact Us</div>
             <FormProvider {...methods}>
               <form
                 ref={form}
@@ -94,6 +94,7 @@ const Contact = () => {
           </div>
         )}
       </div>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}

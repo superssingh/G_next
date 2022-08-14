@@ -17,7 +17,7 @@ const PostDetail = ({ post }) => {
           className="object-cover shadow-lg rounded-t-lg"
         />
       </div>
-      <div className=" bg-white bg-opacity-50 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
+      <div className=" bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
         <div className="PostDetail">
           <div className="text-gray-700 text-4xl font-semibold p-4 mb-4 ">
             {post.title}

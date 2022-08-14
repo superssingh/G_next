@@ -1,5 +1,5 @@
 const Courses = () => {
-  return <div className="showSlow">Coming soon... </div>;
+  return <div className="showSlow text-white">Coming soon... </div>;
 };
 
 export default Courses;

@@ -22,10 +22,9 @@
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(1em);
-  background: $navBarColor;
   padding: 1rem;
   position: fixed;
-  border-bottom: 1px solid rgb(227, 225, 225);
+  // border-bottom: 1px solid rgb(227, 225, 225);
   top: 0;
   .brandLogo {
     width: wrap;
@@ -98,14 +97,12 @@
     transition: 0.3s ease-in-out;
     color: $menusTextColors;
     outline: 0;
-    &:hover {
-      background: $menusColors;
-      box-shadow: 0px 15px 8px 0px rgba(93, 93, 94, 0.884);
-    }
+    &:hover,
     &:focus,
     &:active {
       background: $menusColors;
-      box-shadow: 0px 15px 8px 0px rgba(77, 77, 77, 0.884);
+      color: $blackColor;
+      box-shadow: 0px 5px 5px 1px rgba(10, 10, 10, 0.426);
     }
   }
 }
@@ -189,7 +186,6 @@
   }
 
   .mobile-open {
-    z-index: 2;
     display: grid;
     position: absolute;
     top: $height;
@@ -214,11 +210,12 @@
         font-size: 1rem;
         line-height: 1rem;
         transition: 0.3s ease-in-out;
+        color: #fff;
         .icon {
           display: grid;
           width: 3rem;
           place-content: center;
-          fill: #fff;
+          // fill: #fff;
         }
         .menuname {
           display: grid;
@@ -346,4 +343,9 @@
 .hoverEffect:hover {
   background: $menusColors;
   box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

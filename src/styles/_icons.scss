@@ -7,18 +7,22 @@
     height: wrap;
     border-radius: 0.5em;
     padding: 0;
-    margin: 0;
+    margin: 0 3px;
+
     top: 0;
-    transition: all 0.3s;
-    fill: $secondaryColor;
+    transition: all 0.7s;
+    fill: rgb(237, 248, 248);
+    box-shadow: 0px 2px 0px 0px rgba(186, 247, 224, 0.886);
     &:hover {
-      background: rgb(255, 255, 255);
+      background: rgb(251, 251, 251);
+      box-shadow: none;
+      // transform: rotate(45deg);
     }
   }
 }
 
 .instagram svg:hover {
-  fill: #f75371;
+  fill: #ff6021;
 }
 
 .youtube svg:hover {

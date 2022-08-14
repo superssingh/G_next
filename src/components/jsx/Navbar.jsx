@@ -46,15 +46,17 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <li className="mobile-menus" tabIndex={2}>
+        <li className="mobile-menus z-[5] ">
           {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a
                 onClick={handleClicked}
                 data-text={m.name}
-                className="hoverEffect"
+                className="hoverEffect z-10"
               >
-                <div className="icon w-auto">{m.icon}</div>
+                <div className="icon w-auto " width={24} height={24}>
+                  {m.icon}
+                </div>
                 <div className="menuname w-fit">{m.name}</div>
               </a>
             </Link>
@@ -67,11 +69,11 @@ const Navbar = () => {
             Sign Up
           </Link> */}
 
-          <li className="social">
+          <li className="social z-[10]">
             <SocialWidget />
           </li>
 
-          <li className="navLogo">
+          <li className="navLogo z-10">
             <Link href="/">
               <Image
                 src={Logo}
@@ -82,6 +84,7 @@ const Navbar = () => {
               />
             </Link>
           </li>
+          <div className="absolute z-[0] w-[40%] h-[100%] bottom-0 pink_gradient" />
         </li>
       </ul>
     </div>

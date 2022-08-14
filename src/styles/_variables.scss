@@ -1,11 +1,6 @@
 $height: 4rem;
 //-------color
-$primaryColor: rgb(249, 253, 249);
-$primaryDarkColor: rgba(10, 10, 10, 0.757);
-$secondaryColor: rgb(50, 187, 50);
-
-$primaryColor1: linear-gradient(-90deg, #340434d7, #d114cbb8, #2e032ed7);
-
+$GradientRedColor: linear-gradient(-90deg, #340434d7, #f31717b8, #2e032ed7);
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
 $GradientGreen: linear-gradient(90deg, #04532c, #00ff62e9, #044d3a);
 $GradientGoldenColor: linear-gradient(90deg, #332003de, #ff5100, #352003e7);
@@ -14,41 +9,18 @@ $blackGlassColor: linear-gradient(-90deg, #010101c6, #0c0c0cdd, #090909ad);
 
 //---------color options ----
 $primaryGreenColor: linear-gradient(-90deg, #250438, #0daa73, #1e032e);
-
-$gradientGlassColor: linear-gradient(
-  -90deg,
-  rgba(246, 246, 245, 1),
-  rgba(122, 121, 124, 1)
-);
-
 $transparentGlassColor: linear-gradient(0deg, #eeeaea64, #f7f6f68f, #d8d7d7c4);
 $GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #044e23);
-$GradientPurple: linear-gradient(90deg, #130113, #d503d5, #130113);
-$GradientPurple1: linear-gradient(0deg, #300230c2, #9b089bbd, #420542bb);
-$PurpleDark: rgba(18, 0, 22, 0.947);
-$GreenDark: rgba(0, 22, 4, 0.947);
-$Gradientblack: linear-gradient(-90deg, #010101d2, #373737dd, #010101d2);
-$GradientWhite: linear-gradient(-90deg, #445a7e, #0a244f, #445a7e);
-
 //Gradient Colors
-$GradientRedColor: linear-gradient(90deg, #470831, #ee319f, #38062a);
-$GradientWhiteColor: linear-gradient(90deg, #666565b7, #ffffff, #646262d5);
+
+$GradientWhiteColor: linear-gradient(90deg, #cacccbc2, #ffffffc2, #cacccbc2);
+
 $GradientGreenColor: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 $GradientLightGreen: linear-gradient(90deg, #53a569c2, #f2faf2c2, #589468c2);
 $GradientLightGreen45: linear-gradient(-45deg, #74ad83c2, #def3dec2, #74ad83c2);
 $GradientBlueColor: linear-gradient(90deg, #48538bc2, #7592c5c2, #48538bc2);
-$cardColor: linear-gradient(90deg, #acd0bed4, #e4feebc2, #acd0bed4);
+$GradientLime: linear-gradient(90deg, #acd0bed4, #e4feebc2, #acd0bed4);
 $transparentWhiteColor: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
-$bgColor: linear-gradient(
-  180deg,
-  #ffffff,
-  #fefeff,
-  #fafdff,
-  #f5fbff,
-  #f0f9ff,
-  #edf8ff,
-  #ebf7ff
-);
 
 $waterDrop: linear-gradient(-45deg, #74ad83c2, #f2faf2c2, #74ad83c2);
 
@@ -61,12 +33,50 @@ $GlassColor: rgba(24, 24, 24, 0.733);
 
 $grayColor: rgb(75, 75, 75);
 $blackColor: rgb(9, 9, 9);
-// $mobileMenu: $GlassColor;
+$purpleGradient: linear-gradient(0deg, #312d49 0%, #555076 100%);
+
+//---- Color Variables
+
+$primaryColor: rgb(249, 253, 249);
+$primaryDarkColor: rgba(10, 10, 10, 0.957);
+$secondaryColor: rgb(73, 239, 220);
+
+$backgroundColor: $purpleGradient;
+$fontColor: $grayColor;
+
+// Navbar Color------
 $navBarColor: $transparentWhite;
 $navMenuColor: $grayColor;
 $menusColors: $GradientGreenColor;
 $menusTextColors: $grayColor;
 
+//Mobile Navbar color ------
 $mobileNavColor: $whiteColor;
-$bodyColor: $whiteColor;
-$fontColor: $grayColor;
+// $bodyColor: $whiteColor;
+// $fontColor: $grayColor;
+$cardColor: $GradientLime;
+// $cardColor: $primaryColor;
+$menusTextColors: $whiteColor;
+$mobileNavColor: $primaryDarkColor;
+
+.pink_gradient {
+  z-index: 0;
+  background: linear-gradient(90deg, #f4c4f3 0%, #340325 100%);
+  filter: blur(400px);
+}
+
+.white_gradient {
+  z-index: 0;
+  // background: linear-gradient(90deg, #f4c4f3 0%, #fbfbfbc4 100%);
+  background: rgba(255, 255, 255, 0.772);
+  filter: blur(750px);
+}
+.blue_gradient {
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 38, 124, 0.843) 0%,
+    #66a0d6 100%
+  );
+  filter: blur(123px);
+}
