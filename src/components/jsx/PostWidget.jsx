@@ -29,7 +29,7 @@ const PostWidget = ({ recentPosts, category, id }) => {
   }, [recentPosts]);
 
   return (
-    <div className="showSlow widget relative  w-auto md:w-80 place-self-start  shadow-lg drop-shadow-md  rounded-lg p-6 mb-6 md:mx-2">
+    <div className="showSlow widget relative transition-all duration-700 w-auto md:w-80 place-self-start shadow-lg drop-shadow-md  rounded-lg p-6 mb-6 md:mx-2 ">
       <h3 className=" text-md text-gray-800 border-b border-slate-500/[.50] pb-2">
         {similar ? "Relevant Posts" : "Recent Posts"}
       </h3>
@@ -37,7 +37,7 @@ const PostWidget = ({ recentPosts, category, id }) => {
         similarPosts.map((m) => {
           return (
             <Link href={`/posts/${m.node.slug}`} key={m.node.id}>
-              <div className="flex items-center transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  place-content-start rounded-lg  my-2 hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45]">
+              <div className="flex items-center transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  place-content-start rounded-lg  my-2 hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45] ">
                 <Image
                   src={m.node.featured_image[0].url}
                   alt={m.node.title}

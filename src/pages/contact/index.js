@@ -65,8 +65,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="grid place-content-center ">
-      <div className="contactbox grid place-content-center m-2 p-4 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
+    <div className="grid place-content-center">
+      <div className="grid place-content-center m-2 p-4 bg-white bg-opacity-30 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
             <div className=" text-green-600 pr-2">
@@ -87,7 +87,11 @@ const Contact = () => {
               >
                 <ContactForm />
                 <div className="grid place-content-center m-2">
-                  <input type="submit" value="Send" className="leafButton" />
+                  <input
+                    type="submit"
+                    value="Send"
+                    className=" rounded-md autoColorChange p-4 shadow-lg shadow-black/50"
+                  />
                 </div>
               </form>
             </FormProvider>
