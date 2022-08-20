@@ -21,8 +21,10 @@
   height: $height;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(1em);
-  padding: 1rem;
+  align-content: center;
+  place-items: center;
+  backdrop-filter: blur(1.2em);
+  padding: 1rem 0.5rem;
   position: fixed;
   // border-bottom: 1px solid rgb(227, 225, 225);
   top: 0;
@@ -93,7 +95,7 @@
     font-size: 1rem;
     padding: 0.7rem;
     margin: 0 0.2rem;
-    border-radius: 1.5em;
+    border-radius: 100%;
     transition: 0.3s ease-in-out;
     color: $menusTextColors;
     outline: 0;
@@ -102,7 +104,7 @@
     &:active {
       background: $menusColors;
       color: $blackColor;
-      box-shadow: 0px 5px 5px 1px rgba(10, 10, 10, 0.426);
+      box-shadow: 0px 8px 8px 0px rgba(41, 41, 41, 0.85);
     }
   }
 }

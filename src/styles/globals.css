@@ -119,6 +119,12 @@
 * Testing
 *
 **/
+.purple_gradient {
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(188, 142, 233, 0.7725490196) 0%, rgba(60, 22, 101, 0.8901960784) 100%);
+  filter: blur(200px);
+}
+
 .pink_gradient {
   z-index: 0;
   background: linear-gradient(90deg, #f4c4f3 0%, #340325 100%);
@@ -133,10 +139,39 @@
 
 .blue_gradient {
   z-index: 0;
-  background: linear-gradient(180deg, rgba(14, 38, 124, 0.843) 0%, #66a0d6 100%);
+  background: linear-gradient(180deg, rgba(28, 61, 178, 0.843) 0%, #66a0d6 100%);
   filter: blur(123px);
 }
 
+.css-selector {
+  background: linear-gradient(246deg, #3e0f49, #0e4a50, #8f63ac);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 32s ease infinite;
+  animation: AnimationName 32s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 69%;
+  }
+  50% {
+    background-position: 100% 32%;
+  }
+  100% {
+    background-position: 0% 69%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 69%;
+  }
+  50% {
+    background-position: 100% 32%;
+  }
+  100% {
+    background-position: 0% 69%;
+  }
+}
 .Navigation {
   z-index: 5;
   display: flex;
@@ -160,9 +195,11 @@
   height: 4rem;
   justify-content: space-between;
   align-items: center;
-  -webkit-backdrop-filter: blur(1em);
-          backdrop-filter: blur(1em);
-  padding: 1rem;
+  align-content: center;
+  place-items: center;
+  -webkit-backdrop-filter: blur(1.2em);
+          backdrop-filter: blur(1.2em);
+  padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
 }
@@ -239,7 +276,7 @@
   font-size: 1rem;
   padding: 0.7rem;
   margin: 0 0.2rem;
-  border-radius: 1.5em;
+  border-radius: 100%;
   transition: 0.3s ease-in-out;
   color: rgba(252, 252, 252, 0.981);
   outline: 0;
@@ -247,7 +284,7 @@
 .menus li a:hover, .menus li a:focus, .menus li a:active {
   background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   color: rgb(9, 9, 9);
-  box-shadow: 0px 5px 5px 1px rgba(10, 10, 10, 0.426);
+  box-shadow: 0px 8px 8px 0px rgba(41, 41, 41, 0.85);
 }
 
 @media (min-width: 921px) {
@@ -659,7 +696,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgb(75, 75, 75);
-  background: linear-gradient(0deg, #312d49 0%, #555076 100%);
+  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, hsl(251deg, 60%, 68%) 100%);
   background-attachment: fixed;
   background-size: cover;
   font-family: Poppins;

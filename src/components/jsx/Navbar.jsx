@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="Navigation">
       <div>
-        <header className="Navbar border-b border-slate-500/[.0]">
+        <header className="Navbar border-b border-slate-500/[.0] ">
           <a className="w-48 center-center mx-8" href="/">
             <Image src={BrandName} alt={TagName.COMPANY_NAME} priority />
           </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <div className="absolute z-[0] w-[40%] h-[100%] bottom-0 pink_gradient" />
+          <div className="absolute z-[0] w-[100%] h-[100%] bottom-0 purple_gradient" />
         </li>
       </ul>
     </div>

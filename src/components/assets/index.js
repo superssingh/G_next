@@ -1,3 +1,4 @@
 import coding from "./coding.svg";
+import heroImg from "./codes.jpeg";
 
-export { coding };
+export { coding, heroImg };

@@ -37,7 +37,7 @@ const PostWidget = ({ recentPosts, category, id }) => {
         similarPosts.map((m) => {
           return (
             <Link href={`/posts/${m.node.slug}`} key={m.node.id}>
-              <div className="flex items-center transition-all duration-700 bg-white/30 shadow-lg shadow-black/[.30] place-content-start rounded-lg  my-2 hover:bg-white">
+              <div className="flex items-center transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  place-content-start rounded-lg  my-2 hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45]">
                 <Image
                   src={m.node.featured_image[0].url}
                   alt={m.node.title}

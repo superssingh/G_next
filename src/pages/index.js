@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import * as TagName from "../components/js/constants";
 import styles from "../components/js/styles";
-import { coding } from "../components/assets";
+import { coding, heroImg } from "../components/assets";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -17,21 +18,35 @@ const Home = () => {
       </div>
 
       <div className="flex-1 flex justify-center items-center md:my-0 my-10 relative transition-all duration-500 p-8 hover:bg-opacity-50 showFromTop ">
-        <span className=" text-4xl text-white">Hi, Welcome to Gogixer...</span>
         <div className="relative flex md:justify-center items-center ">
           <div
             className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
           >
-            <img
-              src={coding}
+            <span className=" text-4xl text-white">
+              Hi, Welcome to Gogixer...
+            </span>
+            <Image
+              src={heroImg}
               alt="coding"
-              className="w-[100%] h-[100%] relative z-[2]"
+              width={600}
+              height={400}
+              className={`absolute rounded-xl z-[2]`}
             />
+
+            <Image
+              src={coding}
+              width={600}
+              height={400}
+              className={`absolute rounded-xl z-[2]`}
+            />
+
+            {/* <coding /> */}
 
             {/* gradient start */}
             <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink_gradient" />
             <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white_gradient bottom-40" />
             <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue_gradient" />
+
             {/* gradient end */}
           </div>
         </div>
