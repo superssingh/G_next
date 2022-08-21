@@ -186,27 +186,35 @@ export const services = [
   {
     title: "Responsive Design",
     description:
-      "Learn responsive user interface design with CSS, SASS & SCSS.",
+      "Learn responsive user interface design with CSS, SASS, SCSS & tailwindCSS.",
     icon: "",
   },
   {
     title: "Frontend Development",
-    description: "Learn frontend development skills from scratch.",
+    description:
+      "Learn frontend development most demanding skills- Javascript, ReactJS & NextJS.",
     icon: "",
   },
   {
     title: "Backend Development",
-    description: "Learn backend development skills from scratch.",
+    description: "Learn how to built backend with NodeJS from scratch.",
+    icon: "",
+  },
+
+  {
+    title: "App Deployment ",
+    description: "Learn deployment web app scratch.",
     icon: "",
   },
   {
-    title: "ReactJS App Development",
-    description: "Learn React web app development skills from scratch.",
+    title: "Data Structure & Algorithum",
+    description: "Learn data structure and algorithum.",
     icon: "",
   },
   {
-    title: "NextJs App Development",
-    description: "Learn NextJS web app development skills from scratch. ",
+    title: "Productivie Skills",
+    description:
+      "Learn essential personal development soft skills for productivity.",
     icon: "",
   },
 ];

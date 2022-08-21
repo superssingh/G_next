@@ -14,7 +14,10 @@ const Navbar = () => {
     <div className="Navigation">
       <div>
         <header className="Navbar border-b border-slate-500/[.0] ">
-          <a className="w-48 center-center mx-8" href="/">
+          <a
+            className="w-48 center-center mx-8 hover:hue-rotate-180 transition-all duration-700"
+            href="/"
+          >
             <Image src={BrandName} alt={TagName.COMPANY_NAME} priority />
           </a>
 

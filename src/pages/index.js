@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import HeroPage from "../components/jsx/HeroPage";
 import Services from "../components/jsx/Services";
+import SocialProof from "../components/jsx/SocialProof";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
 
       <HeroPage />
       <Services />
+      <SocialProof />
     </section>
   );
 };
