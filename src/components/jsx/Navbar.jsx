@@ -22,7 +22,7 @@ const Navbar = () => {
             <li>
               {TagName.menus.map((m) => (
                 <Link key={m.name} href={m.path}>
-                  <a tabIndex={1} data-text={m.name} className="">
+                  <a tabIndex={1} data-text={m.name}>
                     {m.name}
                   </a>
                 </Link>

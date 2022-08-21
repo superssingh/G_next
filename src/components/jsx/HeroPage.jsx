@@ -11,8 +11,9 @@ const HeroPage = () => {
           <div
             className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
           >
-            <span className=" text-4xl text-white">
-              Hi, Welcome to Gogixer...
+            <span className="p-6 text-white">
+              <p className="text-4xl ">Hello there...</p>
+              <p className=" text-2xl ">{`{ Best way to learn coding by doing... }`}</p>
             </span>
             <Image
               src={heroImg}

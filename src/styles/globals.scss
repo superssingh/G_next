@@ -17,7 +17,7 @@ html {
 
 @layer components {
   .card {
-    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 overflow-hidden rounded-lg mb-6 shadow-md shadow-gray-800 hover:shadow-black hover:shadow-lg;
+    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .card {
-  background: $GradientLime;
+  background: $cardColor;
   transition: 0.5s ease-in-out;
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 .widget {
-  background: $menusColors;
+  background: $cardColor;
 }
 
 .gradientbg {
