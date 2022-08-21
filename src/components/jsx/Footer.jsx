@@ -5,7 +5,7 @@ import { TagName, SocialWidget, Logo } from "../";
 
 const Footer = () => {
   return (
-    <div className="flex z-[3] flex-col w-full h-fit bottom-0 transition-all duration-700 p-4 bg-black/60 text-gray-300 ">
+    <div className="flex z-[3] flex-col w-full h-fit bottom-0 transition-all duration-700 p-4 bg-gray-900 text-gray-300 ">
       <div className="grid w-full h-fit place-items-center top-0 px-2 md:grid-cols-3 ">
         <div className="grid grid-cols-2 w-full p-4 place-items-start md:place-items-start">
           {TagName.footermenus.map((m) => (

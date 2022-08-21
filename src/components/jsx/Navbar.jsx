@@ -84,7 +84,6 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <div className="absolute z-[0] w-[100%] h-[100%] bottom-0 purple_gradient" />
         </li>
       </ul>
     </div>

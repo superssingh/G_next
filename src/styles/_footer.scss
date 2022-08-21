@@ -21,7 +21,7 @@
 .underLine::after {
   content: "";
   position: absolute;
-  background: $GradientGreenColor;
+  background: $underLineColor;
   width: 100%;
   height: 0.15rem;
   left: 0;

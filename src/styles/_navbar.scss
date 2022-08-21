@@ -91,7 +91,6 @@
   align-items: center;
   margin-right: 2rem;
   height: inherit;
-
   li {
     a {
       font-size: 1rem;
@@ -100,13 +99,12 @@
       border-radius: 100%;
       transition: 0.3s ease-in-out;
       color: $menusTextColors;
-      outline: 0;
+      outline: 1;
       &:hover,
       &:focus,
       &:active {
         background: $menusColors;
-        color: $blackColor;
-        box-shadow: 0px 8px 5px 0px rgba(41, 41, 41, 0.85);
+        box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
       }
     }
   }
@@ -200,14 +198,13 @@
     outline: 0;
     place-self: top;
     justify-content: end;
-
     .mobile-menus {
       place-self: top;
       width: 20em;
       height: 100%;
       top: 0;
-      background: $mobileNavColor;
-      box-shadow: 0 0 2px 0px rgba(41, 41, 42, 0.805);
+      background: $navBarColor;
+      box-shadow: 0 0 2px 0px rgba(32, 32, 34, 0.805);
       a {
         display: flex;
         position: relative;
@@ -215,8 +212,8 @@
         padding: 0.6rem;
         font-size: 1rem;
         line-height: 1rem;
+        color: $menusTextColors;
         transition: 0.3s ease-in-out;
-        color: #fff;
         .icon {
           display: grid;
           width: 3rem;

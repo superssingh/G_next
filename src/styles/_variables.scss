@@ -71,7 +71,17 @@ $background-image2: linear-gradient(
 );
 
 //-------color
-$GradientRedColor: linear-gradient(-90deg, #ff0202d7, #ff00aab8, #210221d7);
+$background-image3: linear-gradient(
+  to left bottom,
+  #191a1b,
+  #1f2223,
+  #252a29,
+  #2e322f,
+  #383934
+);
+
+$GradientBlack: linear-gradient(-90deg, #080808d7, #575958b8, #060606d7);
+$GradientRedColor: linear-gradient(-90deg, #0e020ea2, #ff0be3af, #0e020eb9);
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
 $GradientGreen: linear-gradient(90deg, #04532c, #00fb60e9, #044d3a);
 $GradientGoldenColor: linear-gradient(90deg, #332003de, #ff5100, #352003e7);
@@ -86,17 +96,11 @@ $GradientGreen: linear-gradient(90deg, #044e23, #2ce065e9, #044e23);
 //Gradient Colors
 
 $GradientWhiteColor: linear-gradient(90deg, #cacccbc2, #ffffffc2, #cacccbc2);
-
 $GradientGreenColor: linear-gradient(90deg, #09120bc2, #02fb02, #050906c2);
 
 $GradientLightGreen: linear-gradient(90deg, #f2faf2c2, #589468c2);
-$GradientLightGreen3: linear-gradient(90deg, #53a569c2, #f2faf2c2, #589468c2);
-$GradientLightGreen45: linear-gradient(-45deg, #74ad83c2, #def3dec2, #74ad83c2);
-$GradientBlueColor: linear-gradient(90deg, #7287efc2, #9ecffdf7, #7186f0c2);
 $GradientLime: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 $transparentWhiteColor: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
-
-$waterDrop: linear-gradient(90deg, #8d53c1, #fb8ac1, #985baa);
 
 //RGBA Colors
 $transparentWhite: rgba(253, 253, 253, 0.617);
@@ -107,27 +111,39 @@ $GlassColor: rgba(24, 24, 24, 0.733);
 
 $grayColor: rgb(75, 75, 75);
 $blackColor: rgb(9, 9, 9);
-$purpleGradient: linear-gradient(0deg, #312d49 0%, #555076 100%);
+$purpleGradient: linear-gradient(
+  to left bottom,
+  #351840,
+  #19121d,
+  #231a2d,
+  #2e223e,
+  #372a50
+);
 
+$purpleGradient1: linear-gradient(
+  to left bottom,
+  #2f1938,
+  #40294e,
+  #503965,
+  #614b7d,
+  #715d97
+);
 //---- Color Variables
 
 $primaryColor: rgba(179, 235, 245, 0.835);
 $primaryDarkColor: rgba(10, 10, 10, 0.957);
 $secondaryColor: rgb(73, 239, 220);
 
-// $backgroundColor: $purpleGradient;
+$fontColor: $grayColor;
 $backgroundColor: $background-image1;
 // $backgroundColor: $bg1;
-
-$fontColor: $grayColor;
-
 // Navbar Color------
 // $menusTextColors: $grayColor;
-$navBarColor: $transparentWhite;
-$navMenuColor: $grayColor;
+$navBarColor: $backgroundColor;
+$navMenuColor: $backgroundColor;
 $menusColors: $GradientLime;
 $menusTextColors: $whiteColor;
-
+$underLineColor: $GradientGreenColor;
 //Mobile Navbar color ------
 // $mobileNavColor: $primaryDarkColor;
 $mobileNavColor: $backgroundColor;
