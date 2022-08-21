@@ -8,27 +8,18 @@ const HeroPage = () => {
     <div>
       <div className="flex-1 flex justify-center items-center md:my-0 my-10 relative transition-all duration-500 p-8 hover:bg-opacity-50 showFromTop ">
         <div className="relative flex md:justify-center items-center text-slate-100">
-          <div
-            className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
-          >
+          <div className={` md:flex text-center md:my-0 my-10 relative`}>
             <span className="p-6 ">
-              <p className="text-4xl ">Hello there...</p>
-              <p className=" text-2xl ">{`{ Best way to learn coding by doing... }`}</p>
+              <p className="text-4xl ">Hello</p>
+              <p className=" text-3xl pb-2 ">{`{ Learn coding by doing. }`}</p>
             </span>
-            <Image
-              src={heroImg}
-              alt="coding"
-              width="300px"
-              height="200px"
-              className={`absolute rounded-xl z-[2]`}
-            />
 
-            {/* <Image
+            <Image
               src={coding}
-              width={600}
-              height={400}
-              className={`absolute rounded-xl z-[2]`}
-            /> */}
+              width={400}
+              height={300}
+              className={`absolute rounded-xl z-[2] `}
+            />
 
             {/* <coding /> */}
 

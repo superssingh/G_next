@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 
 import HeroPage from "../components/jsx/HeroPage";
+import Services from "../components/jsx/Services";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       </div>
 
       <HeroPage />
+      <Services />
     </section>
   );
 };

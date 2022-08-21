@@ -181,3 +181,32 @@ export const getPosts = () => {
 export const getImagePath = () => {
   return imageURL;
 };
+
+export const services = [
+  {
+    title: "Responsive Design",
+    description:
+      "Learn responsive user interface design with CSS, SASS & SCSS.",
+    icon: "",
+  },
+  {
+    title: "Frontend Development",
+    description: "Learn frontend development skills from scratch.",
+    icon: "",
+  },
+  {
+    title: "Backend Development",
+    description: "Learn backend development skills from scratch.",
+    icon: "",
+  },
+  {
+    title: "ReactJS App Development",
+    description: "Learn React web app development skills from scratch.",
+    icon: "",
+  },
+  {
+    title: "NextJs App Development",
+    description: "Learn NextJS web app development skills from scratch. ",
+    icon: "",
+  },
+];
