@@ -6,7 +6,7 @@ import moment from "moment";
 const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
-      <div className="card hover:-hue-rotate-180 ">
+      <div className="card bg-white hover:bg-white/[.7] ">
         <div className="relative h-56 w-full md:w-48 md:h-48 md:shrink-0 xl:h-56 xl:w-full">
           <Image
             src={post.featured_image[0].url}
@@ -16,9 +16,9 @@ const PostCard = ({ post }) => {
             className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
-        <div className="h-36 w-full h-30 px-8 py-2">
+        <div className=" h-36 w-full h-30 px-8 py-2">
           <div className="relative z-10 ">
-            <div className="absolute left-[-65px] bottom-[-60px] rotate-[-90deg] text-center align-middle flex uppercase tracking-wide text-xs ">
+            <div className="absolute left-[-65px] bottom-[-60px] rotate-[-90deg]  text-center align-middle flex uppercase tracking-wide text-xs ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"
@@ -40,14 +40,15 @@ const PostCard = ({ post }) => {
               </div>
             </div>
           </div>
+          <div className="ml-2">
+            <p className="grid mt-2 text-xl font-semibold text-gray-800 uppercase">
+              {post.title}
+            </p>
 
-          <p className="grid mt-2 text-xl font-semibold text-gray-800 uppercase">
-            {post.title}
-          </p>
-
-          <p className="line-clamp-2 text-l mt-2 mb-2 text-gray-700 ">
-            {post.description}
-          </p>
+            <p className="line-clamp-2 text-l mt-2 mb-2 text-gray-600 ">
+              {post.description}
+            </p>
+          </div>
         </div>
       </div>
     </Link>

@@ -204,6 +204,7 @@
       height: 100%;
       top: 0;
       background: $mobileNavColor;
+      box-shadow: 0 0 2px 0px rgba(51, 5, 73, 0.899);
       a {
         display: flex;
         position: relative;
@@ -217,7 +218,6 @@
           display: grid;
           width: 3rem;
           place-content: center;
-          // fill: #fff;
         }
         .menuname {
           display: grid;

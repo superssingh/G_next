@@ -8,6 +8,15 @@ $colorPoweBlue: #b8dbd9;
 $colorGhostWhite: #f4f4f9;
 $colorGrayDark: #464545;
 
+$bg1: radial-gradient(
+  circle at 50% -20.71%,
+  #b496e7 0,
+  #9480df 25%,
+  #6c6cd8 50%,
+  #2d5ad1 75%,
+  #004bca 100%
+);
+
 $background-image: linear-gradient(
   35deg,
   hsl(240deg 84% 17%) 0%,
@@ -62,10 +71,11 @@ $background-image2: linear-gradient(
 );
 
 //-------color
-$GradientRedColor: linear-gradient(-90deg, #340434d7, #f31717b8, #2e032ed7);
+$GradientRedColor: linear-gradient(-90deg, #ff0202d7, #ff00aab8, #210221d7);
 $secondaryDarkColor: linear-gradient(45deg, #23fc59, #044322, #0edf5e, #088544);
-$GradientGreen: linear-gradient(90deg, #04532c, #00ff62e9, #044d3a);
+$GradientGreen: linear-gradient(90deg, #04532c, #00fb60e9, #044d3a);
 $GradientGoldenColor: linear-gradient(90deg, #332003de, #ff5100, #352003e7);
+$GradientPurpleColor: linear-gradient(90deg, #330c4fde, #e605ff, #470c62e7);
 
 $blackGlassColor: linear-gradient(-90deg, #010101c6, #0c0c0cdd, #090909ad);
 
@@ -107,23 +117,24 @@ $secondaryColor: rgb(73, 239, 220);
 
 // $backgroundColor: $purpleGradient;
 $backgroundColor: $background-image1;
+// $backgroundColor: $bg1;
 
 $fontColor: $grayColor;
 
 // Navbar Color------
+// $menusTextColors: $grayColor;
 $navBarColor: $transparentWhite;
 $navMenuColor: $grayColor;
 $menusColors: $GradientLime;
-$menusTextColors: $grayColor;
+$menusTextColors: $whiteColor;
 
 //Mobile Navbar color ------
-$mobileNavColor: $whiteColor;
+// $mobileNavColor: $primaryDarkColor;
+$mobileNavColor: $backgroundColor;
 // $bodyColor: $whiteColor;
 // $fontColor: $grayColor;
 $cardColor: $GradientLime;
 // $cardColor: $primaryColor;
-$menusTextColors: $whiteColor;
-$mobileNavColor: $primaryDarkColor;
 
 .purple_gradient {
   z-index: 0;
