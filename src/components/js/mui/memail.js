@@ -1,7 +1,7 @@
 import { Controller } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 
-const MEmail = ({ control, name, label, wid, required, error }) => {
+const MEmail = ({ control, name, label, wid, required, error, white }) => {
   return (
     <>
       <Controller
@@ -20,6 +20,12 @@ const MEmail = ({ control, name, label, wid, required, error }) => {
               fullWidth
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )) || (
@@ -31,6 +37,12 @@ const MEmail = ({ control, name, label, wid, required, error }) => {
               style={{ width: wid }}
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )

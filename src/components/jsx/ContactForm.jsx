@@ -19,6 +19,7 @@ const ContactForm = () => {
             error={errors.from_name}
             label="Name"
             className="m-2"
+            white={true}
           />
         </div>
         <div className="m-2 ">
@@ -29,6 +30,7 @@ const ContactForm = () => {
             error={errors.from_email}
             label="Email"
             className="m-2"
+            white={true}
           />
         </div>
       </div>
@@ -40,6 +42,7 @@ const ContactForm = () => {
           error={errors.message}
           label="Message"
           className="m-2"
+          white={true}
         />
       </div>
     </div>

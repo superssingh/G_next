@@ -11,7 +11,7 @@ const HeroPage = () => {
           <div className={` md:flex text-center md:my-0 my-10 relative`}>
             <span className="p-6 ">
               <p className="text-4xl ">Hello</p>
-              <p className=" text-3xl pb-2 ">{`{ Learn coding by doing. }`}</p>
+              <p className=" text-3xl pb-2 ">{`{ Learn by doing. }`}</p>
             </span>
 
             <Image

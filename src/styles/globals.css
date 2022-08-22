@@ -144,11 +144,10 @@
 }
 
 .autoColorChange {
-  background: linear-gradient(245deg, #fe10c7, #9a1fe2, #9063c1, #23192c, #4c4d4e);
-  background-size: 500% 100%;
+  background: linear-gradient(245deg, #700a55, #ba0b92, #fe10c7, #a01eea, rgba(128, 29, 234, 0.9803921569), #2e075a);
+  background-size: 500% 500%;
   -webkit-animation: AnimationName 2000ms ease infinite;
   animation: AnimationName 10s ease infinite;
-  border-radius: 1rem;
 }
 
 @-webkit-keyframes AnimationName {
@@ -283,7 +282,7 @@
   outline: 1;
 }
 .menus li a:hover, .menus li a:focus, .menus li a:active {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
   box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
 }
 
@@ -512,7 +511,7 @@
 }
 
 .hoverEffect:hover {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
   box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
 }
 
@@ -826,7 +825,7 @@ body {
   padding: 0px 10px;
   margin-top: -2em;
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .customRadius {
@@ -843,6 +842,14 @@ body {
 .serviceCard:hover {
   background: #7643cd;
   box-shadow: 0px 1px 0px 2px rgba(22, 22, 22, 0.875);
+}
+
+.socialCard {
+  border-radius: 30% 0% 30% 0%;
+}
+.socialCard:hover {
+  background: #cd1cbe;
+  border-radius: 50% 50% 50% 0;
 }
 
 .iconColor {

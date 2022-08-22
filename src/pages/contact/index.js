@@ -65,11 +65,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="grid place-content-center">
-      <div className="grid place-content-center m-2 p-4 bg-white bg-opacity-30 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
+    <div className="grid   place-content-center ">
+      <div className="grid w-fit place-content-center m-2 p-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
-            <div className=" text-green-600 pr-2">
+            <div className=" text-green-400 pr-2">
               <CheckCircleIcon />
             </div>
             <div className=" font-medium text-lg ">
@@ -78,7 +78,9 @@ const Contact = () => {
           </div>
         )) || (
           <div>
-            <div className="contactLabel mx-2 text-center">Contact Us</div>
+            <div className="text-3xl mt-[-42px] mx-2 text-center">
+              Contact Us
+            </div>
             <FormProvider {...methods}>
               <form
                 ref={form}
@@ -90,7 +92,7 @@ const Contact = () => {
                   <input
                     type="submit"
                     value="Send"
-                    className=" rounded-md autoColorChange p-4 shadow-lg shadow-black/50"
+                    className=" rounded-full autoColorChange p-4 shadow-lg shadow-black/50"
                   />
                 </div>
               </form>

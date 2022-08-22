@@ -104,6 +104,9 @@ $GradientLightGreen: linear-gradient(90deg, #f2faf2c2, #589468c2);
 $GradientLime: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 $transparentWhiteColor: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 
+$GradientMenuButton: linear-gradient(90deg, #340d41c2, #c21db7c2, #580b54c2);
+$GradientMenuButton2: linear-gradient(90deg, #eed5f7c2, #ebe5eac2, #d3d1d3c2);
+
 //RGBA Colors
 $transparentWhite: rgba(253, 253, 253, 0.617);
 $transparentBlack: rgba(25, 25, 25, 0.677);
@@ -138,21 +141,23 @@ $secondaryColor: rgb(73, 239, 220);
 
 $fontColor: $grayColor;
 $backgroundColor: $background-image1;
+
+$navBarColor: $backgroundColor;
+$navMenuColor: $backgroundColor;
+$menusColors: $GradientMenuButton;
+$menusTextColors: $whiteColor;
+$mobileNavColor: $backgroundColor;
+$underLineColor: $GradientGreenColor;
+$cardColor: $GradientLime;
+
 // $backgroundColor: $bg1;
 // Navbar Color------
 // $menusTextColors: $grayColor;
-$navBarColor: $backgroundColor;
-$navMenuColor: $backgroundColor;
-$menusColors: $GradientLime;
-$menusTextColors: $whiteColor;
-$underLineColor: $GradientGreenColor;
-//Mobile Navbar color ------
-// $mobileNavColor: $primaryDarkColor;
-$mobileNavColor: $backgroundColor;
+// $menusColors: $GradientLime;
+// $cardColor: $GradientLime;
+
 // $bodyColor: $whiteColor;
 // $fontColor: $grayColor;
-$cardColor: $GradientLime;
-// $cardColor: $primaryColor;
 
 .purple_gradient {
   z-index: 0;
@@ -184,19 +189,18 @@ $cardColor: $GradientLime;
 .autoColorChange {
   background: linear-gradient(
     245deg,
+    #700a55,
+    #ba0b92,
     #fe10c7,
-    #9a1fe2,
-    #9063c1,
-    #23192c,
-    #4c4d4e
+    #a01eea,
+    #801deafa,
+    #2e075a
   );
-  background-size: 500% 100%;
+  background-size: 500% 500%;
 
   -webkit-animation: AnimationName 2000ms ease infinite;
   -moz-animation: AnimationName 2000ms ease infinite;
   animation: AnimationName 10s ease infinite;
-
-  border-radius: 1rem;
 }
 
 @-webkit-keyframes AnimationName {

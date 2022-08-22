@@ -28,6 +28,12 @@ const MNumber = ({
               required
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )) || (
@@ -39,6 +45,12 @@ const MNumber = ({
               style={{ width: wid || 100 }}
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )

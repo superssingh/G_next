@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { TagName, BrandName, Logo, SocialWidget } from "../";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);

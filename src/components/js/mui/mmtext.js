@@ -1,7 +1,8 @@
 import { Controller } from "react-hook-form";
 import TextField from "@mui/material/TextField";
+import { borderColor } from "@mui/system";
 
-const MMText = ({ control, name, label, wid, required, error }) => {
+const MMText = ({ control, name, label, wid, required, error, white }) => {
   return (
     <>
       <Controller
@@ -21,6 +22,12 @@ const MMText = ({ control, name, label, wid, required, error }) => {
               fullWidth
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )) || (
@@ -34,6 +41,12 @@ const MMText = ({ control, name, label, wid, required, error }) => {
               fullWidth
               error={!!error}
               helperText={error ? error?.message : ""}
+              InputLabelProps={{
+                style: { color: white ? "white" : "" },
+              }}
+              InputProps={{
+                style: { color: white ? "aqua" : "" },
+              }}
               {...field}
             />
           )
