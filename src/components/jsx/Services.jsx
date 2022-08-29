@@ -3,9 +3,9 @@ import SchoolSharpIcon from "@mui/icons-material/SchoolSharp";
 
 const Services = () => {
   return (
-    <div className="customRadius flex-1 flex bg-black/50  justify-center items-center md:my-0 my-10 relative transition-all duration-500 p-8 showFromTop ">
-      <div className="relative md:justify-center items-center text-slate-100">
-        <span className="text-2xl left-0 top- ">Categories</span>
+    <div className=" flex-1 flex bg-black/50  justify-center items-center md:my-0 my-10 relative transition-all duration-500 py-6 showFromTop ">
+      <div className="relative text-center md:justify-center items-center text-slate-100">
+        <span className="text-lg text-white/30 ">Categories</span>
         <div className="grid relative md:grid-cols-3">
           {TagName.services.map((m) => {
             return (

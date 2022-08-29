@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps, posts, categories }) {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <div className="w-full flex flex-col min-h-screen">
-          <div className="containerbox flex-grow mt-24 mb-10 px-2 ">
+          <div className="containerbox flex-grow mt-24 mb-10  ">
             <Component {...pageProps} />
           </div>
           <Footer />
