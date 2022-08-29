@@ -71,6 +71,7 @@ $background-image2: linear-gradient(
   hsl(244deg 100% 90%) 100%
 );
 
+$socialBG: linear-gradient(0deg, hsl(294deg 83% 35%) 100%);
 //-------color
 $background-image3: linear-gradient(
   to left bottom,
@@ -80,6 +81,9 @@ $background-image3: linear-gradient(
   #2e322f,
   #383934
 );
+
+.social {
+}
 
 $GradientBlack: linear-gradient(-90deg, #080808d7, #575958b8, #060606d7);
 $GradientRedColor: linear-gradient(-90deg, #0e020ea2, #ff0be3af, #0e020eb9);
@@ -149,8 +153,10 @@ $menusTextColors: $whiteColor;
 $mobileNavColor: $backgroundColor;
 $underLineColor: $GradientGreenColor;
 $cardColor: $GradientLime;
+$SocialPicColor: linear-gradient(180deg, #7ef590ec 0%, #ca1ea5c4 100%);
+$SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 
-// $backgroundColor: $bg1;
+// $backgroundCorgb(213, 37, 207)
 // Navbar Color------
 // $menusTextColors: $grayColor;
 // $menusColors: $GradientLime;

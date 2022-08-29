@@ -19,6 +19,10 @@ html {
   .card {
     @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
+
+  .animate {
+    @apply transition-all duration-700;
+  }
 }
 
 header,
@@ -200,13 +204,7 @@ body {
 }
 
 .serviceCard {
-  // background: rgb(71, 24, 96);
   border-radius: 0.5rem 20% 0.5rem 10%;
-  &:hover {
-    // background: #9277c2;
-    box-shadow: 0px 1px 0px 2px rgba(239, 239, 239, 0.875);
-    // background: $grayColor;
-  }
 }
 
 .iconColor {
@@ -215,5 +213,15 @@ body {
 
 .ReviewerPic {
   border-radius: 50% 50% 0 50%;
-  background: $cardColor;
+  background: $SocialPicColor;
+  &:hover {
+    background: rgba(245, 141, 248, 0.934);
+  }
+}
+
+.socialCard {
+  background: $SocialBGColor;
+  &:hover {
+    background: rgba(62, 9, 95, 0.782);
+  }
 }

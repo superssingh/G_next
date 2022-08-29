@@ -10,7 +10,7 @@ const Services = () => {
           {TagName.services.map((m) => {
             return (
               <div className="grid relative m-2 p-[2px] overflow-hidden transition-all duration-500 text-left ">
-                <div className="serviceCard text-slate-200  w-full h-fit md:w-52 md:h-52 p-4 transition-all duration-500 border-2 border-violet-500/50 hover:bg-violet-500">
+                <div className="serviceCard text-slate-200  w-full h-fit md:w-52 md:h-52 p-4 transition-all duration-500 border-2 border-violet-500/30 hover:bg-violet-500/50">
                   <p className="text-md mt-2 uppercase font-semibold ">
                     {m.title}
                   </p>
