@@ -169,6 +169,12 @@ $SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 // $bodyColor: $whiteColor;
 // $fontColor: $grayColor;
 
+.purple_gradient1 {
+  z-index: 10;
+  background: linear-gradient(180deg, #bc8ee9c5 0%, #3c1665e3 100%);
+  // filter: blur(200px);
+}
+
 .purple_gradient {
   z-index: 0;
   background: linear-gradient(180deg, #bc8ee9c5 0%, #3c1665e3 100%);

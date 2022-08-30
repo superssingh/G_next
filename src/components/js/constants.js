@@ -192,6 +192,11 @@ export const services = [
     icon: "",
   },
   {
+    title: "Data Structure & Algorithum",
+    description: "Learn data structure and algorithum.",
+    icon: "",
+  },
+  {
     title: "Frontend Development",
     description:
       "Learn frontend development most demanding skills- Javascript, ReactJS & NextJS.",
@@ -208,11 +213,7 @@ export const services = [
     description: "Learn deployment web app scratch.",
     icon: "",
   },
-  {
-    title: "Data Structure & Algorithum",
-    description: "Learn data structure and algorithum.",
-    icon: "",
-  },
+
   {
     title: "Productivie Skills",
     description:
@@ -286,51 +287,50 @@ export const socialLinks = [
 
 export const reviews = [
   {
-    name: "Unknown",
-    comment: "Awesome website with best resources for web developers.",
-    image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
-      imageFit,
-  },
-  {
-    name: "Unknown",
-    comment: "Awesome website with best resources for web developers",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
-      imageFit,
-  },
-  {
-    name: "Unknown",
-    comment: "Awesome website with best resources for web developers",
-    image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
-      imageFit,
-  },
-  {
-    name: "Jane Cooper",
-    comment: "Great explanation with amazing ways.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
-      imageFit,
-  },
-  {
-    name: "Jane Cooper",
-    comment: "Great explanation with amazing ways.",
-    image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
-      imageFit,
-  },
-  {
-    name: "Jane Cooper",
+    name: "User 1",
     comment:
-      "Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis necessitatibus rerum sint nesciunt voluptas alias quam, fuga commodi deleniti, aut suscipit exercitationem reiciendis doloribus.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
       imageFit,
   },
   {
-    name: "Unknown",
-    comment: "Awesome website with best resources for web developers",
+    name: "User 2",
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ut ipsa fugit, voluptatem repudiandae tenetur, harum aliquid voluptas quisquam dolor suscipit vel quos nihil corrupti, blanditiis amet id!",
+    image:
+      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
+      imageFit,
+  },
+  {
+    name: "User 3",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro praesentium itaque in repudiandae modi molestias tempora voluptate.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
+      imageFit,
+  },
+  {
+    name: "User 4",
+    comment:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus porro eius eum nulla provident! Pariatur illum at quidem aspernatur ex, odio, ad temporibus ea repellendus, odit nesciunt aut autem.",
+    image:
+      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
+      imageFit,
+  },
+  {
+    name: "User 5",
+    comment:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur est earum sit. Atque, iusto.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
+      imageFit,
+  },
+  {
+    name: "User 6",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt laboriosam cupiditate sapiente enim iste voluptates nihil consectetur nisi totam.",
+
     image:
       "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
       imageFit,
