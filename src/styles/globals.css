@@ -863,11 +863,11 @@ body {
 }
 
 .socialCard {
-  background: linear-gradient(0deg, rgba(78, 17, 101, 0.8862745098) 0%, rgba(163, 40, 176, 0.862745098) 100%);
+  background: linear-gradient(180deg, rgba(12, 151, 121, 0.859) 0%, rgba(5, 78, 62, 0.859) 100%);
   border-radius: 0 20px 0 20px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }
 .socialCard:hover {
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0px 5px 1px rgba(205, 43, 205, 0.815);
+  box-shadow: 0 0px 5px 1px rgba(76, 208, 173, 0.919);
 }/*# sourceMappingURL=globals.css.map */
