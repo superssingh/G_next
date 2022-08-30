@@ -1,17 +1,22 @@
 import * as TagName from "../js/constants";
 import SchoolSharpIcon from "@mui/icons-material/SchoolSharp";
+import Swiper, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 const SocialProof = () => {
+  // init Swiper:
+
   return (
     <div className="customRadiusR flex-1 flex  justify-center items-center md:my-0 my-10 relative transition-all duration-500 p-8 showFromTop ">
       <div className="relative text-center">
         <div className="text-xl text-white/40 mb-7 top-20 ">Social</div>
 
         <div className=" md:justify-center items-center text-slate-100 text-center">
-          <div className="grid relative md:grid-cols-3">
+          <div className=" grid relative md:grid-cols-3 ">
             {TagName.reviews.map((r) => {
               return (
-                <div className="grid relative my-6 transition-all duration-500 text-left ">
-                  <div className="grid relative min-w-full md:w-60 lg:w-80 place-items-center ">
+                <div className="relative my-6 transition-all duration-500 text-left  ">
+                  <div className="grid relative min-w-full md:w-60 lg:w-80 place-items-center  ">
                     <div className="ReviewerPic animate grid absolute h-20 w-20 p-1 rotate-45 overflow-hidden top-[-50px] z-[1] shadow-xl drop-shadow-lg">
                       <img
                         className=" h-fit w-fit rounded-full rotate-[-45deg] "

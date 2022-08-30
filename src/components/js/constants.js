@@ -287,7 +287,7 @@ export const socialLinks = [
 export const reviews = [
   {
     name: "Unknown",
-    comment: "Awesome website with best resources for web developers",
+    comment: "Awesome website with best resources for web developers.",
     image:
       "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
       imageFit,
