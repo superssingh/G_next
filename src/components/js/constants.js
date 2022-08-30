@@ -322,7 +322,8 @@ export const reviews = [
   },
   {
     name: "Jane Cooper",
-    comment: "Great explanation with amazing ways.",
+    comment:
+      "Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways. Great explanation with amazing ways.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
       imageFit,

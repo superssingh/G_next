@@ -220,13 +220,17 @@ body {
 }
 
 .socialCard {
-  background: $SocialBGColor;
+  background: $GradientTeal;
+  box-shadow: 0 1px 0px 0px rgba(40, 11, 71, 0.815);
+  border-radius: 10px;
+
   &:hover {
-    background: rgba(62, 9, 95, 0.782);
+    box-shadow: 0 0 5px 2px rgba(182, 241, 240, 0.815);
   }
 }
 
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  margin: 0.5rem;
 }
