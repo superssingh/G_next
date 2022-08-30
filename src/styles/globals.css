@@ -863,7 +863,7 @@ body {
 }
 
 .socialCard {
-  background: linear-gradient(180deg, rgba(12, 151, 121, 0.859) 0%, rgba(5, 78, 62, 0.859) 100%);
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   border-radius: 0 20px 0 20px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }

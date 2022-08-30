@@ -23,10 +23,10 @@ const SocialProof = () => {
 
                     <div className="   w-full h-full  sm:text-right md:text-center place-self-center">
                       <div className="socialCard animate grid h-fit mt-20 py-4 place-items-center">
-                        <p className=" text-sm w-fit  font-bold text-white/60">
+                        <p className=" text-sm w-fit  font-bold text-white/70">
                           {r.name}
                         </p>
-                        <p className="text-sm text-white/70 from-neutral-300 px-4 mt-4 line-clamp-8 text-left ">
+                        <p className="text-sm text-white  px-4 mt-4 line-clamp-8 text-left ">
                           {`"` + r.comment + `"`}
                         </p>
                       </div>
