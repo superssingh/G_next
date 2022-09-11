@@ -4,7 +4,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useForm, FormProvider } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import ContactForm from "../../components/jsx/ContactForm";
+import { ContactForm } from "../../components";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,9 +16,12 @@ const schema = yup.object({
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
-  const EMAIL_SERVICE_ID = "service_qgsohfe";
-  const EMAIL_TEMPLATE_ID = "template_yfvxx4s";
-  const publicKey = "1IbTNiS-_C1i67RVo";
+  const EMAIL_SERVICE = {
+    SERVICE_ID: "service_qgsohfe",
+    TEMPLATE_ID: "template_yfvxx4s",
+    PUBLIC_KEY: "1IbTNiS-_C1i67RVo",
+  };
+
   const form = useRef();
   const methods = useForm({ resolver: yupResolver(schema) });
 
@@ -36,7 +39,12 @@ const Contact = () => {
     }
 
     emailjs
-      .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, form.current, publicKey)
+      .sendForm(
+        EMAIL_SERVICE.SERVICE_ID,
+        EMAIL_SERVICE.TEMPLATE_ID,
+        form.current,
+        EMAIL_SERVICE.PUBLIC_KEY
+      )
       .then(
         (result) => {
           setSuccess(true);

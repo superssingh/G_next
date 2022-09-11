@@ -44,13 +44,13 @@ const PostWidget = ({ recentPosts, category, id }) => {
                   width={70}
                   height={70}
                   layout="fixed"
-                  className="align-middle  justify-self-stretch object-cover rounded-l-lg"
+                  className="align-middle justify-self-stretch object-cover rounded-l-lg"
                 ></Image>
                 <div className="w-fit pl-2 pr-2">
                   <div className="text-gray-800 text-md font-semibold">
                     {m.node.title}
                   </div>
-                  <div className="text-gray-700 text-xs">
+                  <div className="text-gray-700 text-xs ">
                     {moment(m.node.createdAt).format("MMM DD, YYYY")}
                   </div>
                 </div>

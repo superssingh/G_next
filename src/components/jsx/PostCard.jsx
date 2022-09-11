@@ -17,8 +17,8 @@ const PostCard = ({ post }) => {
           />
         </div>
         <div className=" h-36 w-full h-30 px-8 py-2">
-          <div className="relative z-10 ">
-            <div className="absolute left-[-65px] bottom-[-60px] rotate-[-90deg]  text-center align-middle flex uppercase tracking-wide text-xs ">
+          <div className="relative z-2 ">
+            <div className="absolute left-[-65px] bottom-[-60px] rotate-[-90deg] text-center align-middle flex uppercase tracking-wide text-xs ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"
