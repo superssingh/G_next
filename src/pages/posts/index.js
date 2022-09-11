@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { getCategories, getPosts } from "../../services/getBlogData";
 import moment from "moment";
 import _ from "lodash";
 import {
-  TagName,
   BlogContext,
   PostCard,
   PostWidget,
@@ -32,12 +31,14 @@ const Home = ({ posts, categories }) => {
             <PostCard post={p.node} key={p.node.id} />
           ))}
         </div>
-        <div className="grid w-full md:col-span-8 lg:col-span-4 ">
-          <div className=" place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
-            {blogs && <PostWidget recentPosts={blogs} />}
-            <Categories categories={categories} />
+        {blogs && (
+          <div className="grid w-full md:col-span-8 lg:col-span-4 ">
+            <div className=" place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
+              <PostWidget recentPosts={blogs} />
+              <Categories categories={categories} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

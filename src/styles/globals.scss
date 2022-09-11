@@ -218,7 +218,7 @@ body {
   border-radius: 50% 50% 0 50%;
   background: $SocialPicColor;
   &:hover {
-    background: rgba(245, 141, 248, 0.934);
+    background: rgba(122, 255, 228, 0.934);
   }
 }
 
@@ -230,6 +230,6 @@ body {
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
   &:hover {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0px 5px 1px rgba(76, 208, 173, 0.919);
+    box-shadow: 0 0px 0px 2px rgba(91, 201, 172, 0.919);
   }
 }

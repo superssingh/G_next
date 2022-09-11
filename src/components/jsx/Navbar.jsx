@@ -24,6 +24,17 @@ const Navbar = () => {
 
           <ul className={TagName.MENU_DEFAULT}>
             <li>
+              <Link key={TagName.HomeMenu.name} href={TagName.HomeMenu.path}>
+                <div
+                  className="menu w-auto text-slate-200 hoverEffect p-3 rounded-full "
+                  width={24}
+                  height={24}
+                >
+                  {TagName.HomeMenu.icon}
+                </div>
+              </Link>
+            </li>
+            <li>
               {TagName.menus.map((m) => (
                 <Link key={m.name} href={m.path}>
                   <a tabIndex={1} data-text={m.name}>
@@ -56,7 +67,7 @@ const Navbar = () => {
               <a
                 onClick={handleClicked}
                 data-text={m.name}
-                className="hoverEffect z-10"
+                className="z-10 hoverEffect"
               >
                 <div className="icon w-auto " width={24} height={24}>
                   {m.icon}

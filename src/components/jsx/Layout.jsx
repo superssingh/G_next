@@ -3,6 +3,7 @@ import { Navbar, BlogContext } from "../";
 
 const Layout = ({ children, posts }) => {
   const [blogs, setBlogs] = useState([]);
+  const [shop, setShop] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const handleBlogs = (blogs) => {
@@ -11,6 +12,10 @@ const Layout = ({ children, posts }) => {
 
   const handleCategory = (categories) => {
     setCategories(categories);
+  };
+
+  const handleShop = (items) => {
+    setShop(items);
   };
 
   return (

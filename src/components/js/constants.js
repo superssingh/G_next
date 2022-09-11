@@ -150,7 +150,7 @@ export const footermenus = [
   { name: "📚-Courses", path: "/courses" },
   { name: "🔏-Privacy Policy", path: "/privacypolicy" },
   { name: "🏠-Shop", path: "/shop" },
-  { name: "📜-Terms of Service", path: "/terms" },
+  { name: "📜-Terms", path: "/terms" },
 ];
 
 export const categories = [
@@ -190,35 +190,41 @@ export const services = [
     description:
       "Learn responsive user interface design with CSS, SASS, SCSS & tailwindCSS.",
     icon: "",
+    path: "/courses/responsive_design",
   },
   {
     title: "Data Structure & Algorithum",
     description: "Learn data structure and algorithum.",
     icon: "",
+    path: "/courses/data_structure",
   },
   {
     title: "Frontend Development",
     description:
       "Learn frontend development most demanding skills- Javascript, ReactJS & NextJS.",
     icon: "",
+    path: "/courses/frontend",
   },
   {
     title: "Backend Development",
     description: "Learn how to built backend with NodeJS from scratch.",
     icon: "",
+    path: "/courses/backend",
   },
 
   {
     title: "App Deployment ",
     description: "Learn deployment web app scratch.",
     icon: "",
+    path: "/courses/deployment",
   },
 
   {
-    title: "Productivie Skills",
+    title: "Productivity Skills",
     description:
       "Learn essential personal development soft skills for productivity.",
     icon: "",
+    path: "/courses/productivity",
   },
 ];
 

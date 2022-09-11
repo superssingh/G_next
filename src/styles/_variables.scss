@@ -43,11 +43,11 @@ $background-image1: linear-gradient(
   hsl(255deg 43% 48%) 67%,
   hsl(254deg 45% 54%) 78%,
   hsl(252deg 51% 61%) 89%,
-  hsl(251deg 60% 68%) 100%
+  rgb(144, 124, 222) 100%
 );
 
 $background-image2: linear-gradient(
-  40deg,
+  0deg,
   hsl(250deg 82% 4%) 0%,
   hsl(250deg 76% 7%) 5%,
   hsl(249deg 71% 10%) 10%,
@@ -117,7 +117,8 @@ $GradientMenuButton2: linear-gradient(90deg, #eed5f7c2, #ebe5eac2, #d3d1d3c2);
 
 //RGBA Colors
 $transparentWhite: rgba(253, 253, 253, 0.617);
-$transparentBlack: rgba(25, 25, 25, 0.677);
+$transparentBlack: rgba(13, 13, 13, 0.737);
+$transparentPurple: rgba(40, 6, 73, 0.839);
 $whiteColor: rgba(252, 252, 252, 0.981);
 $GlassColor: rgba(24, 24, 24, 0.733);
 //Basic Color
@@ -154,7 +155,7 @@ $navBarColor: $backgroundColor;
 $navMenuColor: $backgroundColor;
 $menusColors: $GradientMenuButton;
 $menusTextColors: $whiteColor;
-$mobileNavColor: $backgroundColor;
+$mobileNavColor: $transparentPurple;
 $underLineColor: $GradientGreenColor;
 $cardColor: $GradientLime;
 $SocialPicColor: linear-gradient(180deg, #7ef590ec 0%, #ca1ea5c4 100%);

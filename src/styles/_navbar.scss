@@ -204,7 +204,8 @@
       width: 12em;
       height: wrap;
       top: 0;
-      background: $navBarColor;
+      backdrop-filter: blur(1rem);
+      background: $mobileNavColor;
       box-shadow: 0 0 2px 0px rgba(32, 32, 34, 0.805);
       a {
         display: flex;
@@ -346,7 +347,7 @@
 
 .hoverEffect:hover {
   background: $menusColors;
-  box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
+  box-shadow: 0px 2px 5px 1px rgba(21, 21, 21, 0.79);
 }
 
 .sidebar {

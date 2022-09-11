@@ -379,7 +379,9 @@
     width: 12em;
     height: wrap;
     top: 0;
-    background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, hsl(251deg, 60%, 68%) 100%);
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    background: rgba(40, 6, 73, 0.839);
     box-shadow: 0 0 2px 0px rgba(32, 32, 34, 0.805);
   }
   .mobile-open .mobile-menus a {
@@ -519,7 +521,7 @@
 
 .hoverEffect:hover {
   background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
-  box-shadow: 0px 2px 5px 1px rgba(77, 75, 75, 0.692);
+  box-shadow: 0px 2px 5px 1px rgba(21, 21, 21, 0.79);
 }
 
 .sidebar {
@@ -706,7 +708,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgb(75, 75, 75);
-  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, hsl(251deg, 60%, 68%) 100%);
+  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
   background-attachment: fixed;
   background-size: cover;
   font-family: Poppins;
@@ -820,7 +822,7 @@ body {
 }
 
 .gradientbg {
-  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, hsl(251deg, 60%, 68%) 100%);
+  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
 }
 
 .contactbox {
@@ -859,7 +861,7 @@ body {
   background: linear-gradient(180deg, rgba(126, 245, 144, 0.9254901961) 0%, rgba(202, 30, 165, 0.768627451) 100%);
 }
 .ReviewerPic:hover {
-  background: rgba(245, 141, 248, 0.934);
+  background: rgba(122, 255, 228, 0.934);
 }
 
 .socialCard {
@@ -869,5 +871,5 @@ body {
 }
 .socialCard:hover {
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0px 5px 1px rgba(76, 208, 173, 0.919);
+  box-shadow: 0 0px 0px 2px rgba(91, 201, 172, 0.919);
 }/*# sourceMappingURL=globals.css.map */

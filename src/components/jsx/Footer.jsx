@@ -13,14 +13,14 @@ const Footer = () => {
               <a
                 tabIndex={1}
                 data-text={m.name}
-                className="underLine relative w-fit text-sm py-1 mx-1 transition-all duration-300"
+                className="underLine relative w-fit text-xs p-[5px]  transition-all duration-300"
               >
                 {m.name}
               </a>
             </Link>
           ))}
         </div>
-        <div className=" top-0 w-fit">
+        <div className=" top-0 w-fit animate-pulse">
           <Link href="/">
             <Image
               src={Logo}
@@ -34,8 +34,13 @@ const Footer = () => {
           <SocialWidget />
         </div>
       </div>
-      <div className="grid place-items-center  text-sm mt-6 text-gray-300">
-        <div> &copy;2022 Gogixer.com | All right reserved.</div>
+      <div className="grid place-items-center text-gray-300">
+        <div className="flex flex-auto place-items-center">
+          <span className="text-sm">&copy;</span>
+          <span className="text-xs ">
+            2022 Gogixer.com | All right reserved.
+          </span>
+        </div>
         {/* <div>Made by Santosh Singh [superssingh@gmail.com]</div> */}
       </div>
     </div>
