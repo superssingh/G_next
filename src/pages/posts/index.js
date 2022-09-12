@@ -8,6 +8,7 @@ import {
   PostWidget,
   Categories,
 } from "../../components";
+import SortIcon from "@mui/icons-material/Sort";
 
 const Home = ({ posts, categories }) => {
   const { blogs, setBlogs, setCategories } = useContext(BlogContext);
@@ -25,6 +26,9 @@ const Home = ({ posts, categories }) => {
 
   return (
     <div>
+      <div className="mx-4 mb-2 p-2 w-fit h-fit sm:mx-8 text-white bg-black/20 transition-all duration-300 shadow-md shadow-black rounded-lg hover:bg-black/50">
+        <SortIcon />
+      </div>
       <div className="grid relative w-full lg:grid-cols-12 gap-4 px-2">
         <div className="grid w-full place-self-start content-center md:w-full md:col-span-8 xl:grid-cols-2 2xl:grid-cols-3">
           {blogs.map((p) => (

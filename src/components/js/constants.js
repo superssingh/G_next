@@ -19,18 +19,13 @@ export const HomeMenu = {
   path: "/",
   icon: (
     <svg
+      fill="#ffffff"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
       viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
+      width="24px"
+      height="24px"
     >
-      <path
-        strokeLinecap="round"
-        strokeinejoin="round"
-        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-      />
+      <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z" />
     </svg>
   ),
 };

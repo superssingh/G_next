@@ -6,11 +6,11 @@ const SocialProof = () => {
       <div className="relative text-center">
         <div className="text-xl text-white/40 mb-7 top-20 ">Social</div>
         <div className="grid w-full place-content-center">
-          <div className="grid relative w-full  md:grid-cols-3  place-items-center">
+          <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3  place-items-center">
             {TagName.reviews.map((r) => {
               return (
                 <div className="grid relative animate h-fit  ">
-                  <div className="grid relative w-full md:w-60 h-fit place-items-center  p-4 ">
+                  <div className="grid relative w-full sm:w-60 h-fit place-items-center  p-4 ">
                     <div className="ReviewerPic animate grid absolute h-20 w-20 p-1 rotate-45 overflow-hidden top-[10px] z-[1] shadow-xl drop-shadow-lg">
                       <div>
                         <img

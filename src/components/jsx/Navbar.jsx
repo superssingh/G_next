@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { TagName, BrandName, Logo, SocialWidget } from "../";
-import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -26,7 +25,7 @@ const Navbar = () => {
             <li>
               <Link key={TagName.HomeMenu.name} href={TagName.HomeMenu.path}>
                 <div
-                  className="menu w-auto text-slate-200 hoverEffect p-3 rounded-full "
+                  className=" transition-all duration-400 w-auto text-slate-200 p-3 rounded-full hoverEffect"
                   width={24}
                   height={24}
                 >
