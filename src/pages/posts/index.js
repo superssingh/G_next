@@ -26,7 +26,7 @@ const Home = ({ posts, categories }) => {
 
   return (
     <div>
-      <div className="mx-4 mb-2 p-2 w-fit h-fit sm:mx-8 text-white bg-black/20 transition-all duration-300 shadow-md shadow-black rounded-lg hover:bg-black/50">
+      <div className="mx-4 mb-4 p-2 w-fit h-fit  md:mx-12 text-white buttonViolet ">
         <SortIcon />
       </div>
       <div className="grid relative w-full lg:grid-cols-12 gap-4 px-2">

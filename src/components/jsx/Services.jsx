@@ -12,8 +12,8 @@ const Services = () => {
             return (
               <Link href={m.path} key={m.title}>
                 <div className="grid relative m-2 p-2 transition-all duration-500 text-left ">
-                  <div className="serviceCard text-slate-200  w-full h-fit sm:w-52 sm:h-52 p-5 transition-all duration-500 border-2 border-violet-500/50 hover:bg-violet-600/60 ">
-                    <p className="text-md mt-2 uppercase font-semibold ">
+                  <div className="serviceCard text-slate-200  w-full h-fit sm:w-52 sm:h-52 p-5 transition-all duration-500 border-2 border-violet-500/50 hover:bg-teal-500 ">
+                    <p className="text-md mt-2 uppercase font-semibold font ">
                       {m.title}
                     </p>
                     <p className="text-sm mt-2 font-medium ">{m.description}</p>
