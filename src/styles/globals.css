@@ -674,6 +674,15 @@
   font-size: 18px;
 }
 
+.masonry_layout {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: masonry;
+  gap: 1em;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -858,7 +867,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .serviceCard:hover {
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  background: rgba(143, 33, 179, 0.83);
 }
 
 .iconColor {
@@ -867,7 +876,7 @@ body {
 
 .ReviewerPic {
   border-radius: 50% 50% 0 50%;
-  background: linear-gradient(180deg, rgba(126, 245, 144, 0.9254901961) 0%, rgba(202, 30, 165, 0.768627451) 100%);
+  background: rgba(239, 240, 240, 0.526);
 }
 .ReviewerPic:hover {
   background: rgba(122, 255, 228, 0.934);
@@ -875,10 +884,9 @@ body {
 
 .socialCard {
   background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
-  border-radius: 0 20px 0 20px;
+  border-radius: 10% 10px 10px 10px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }
 .socialCard:hover {
-  background: rgba(0, 0, 0, 0.13);
-  box-shadow: 0 0px 0px 3px rgba(89, 198, 197, 0.919);
+  background: rgba(158, 60, 190, 0.83);
 }/*# sourceMappingURL=globals.css.map */

@@ -289,6 +289,7 @@ export const socialLinks = [
 export const reviews = [
   {
     name: "User 1",
+    job: "Web Developer",
     comment:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis necessitatibus rerum sint nesciunt voluptas alias quam, fuga commodi deleniti, aut suscipit exercitationem reiciendis doloribus.",
     image:
@@ -297,6 +298,7 @@ export const reviews = [
   },
   {
     name: "User 2",
+    job: "Full Stack Developer",
     comment:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ut ipsa fugit, voluptatem repudiandae tenetur, harum aliquid voluptas quisquam dolor suscipit vel quos nihil corrupti, blanditiis amet id!",
     image:
@@ -305,6 +307,7 @@ export const reviews = [
   },
   {
     name: "User 3",
+    job: "Business Startup",
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro praesentium itaque in repudiandae modi molestias tempora voluptate.",
     image:
@@ -313,6 +316,7 @@ export const reviews = [
   },
   {
     name: "User 4",
+    job: "Frontend Developer",
     comment:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus porro eius eum nulla provident! Pariatur illum at quidem aspernatur ex, odio, ad temporibus ea repellendus, odit nesciunt aut autem.",
     image:
@@ -321,6 +325,7 @@ export const reviews = [
   },
   {
     name: "User 5",
+    job: "Web Developer",
     comment:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur est earum sit. Atque, iusto.",
     image:
@@ -329,6 +334,7 @@ export const reviews = [
   },
   {
     name: "User 6",
+    job: "DevOps Developer",
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt laboriosam cupiditate sapiente enim iste voluptates nihil consectetur nisi totam.",
 
