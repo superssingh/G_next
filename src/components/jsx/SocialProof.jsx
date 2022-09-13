@@ -18,7 +18,7 @@ const SocialProof = () => {
                     />
                   </div>
                 </div>
-                <div className="socialCard animate grid relative h-fit py-3 place-items-start ">
+                <div className="socialCard animate grid relative h-fit py-3 place-items-start bg-violet-500/50 ">
                   <div className="w-full pl-20  ">
                     <p className=" text-sm w-fit font-bold text-slate-100 uppercase ">
                       {r.name}

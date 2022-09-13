@@ -865,9 +865,10 @@ body {
 .serviceCard {
   border-radius: 0 10% 10% 0;
   transition: all 0.5s ease-in-out;
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
 }
 .serviceCard:hover {
-  background: rgba(143, 33, 179, 0.83);
+  background: rgba(48, 42, 50, 0);
 }
 
 .iconColor {
@@ -876,17 +877,18 @@ body {
 
 .ReviewerPic {
   border-radius: 50% 50% 0 50%;
-  background: rgba(239, 240, 240, 0.526);
+  background: linear-gradient(180deg, rgba(126, 245, 144, 0.9254901961) 0%, rgba(202, 30, 165, 0.768627451) 100%);
 }
 .ReviewerPic:hover {
   background: rgba(122, 255, 228, 0.934);
 }
 
 .socialCard {
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  border: 2px solid rgba(50, 49, 49, 0.194);
   border-radius: 10% 10px 10px 10px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }
 .socialCard:hover {
-  background: rgba(158, 60, 190, 0.83);
+  background: rgba(14, 14, 14, 0.018);
+  border: 2px solid rgba(169, 93, 224, 0.785);
 }/*# sourceMappingURL=globals.css.map */
