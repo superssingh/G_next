@@ -865,7 +865,6 @@ body {
 .serviceCard {
   border-radius: 0 10% 10% 0;
   transition: all 0.5s ease-in-out;
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
 }
 .serviceCard:hover {
   background: rgba(48, 42, 50, 0);
@@ -884,7 +883,7 @@ body {
 }
 
 .socialCard {
-  border: 2px solid rgba(50, 49, 49, 0.194);
+  border: 2px solid rgba(53, 7, 72, 0.166);
   border-radius: 10% 10px 10px 10px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }

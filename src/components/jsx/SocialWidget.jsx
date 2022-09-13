@@ -5,7 +5,7 @@ const SocialWidget = () => {
     <div className="showSlow z-2">
       {TagName.socialLinks.map((s) => {
         return (
-          <Link href={s.url}>
+          <Link href={s.url} key={s.name}>
             <a className={s.name}>{s.icon}</a>
           </Link>
         );
