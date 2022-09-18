@@ -95,6 +95,11 @@ $GradientTeal: linear-gradient(
   rgba(21, 213, 171, 0.859) 0%,
   rgba(17, 145, 117, 0.859) 100%
 );
+$GradientTeal1: linear-gradient(
+  180deg,
+  rgba(21, 213, 171, 1) 0%,
+  rgba(17, 145, 117, 1) 100%
+);
 $blackGlassColor: linear-gradient(-90deg, #010101c6, #0c0c0cdd, #090909ad);
 
 //---------color options ----
@@ -108,6 +113,7 @@ $GradientGreenColor: linear-gradient(90deg, #09120bc2, #02fb02, #050906c2);
 
 $GradientLightGreen: linear-gradient(90deg, #f2faf2c2, #589468c2);
 $GradientLime: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
+$GradientLime0: linear-gradient(0deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 $transparentWhiteColor: linear-gradient(90deg, #7fad8bc2, #c8f0c8c2, #7fad8bc2);
 
 $GradientMenuButton: linear-gradient(90deg, #340d41c2, #c21db7c2, #580b54c2);

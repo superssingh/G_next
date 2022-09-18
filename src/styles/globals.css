@@ -292,7 +292,7 @@
   box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
 }
 
-@media (min-width: 921px) {
+@media (min-width: 801px) {
   #hamburger {
     display: none;
   }
@@ -309,7 +309,7 @@
     display: none;
   }
 }
-@media (max-width: 919px) {
+@media (max-width: 799px) {
   .menus {
     display: none;
   }
@@ -443,7 +443,6 @@
   .mobile-open .navLogo {
     width: wrap;
     height: wrap;
-    transition: all 0.3s;
     display: flex;
     position: relative;
     justify-content: center;
@@ -863,15 +862,51 @@ body {
 }
 
 .serviceCard {
-  border-radius: 0 10% 10% 0;
-  transition: all 0.5s ease-in-out;
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  display: grid;
+  border-radius: 10px;
+  border: 2px solid rgba(76, 255, 163, 0);
+  transition: all 0.5s ease;
+  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
+          animation: 0.7s ease-out 0s 1 slideInTop;
+  overflow: hidden;
 }
 .serviceCard:hover {
-  background: rgba(48, 42, 50, 0);
+  background: rgba(60, 7, 101, 0.571);
+  border: 2px solid rgba(54, 243, 180, 0.742);
+}
+.serviceCard:hover .serviceDesc {
+  width: 100%;
+  padding: 10px 1rem;
+  -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
+          animation: 0.7s ease-out 0s 1 slideInBottom;
+  display: block;
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
 }
 
+@media (min-width: 640px) {
+  .serviceDesc {
+    display: none;
+  }
+}
+@media (max-width: 639px) {
+  .serviceCard {
+    display: grid;
+    padding: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .serviceCard:hover {
+    background: rgba(60, 7, 101, 0.571);
+  }
+  .serviceCard:hover .serviceDesc {
+    width: 100%;
+    display: block;
+    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  }
+}
 .iconColor {
-  color: rgb(219, 213, 255);
+  color: rgb(255, 255, 255);
 }
 
 .ReviewerPic {
@@ -883,11 +918,15 @@ body {
 }
 
 .socialCard {
-  border: 2px solid rgba(53, 7, 72, 0.166);
+  border: 2px solid rgba(52, 7, 72, 0.017);
   border-radius: 10% 10px 10px 10px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
 }
 .socialCard:hover {
   background: rgba(14, 14, 14, 0.018);
   border: 2px solid rgba(169, 93, 224, 0.785);
+}
+
+.gradientTeal {
+  background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
 }/*# sourceMappingURL=globals.css.map */

@@ -209,15 +209,52 @@ body {
 }
 
 .serviceCard {
-  border-radius: 0 10% 10% 0;
-  transition: all 0.5s ease-in-out;
+  background: $GradientTeal;
+  display: grid;
+  border-radius: 10px;
+  border: 2px solid rgba(76, 255, 163, 0);
+  transition: all 0.5s ease;
+  animation: 0.7s ease-out 0s 1 slideInTop;
+  overflow: hidden;
   &:hover {
-    background: rgba(48, 42, 50, 0);
+    // animation: 0.7s ease-out 0s 1 slideInBottom;
+    .serviceDesc {
+      width: 100%;
+      padding: 10px 1rem;
+      animation: 0.7s ease-out 0s 1 slideInBottom;
+      display: block;
+      background: $GradientTeal;
+    }
+    background: rgba(60, 7, 101, 0.571);
+    border: 2px solid rgba(54, 243, 180, 0.742);
+  }
+}
+
+@include media(">=phablet") {
+  .serviceDesc {
+    display: none;
+  }
+}
+
+@include media("<phablet") {
+  .serviceCard {
+    display: grid;
+    padding: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    &:hover {
+      .serviceDesc {
+        width: 100%;
+        display: block;
+        background: $GradientTeal;
+      }
+      background: rgba(60, 7, 101, 0.571);
+    }
   }
 }
 
 .iconColor {
-  color: rgb(219, 213, 255);
+  color: rgb(255, 255, 255);
 }
 
 .ReviewerPic {
@@ -232,11 +269,15 @@ body {
 
 .socialCard {
   // background: rgb(184, 184, 184);
-  border: 2px solid rgba(53, 7, 72, 0.166);
+  border: 2px solid rgba(52, 7, 72, 0.017);
   border-radius: 10% 10px 10px 10px;
   box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
   &:hover {
     background: rgba(14, 14, 14, 0.018);
     border: 2px solid rgba(169, 93, 224, 0.785);
   }
+}
+
+.gradientTeal {
+  background: $GradientTeal1;
 }
