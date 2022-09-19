@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TagName, SocialWidget, Logo } from "../";
 
 const Footer = () => {
+  const social = TagName.social;
   return (
     <div className="flex z-[3] flex-col w-full h-fit bottom-0 transition-all duration-700 p-4 bg-gray-900 text-gray-300 ">
       <div className="grid w-full h-fit place-items-center top-0 px-2 md:grid-cols-3 ">
@@ -31,7 +32,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="footerSocial top-0 w-fit place-items-start ">
-          <SocialWidget />
+          <SocialWidget social={TagName.socialLinks} />
         </div>
       </div>
       <div className="grid place-items-center text-gray-300">

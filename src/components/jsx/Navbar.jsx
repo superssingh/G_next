@@ -84,7 +84,7 @@ const Navbar = () => {
           </Link> */}
 
           <li className="social z-[10]">
-            <SocialWidget />
+            <SocialWidget social={TagName.socialLinks} />
           </li>
 
           <li className="navLogo z-10">

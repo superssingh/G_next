@@ -87,7 +87,7 @@ body {
 }
 
 .card {
-  background: $cardColor;
+  background: $GradientLime;
   transition: 0.5s ease-in-out;
 }
 
@@ -209,24 +209,17 @@ body {
 }
 
 .serviceCard {
-  background: $GradientTeal;
+  // background: $GradientTeal;
   display: grid;
   border-radius: 10px;
-  border: 2px solid rgba(76, 255, 163, 0);
+  border: 2px solid rgba(222, 114, 224, 0.688);
   transition: all 0.5s ease;
-  animation: 0.7s ease-out 0s 1 slideInTop;
   overflow: hidden;
+
   &:hover {
-    // animation: 0.7s ease-out 0s 1 slideInBottom;
     .serviceDesc {
-      width: 100%;
-      padding: 10px 1rem;
-      animation: 0.7s ease-out 0s 1 slideInBottom;
       display: block;
-      background: $GradientTeal;
     }
-    background: rgba(60, 7, 101, 0.571);
-    border: 2px solid rgba(54, 243, 180, 0.742);
   }
 }
 
@@ -234,21 +227,44 @@ body {
   .serviceDesc {
     display: none;
   }
+
+  .serviceCard {
+    // background: $GradientTeal;
+    display: grid;
+    border-radius: 10px;
+    border: 2px solid rgba(222, 114, 224, 0.688);
+    transition: all 0.5s ease;
+    overflow: hidden;
+
+    &:hover {
+      .serviceDesc {
+        width: 100%;
+        padding: 10px 14px;
+        animation: 0.7s ease-out 0s 1 slideInBottom;
+        display: block;
+        background: $GradientTeal;
+      }
+      background: rgba(68, 9, 114, 0.571);
+      border: 2px solid rgba(54, 243, 180, 0.742);
+    }
+  }
 }
 
 @include media("<phablet") {
   .serviceCard {
     display: grid;
     padding: 10px;
-    transition: all 0.5s ease;
     overflow: hidden;
+    border: 1px solid rgba(25, 5, 37, 0.513);
+    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
+    transition: all 0.5s ease;
     &:hover {
       .serviceDesc {
         width: 100%;
         display: block;
-        background: $GradientTeal;
       }
-      background: rgba(60, 7, 101, 0.571);
+      background: $GradientTeal1;
+      box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.852);
     }
   }
 }
@@ -280,4 +296,12 @@ body {
 
 .gradientTeal {
   background: $GradientTeal1;
+}
+
+.AuthorPic {
+  border-radius: 50px;
+  background: rgba(246, 231, 248, 0.904);
+  &:hover {
+    background: #fff;
+  }
 }

@@ -1,8 +1,33 @@
+import Image from "next/image";
 const AuthorInfo = ({ author }) => {
   return (
-    <div>
-      <div>Author: Santosh K. Singh</div>
-      <div>Profession: Founder of Gogixer and Software Developer </div>
+    <div className=" bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 my-2">
+      <div className="grid w-full place-content-center">
+        <div className="AuthorPic animate grid w-20 p-1 place-content-center mt-[-30px] rotate-[45deg] rounded-full overflow-hidden z-[1]">
+          <Image
+            src={author.photo.url}
+            alt="Picture of the author"
+            width={84}
+            height={84}
+            priority
+            className="object-cover shadow-lg rounded-full rotate-[-45deg]"
+          />
+        </div>
+      </div>
+      <div className=" w-full  text-slate-300 ">
+        <div className="text-center p-2">
+          <div className="text-lg font-semibold text-slate-200 ">
+            {author.name}
+          </div>
+          <div className="text-sm font-semibold">{author.profession}</div>
+
+          <div className="text-sm font-bold">
+            {author.social.map((s) => {
+              return <div> {s}</div>;
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

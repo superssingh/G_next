@@ -1,9 +1,9 @@
 import Link from "next/link";
-import * as TagName from "../js/constants";
-const SocialWidget = () => {
+import { TagName } from "..";
+const SocialWidget = ({ social }) => {
   return (
     <div className="showSlow z-2">
-      {TagName.socialLinks.map((s) => {
+      {social.map((s) => {
         return (
           <Link href={s.url} key={s.name}>
             <a className={s.name}>{s.icon}</a>

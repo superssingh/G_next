@@ -13,6 +13,8 @@ export const getPosts = async () => {
               photo {
                 url
               }
+              profession
+              social
             }
             id
             title
@@ -70,6 +72,8 @@ export const getPostDetail = async (slug) => {
           photo {
             url
           }
+          profession
+          social
         }
         id
         title
@@ -111,6 +115,8 @@ export const getPostsByCategory = async (category) => {
           photo {
             url
           }
+          profession
+          social
         }
         id
         title

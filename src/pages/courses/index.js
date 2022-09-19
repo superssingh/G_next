@@ -1,5 +1,8 @@
+import { Course } from "../../components";
+import Link from "next/link";
+
 const Courses = () => {
-  return <div className="showSlow text-white">Coming soon... </div>;
+  return <Course label={false} />;
 };
 
 export default Courses;

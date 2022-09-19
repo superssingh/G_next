@@ -289,7 +289,7 @@
 }
 .menus li a:hover, .menus li a:focus, .menus li a:active {
   background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
-  box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
+  box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);
 }
 
 @media (min-width: 801px) {
@@ -315,6 +315,8 @@
   }
   .mobile-open {
     opacity: 1;
+    -webkit-animation: 0.3s ease-out 0s 1 slideInRight;
+            animation: 0.3s ease-out 0s 1 slideInRight;
   }
   .mobile-menus {
     display: block;
@@ -451,6 +453,8 @@
   }
   .mobile-close {
     display: none;
+    -webkit-animation: 0.5s ease-out 0s 1 slideInLeft;
+            animation: 0.5s ease-out 0s 1 slideInLeft;
   }
   .mobile-close .mobileMenus {
     opacity: 0;
@@ -862,47 +866,56 @@ body {
 }
 
 .serviceCard {
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   display: grid;
   border-radius: 10px;
-  border: 2px solid rgba(76, 255, 163, 0);
+  border: 2px solid rgba(222, 114, 224, 0.688);
   transition: all 0.5s ease;
-  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
-          animation: 0.7s ease-out 0s 1 slideInTop;
   overflow: hidden;
 }
-.serviceCard:hover {
-  background: rgba(60, 7, 101, 0.571);
-  border: 2px solid rgba(54, 243, 180, 0.742);
-}
 .serviceCard:hover .serviceDesc {
-  width: 100%;
-  padding: 10px 1rem;
-  -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
-          animation: 0.7s ease-out 0s 1 slideInBottom;
   display: block;
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
 }
 
 @media (min-width: 640px) {
   .serviceDesc {
     display: none;
   }
+  .serviceCard {
+    display: grid;
+    border-radius: 10px;
+    border: 2px solid rgba(222, 114, 224, 0.688);
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .serviceCard:hover {
+    background: rgba(68, 9, 114, 0.571);
+    border: 2px solid rgba(54, 243, 180, 0.742);
+  }
+  .serviceCard:hover .serviceDesc {
+    width: 100%;
+    padding: 10px 14px;
+    -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
+            animation: 0.7s ease-out 0s 1 slideInBottom;
+    display: block;
+    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  }
 }
 @media (max-width: 639px) {
   .serviceCard {
     display: grid;
     padding: 10px;
-    transition: all 0.5s ease;
     overflow: hidden;
+    border: 1px solid rgba(25, 5, 37, 0.513);
+    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
+    transition: all 0.5s ease;
   }
   .serviceCard:hover {
-    background: rgba(60, 7, 101, 0.571);
+    background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
+    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.852);
   }
   .serviceCard:hover .serviceDesc {
     width: 100%;
     display: block;
-    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
 }
 .iconColor {
@@ -929,4 +942,12 @@ body {
 
 .gradientTeal {
   background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
+}
+
+.AuthorPic {
+  border-radius: 50px;
+  background: rgba(246, 231, 248, 0.904);
+}
+.AuthorPic:hover {
+  background: #fff;
 }/*# sourceMappingURL=globals.css.map */

@@ -1,15 +1,17 @@
-import * as TagName from "../js/constants";
+import { TagName } from "..";
 import Link from "next/link";
 
-const Services = () => {
+const Course = ({ label }) => {
   return (
-    <div className="grid  justify-center items-center md:my-0 my-10 relative transition-all duration-500 py-4 showFromTop ">
+    <div className="grid  justify-center items-center md:my-0 my-10 relative transition-all duration-500 py-2 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
-        <span className="text-xl text-slate-300 font-sans font-medium ">
-          Our Services
-        </span>
+        {label && (
+          <span className="text-lg text-white/80 font-medium font-sans ">
+            Courses
+          </span>
+        )}
         <div className="grid relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 ">
-          {TagName.services.map((m) => {
+          {TagName.courses.map((m) => {
             return (
               <Link href={m.path} key={m.title}>
                 <div className="grid relative w-full transition-all duration-700 text-left sm:place-items-center">
@@ -38,4 +40,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Course;

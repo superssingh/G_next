@@ -4,8 +4,10 @@ import Link from "next/link";
 import moment from "moment";
 import Markdown from "markdown-to-jsx";
 import LikeButton from "./LikeButton";
+import AuthorInfo from "./AuthorInfo";
 
 const PostDetail = ({ post }) => {
+  console.log(post);
   return (
     <div className="grid relative place-content-center showSlow">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
@@ -19,7 +21,7 @@ const PostDetail = ({ post }) => {
       </div>
       <div className=" bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
         <div className="PostDetail">
-          <div className="text-gray-700 text-4xl font-semibold p-4 mb-4 ">
+          <div className="text-gray-700 text-3xl font-semibold p-4 mb-4 ">
             {post.title}
           </div>
           <div className="relative px-4 pb-2">
@@ -40,12 +42,12 @@ const PostDetail = ({ post }) => {
                 <line x1="8" y1="2" x2="8" y2="6"></line>
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
-              <div className="pl-1">
+              <div className="pl-1 text-gray-400">
                 {moment(post.createdAt).format("MMM DD, YYYY")}
               </div>
             </div>
 
-            <div className=" text-lg text-gray-600">
+            <div className=" text-md text-gray-600">
               {post.content.map((c, id) => (
                 <div className="my-6" key={id}>
                   <Markdown>{c.html}</Markdown>
@@ -75,6 +77,7 @@ const PostDetail = ({ post }) => {
       </Link>
 
       {/* <LikeButton /> */}
+      <AuthorInfo author={post.author} />
     </div>
   );
 };
