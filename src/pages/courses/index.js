@@ -2,7 +2,11 @@ import { Course } from "../../components";
 import Link from "next/link";
 
 const Courses = () => {
-  return <Course label={false} />;
+  return (
+    <div className="">
+      <Course label={false} />
+    </div>
+  );
 };
 
 export default Courses;

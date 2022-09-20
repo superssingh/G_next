@@ -165,6 +165,12 @@ export const getImagePath = () => {
 
 export const services = [
   {
+    title: "Website Development",
+    description: "Built your desired website with us",
+    icon: "",
+    path: "/contact",
+  },
+  {
     title: "Responsive Design",
     description:
       "Learn responsive user interface design with CSS, SASS, SCSS & tailwindCSS.",
