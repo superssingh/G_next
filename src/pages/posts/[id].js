@@ -1,24 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useRouter } from "next/router";
-import {
-  getPosts,
-  getPostDetail,
-  getCategories,
-  getPostsByCategory,
-} from "../../services/getBlogData";
-import {
-  BlogContext,
-  HeadTag,
-  PostDetail,
-  PostWidget,
-  Categories,
-} from "../../components";
+import React from "react";
+
+import { getPosts, getPostDetail } from "../../services/getBlogData";
+import { HeadTag, PostDetail, PostWidget } from "../../components";
 import moment from "moment";
 
 const Blog = ({ post, posts }) => {
-  // const router = useRouter();
-  // const { id } = router.query;
-
   return (
     <div className="showSlow">
       <HeadTag post={post} />
@@ -37,7 +23,6 @@ const Blog = ({ post, posts }) => {
                   id={post.id}
                 />
               )}
-              {/* <Categories /> */}
             </div>
           </div>
         </div>
@@ -57,7 +42,6 @@ export async function getStaticProps({ params }) {
     props: {
       post,
       posts,
-      // categories,
     },
     revalidate: 60000,
   };
