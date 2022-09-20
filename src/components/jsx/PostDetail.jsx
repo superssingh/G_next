@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 import Markdown from "markdown-to-jsx";
-import { AuthorInfo } from "../";
+import { AuthorInfo } from "..";
+
+// const DynamicAuthorInfo = dynamic(() => import("../jsx/AuthorInfo"), {
+//   suspense: true,
+// });
 
 const PostDetail = ({ post }) => {
   return (
@@ -74,6 +79,12 @@ const PostDetail = ({ post }) => {
         </div>
       </Link>
       {post.author && <AuthorInfo author={post.author} />}
+      {/*       
+      {post.author && (
+        <Suspense fallback={`Loading...`}>
+          <DynamicAuthorInfo author={post.author} />
+        </Suspense>
+      )} */}
     </div>
   );
 };
