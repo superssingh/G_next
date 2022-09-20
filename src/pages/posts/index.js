@@ -1,5 +1,5 @@
-import React, { useEffect, useContext } from "react";
-import { getCategories, getPosts } from "../../services/getBlogData";
+import React, { useEffect, useContext, useState } from "react";
+import { getPosts } from "../../services/getBlogData";
 import moment from "moment";
 import _ from "lodash";
 import {
@@ -9,19 +9,19 @@ import {
   Categories,
 } from "../../components";
 
-const Home = ({ posts, categories }) => {
-  // const { blogs, setBlogs, setCategories } = useContext(BlogContext);
-  // useEffect(async () => {
-  //   if (posts) {
-  //     const recent = await _.orderBy(
-  //       posts,
-  //       (a) => moment(a.node.createdAt).format("YYYYMMDD"),
-  //       "desc"
-  //     );
-  //     setBlogs(recent);
-  //     setCategories(categories);
-  //   }
-  // }, []);
+const Home = ({ posts }) => {
+  const [recentPosts, setRecentPosts] = useState([]);
+
+  useEffect(async () => {
+    if (posts) {
+      const recent = await _.orderBy(
+        posts,
+        (a) => moment(a.node.createdAt).format("YYYYMMDD"),
+        "desc"
+      );
+      setRecentPosts(recent);
+    }
+  }, [posts]);
 
   return (
     <div>
@@ -34,8 +34,8 @@ const Home = ({ posts, categories }) => {
         {posts && (
           <div className="grid w-full md:col-span-8 lg:col-span-4 ">
             <div className=" place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
-              <PostWidget recentPosts={posts} />
-              <Categories categories={categories} />
+              <PostWidget posts={recentPosts} />
+              {/* <Categories categories={TagName.categories} /> */}
             </div>
           </div>
         )}
@@ -47,6 +47,6 @@ export default Home;
 
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
-  const categories = (await getCategories()) || [];
-  return { props: { posts, categories }, revalidate: 36000 };
+  // const categories = (await getCategories()) || [];
+  return { props: { posts }, revalidate: 36000 };
 }

@@ -3,26 +3,26 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className="grid  justify-center items-center md:my-0 my-10 relative transition-all duration-500 py-4 showFromTop ">
+    <div className="grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
         <span className="text-xl text-slate-300 font-sans font-medium ">
           Our Services
         </span>
-        <div className="grid relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 ">
+        <div className="grid w-full relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4  ">
           {TagName.services.map((m) => {
             return (
               <Link href={m.path} key={m.title}>
-                <div className="grid relative w-full transition-all duration-700 text-left sm:place-items-center">
-                  <div className=" serviceCard w-full h-fit sm:w-60 sm:h-52 ">
-                    <div className="flex relative w-full place-content-start  sm:grid sm:w-60 sm:place-content-center ">
-                      <div className="grid place-self-center place-content-center text-center place-items-center p-2  ">
+                <div className="grid relative transition-all duration-700 sm:place-items-center ">
+                  <div className="serviceCard w-full h-fit sm:w-60 sm:h-52  ">
+                    <div className="w-full flex place-content-start sm:grid sm:w-60 sm:place-content-center ">
+                      <div className="grid place-content-center p-2">
                         {m.icon}
                       </div>
-                      <div className="w-full">
+                      <div className="">
                         <div className=" px-4 pb-2 text-slate-100  text-left text-md uppercase font-semibold sm:text-center shadow-none border-0 drop-shadow-none">
                           {m.title}
                         </div>
-                        <div className="serviceDesc text-slate-200 text-sm  px-4 pb-4 ">
+                        <div className="serviceDesc w-[100%] text-left text-slate-200 text-md px-4  ">
                           {m.description}
                         </div>
                       </div>

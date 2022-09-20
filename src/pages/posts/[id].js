@@ -32,12 +32,12 @@ const Blog = ({ post, posts }) => {
             <div className="place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
               {posts && (
                 <PostWidget
-                  recentPosts={posts}
+                  posts={posts}
                   category={post.categories[0].name}
                   id={post.id}
                 />
               )}
-              {categories && <Categories categories={categories} />}
+              {/* <Categories /> */}
             </div>
           </div>
         </div>

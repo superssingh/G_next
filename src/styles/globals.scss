@@ -235,6 +235,27 @@ body {
     border: 2px solid rgba(91, 210, 122, 0.897);
     transition: all 0.5s ease;
     overflow: hidden;
+    background: $GradientTeal;
+    &:hover {
+      .serviceDesc {
+        width: 100%;
+        padding: 10px 14px;
+        animation: 0.7s ease-out 0s 1 slideInBottom;
+        display: block;
+        background: $GradientTeal;
+      }
+      background: rgba(68, 9, 114, 0.571);
+      border: 2px solid rgba(54, 243, 180, 0.742);
+    }
+  }
+
+  .courseCard {
+    // background: $GradientTeal;
+    display: grid;
+    border-radius: 10px;
+    border: 2px solid rgba(91, 210, 122, 0.897);
+    transition: all 0.5s ease;
+    overflow: hidden;
 
     &:hover {
       .serviceDesc {
@@ -251,19 +272,38 @@ body {
 }
 
 @include media("<phablet") {
-  .serviceCard {
+  .courseCard {
     display: grid;
+    border-radius: 10px;
     padding: 10px;
-    overflow: hidden;
-    border: 2px solid rgba(73, 149, 93, 0.897);
-    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
+    border: 2px solid rgba(23, 23, 23, 0);
     transition: all 0.5s ease;
+    overflow: hidden;
+    border: 2px solid rgba(91, 210, 122, 0.897);
     &:hover {
+      background: $GradientTeal;
       .serviceDesc {
         width: 100%;
         display: block;
       }
-      background: $GradientTeal1;
+      border: 2px solid rgba(54, 243, 180, 0);
+    }
+  }
+  .serviceCard {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(101, 227, 135, 0.892);
+    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
+    transition: all 0.5s ease;
+    background: $GradientTeal;
+    &:hover {
+      .serviceDesc {
+        bottom: 0px;
+        width: 100%;
+        display: block;
+      }
+      background: rgba(1, 26, 16, 0.3);
       box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.852);
     }
   }

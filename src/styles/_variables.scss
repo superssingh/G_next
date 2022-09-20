@@ -185,9 +185,9 @@ $SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 // $fontColor: $grayColor;
 
 .purple_gradient1 {
-  z-index: 10;
-  background: linear-gradient(180deg, #bc8ee9c5 0%, #3c1665e3 100%);
-  // filter: blur(200px);
+  z-index: 0;
+  background: linear-gradient(180deg, #8d32e7c5 0%, #3c1665e3 100%);
+  filter: blur(5px);
 }
 
 .purple_gradient {
@@ -198,21 +198,21 @@ $SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 
 .pink_gradient {
   z-index: 0;
-  background: linear-gradient(90deg, #f4c4f3 0%, #340325 100%);
-  filter: blur(400px);
+  background: linear-gradient(90deg, #914aba 0%, #68064a 100%);
+  filter: blur(100px);
 }
 .white_gradient {
   z-index: 0;
   // background: linear-gradient(90deg, #f4c4f3 0%, #fbfbfbc4 100%);
-  background: rgba(255, 255, 255, 0.772);
-  filter: blur(750px);
+  background: rgba(253, 253, 253, 0.523);
+  filter: blur(300px);
 }
 .blue_gradient {
   z-index: 0;
   background: linear-gradient(
     180deg,
-    rgba(28, 61, 178, 0.843) 0%,
-    #66a0d6 100%
+    rgba(182, 230, 242, 0.843) 0%,
+    #1b569a 100%
   );
   filter: blur(123px);
 }

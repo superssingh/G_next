@@ -4,7 +4,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useForm, FormProvider } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ContactForm } from "../../components";
+import { ContactForm, SocialWidget, TagName } from "../../components";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,7 +14,7 @@ const schema = yup.object({
   message: yup.string().min(25).max(200).required(),
 });
 
-const Contact = () => {
+const Contact = ({ client }) => {
   const [success, setSuccess] = useState(false);
   const EMAIL_SERVICE = {
     SERVICE_ID: "service_qgsohfe",
@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="grid   place-content-center ">
+    <div className="grid place-content-center ">
       <div className="grid w-fit place-content-center m-2 p-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
@@ -107,6 +107,14 @@ const Contact = () => {
             </FormProvider>
           </div>
         )}
+        <div className="mt-4  p-2 ">
+          <div className="text-center text-gray-400 text-xs mb-2">
+            Follow Us
+          </div>
+          <div className="grid ">
+            <SocialWidget social={TagName.socialLinks} />
+          </div>
+        </div>
       </div>
 
       <ToastContainer

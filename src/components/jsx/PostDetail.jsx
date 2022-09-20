@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 import Markdown from "markdown-to-jsx";
-import { AuthorInfo } from "..";
+import { AuthorInfo, Back } from "..";
 
 // const DynamicAuthorInfo = dynamic(() => import("../jsx/AuthorInfo"), {
 //   suspense: true,
@@ -60,24 +60,7 @@ const PostDetail = ({ post }) => {
           </div>
         </div>
       </div>
-      <Link href={`/posts`}>
-        <div id="backButton" className=" top-0 w-fit h-fit">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#000000"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-        </div>
-      </Link>
+      <Back path="posts" />
       {post.author && <AuthorInfo author={post.author} />}
       {/*       
       {post.author && (

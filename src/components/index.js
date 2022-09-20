@@ -20,3 +20,4 @@ export { default as ContactForm } from "./jsx/ContactForm";
 export { default as Course } from "./jsx/Course";
 export { default as Services } from "./jsx/Services";
 export { default as SocialProof } from "./jsx/SocialProof";
+export { default as Back } from "./jsx/Back";
