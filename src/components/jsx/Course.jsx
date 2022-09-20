@@ -7,7 +7,7 @@ const Course = ({ label }) => {
       <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
         {label && (
           <span className="text-lg text-white/80 font-medium font-sans ">
-            Courses
+            Our Courses
           </span>
         )}
         <div className="grid relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 ">
