@@ -22,8 +22,8 @@ const AuthorInfo = ({ author }) => {
           <div className="text-sm font-semibold">{author.profession}</div>
 
           <div className="text-sm font-bold">
-            {author.social.map((s) => {
-              return <div> {s}</div>;
+            {author.social.map((s, i) => {
+              return <div key={i}> {s}</div>;
             })}
           </div>
         </div>

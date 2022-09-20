@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 import Markdown from "markdown-to-jsx";
-import LikeButton from "./LikeButton";
-import AuthorInfo from "./AuthorInfo";
+import { AuthorInfo } from "../";
 
 const PostDetail = ({ post }) => {
   return (
@@ -74,10 +73,7 @@ const PostDetail = ({ post }) => {
           </svg>
         </div>
       </Link>
-
-      {/* <LikeButton /> */}
-      <AuthorInfo author={post.author} />
-      {/* ----------------- */}
+      {post.author && <AuthorInfo author={post.author} />}
     </div>
   );
 };
