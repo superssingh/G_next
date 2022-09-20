@@ -10,7 +10,7 @@ const HeroPage = () => {
         <div className="relative flex md:justify-center items-center text-slate-100">
           <div className={` md:flex text-center md:my-0 my-10 relative`}>
             <span className="p-6 ">
-              <p className="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-red-200 to-orange-300">
+              <p className=" text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-red-200 to-orange-300">
                 👋 Hello their
               </p>
               <p className="mt-4 text-3xl pb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-200 to-violet-500">{`{ Learn by doing. }`}</p>
