@@ -15,9 +15,9 @@ import {
 } from "../../components";
 import moment from "moment";
 
-const Blog = ({ post, categories, posts }) => {
-  const router = useRouter();
-  const { slug } = router.query;
+const Blog = ({ post, posts }) => {
+  // const router = useRouter();
+  // const { id } = router.query;
 
   return (
     <div className="showSlow">
@@ -50,14 +50,14 @@ export default Blog;
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-  const post = (await getPostDetail(params.slug)) || [];
-  const categories = (await getCategories()) || [];
+  const post = (await getPostDetail(params.id)) || [];
   const posts = (await getPosts()) || [];
+  // const categories = (await getCategories()) || [];
   return {
     props: {
       post,
-      categories,
       posts,
+      // categories,
     },
     revalidate: 60000,
   };
@@ -65,7 +65,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-  const paths = posts.map(({ node: { slug } }) => ({ params: { slug } }));
+  const paths = posts.map(({ node: { id } }) => ({ params: { id } }));
 
   return { paths, fallback: "blocking" };
 }

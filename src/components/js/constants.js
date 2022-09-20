@@ -150,9 +150,7 @@ export const footermenus = [
 
 export const categories = [
   { name: "Programming", image: "", id: "1" },
-  { name: "Productivity", image: "", id: "2" },
   { name: "Technology", image: "", id: "3" },
-  { name: "Top / Best", image: "", id: "4" },
 ];
 
 export const getPosts = () => {
