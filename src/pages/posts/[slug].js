@@ -35,7 +35,7 @@ export default Blog;
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-  const post = (await getPostDetail(params.id)) || [];
+  const post = (await getPostDetail(params.slug)) || [];
   const posts = (await getPosts()) || [];
   // const categories = (await getCategories()) || [];
   return {
@@ -49,7 +49,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-  const paths = posts.map(({ node: { id } }) => ({ params: { id } }));
+  const paths = posts.map(({ node: { slug } }) => ({ params: { slug } }));
 
   return { paths, fallback: "blocking" };
 }
