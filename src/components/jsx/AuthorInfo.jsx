@@ -7,8 +7,8 @@ const AuthorInfo = ({ author }) => {
           <Image
             src={author.photo.url}
             alt="Picture of the author"
-            width={84}
-            height={84}
+            width={72}
+            height={72}
             priority
             className="object-cover shadow-lg rounded-full rotate-[-45deg]"
           />

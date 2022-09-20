@@ -7,7 +7,6 @@ import LikeButton from "./LikeButton";
 import AuthorInfo from "./AuthorInfo";
 
 const PostDetail = ({ post }) => {
-  console.log(post);
   return (
     <div className="grid relative place-content-center showSlow">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
@@ -78,6 +77,7 @@ const PostDetail = ({ post }) => {
 
       {/* <LikeButton /> */}
       <AuthorInfo author={post.author} />
+      {/* ----------------- */}
     </div>
   );
 };

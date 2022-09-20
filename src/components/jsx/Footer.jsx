@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { TagName, SocialWidget, Logo } from "../";
+import { TagName, SocialWidget, Logo } from "..";
 
 const Footer = () => {
-  const social = TagName.social;
   return (
     <div className="flex z-[3] flex-col w-full h-fit bottom-0 transition-all duration-700 p-4 bg-gray-900 text-gray-300 ">
       <div className="grid w-full h-fit place-items-center top-0 px-2 md:grid-cols-3 ">
