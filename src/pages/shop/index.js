@@ -1,7 +1,9 @@
 const Shop = () => {
   return (
-    <div className="showSlow text-white">
-      <div>Coming soon... </div>
+    <div className="showSlow  m-4">
+      <div className="animate-pulse text-2xl font-extrabold p-3 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white ">
+        Coming soon...
+      </div>
     </div>
   );
 };
