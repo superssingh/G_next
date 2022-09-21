@@ -8,8 +8,8 @@ const SocialProof = () => {
         <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center place-content-center">
           {TagName.reviews.map((r) => {
             return (
-              <div className="grid relative animate sm:w-64 md:w-60 lg:w-80 h-fit my-2">
-                <div className="ReviewerPic animate grid absolute h-16 w-16 p-1 left-0 top-[-14px] rotate-45 rounded-full overflow-hidden z-[1]">
+              <div className="grid relative  sm:w-60 md:w-60 lg:w-80 h-fit my-2">
+                <div className="ReviewerPic grid absolute h-16 w-16 p-1 left-0 top-[-14px] rotate-45 rounded-full overflow-hidden z-[1]">
                   <div>
                     <Image
                       className=" h-wrap w-wrap rounded-full rotate-[-45deg] "
