@@ -217,7 +217,7 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0.294);
+    border: 2px solid rgba(207, 214, 210, 0);
     transition: all 0.5s ease;
     overflow: hidden;
     background: $GradientTeal;
@@ -243,7 +243,7 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(91, 210, 122, 0.897);
+    border: 2px solid rgba(207, 214, 210, 0.294);
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -255,7 +255,7 @@ body {
         display: block;
         background: $GradientTeal;
       }
-      background: rgba(41, 4, 69, 0.597);
+      background: rgba(70, 16, 115, 0.471);
       border: 2px solid rgba(54, 243, 180, 0.742);
     }
   }
@@ -266,17 +266,16 @@ body {
     display: grid;
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid rgba(23, 23, 23, 0);
+    border: 2px solid rgba(189, 186, 186, 0.3);
     transition: all 0.5s ease;
     overflow: hidden;
-    border: 2px solid rgba(91, 210, 122, 0.897);
+
     &:hover {
-      background: $GradientTeal;
       .serviceDesc {
         width: 100%;
         display: block;
       }
-      border: 2px solid rgba(54, 243, 180, 0);
+      border: 2px solid rgb(59, 221, 81);
     }
   }
   .serviceCard {
@@ -284,8 +283,7 @@ body {
     padding: 10px;
     overflow: hidden;
     border-radius: 10px;
-    border: 2px solid rgba(101, 227, 135, 0.892);
-    box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
+    border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
     background: $GradientTeal;
     &:hover {
@@ -295,7 +293,7 @@ body {
         display: block;
       }
       background: rgba(1, 26, 16, 0.3);
-      box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.852);
+      border: 2px solid rgb(44, 236, 101);
     }
   }
 }
