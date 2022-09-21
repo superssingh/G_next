@@ -13,7 +13,7 @@ const Services = () => {
             return (
               <Link href={m.path} key={m.title}>
                 <div className="  grid relative transition-all duration-700 sm:place-items-center ">
-                  <div className="serviceCard w-full h-fit sm:w-60 sm:h-52  ">
+                  <div className="serviceCard w-72 h-fit sm:w-60 sm:h-52  ">
                     <div className="w-full flex place-content-start sm:grid sm:w-60 sm:place-content-center ">
                       <div className="grid place-content-center px-4">
                         {m.icon}
