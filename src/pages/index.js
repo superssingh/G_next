@@ -7,19 +7,19 @@ import SocialProof from "../components/jsx/SocialProof";
 
 const Home = () => {
   return (
-    <section className="">
+    <section className=" bg-black">
       <div className="description">
-        <span className="hidden">
+        <span className="hidden w-56">
           <em>
-            <b>Gogixer </b>
+            <b>Gogixer</b>
           </em>
-          is an online learning platform for web developers and entrepreneurs to
+          -An online learning platform for web developers and entrepreneurs to
           learn web development skills.
         </span>
       </div>
 
       <HeroPage />
-      <Services />
+      <Services className="bg-green-500" />
       <Course label={true} />
       <Team />
       <SocialProof />

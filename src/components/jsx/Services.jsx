@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className="grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
+    <div className="bg-green-200 grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
         <span className="text-xl text-slate-300 font-sans font-medium ">
           Our Services
@@ -12,7 +12,7 @@ const Services = () => {
           {TagName.services.map((m) => {
             return (
               <Link href={m.path} key={m.title}>
-                <div className="grid relative transition-all duration-700 sm:place-items-center ">
+                <div className="  grid relative transition-all duration-700 sm:place-items-center ">
                   <div className="serviceCard w-full h-fit sm:w-60 sm:h-52  ">
                     <div className="w-full flex place-content-start sm:grid sm:w-60 sm:place-content-center ">
                       <div className="grid place-content-center px-4">
