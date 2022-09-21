@@ -257,7 +257,7 @@ export const services = [
   },
   {
     title: "Website Development",
-    description: "We build your desire website.",
+    description: "We build websites on demand.",
     icon: (
       <svg
         version="1.1"

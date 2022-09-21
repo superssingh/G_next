@@ -4,8 +4,8 @@ const SocialProof = () => {
   return (
     <div className="grid justify-center relative animate showFromTop ">
       <div className="grid relative text-center m-2 px-2">
-        <div className="text-xl text-white/30 mb-7 top-20 ">Social</div>
-        <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-2 place-items-center place-content-center">
+        <div className="text-xl text-white/30 mb-6 top-10 ">Social</div>
+        <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center place-content-center">
           {TagName.reviews.map((r) => {
             return (
               <div className="grid relative animate sm:w-64 md:w-60 lg:w-80 h-fit my-2">
