@@ -5,11 +5,10 @@ const Course = ({ label }) => {
   return (
     <div className="grid m-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 ">
-        {label && (
-          <span className="text-lg text-white/80 font-medium font-sans ">
-            Our Courses
-          </span>
-        )}
+        <span className="text-lg text-white/80 font-medium font-sans ">
+          Our Courses
+        </span>
+
         <div className="grid relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m) => {
             return (
