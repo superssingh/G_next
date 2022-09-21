@@ -19,7 +19,7 @@ const Services = () => {
                         {m.icon}
                       </div>
                       <div className="">
-                        <div className=" px-4 pb-2 text-slate-100  text-left text-md uppercase font-semibold sm:text-center shadow-none border-0 drop-shadow-none">
+                        <div className=" px-4 pb-2 text-slate-100  text-left text-md font-sans uppercase font-semibold sm:text-center shadow-none border-0 drop-shadow-none">
                           {m.title}
                         </div>
                         <div className="serviceDesc w-[100%] text-left text-slate-200 text-md px-4  ">

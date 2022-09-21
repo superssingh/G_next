@@ -10,6 +10,7 @@ import { AuthorInfo, Back } from "..";
 // });
 
 const PostDetail = ({ post }) => {
+  console.log(post.author.photo.url);
   return (
     <div className="grid relative place-content-center showSlow">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">

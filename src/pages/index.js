@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Course } from "../components";
+import { Course, Team } from "../components";
 
 import HeroPage from "../components/jsx/HeroPage";
 import Services from "../components/jsx/Services";
@@ -21,6 +21,7 @@ const Home = () => {
       <HeroPage />
       <Services />
       <Course label={true} />
+      <Team />
       <SocialProof />
     </section>
   );

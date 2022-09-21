@@ -208,21 +208,6 @@ body {
   border-radius: 0 20% 0 20%;
 }
 
-.serviceCard {
-  // background: $GradientTeal;
-  display: grid;
-  border-radius: 10px;
-  border: 2px solid rgba(97, 232, 144, 0.913);
-  transition: all 0.5s ease;
-  overflow: hidden;
-
-  &:hover {
-    .serviceDesc {
-      display: block;
-    }
-  }
-}
-
 @include media(">=phablet") {
   .serviceDesc {
     display: none;
@@ -232,10 +217,14 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(91, 210, 122, 0.897);
+    border: 2px solid rgba(207, 214, 210, 0.294);
     transition: all 0.5s ease;
     overflow: hidden;
     background: $GradientTeal;
+
+    * {
+      fill: rgb(241, 247, 242);
+    }
     &:hover {
       .serviceDesc {
         width: 100%;
@@ -244,8 +233,9 @@ body {
         display: block;
         background: $GradientTeal;
       }
+
       background: rgba(68, 9, 114, 0.571);
-      border: 2px solid rgba(54, 243, 180, 0.742);
+      border: 2px solid rgba(5, 193, 80, 0.897);
     }
   }
 
@@ -265,7 +255,7 @@ body {
         display: block;
         background: $GradientTeal;
       }
-      background: rgba(68, 9, 114, 0.571);
+      background: rgba(41, 4, 69, 0.597);
       border: 2px solid rgba(54, 243, 180, 0.742);
     }
   }
@@ -293,6 +283,7 @@ body {
     width: 100%;
     padding: 10px;
     overflow: hidden;
+    border-radius: 10px;
     border: 2px solid rgba(101, 227, 135, 0.892);
     box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
     transition: all 0.5s ease;
@@ -315,22 +306,23 @@ body {
 
 .ReviewerPic {
   border-radius: 50% 50% 0 50%;
+  // background: $SocialPicColor;
+  background: rgba(182, 149, 226, 0.934);
+}
+
+.TeamPic {
+  border-radius: 50%;
   background: $SocialPicColor;
-  // background: $GradientTeal;
-  // background: rgba(122, 255, 228, 0.934);
   &:hover {
-    background: rgba(122, 255, 228, 0.934);
+    background: rgba(243, 248, 246, 0.739);
   }
 }
 
 .socialCard {
-  // background: rgb(184, 184, 184);
-  border: 2px solid rgba(52, 7, 72, 0.017);
   border-radius: 10% 10px 10px 10px;
-  box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
+  box-shadow: 0 1px 2px 0px rgba(246, 244, 246, 0.815);
   &:hover {
-    background: rgba(14, 14, 14, 0.018);
-    border: 2px solid rgba(169, 93, 224, 0.785);
+    background: rgb(238, 233, 246);
   }
 }
 

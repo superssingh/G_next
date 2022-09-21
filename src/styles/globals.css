@@ -873,17 +873,6 @@ body {
   border-radius: 0 20% 0 20%;
 }
 
-.serviceCard {
-  display: grid;
-  border-radius: 10px;
-  border: 2px solid rgba(97, 232, 144, 0.913);
-  transition: all 0.5s ease;
-  overflow: hidden;
-}
-.serviceCard:hover .serviceDesc {
-  display: block;
-}
-
 @media (min-width: 640px) {
   .serviceDesc {
     display: none;
@@ -891,14 +880,17 @@ body {
   .serviceCard {
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(91, 210, 122, 0.897);
+    border: 2px solid rgba(207, 214, 210, 0.294);
     transition: all 0.5s ease;
     overflow: hidden;
     background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
+  .serviceCard * {
+    fill: rgb(241, 247, 242);
+  }
   .serviceCard:hover {
     background: rgba(68, 9, 114, 0.571);
-    border: 2px solid rgba(54, 243, 180, 0.742);
+    border: 2px solid rgba(5, 193, 80, 0.897);
   }
   .serviceCard:hover .serviceDesc {
     width: 100%;
@@ -916,7 +908,7 @@ body {
     overflow: hidden;
   }
   .courseCard:hover {
-    background: rgba(68, 9, 114, 0.571);
+    background: rgba(41, 4, 69, 0.597);
     border: 2px solid rgba(54, 243, 180, 0.742);
   }
   .courseCard:hover .serviceDesc {
@@ -950,6 +942,7 @@ body {
     width: 100%;
     padding: 10px;
     overflow: hidden;
+    border-radius: 10px;
     border: 2px solid rgba(101, 227, 135, 0.892);
     box-shadow: 0 1px 1px 1px rgba(25, 5, 37, 0.101);
     transition: all 0.5s ease;
@@ -971,20 +964,23 @@ body {
 
 .ReviewerPic {
   border-radius: 50% 50% 0 50%;
-  background: linear-gradient(180deg, rgba(126, 245, 144, 0.9254901961) 0%, rgba(202, 30, 165, 0.768627451) 100%);
+  background: rgba(182, 149, 226, 0.934);
 }
-.ReviewerPic:hover {
-  background: rgba(122, 255, 228, 0.934);
+
+.TeamPic {
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 253, 252, 0.9254901961) 0%, rgba(181, 74, 226, 0.768627451) 100%);
+}
+.TeamPic:hover {
+  background: rgba(243, 248, 246, 0.739);
 }
 
 .socialCard {
-  border: 2px solid rgba(52, 7, 72, 0.017);
   border-radius: 10% 10px 10px 10px;
-  box-shadow: 0 1px 2px 0px rgba(27, 2, 27, 0.815);
+  box-shadow: 0 1px 2px 0px rgba(246, 244, 246, 0.815);
 }
 .socialCard:hover {
-  background: rgba(14, 14, 14, 0.018);
-  border: 2px solid rgba(169, 93, 224, 0.785);
+  background: rgb(238, 233, 246);
 }
 
 .gradientTeal {
