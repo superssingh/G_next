@@ -4,20 +4,20 @@ import { coding, heroImg } from "../assets";
 const HeroPage = () => {
   return (
     <div>
-      <div className="bg-green-200 grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
-        <div className="grid md:flex md:justify-center items-center text-slate-100">
+      <div className=" grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
+        <div className="grid md:flex md:justify-center items-center text-slate-100 m-2">
           <div className="grid md:flex place-content-center text-center ">
             <span className="">
               <p className=" text-4xl text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-red-200 to-orange-300">
                 👋 Hello
               </p>
               <p className="mt-4 text-3xl pb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-200 to-violet-500">{`{ Learn by doing. }`}</p>
-              <div className="w-full text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-red-100 to-pink-300 text-xl text-center md:text-left  rounded-lg p-4  ">
-                Trying to learn something by doing is the best approach that
-                gives you hands-on experience in development.
+              <div className="w-96 text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-green-100 to-pink-300 text-xl text-center md:text-left  rounded-lg p-4  ">
+                Learn something by doing is the best approach that gives you
+                hands-on experience in development.
               </div>
             </span>
-            <div className="w-full sm-60 md:64">
+            <div className=" w-full sm-60 md:64">
               <Image
                 src={coding}
                 width={300}

@@ -5,7 +5,7 @@ import SocialWidget from "./SocialWidget";
 const Team = () => {
   return (
     <div>
-      <div className="bg-green-500 grid w-full sm:justify-center relative animate showFromTop ">
+      <div className=" grid w-full sm:justify-center relative animate showFromTop ">
         <div className=" relative text-center m-2 px-2">
           <div className="text-xl text-white/60 mb-12 top-20 ">
             Meet Our Team

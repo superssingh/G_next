@@ -7,7 +7,7 @@ import SocialProof from "../components/jsx/SocialProof";
 
 const Home = () => {
   return (
-    <section className=" bg-black">
+    <section className="">
       <div className="description">
         <span className="hidden w-56">
           <em>
@@ -19,7 +19,7 @@ const Home = () => {
       </div>
 
       <HeroPage />
-      <Services className="bg-green-500" />
+      <Services />
       <Course label={true} />
       <Team />
       <SocialProof />

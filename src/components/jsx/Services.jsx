@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className="bg-green-200 grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
+    <div className=" grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
         <span className="text-xl text-slate-300 font-sans font-medium ">
           Our Services
