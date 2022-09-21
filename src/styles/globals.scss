@@ -264,8 +264,8 @@ body {
 @include media("<phablet") {
   .courseCard {
     display: grid;
+    padding: 10px 0;
     border-radius: 10px;
-    padding: 10px;
     border: 2px solid rgba(189, 186, 186, 0.3);
     transition: all 0.5s ease;
     overflow: hidden;
@@ -280,7 +280,7 @@ body {
   }
   .serviceCard {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     overflow: hidden;
     border-radius: 10px;
     border: 2px solid rgba(12, 219, 133, 0);

@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Course = ({ label }) => {
   return (
-    <div className="grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
-      <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
+    <div className="grid m-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
+      <div className="relative text-center md:justify-center items-center text-slate-100 ">
         {label && (
           <span className="text-lg text-white/80 font-medium font-sans ">
             Our Courses
@@ -20,11 +20,11 @@ const Course = ({ label }) => {
                       <div className="grid place-self-center place-content-center text-center place-items-center p-2  ">
                         {m.icon}
                       </div>
-                      <div className="w-full">
-                        <div className=" px-4 pb-2 text-slate-300  text-left text-md uppercase font-semibold sm:text-center shadow-none border-0 drop-shadow-none">
+                      <div className="grid place-content-center">
+                        <div className=" px-4 text-slate-300  text-left text-md uppercase font-semibold sm:text-center shadow-none border-0 drop-shadow-none">
                           {m.title}
                         </div>
-                        <div className="serviceDesc text-slate-300 sm:text-slate-200  text-md px-4  ">
+                        <div className="serviceDesc text-slate-300 sm:text-slate-200  text-sm px-4 ">
                           {m.description}
                         </div>
                       </div>
