@@ -1,6 +1,6 @@
-import Image from "next/Image";
+import Image from "next/image";
 import Link from "next/Link";
-import { frontend } from "../index";
+import { frontend } from "../";
 
 const HeroPage = () => {
   return (

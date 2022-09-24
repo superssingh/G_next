@@ -999,14 +999,15 @@ export const team = [
 
 const steps = [
   {
+    label: "Learn by doing.",
+  },
+  {
     label: "Read & follow the official documentation.",
   },
   {
     label: "Take notes from tutorial and blog.",
   },
-  {
-    label: "Learn by doing.",
-  },
+
   {
     label: "Build Small & Simple.",
   },
