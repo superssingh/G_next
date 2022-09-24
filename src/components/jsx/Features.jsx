@@ -19,7 +19,7 @@ const Features = () => {
                     </div>
                     <div className="grid place-content-center md:place-content-start">
                       <Link href={s.url}>
-                        <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full m-2 text-white font-bold hover:bg-purple-500/70 animate">
+                        <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                           Let's Started
                         </div>
                       </Link>
@@ -42,7 +42,7 @@ const Features = () => {
                       <div className="text-lg text-gray-300">{s.des}</div>
                       <div className="grid place-content-center md:place-content-end">
                         <Link href={s.url}>
-                          <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full m-2 text-white font-bold hover:bg-purple-500/70 animate">
+                          <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                             Let's Started
                           </div>
                         </Link>
