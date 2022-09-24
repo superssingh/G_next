@@ -5,7 +5,7 @@ import { frontend } from "..";
 const HeroPage = () => {
   return (
     <div className="">
-      <div className=" grid p-4 place-content-center items-center sm:justify-center   relative transition-all duration-500 showFromTop ">
+      <div className=" grid px-8 place-content-center items-center sm:justify-center   relative transition-all duration-500 showFromTop ">
         <div className="grid md:flex text-slate-100 m-2 max-w-6xl">
           <div className="grid md:flex  ">
             <div className="">

@@ -1,6 +1,5 @@
-// import Image from "next/image";
-
-import { AuthorInfo } from "../../components";
+import Image from "next/image";
+import { TagName, SocialWidget } from "../../components/";
 
 const About = () => {
   return (
@@ -13,23 +12,38 @@ const About = () => {
         <div className="relative p-2 text-slate-200 ">
           <h1 className="text-3xl p-2 font-bold">👋 Hello world, </h1>
           <div className="text-xl p-2 ">
-            Welcome to Gogixer. An online tech and web development website for
-            Web Developer. Hope our content help you to fulfil your desired
-            outcome.
+            Welcome to Gogixer. A website for Web Developers. Hope our content
+            help you to fulfil your desired outcome.
           </div>
         </div>
 
-        <div className="p-2 text-white grid place-content-center">
-          <div className="p-4 text-2xl font-bold">About Me</div>
-          <div className="text-2xl p-4 text-left">
-            Hi, I'm Santosh Singh, founder of gogixer and full stack developer.
-            I am a software developer, freelancer & founder of Gogixer. I love
-            my profession and have a keen interest to teach people about web
-            development. I have learned web development skills from online free
-            and paid courses. Therefore, I wanna give it back by helping you and
-            others through Gogixer. I Hope you enjoy it... 😇
+        <div className="grid p-2 bg-black/50 text-white text-center place-content-center">
+          <div className="p-4 text-2xl text-gray-400 font-bold">About Me</div>
+
+          <div className="relative m-4  rounded-b-lg ">
+            <div className="grid w-full place-content-center">
+              <div className=" animate grid w-72 h-72 p-2 place-content-center rounded-full overflow-hidden z-[1]">
+                <Image
+                  src={TagName.founderData.image}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  priority
+                  className="object-cover shadow-lg rounded-full "
+                />
+              </div>
+            </div>
           </div>
-          <h1 className="p-4 text-xl font-bold text-center">
+
+          <div className="text-xl p-4 text-left text-slate-400">
+            Hi, I'm Santosh Singh, <b>founder</b> of gogixer and full stack
+            developer. I love this profession and have a keen interest to teach
+            people about web development. I have learned web development skills
+            from online and build gogixer to document my journey as a software
+            developer. I hope you will enjoy it... 😇
+          </div>
+
+          <h1 className="p-4 text-3xl font-bold text-center">
             🗣 Have a nice day and happing coding...
           </h1>
         </div>

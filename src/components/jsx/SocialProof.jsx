@@ -2,7 +2,7 @@ import Image from "next/image";
 import { TagName } from "..";
 const SocialProof = () => {
   return (
-    <div className=" py-6 grid justify-center relative animate showFromTop ">
+    <div className=" py-6 grid justify-center relative animate showFromTop px-4 ">
       <div className="grid relative text-center mx-2 ">
         <div className="text-xl text-white/50 mb-6 top-10 ">Testimonials</div>
         <div className="text-lg text-white/30 mb-6 top-10 "></div>

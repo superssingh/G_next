@@ -986,7 +986,7 @@ body {
     transition: all 0.5s ease;
   }
   .serviceCard:hover {
-    background: rgba(1, 26, 16, 0.3);
+    background: rgb(8, 146, 107);
   }
   .serviceCard:hover .serviceDesc {
     bottom: 0px;

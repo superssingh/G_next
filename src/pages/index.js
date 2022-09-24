@@ -23,13 +23,13 @@ const Home = () => {
           learn web development skills.
         </span>
       </div>
-
-      <HeroPage />
-      <Services />
-      <Features />
-      <Team />
-      <SocialProof />
-
+      <div className="">
+        <HeroPage />
+        <Services />
+        <Features />
+        <Team />
+        <SocialProof />
+      </div>
       {/* <FAQ /> */}
     </section>
   );

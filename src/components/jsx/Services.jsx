@@ -4,15 +4,15 @@ const Services = () => {
   return (
     <div className="bg-black/30 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 my-8">
-        <span className="text-xl text-slate-300 font-sans font-medium ">
+        <span className="text-xl text-slate-300 font-medium ">
           Our Services
         </span>
-        <div className="grid w-full relative md:grid-cols-3 gap-2 md:gap-4 mt-4  ">
+        <div className="grid w-full relative md:grid-cols-3 gap-0 md:gap-4 mt-4  ">
           {TagName.services.map((m) => {
             return (
               <Link href={m.path} key={m.title}>
                 <div className="grid relative transition-all duration-700 md:place-items-center ">
-                  <div className="serviceCard w-full md:w-64 md:h-60  ">
+                  <div className="serviceCard w-full md:w-60 md:h-60 ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
                       <div className="grid place-content-start md:place-content-center p-4 ">
                         {m.icon}
