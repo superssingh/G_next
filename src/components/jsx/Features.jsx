@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { TagName } from "..";
-
+import { TagName } from "../index";
 const Features = () => {
   return (
     <div>

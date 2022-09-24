@@ -1,12 +1,15 @@
-import React, { useState, useEffect, useContext } from "react";
-import { CategoryFilter, Course, Team } from "../components";
+import React from "react";
 
-import HeroPage from "../components/jsx/HeroPage";
-import Services from "../components/jsx/Services";
-import SocialProof from "../components/jsx/SocialProof";
-import FAQ from "../components/jsx/tailwindExamples/Faq";
-import HeroSection from "../components/jsx/tailwindExamples/HeroSection";
-import Features from "../components/jsx/Features";
+import {
+  HeroPage,
+  Services,
+  SocialProof,
+  FAQ,
+  Features,
+  CategoryFilter,
+  Course,
+  Team,
+} from "../components/";
 
 const Home = () => {
   return (

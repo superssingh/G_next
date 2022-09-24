@@ -1,7 +1,5 @@
-import * as TagName from "../js/constants";
+import { TagName, SocialWidget } from "../index";
 import Image from "next/image";
-import SocialWidget from "./SocialWidget";
-import { founderPic0, founderPic1 } from "../assets";
 
 const Team = () => {
   return (

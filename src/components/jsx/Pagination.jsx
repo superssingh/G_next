@@ -1,10 +1,10 @@
 import React from "react";
 import _ from "lodash";
 import Pagination from "@mui/material/Pagination";
+
 import Stack from "@mui/material/Stack";
 
-const PaginationBar = (props) => {
-  const { itemCount, pageSize, currentPage, onPageChange } = props;
+const PaginationBar = ({ itemCount, pageSize, currentPage, onPageChange }) => {
   const pageCount = Math.ceil(itemCount / pageSize);
   if (pageCount === 1) return null;
 
@@ -16,7 +16,7 @@ const PaginationBar = (props) => {
   };
 
   return (
-    <nav className="PaginationBar">
+    <nav className="PaginationBar bg-slate-200 p-2 place-content-center grid rounded-md">
       <Stack spacing={2}>
         <Pagination
           count={pages.length}
@@ -24,6 +24,7 @@ const PaginationBar = (props) => {
           onChange={handleChange}
           variant="outlined"
           shape="rounded"
+          color="secondary"
         />
       </Stack>
     </nav>

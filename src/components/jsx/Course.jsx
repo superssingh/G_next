@@ -1,6 +1,5 @@
-import { TagName } from "..";
 import Link from "next/link";
-
+import { TagName } from "..";
 const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">

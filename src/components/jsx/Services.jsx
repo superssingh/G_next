@@ -1,9 +1,8 @@
-import * as TagName from "../js/constants";
 import Link from "next/link";
-
+import { TagName } from "..";
 const Services = () => {
   return (
-    <div className=" grid items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
+    <div className=" grid items-center sm:justify-center md:py-4  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 ">
         <span className="text-xl text-slate-300 font-sans font-medium ">
           Our Services

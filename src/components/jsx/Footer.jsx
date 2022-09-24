@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { TagName, SocialWidget, Logo } from "..";
+import { TagName, SocialWidget, Logo } from "../index";
 
 const Footer = () => {
   return (

@@ -1,6 +1,6 @@
-import * as TagName from "../js/constants";
 import Image from "next/image";
-const SocialProof = () => {
+import { TagName } from "..";
+const SocialProof = (reviews) => {
   return (
     <div className=" grid justify-center relative animate showFromTop ">
       <div className="grid relative text-center mx-2 ">

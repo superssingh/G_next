@@ -1,9 +1,7 @@
-import React, { useState, useContext, forwardRef } from "react";
-
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { TagName, BrandName, Logo, SocialWidget } from "..";
-import CustomLink from "./CustomLink";
+import { TagName, BrandName, Logo, SocialWidget } from "../index";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);

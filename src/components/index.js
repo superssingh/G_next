@@ -1,6 +1,14 @@
 export { default as Logo } from "../../public/images/gogixerlogo.png";
 export { default as BrandName } from "../../public/images/gogixer.png";
 
+import founderPic from "./assets/santoshsingh1.png";
+import coding from "./assets/coding.svg";
+import frontend from "./assets/frontend.svg";
+import backend from "./assets/backend.svg";
+import fullstack from "./assets/fullstack.svg";
+import deploy from "./assets/deploy.svg";
+
+export { founderPic, coding, frontend, backend, fullstack, deploy };
 //JS Files---
 export * as TagName from "./js/constants";
 export { default as BlogContext } from "./contexts/blogContext";
@@ -22,5 +30,7 @@ export { default as Services } from "./jsx/Services";
 export { default as SocialProof } from "./jsx/SocialProof";
 export { default as Back } from "./jsx/Back";
 export { default as Team } from "./jsx/Team";
-export { default as Features } from "./jsx/tailwindExamples/FeatureSection";
+export { default as Features } from "./jsx/Features";
+export { default as HeroPage } from "./jsx/HeroPage";
 export { default as CategoryFilter } from "./jsx/tailwindExamples/CategoryFilter";
+export { default as Pagination } from "./jsx/tailwindExamples/Pagination";

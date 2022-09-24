@@ -1,5 +1,5 @@
 "use strict";
-import { founderPic, frontend, backend, fullstack, deploy } from "../assets";
+import { founderPic, frontend, backend, fullstack, deploy } from "../index";
 export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";

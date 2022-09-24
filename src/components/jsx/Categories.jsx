@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { TagName } from "..";
 const Categories = ({ categories }) => {
   return (
     <div className="showSlow widget relative w-auto md:w-80 place-self-start  shadow-lg drop-shadow-md  hover:border-green-500 rounded-lg p-6 mb-6 md:mx-2">

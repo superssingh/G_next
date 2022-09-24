@@ -6,7 +6,7 @@ import {
   ScaleIcon,
 } from "@heroicons/react/24/outline";
 
-const features = [
+const featuresOptions = [
   {
     name: "Competitive exchange rates",
     description:

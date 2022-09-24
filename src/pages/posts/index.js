@@ -4,6 +4,8 @@ import ExamplePagination from "../../components/jsx/tailwindExamples/Pagination"
 import moment from "moment";
 import _ from "lodash";
 import { PostCard, PostWidget } from "../../components";
+import PaginationBar from "../../components/jsx/Pagination";
+import { Paginate } from "../../components/js/paginate";
 
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([]);
@@ -23,17 +25,33 @@ const Home = ({ posts }) => {
     setRecentPosts(recent);
   }
 
+  const handlePageChange = async (pageNumber) => {
+    const filteredList = await Paginate(
+      recentPosts,
+      pageNumber,
+      recentPosts.length
+    );
+    setRecentPosts(filteredList);
+  };
+
   return (
     <div>
-      <div className="grid  relative w-full lg:grid-cols-12 gap-4 px-2">
-        <div className="grid w-full place-content-center  justify-center place-self-start content-center md:w-full md:col-span-8 ">
-          <div className="grid w-full  justify-center place-self-start content-center md:grid md:w-full md:col-span-8 xl:grid-cols-3 2xl:grid-cols-3">
+      <div className="grid  relative w-full lg:grid-cols-12 gap-4 ">
+        <div className="grid w-full  md:col-span-8 max-w-5xl">
+          <div className="grid w-full  justify-center place-self-start content-center md:grid md:w-full lg:flex ">
             {recentPosts.map((p) => (
               <PostCard post={p.node} key={p.node.id} />
             ))}
           </div>
-          <div className="grid  w-full sm:m-2 place-content-center  ">
-            <ExamplePagination />
+          <div className="grid place-content-center bottom-0  ">
+            <div className="text-white  place-content-center">
+              <PaginationBar
+                itemCount={recentPosts.length}
+                pageSize={6}
+                currentPage={1}
+                onPageChange={handlePageChange}
+              />
+            </div>
           </div>
         </div>
 

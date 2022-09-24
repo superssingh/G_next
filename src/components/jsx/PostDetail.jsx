@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import moment from "moment";
 import Markdown from "markdown-to-jsx";
-import { AuthorInfo, Back } from "..";
+import { AuthorInfo, Back } from "../index";
 
 // const DynamicAuthorInfo = dynamic(() => import("../jsx/AuthorInfo"), {
 //   suspense: true,
