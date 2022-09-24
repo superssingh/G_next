@@ -10,7 +10,7 @@ const HeroPage = () => {
           <div className="grid md:flex  ">
             <div className="">
               <div className="grid max-w-5xl justify-center">
-                <div className=" text-center md:text-left text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-red-200 to-orange-300">
+                <div className=" text-center md:text-left text-4xl font-semibold ">
                   <h1 className=" py-4 text-4xl font-bold text-gray-900 sm:text-5xl md:text-5xl text-center md:text-left">
                     <div className="text-7xl pb-2">Hello,</div>
                     <span className="">
@@ -20,8 +20,11 @@ const HeroPage = () => {
                 </div>
                 <div className="grid place-content-center md:place-content-start py-2">
                   <Link href="/courses">
-                    <span id="getStarted" className="w-fit font-bold p-4  ">
-                      Get Started
+                    <span
+                      id="getStarted"
+                      className="w-32 font-bold p-4 text-lg "
+                    >
+                      Let's Go
                     </span>
                   </Link>
                 </div>

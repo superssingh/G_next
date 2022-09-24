@@ -1,5 +1,5 @@
 import Link from "next/link";
-const Back = ({ path }) => {
+const Back = ({ path = "" }) => {
   return (
     <Link href={`/${path}`}>
       <div id="backButton" className=" top-0 w-fit h-fit animate-pulse">

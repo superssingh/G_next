@@ -4,9 +4,9 @@ import Image from "next/image";
 const Team = () => {
   return (
     <div>
-      <div className=" grid w-full sm:justify-center relative animate showFromTop ">
+      <div className=" bg-violet-500/30 py-6 grid w-full sm:justify-center relative animate showFromTop ">
         <div className=" relative text-center m-2 px-2">
-          <div className="text-xl text-white/60 mb-12 top-20 ">
+          <div className="text-xl text-white/60 mb-12 top-20 pb-4">
             Meet Our Team
           </div>
           <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center place-content-center mt-6">
@@ -14,7 +14,7 @@ const Team = () => {
               return (
                 <div
                   key={i}
-                  className="relative animate place-content-center w-72 sm:64 md:w-60 my-6 bg-black/40 rounded-lg px-4 py-6 hover:bg-purple-700 "
+                  className="relative animate place-content-center w-72 sm:64 md:w-60 my-6 bg-black/40 rounded-lg px-4 py-6 hover:bg-pink-500/30 "
                 >
                   <div className="grid w-full place-content-center mt-0 ">
                     <div className="TeamPic h-48 w-48 rounded-full mt-[-5rem] overflow-hidden z-[1]  ">

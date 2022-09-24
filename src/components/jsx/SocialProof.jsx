@@ -2,12 +2,10 @@ import Image from "next/image";
 import { TagName } from "..";
 const SocialProof = () => {
   return (
-    <div className=" grid justify-center relative animate showFromTop ">
+    <div className=" py-6 grid justify-center relative animate showFromTop ">
       <div className="grid relative text-center mx-2 ">
         <div className="text-xl text-white/50 mb-6 top-10 ">Testimonials</div>
-        <div className="text-lg text-white/30 mb-6 top-10 ">
-          Community coments
-        </div>
+        <div className="text-lg text-white/30 mb-6 top-10 "></div>
         <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center place-content-center">
           {TagName.reviews.map((r, i) => {
             return (

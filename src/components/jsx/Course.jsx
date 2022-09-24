@@ -4,9 +4,9 @@ const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 ">
-        <span className="text-lg text-slate-100 font-medium font-sans ">
-          Our Courses
-        </span>
+        <h1 className="text-3xl text-slate-100 font-bold uppercase ">
+          Courses
+        </h1>
 
         <div className="grid relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m) => {

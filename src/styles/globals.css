@@ -322,7 +322,7 @@
   box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);
 }
 
-@media (min-width: 801px) {
+@media (min-width: 761px) {
   #hamburger {
     display: none;
   }
@@ -339,7 +339,7 @@
     display: none;
   }
 }
-@media (max-width: 799px) {
+@media (max-width: 759px) {
   .menus {
     display: none;
   }
@@ -854,11 +854,11 @@ body {
 #LikeButton {
   display: grid;
   margin-top: 1em;
-  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
   padding: 0.8rem;
-  border-radius: 2em;
+  border-radius: 50px;
   justify-content: center;
   box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+  background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
   transition: 0.8s ease;
 }
 #getStarted:hover, #getStarted:focus,
@@ -866,7 +866,15 @@ body {
 #shareButton:focus,
 #LikeButton:hover,
 #LikeButton:focus {
-  box-shadow: 0px 1px 12px 1px rgba(2, 2, 2, 0);
+  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
+}
+
+.customShadow {
+  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+}
+.customShadow:focus {
+  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
 }
 
 .gradientRed {
@@ -904,7 +912,7 @@ body {
   border-radius: 0 20% 0 20%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 760px) {
   .serviceDesc {
     display: none;
   }
@@ -953,7 +961,7 @@ body {
     background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 759px) {
   .courseCard {
     display: grid;
     padding: 10px 0;
