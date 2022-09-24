@@ -3,7 +3,7 @@ import { TagName } from "..";
 const Categories = ({ categories }) => {
   return (
     <div className="showSlow widget relative w-auto md:w-80 place-self-start  shadow-lg drop-shadow-md  hover:border-green-500 rounded-lg p-6 mb-6 md:mx-2">
-      <h3 className="w-full text-md text-gray-800 border-b border-slate-500/[.50] pb-2">
+      <h3 className="w-full text-md text-gray-200 border-b border-slate-500/[.50] pb-2">
         Categories
       </h3>
       <div className="flex place-content-start ">

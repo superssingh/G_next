@@ -1,5 +1,4 @@
 import React from "react";
-
 import { getPosts, getPostDetail } from "../../services/getBlogData";
 import { HeadTag, PostDetail, PostWidget } from "../../components";
 import moment from "moment";

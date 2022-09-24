@@ -7,31 +7,33 @@ const PostWidget = ({ posts, category, id }) => {
   const [similarPosts, setSimilarPosts] = useState([]);
   const [similar, setSimilar] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
     if (posts) {
-      if (!category && !id) {
-        setSimilarPosts(posts);
-        setSimilar = false;
-      } else {
-        const relevant = await posts.filter((p) => {
-          return p.node.categories[0].name === category && p.node.id != id;
-        });
-
-        if (relevant.length) {
-          setSimilarPosts(relevant);
-          setSimilar(true);
-          return;
-        } else {
-          const otherPosts = await posts.filter((p) => {
-            return p.node.id != id;
-          });
-          setSimilarPosts(otherPosts);
-          setSimilar(false);
-          return;
-        }
-      }
+      setData();
     }
   }, [posts]);
+
+  async function setData() {
+    if (!category && !id) {
+      setSimilarPosts(posts);
+      setSimilar = false;
+    } else {
+      const relevant = await posts.filter((p) => {
+        return p.node.categories[0].name === category && p.node.id != id;
+      });
+
+      if (relevant.length) {
+        setSimilarPosts(relevant);
+        setSimilar(true);
+      } else {
+        const otherPosts = await posts.filter((p) => {
+          return p.node.id != id;
+        });
+        setSimilarPosts(otherPosts);
+        setSimilar(false);
+      }
+    }
+  }
 
   return (
     <div className="showSlow widget relative transition-all duration-700 w-auto  place-self-start shadow-lg drop-shadow-md  rounded-lg p-6 mb-4 md:mx-2 ">

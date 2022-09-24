@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Course, Team } from "../components";
+import { CategoryFilter, Course, Team } from "../components";
 
 import HeroPage from "../components/jsx/HeroPage";
 import Services from "../components/jsx/Services";
 import SocialProof from "../components/jsx/SocialProof";
+import FAQ from "../components/jsx/tailwindExamples/Faq";
+import HeroSection from "../components/jsx/tailwindExamples/HeroSection";
+import Features from "../components/jsx/Features";
 
 const Home = () => {
   return (
@@ -20,9 +23,11 @@ const Home = () => {
 
       <HeroPage />
       <Services />
-      <Course label={true} />
+      <Features />
       <Team />
       <SocialProof />
+
+      {/* <FAQ /> */}
     </section>
   );
 };

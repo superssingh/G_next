@@ -22,3 +22,5 @@ export { default as Services } from "./jsx/Services";
 export { default as SocialProof } from "./jsx/SocialProof";
 export { default as Back } from "./jsx/Back";
 export { default as Team } from "./jsx/Team";
+export { default as Features } from "./jsx/tailwindExamples/FeatureSection";
+export { default as CategoryFilter } from "./jsx/tailwindExamples/CategoryFilter";

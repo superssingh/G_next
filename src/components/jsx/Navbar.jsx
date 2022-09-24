@@ -1,12 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, forwardRef } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import { TagName, BrandName, Logo, SocialWidget } from "..";
+import CustomLink from "./CustomLink";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
 
-  const handleClicked = () => {
+  const handleClicked = async () => {
     setClicked(!clicked);
   };
 
@@ -60,7 +62,7 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <li className="mobile-menus z-[5] ">
+        <div className="mobile-menus z-[5] ">
           {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
               <a
@@ -75,13 +77,6 @@ const Navbar = () => {
               </a>
             </Link>
           ))}
-
-          {/* <Link to="/login" key="login" id="signin" onClick={handleClicked}>
-            Sign In
-          </Link>
-          <Link to="/signup" key="signup" id="signup" onClick={handleClicked}>
-            Sign Up
-          </Link> */}
 
           <li className="social z-[10]">
             <SocialWidget social={TagName.socialLinks} />
@@ -98,7 +93,7 @@ const Navbar = () => {
               />
             </Link>
           </li>
-        </li>
+        </div>
       </ul>
     </div>
   );

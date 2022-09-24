@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className=" grid p-4 items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
-      <div className="relative text-center md:justify-center items-center text-slate-100 m-2">
+    <div className=" grid items-center sm:justify-center md:my-4  relative transition-all duration-500 showFromTop ">
+      <div className="relative text-center md:justify-center items-center text-slate-100 ">
         <span className="text-xl text-slate-300 font-sans font-medium ">
           Our Services
         </span>
-        <div className="grid w-full relative sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4  ">
+        <div className="grid w-full relative sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mt-4  ">
           {TagName.services.map((m) => {
             return (
               <Link href={m.path} key={m.title}>

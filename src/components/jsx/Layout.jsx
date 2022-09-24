@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { Navbar, BlogContext } from "../";
+import dynamic from "next/dynamic";
+
+const Navbar = dynamic(() => import("../jsx/Navbar"), {
+  ssr: false,
+});
 
 const Layout = ({ children, posts }) => {
-  const [blogs, setBlogs] = useState([]);
-  const [shop, setShop] = useState([]);
-  const [categories, setCategories] = useState([]);
-
-  const handleBlogs = (blogs) => {
-    setBlogs(blogs);
-  };
-
-  const handleCategory = (categories) => {
-    setCategories(categories);
-  };
+  const [cart, setCart] = useState([]);
+  const [user, setUser] = useState([]);
 
   const handleShop = (items) => {
     setShop(items);
@@ -21,17 +16,17 @@ const Layout = ({ children, posts }) => {
   return (
     <React.StrictMode>
       <div className="containerBox flex flex-col min-w-screen min-h-screen ">
-        <BlogContext.Provider
+        {/* <BlogContext.Provider
           value={{
             blogs: blogs,
             categories: categories,
             setBlogs: handleBlogs,
             setCategories: handleCategory,
           }}
-        >
-          <Navbar />
-          <div>{children}</div>
-        </BlogContext.Provider>
+        > */}
+        <Navbar />
+        <div>{children}</div>
+        {/* </BlogContext.Provider> */}
       </div>
     </React.StrictMode>
   );

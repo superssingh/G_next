@@ -1,5 +1,5 @@
 "use strict";
-
+import { founderPic, frontend, backend, fullstack, deploy } from "../assets";
 export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";
@@ -10,9 +10,10 @@ export const MENU_DEFAULT = "menus";
 export const MOBILE_OPEN = "mobile-open";
 export const MOBILE_CLOSE = "mobile-close";
 
-const imageFit = "&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60";
+const postsURL = process.env.GRAPH_PUBLIC_ENDPOINT;
+// const imageURL=""
 
-export const HeroImg = "../../public/images/codes.jpeg";
+const imageFit = "&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60";
 
 export const HomeMenu = {
   name: "Home",
@@ -154,7 +155,7 @@ export const categories = [
 ];
 
 export const getPosts = () => {
-  return postsUrl;
+  return postsURL;
 };
 
 export const getImagePath = () => {
@@ -237,19 +238,19 @@ export const services = [
       <svg
         width={56}
         height={56}
-        viewBox="0 0 520 450"
+        viewBox="40 20 450 450"
         xmlns="http://www.w3.org/2000/svg"
         fill="#fff"
       >
         <polygon
           fill="var(--ci-primary-color, currentColor)"
           points="368 350.643 256 413.643 144 350.643 144 284.081 112 266.303 112 369.357 256 450.357 400 369.357 400 266.303 368 284.081 368 350.643"
-          class="ci-primary"
+          className="ci-primary"
         />
         <path
           fill="var(--ci-primary-color, currentColor)"
           d="M256,45.977,32,162.125v27.734L256,314.3,448,207.637V296h32V162.125ZM416,188.808l-32,17.777L256,277.7,128,206.585,96,188.808,73.821,176.486,256,82.023l182.179,94.463Z"
-          class="ci-primary"
+          className="ci-primary"
         />
       </svg>
     ),
@@ -606,8 +607,7 @@ export const courses = [
   },
   {
     title: "Database Development",
-    description:
-      "Learn database like MongoDB, PostgreSQL & GraphQL from scratch.",
+    description: "Learn databases MongoDB, PostgreSQL & GraphQL from scratch.",
     icon: (
       <svg
         version="1.1"
@@ -704,7 +704,6 @@ export const courses = [
         height="56"
         width="56"
         viewBox="0 0 290 320"
-        preserveAspectRatio="default"
         fill="#fff"
       >
         <g>
@@ -823,7 +822,7 @@ export const reviews = [
     name: "User Name 1",
     job: "Web Developer",
     comment:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, perspiciatis necessitatibus rerum sint nesciunt voluptas alias quam, fuga commodi deleniti, aut suscipit exercitationem reiciendis doloribus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio velit rem eum facere minus?",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
       imageFit,
@@ -832,7 +831,7 @@ export const reviews = [
     name: "User Name  2",
     job: "Full Stack Developer",
     comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ut ipsa fugit, voluptatem repudiandae tenetur, harum aliquid voluptas quisquam dolor suscipit vel quos nihil corrupti, blanditiis amet id!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae optio commodi expedita? Temporibus facere deleniti nisi cumque eos vel.",
     image:
       "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
       imageFit,
@@ -841,7 +840,7 @@ export const reviews = [
     name: "User Name 3",
     job: "Business Startup",
     comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro praesentium itaque in repudiandae modi molestias tempora voluptate.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam iure facilis ea enim. Molestiae consequatur earum voluptas.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
       imageFit,
@@ -850,7 +849,7 @@ export const reviews = [
     name: "User Name 4",
     job: "Frontend Developer",
     comment:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus porro eius eum nulla provident! Pariatur illum at quidem aspernatur ex, odio, ad temporibus ea repellendus, odit nesciunt aut autem.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis amet aliquam eligendi quas iste.",
     image:
       "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
       imageFit,
@@ -878,15 +877,13 @@ export const reviews = [
 
 export const team = [
   {
-    name: "Member 1 Name ",
-    job: "Founder ",
-    image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
-      imageFit,
+    name: "Santosh Singh",
+    job: "Founder",
+    image: founderPic,
     social: [
       {
         name: "twitter",
-        url: "https://twitter.com/gogixer",
+        url: "https://twitter.com/superssingh",
         icon: (
           <svg
             fill="none"
@@ -901,7 +898,7 @@ export const team = [
       },
       {
         name: "linkedin",
-        url: "https://www.linkedin.com/company/gogixer",
+        url: "https://www.linkedin.com/in/santossingh",
         icon: (
           <svg
             fill="none"
@@ -917,7 +914,7 @@ export const team = [
     ],
   },
   {
-    name: "Member 2 Name ",
+    name: "Vacant ",
     job: "DevOps Developer",
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro praesentium itaque in repudiandae modi molestias tempora voluptate.",
@@ -997,5 +994,49 @@ export const team = [
         ),
       },
     ],
+  },
+];
+
+const steps = [
+  {
+    label: "Read & follow the official documentation.",
+  },
+  {
+    label: "Take notes from tutorial and blog.",
+  },
+  {
+    label: "Learn by doing.",
+  },
+  {
+    label: "Build Small & Simple.",
+  },
+  {
+    label: "Don't repeat.",
+  },
+  {
+    label: "Be the problem solver.",
+  },
+];
+
+export const Skills = [
+  {
+    name: "Frontend Development",
+    des: "In this section, you're going to learn HTML, CSS/SCSS, TailwindCSS, Javascript libraries such as ReactJS and NextJS, and GitHub Version Control. These skills help you to build responsive user interfaces and connect them with third-party REST API data through ReactJS and NextJS.",
+    image: frontend,
+  },
+  {
+    name: "Backend Development",
+    des: "For Backend development, you need to learn about various types of databases and Javascript libraries NodeJS and ExpressJS to build your own secure backend APIs from scratch and connect with the Frontend.",
+    image: backend,
+  },
+  {
+    name: "Deployment",
+    des: "Deployment is the easiest and less time-consuming. In this part, you're going to config the project and then deploy it into the cloud. We often deploy on Github, Netlify & Vercel.",
+    image: deploy,
+  },
+  {
+    name: "Full Stack Development",
+    des: "A Full Stack Developer is someone who do frontend and backend. In this part, you have to create a project yourself. In addition, you gonna learn how to be a problem-solving contributor in open-source communities on Github.",
+    image: fullstack,
   },
 ];

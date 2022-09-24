@@ -114,6 +114,28 @@
     transform: rotate(90deg);
   }
 }
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /**
 *
 * Testing
@@ -685,15 +707,6 @@
   font-size: 18px;
 }
 
-.masonry_layout {
-  max-width: 60rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: masonry;
-  gap: 1em;
-}
-
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -701,7 +714,7 @@ html {
 
 @layer components {
   .card {
-    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
+    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl lg:grid lg:w-80 lg:mx-2 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
   .animate {
     @apply transition-all duration-700;
@@ -807,6 +820,20 @@ body {
   rotate: 45deg;
 }
 
+#LeafButton {
+  display: grid;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  color: rgb(32, 32, 32);
+  padding: 1rem;
+  border-radius: 20em;
+  height: wrap;
+  overflow: hidden;
+  justify-content: center;
+  transition: all 1s ease;
+}
+
 #signup {
   background: linear-gradient(-90deg, rgba(14, 2, 14, 0.6352941176), rgba(255, 11, 227, 0.6862745098), rgba(14, 2, 14, 0.7254901961));
   color: rgb(255, 255, 255);
@@ -883,7 +910,6 @@ body {
     border: 2px solid rgba(207, 214, 210, 0);
     transition: all 0.5s ease;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
   .serviceCard * {
     fill: rgb(241, 247, 242);
@@ -891,6 +917,9 @@ body {
   .serviceCard:hover {
     background: rgba(68, 9, 114, 0.571);
     border: 2px solid rgba(5, 193, 80, 0.897);
+  }
+  .serviceCard:hover * {
+    fill: rgb(38, 245, 162);
   }
   .serviceCard:hover .serviceDesc {
     width: 100%;
@@ -940,10 +969,9 @@ body {
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
-    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
   .serviceCard:hover {
     background: rgba(1, 26, 16, 0.3);
@@ -964,12 +992,8 @@ body {
   background: rgba(188, 133, 236, 0.7);
 }
 
-.TeamPic {
-  border-radius: 50%;
-  background: linear-gradient(180deg, rgba(255, 253, 252, 0.9254901961) 0%, rgba(181, 74, 226, 0.768627451) 100%);
-}
 .TeamPic:hover {
-  background: rgba(243, 248, 246, 0.739);
+  background: rgba(98, 22, 196, 0);
 }
 
 .socialCard {
@@ -977,7 +1001,7 @@ body {
   box-shadow: 0 1px 2px 0px rgba(246, 244, 246, 0.815);
 }
 .socialCard:hover {
-  background: rgb(238, 233, 246);
+  background: rgb(248, 246, 251);
 }
 
 .gradientTeal {
@@ -992,4 +1016,14 @@ body {
 .AuthorPic:hover {
   background: rgba(255, 255, 255, 0.002);
   box-shadow: 0 0 10px 5px rgb(253, 253, 253);
+}
+
+h1 {
+  will-change: transform;
+  background: linear-gradient(-45deg, #e3247a, #edeff1, #cf32f2, #f3dc33);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=globals.css.map */

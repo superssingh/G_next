@@ -100,6 +100,12 @@ $GradientTeal1: linear-gradient(
   rgba(21, 213, 171, 1) 0%,
   rgba(17, 145, 117, 1) 100%
 );
+
+$GradientPurple: linear-gradient(
+  180deg,
+  rgba(180, 24, 236, 0.621) 0%,
+  rgba(47, 9, 88, 0.535) 100%
+);
 $blackGlassColor: linear-gradient(-90deg, #010101c6, #0c0c0cdd, #090909ad);
 
 //---------color options ----

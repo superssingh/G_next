@@ -9,7 +9,7 @@
 @import "./icons";
 @import "./policy";
 @import "./post_detail";
-@import "./masonry";
+@import "./typingeffect";
 
 html {
   scroll-behavior: smooth;
@@ -18,7 +18,7 @@ html {
 
 @layer components {
   .card {
-    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl xl:grid xl:relative xl:w-96 2xl:w-80 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
+    @apply w-full transition-all duration-500 place-self-center md:flex md:max-w-2xl lg:grid lg:w-80 lg:mx-2 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
 
   .animate {
@@ -137,6 +137,20 @@ body {
   }
 }
 
+#LeafButton {
+  display: grid;
+  backdrop-filter: blur(2rem);
+  background: $GradientLime;
+  color: rgb(32, 32, 32);
+  padding: 1rem;
+  border-radius: 20em;
+  height: wrap;
+  overflow: hidden;
+  justify-content: center;
+  // box-shadow: 0px 0px 0px 5px rgba(165, 165, 165, 0.865);
+  transition: all 1s ease;
+}
+
 #signup {
   background: $GradientRedColor;
   color: rgb(255, 255, 255);
@@ -220,18 +234,21 @@ body {
     border: 2px solid rgba(207, 214, 210, 0);
     transition: all 0.5s ease;
     overflow: hidden;
-    background: $GradientTeal;
 
     * {
-      fill: rgb(241, 247, 242);
+      fill: rgba(241, 247, 242, 1);
     }
     &:hover {
+      * {
+        fill: rgb(38, 245, 162);
+      }
       .serviceDesc {
         width: 100%;
         padding: 10px 14px;
         animation: 0.7s ease-out 0s 1 slideInBottom;
         display: block;
         background: $GradientTeal;
+        // background: rgba(68, 9, 114, 0.571);
       }
 
       background: rgba(68, 9, 114, 0.571);
@@ -282,10 +299,10 @@ body {
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
-    background: $GradientTeal;
+
     &:hover {
       .serviceDesc {
         bottom: 0px;
@@ -309,10 +326,8 @@ body {
 }
 
 .TeamPic {
-  border-radius: 50%;
-  background: $SocialPicColor;
   &:hover {
-    background: rgba(243, 248, 246, 0.739);
+    background: rgba(98, 22, 196, 0);
   }
 }
 
@@ -336,4 +351,13 @@ body {
     background: rgba(255, 255, 255, 0.002);
     box-shadow: 0 0 10px 5px rgb(253, 253, 253);
   }
+}
+
+h1 {
+  will-change: transform;
+  background: linear-gradient(-45deg, #e3247a, #edeff1, #cf32f2, #f3dc33);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

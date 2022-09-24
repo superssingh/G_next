@@ -1,11 +1,11 @@
 import { TagName } from "..";
 import Link from "next/link";
 
-const Course = ({ label }) => {
+const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center text-slate-100 ">
-        <span className="text-lg text-white/80 font-medium font-sans ">
+        <span className="text-lg text-slate-100 font-medium font-sans ">
           Our Courses
         </span>
 
@@ -16,7 +16,7 @@ const Course = ({ label }) => {
                 <div className="  grid relative w-full transition-all duration-700 text-left sm:place-items-center">
                   <div className=" courseCard w-full h-fit sm:w-60 sm:h-52 ">
                     <div className="flex relative w-full place-content-start sm:grid sm:w-60 sm:place-content-center ">
-                      <div className="grid place-self-center place-content-center text-center place-items-center px-4  ">
+                      <div className="grid place-self-center place-content-center text-center place-items-center px-4 pb-2  ">
                         {m.icon}
                       </div>
                       <div className="grid place-content-center">

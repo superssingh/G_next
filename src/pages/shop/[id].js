@@ -6,7 +6,7 @@ const Product = () => {
 
   return (
     <div className="showSlow">
-      <p>Product: {id}</p>;
+      <div>Product: {id}</div>;
     </div>
   );
 };
