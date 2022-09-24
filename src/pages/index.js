@@ -10,6 +10,7 @@ import {
   Course,
   Team,
 } from "../components/";
+import Steps from "../components/jsx/Steps";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
         <HeroPage />
         <Services />
         <Features />
-        <Team />
+        <Steps />
         <SocialProof />
       </div>
       {/* <FAQ /> */}
