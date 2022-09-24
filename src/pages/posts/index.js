@@ -38,20 +38,22 @@ const Home = ({ posts }) => {
     <div>
       <div className="grid  relative w-full lg:grid-cols-12 gap-4 ">
         <div className="grid w-full  md:col-span-8 max-w-5xl">
-          <div className="grid w-full  justify-center place-self-start content-center md:grid md:w-full lg:flex ">
+          <div className="grid w-full  justify-center place-self-start content-center md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
             {recentPosts.map((p) => (
               <PostCard post={p.node} key={p.node.id} />
             ))}
           </div>
           <div className="grid place-content-center bottom-0  ">
-            <div className="text-white  place-content-center">
-              <PaginationBar
-                itemCount={recentPosts.length}
-                pageSize={6}
-                currentPage={1}
-                onPageChange={handlePageChange}
-              />
-            </div>
+            {(recentPosts.length < 6 && <div></div>) || (
+              <div className="text-white  place-content-center">
+                <PaginationBar
+                  itemCount={recentPosts.length}
+                  pageSize={6}
+                  currentPage={1}
+                  onPageChange={handlePageChange}
+                />
+              </div>
+            )}
           </div>
         </div>
 

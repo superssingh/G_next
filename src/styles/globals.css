@@ -714,7 +714,7 @@ html {
 
 @layer components {
   .card {
-    @apply transition-all duration-500 md:flex md:max-w-xl lg:grid lg:w-72 lg:mx-2 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
+    @apply transition-all duration-500 md:flex md:max-w-xl lg:grid lg:w-80 lg:mx-2 2xl:w-72 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
   .animate {
     @apply transition-all duration-700;
@@ -770,7 +770,7 @@ body {
 }
 
 .card {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   transition: 0.5s ease-in-out;
 }
 
@@ -804,7 +804,7 @@ body {
   margin-left: 0.5rem;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   color: rgb(37, 37, 38);
   padding: 1rem;
   border-radius: 20em;
@@ -824,7 +824,7 @@ body {
   display: grid;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   color: rgb(32, 32, 32);
   padding: 1rem;
   border-radius: 20em;
@@ -874,7 +874,7 @@ body {
 }
 
 .widget {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
 }
 
 .gradientbg {
@@ -886,7 +886,7 @@ body {
 }
 
 .bgDefault {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(200, 240, 200, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
 }
 
 .contactLabel {
@@ -911,7 +911,7 @@ body {
   .serviceCard {
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0);
+    border: 2px solid rgba(207, 214, 210, 0.2);
     transition: all 0.5s ease;
     overflow: hidden;
   }
@@ -979,7 +979,6 @@ body {
   }
   .serviceCard:hover {
     background: rgba(1, 26, 16, 0.3);
-    border: 2px solid rgb(44, 236, 101);
   }
   .serviceCard:hover .serviceDesc {
     bottom: 0px;

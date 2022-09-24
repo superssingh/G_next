@@ -6,7 +6,7 @@ import moment from "moment";
 const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
-      <div className="card hover:bg-teal-500/[0.7] ">
+      <div className="card hover:bg-teal-500/50 ">
         <div className="relative h-56 w-full md:w-44 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
           <Image
             src={post.featured_image[0].url}

@@ -18,7 +18,7 @@ html {
 
 @layer components {
   .card {
-    @apply transition-all duration-500 md:flex md:max-w-xl lg:grid lg:w-72 lg:mx-2 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
+    @apply transition-all duration-500 md:flex md:max-w-xl lg:grid lg:w-80 lg:mx-2 2xl:w-72 overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
   }
 
   .animate {
@@ -87,7 +87,7 @@ body {
 }
 
 .card {
-  background: $GradientLime;
+  background: $cardColor;
   transition: 0.5s ease-in-out;
 }
 
@@ -230,7 +230,7 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0);
+    border: 2px solid rgba(207, 214, 210, 0.2);
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -309,7 +309,6 @@ body {
         display: block;
       }
       background: rgba(1, 26, 16, 0.3);
-      border: 2px solid rgb(44, 236, 101);
     }
   }
 }
