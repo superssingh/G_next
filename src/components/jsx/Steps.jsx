@@ -40,14 +40,7 @@ const Steps = () => {
                       </summary>
                       <div class="pt-6 pb-6 showFromTop animate ">
                         <div class="text-left prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500 showFromTop animate">
-                          <span>
-                            Buying an all-access license is a{" "}
-                            <strong>
-                              one-time purchase, with no recurring subscription
-                            </strong>
-                            . When you purchase all-access, you get access to
-                            everything in Tailwind UI forever.
-                          </span>
+                          <span>{s.comment}</span>
                         </div>
                       </div>
                     </details>
