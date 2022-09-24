@@ -1016,14 +1016,14 @@ export const steps = [
       "Video tutorial is good if you have no issues. But the best way to start learning is through reading the official documentation and blogs. So read the documentation. Seriously, this solves most issues.",
   },
   {
-    label: "Build Small & Simple.",
+    label: "Build your logic with small & simple projects.",
     comment:
       "Just try to build simple and small projects. Apps like taking notes, making reminders and calculator. They will improve your logical skill.",
   },
   {
     label: "Don't repeat.",
     comment:
-      "Never repeat your code. to learn more search on Google - Programming principle Don't Repeat Yourself (DRY).",
+      "Never repeat your code. To learn more about it search on Google - Programming principle Don't Repeat Yourself (DRY).",
   },
   {
     label: "Contrubute in open source projects on GitHub.",
