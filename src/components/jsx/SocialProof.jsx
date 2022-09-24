@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { TagName } from "..";
-const SocialProof = (reviews) => {
+const SocialProof = () => {
   return (
     <div className=" grid justify-center relative animate showFromTop ">
       <div className="grid relative text-center mx-2 ">

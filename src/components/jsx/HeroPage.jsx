@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/Link";
-import { frontend } from "../";
+import Link from "next/link";
+import { frontend } from "..";
 
 const HeroPage = () => {
   return (
     <div className="">
-      <div className=" gradientRed grid p-4 place-content-center items-center sm:justify-center   relative transition-all duration-500 showFromTop ">
+      <div className=" grid p-4 place-content-center items-center sm:justify-center   relative transition-all duration-500 showFromTop ">
         <div className="grid md:flex text-slate-100 m-2 max-w-6xl">
           <div className="grid md:flex  ">
             <div className="">

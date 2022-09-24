@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { TagName, BrandName, Logo, SocialWidget } from "../index";
+import { TagName, BrandName, Logo, SocialWidget } from "..";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
