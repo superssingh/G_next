@@ -5,6 +5,10 @@ const SocialProof = () => {
     <div className=" py-6 grid justify-center relative animate showFromTop px-4 ">
       <div className="grid relative text-center mx-2 ">
         <div className="text-xl text-white/50 mb-6 top-10 ">Testimonials</div>
+        <h1 className="text-xl text-white/80 mb-6 top-10 font-mono font-bold ">
+          These are dummy comments for UI design. This will be completed in the
+          upcoming backend tutorial project.
+        </h1>
         <div className="text-lg text-white/30 mb-6 top-10 "></div>
         <div className="grid relative w-full sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center place-content-center">
           {TagName.reviews.map((r, i) => {
@@ -22,9 +26,9 @@ const SocialProof = () => {
                     alt="ReviewerImage"
                   />
                 </div>
-                <div className="socialCard animate grid relative pt-2 place-items-start bg-slate-300 ">
+                <div className="socialCard animate grid relative pt-2 place-items-start bg-slate-300 blur-sm">
                   <div className="w-full pl-20  ">
-                    <div className=" text-md w-fit font-bold text-slate-500 uppercase mt-2">
+                    <div className=" text-md w-fit font-bold text-slate-500 uppercase mt-2 ">
                       {r.name}
                     </div>
                     <div className=" text-sm w-fit font-medium text-slate-600 ">
