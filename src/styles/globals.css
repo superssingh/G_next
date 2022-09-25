@@ -867,7 +867,7 @@ body {
 #LikeButton:hover,
 #LikeButton:focus {
   box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
-  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
+  background: rgba(123, 22, 200, 0);
 }
 
 .customShadow {
