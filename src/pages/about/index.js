@@ -17,12 +17,12 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid p-2 bg-black/50 text-white text-center place-content-center">
+        <div className="grid p-2 bg-black/50 text-white text-center place-content-center rounded-md ">
           <div className="p-4 text-2xl text-gray-400 font-bold">About Me</div>
 
           <div className="relative m-4  rounded-b-lg ">
             <div className="grid w-full place-content-center">
-              <div className=" animate grid w-72 h-72 p-2 place-content-center rounded-full overflow-hidden z-[1]">
+              <div className=" animate grid w-72 h-72 p-2 place-content-center rounded-full overflow-hidden z-[1] ">
                 <Image
                   src={TagName.founderData.image}
                   alt="Picture of the author"
@@ -32,15 +32,20 @@ const About = () => {
                   className="object-cover shadow-lg rounded-full "
                 />
               </div>
+              <div className="text-white/50 font-bold ">
+                {" "}
+                {TagName.founderData.name}
+              </div>
             </div>
+            <SocialWidget social={TagName.founderData.social} />
           </div>
 
           <div className="text-xl p-4 text-left text-slate-400">
-            Hi, I'm Santosh Singh, <b>founder</b> of gogixer and full stack
-            developer. I love this profession and have a keen interest to teach
-            people about web development. I have learned web development skills
-            from online and build gogixer to document my journey as a software
-            developer. I hope you will enjoy it... 😇
+            Hi, I'm <b>founder</b> of gogixer and full stack developer. I love
+            this profession and have a keen interest to teach people about web
+            development. I have learned web development skills from online and
+            build gogixer to document my journey as a software developer. I hope
+            you will enjoy it... 😇
           </div>
 
           <h1 className="p-4 text-3xl font-bold text-center">

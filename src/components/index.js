@@ -1,6 +1,7 @@
 export { default as Logo } from "../../public/images/gogixerlogo.png";
 export { default as BrandName } from "../../public/images/gogixer.png";
 
+import founderPic2 from "./assets/santoshsingh2.png";
 import founderPic from "./assets/santoshsingh1.png";
 import founder from "./assets/santoshsingh.jpg";
 import coding from "./assets/coding.svg";
@@ -9,7 +10,16 @@ import backend from "./assets/backend.svg";
 import fullstack from "./assets/fullstack.svg";
 import deploy from "./assets/deploy.svg";
 
-export { founderPic, founder, coding, frontend, backend, fullstack, deploy };
+export {
+  founderPic,
+  founder,
+  founderPic2,
+  coding,
+  frontend,
+  backend,
+  fullstack,
+  deploy,
+};
 //JS Files---
 export * as TagName from "./js/constants";
 export { default as BlogContext } from "./contexts/blogContext";

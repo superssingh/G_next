@@ -1,5 +1,6 @@
 "use strict";
 import {
+  founderPic2,
   founder,
   founderPic,
   frontend,
@@ -1026,7 +1027,7 @@ export const steps = [
       "Never repeat your code. To learn more about it search on Google - Programming principle Don't Repeat Yourself (DRY).",
   },
   {
-    label: "Contrubute in open source projects on GitHub.",
+    label: "Contribute to open source projects on GitHub.",
     comment:
       "This is the most important part and it helps you to get better job opportunities.",
   },
@@ -1064,6 +1065,11 @@ export const founderData = {
   name: "Santosh Singh",
   profession: "Founder & Full Stack Developer",
   image: founder,
+  des: `Hi, I'm <b>founder</b> of gogixer and full stack developer. I love
+            this profession and have a keen interest to teach people about web
+            development. I have learned web development skills from online and
+            build gogixer to document my journey as a software developer. I hope
+            you will enjoy it... 😇`,
   social: [
     {
       name: "twitter",
