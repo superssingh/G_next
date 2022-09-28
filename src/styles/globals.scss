@@ -9,7 +9,6 @@
 @import "./icons";
 @import "./policy";
 @import "./post_detail";
-@import "./typingeffect";
 
 html {
   scroll-behavior: smooth;
@@ -65,6 +64,7 @@ body {
   // background: $bodyColor;
   color: $fontColor;
   background: $backgroundColor;
+
   background-attachment: fixed;
   background-size: cover;
   font-family: Poppins;
@@ -240,7 +240,7 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0.2);
+    border: 2px solid rgba(166, 164, 166, 0.109);
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -256,8 +256,7 @@ body {
         padding: 10px 14px;
         animation: 0.7s ease-out 0s 1 slideInBottom;
         display: block;
-        background: $GradientTeal;
-        // background: rgba(68, 9, 114, 0.571);
+        background: rgb(12, 153, 108);
       }
 
       background: rgba(68, 9, 114, 0.571);
@@ -269,7 +268,7 @@ body {
     // background: $GradientTeal;
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0.294);
+    border: 2px solid rgba(207, 214, 210, 0.194);
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -292,7 +291,7 @@ body {
     display: grid;
     padding: 10px 0;
     border-radius: 10px;
-    border: 2px solid rgba(189, 186, 186, 0.3);
+    border: 2px solid rgba(215, 212, 212, 0.119);
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -311,7 +310,6 @@ body {
     border-radius: 5px;
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
-
     &:hover {
       .serviceDesc {
         bottom: 0px;

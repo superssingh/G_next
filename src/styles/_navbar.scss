@@ -23,7 +23,7 @@
   align-items: center;
   align-content: center;
   place-items: center;
-  backdrop-filter: blur(1.2em);
+  backdrop-filter: blur(2em);
   padding: 1rem 0.5rem;
   position: fixed;
   // background: rgba(72, 27, 112, 0.337);
@@ -203,12 +203,12 @@
     justify-content: end;
     .mobile-menus {
       place-self: top;
-      width: 12em;
+      width: 14em;
       height: wrap;
       top: 0;
-      backdrop-filter: blur(1rem);
+      backdrop-filter: blur(2rem);
       background: $mobileNavColor;
-      box-shadow: 0 0 2px 0px rgba(32, 32, 34, 0.805);
+      box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
       // transition: 0.3s ease-in-out;
       a {
         display: flex;
@@ -273,6 +273,7 @@
       justify-content: center;
       margin-top: 5rem;
       transition: all 0.5s ease;
+      cursor: pointer;
     }
   }
 

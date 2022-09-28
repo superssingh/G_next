@@ -27,6 +27,7 @@ const Footer = () => {
               alt={TagName.COMPANY_NAME}
               width={100}
               height={100}
+              className="logo"
             />
           </Link>
         </div>

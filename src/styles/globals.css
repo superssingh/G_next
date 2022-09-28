@@ -232,8 +232,8 @@
   align-items: center;
   align-content: center;
   place-items: center;
-  -webkit-backdrop-filter: blur(1.2em);
-          backdrop-filter: blur(1.2em);
+  -webkit-backdrop-filter: blur(2em);
+          backdrop-filter: blur(2em);
   padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
@@ -408,13 +408,13 @@
   }
   .mobile-open .mobile-menus {
     place-self: top;
-    width: 12em;
+    width: 14em;
     height: wrap;
     top: 0;
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
-    background: rgba(40, 6, 73, 0.839);
-    box-shadow: 0 0 2px 0px rgba(32, 32, 34, 0.805);
+    -webkit-backdrop-filter: blur(2rem);
+            backdrop-filter: blur(2rem);
+    background: rgba(13, 13, 13, 0.737);
+    box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
   }
   .mobile-open .mobile-menus a {
     display: flex;
@@ -480,6 +480,7 @@
     justify-content: center;
     margin-top: 5rem;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
   .mobile-close {
     display: none;
@@ -579,6 +580,10 @@
   position: relative;
   padding: 10px;
   margin: 0 10px;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .underLine::after {
@@ -746,7 +751,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgb(75, 75, 75);
-  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+  background: linear-gradient(0deg, #3e134d 0%, #b043d4 100%);
   background-attachment: fixed;
   background-size: cover;
   font-family: Poppins;
@@ -886,7 +891,7 @@ body {
 }
 
 .gradientbg {
-  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+  background: linear-gradient(0deg, #3e134d 0%, #b043d4 100%);
 }
 
 .contactbox {
@@ -919,7 +924,7 @@ body {
   .serviceCard {
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0.2);
+    border: 2px solid rgba(166, 164, 166, 0.109);
     transition: all 0.5s ease;
     overflow: hidden;
   }
@@ -939,12 +944,12 @@ body {
     -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
             animation: 0.7s ease-out 0s 1 slideInBottom;
     display: block;
-    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+    background: rgb(12, 153, 108);
   }
   .courseCard {
     display: grid;
     border-radius: 10px;
-    border: 2px solid rgba(207, 214, 210, 0.294);
+    border: 2px solid rgba(207, 214, 210, 0.194);
     transition: all 0.5s ease;
     overflow: hidden;
   }
@@ -966,7 +971,7 @@ body {
     display: grid;
     padding: 10px 0;
     border-radius: 10px;
-    border: 2px solid rgba(189, 186, 186, 0.3);
+    border: 2px solid rgba(215, 212, 212, 0.119);
     transition: all 0.5s ease;
     overflow: hidden;
   }
