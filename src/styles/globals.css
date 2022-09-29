@@ -936,7 +936,7 @@ body {
     border: 2px solid rgba(5, 193, 80, 0.897);
   }
   .serviceCard:hover * {
-    fill: rgb(38, 245, 162);
+    fill: rgb(17, 202, 144);
   }
   .serviceCard:hover .serviceDesc {
     width: 100%;
