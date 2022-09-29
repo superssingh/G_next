@@ -554,10 +554,10 @@
 }
 
 .hoverEffect {
-  transition: all 0.3s ease-in-out;
   color: rgba(252, 252, 252, 0.981);
   font-weight: 500;
   outline: 1;
+  transition: all 0.3s ease-in-out;
 }
 .hoverEffect:hover, .hoverEffect:focus, .hoverEffect:active {
   color: #fff;
