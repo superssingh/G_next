@@ -6,7 +6,7 @@ const Terms = () => {
         <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-gray-200">
           Website Terms and Conditions of Use
         </h1>
-        <div className="terms rounded-lg">
+        <div className="terms rounded-lg text-xs">
           <h2>1. Terms</h2>
 
           <div>

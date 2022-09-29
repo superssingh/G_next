@@ -6,7 +6,7 @@ const Policy = () => {
         <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-gray-200">
           Privacy Policy
         </h1>
-        <div className="policy rounded-lg">
+        <div className="policy rounded-lg text-xs">
           <div>
             At gogixer.com, accessible from http://www.gogixer.com, one of our
             main priorities is the privacy of our visitors. This Privacy Policy
