@@ -203,7 +203,7 @@
     justify-content: end;
     .mobile-menus {
       place-self: top;
-      width: 14em;
+      width: 13rem;
       height: wrap;
       top: 0;
       backdrop-filter: blur(2rem);
@@ -350,15 +350,15 @@
 }
 
 .hoverEffect {
-  transition: 0.3s ease-in-out;
   color: $menusTextColors;
   font-weight: 500;
   outline: 1;
+  transition: all 0.3s ease-in-out;
   &:hover,
   &:focus,
   &:active {
     color: #fff;
-    background: $menusColors;
+    background: $GradientTeal;
     box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
   }
 }

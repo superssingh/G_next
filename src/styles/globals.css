@@ -408,7 +408,7 @@
   }
   .mobile-open .mobile-menus {
     place-self: top;
-    width: 14em;
+    width: 13rem;
     height: wrap;
     top: 0;
     -webkit-backdrop-filter: blur(2rem);
@@ -554,14 +554,14 @@
 }
 
 .hoverEffect {
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: rgba(252, 252, 252, 0.981);
   font-weight: 500;
   outline: 1;
 }
 .hoverEffect:hover, .hoverEffect:focus, .hoverEffect:active {
   color: #fff;
-  background: linear-gradient(90deg, rgba(52, 13, 65, 0.7607843137), rgba(194, 29, 183, 0.7607843137), rgba(88, 11, 84, 0.7607843137));
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
 }
 
