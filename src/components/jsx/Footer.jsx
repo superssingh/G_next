@@ -22,13 +22,15 @@ const Footer = () => {
         </div>
         <div className=" top-0 w-fit animate-pulse">
           <Link href="/">
-            <Image
-              src={Logo}
-              alt={TagName.COMPANY_NAME}
-              width={100}
-              height={100}
-              className="logo"
-            />
+            <div>
+              <Image
+                src={Logo}
+                alt={TagName.COMPANY_NAME}
+                width={100}
+                height={100}
+                className="logo"
+              />
+            </div>
           </Link>
         </div>
         <div className="footerSocial top-0 w-fit place-items-start ">

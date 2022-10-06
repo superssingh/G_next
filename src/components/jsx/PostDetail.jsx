@@ -11,7 +11,7 @@ import { AuthorInfo, Back } from "../index";
 
 const PostDetail = ({ post }) => {
   return (
-    <div className="grid relative place-content-center showSlow">
+    <div className="w-full max-w-3xl grid relative place-content-center showSlow">
       <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}

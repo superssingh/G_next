@@ -681,7 +681,31 @@
   font-weight: 500;
 }
 
+.paginationButton {
+  margin: 0 3px;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+.paginationButton:hover {
+  background: rgba(0, 0, 0, 0.383);
+  color: white;
+}
+
+.activeButton {
+  margin: 0 3px;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
+  color: white;
+}
 .PostDetail {
+  width: 100%;
   display: flexbox;
   position: relative;
   -webkit-backdrop-filter: blur(10px);
@@ -933,7 +957,7 @@ body {
   }
   .serviceCard:hover {
     background: rgba(68, 9, 114, 0.571);
-    border: 2px solid rgba(5, 193, 80, 0.897);
+    border: 2px solid rgba(22, 229, 157, 0.897);
   }
   .serviceCard:hover * {
     fill: rgb(17, 202, 144);
@@ -944,7 +968,7 @@ body {
     -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
             animation: 0.7s ease-out 0s 1 slideInBottom;
     display: block;
-    background: rgb(12, 153, 108);
+    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   }
   .courseCard {
     display: grid;

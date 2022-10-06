@@ -82,13 +82,15 @@ const Navbar = () => {
 
           <li className="navLogo z-10">
             <Link href="/">
-              <Image
-                src={Logo}
-                alt={TagName.COMPANY_NAME}
-                width={80}
-                height={80}
-                onClick={handleClicked}
-              />
+              <div>
+                <Image
+                  src={Logo}
+                  alt={TagName.COMPANY_NAME}
+                  width={80}
+                  height={80}
+                  onClick={handleClicked}
+                />
+              </div>
             </Link>
           </li>
         </div>

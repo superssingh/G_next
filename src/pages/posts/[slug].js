@@ -10,7 +10,7 @@ const Blog = ({ post, posts }) => {
 
       <div className="">
         <div className="grid relative w-full px-4 pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
-          <div className="grid max-w-3xl place-self-center content-center md:col-span-8">
+          <div className=" grid max-w-3xl place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
           </div>
           <div className="grid w-full md:col-span-8 lg:col-span-4">
@@ -18,7 +18,7 @@ const Blog = ({ post, posts }) => {
               {posts && (
                 <PostWidget
                   posts={posts}
-                  category={post.categories[0].name}
+                  category={post.categories[0]?.name}
                   id={post.id}
                 />
               )}
