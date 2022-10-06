@@ -6,16 +6,11 @@ import _ from "lodash";
 
 const Pagination = ({ itemCount, pageSize, currentPage, onPageChange }) => {
   const pageCount = Math.ceil(itemCount / pageSize);
-  console.log("PageCount: ", pageCount);
-
-  console.log("IC: ", itemCount);
-
-  console.log("PSize: ", pageSize);
 
   if (pageCount === 1) return null;
 
   const pages = _.range(1, pageCount + 1);
-  console.log("Pages: ", pages);
+
   const handleChange = async (value) => {
     await onPageChange(value);
   };
