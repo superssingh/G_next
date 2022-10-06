@@ -82,7 +82,7 @@ const Navbar = () => {
 
           <li className="navLogo z-10">
             <Link href="/">
-              <div>
+              <div className="grid place-content-center">
                 <Image
                   src={Logo}
                   alt={TagName.COMPANY_NAME}
