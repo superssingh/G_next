@@ -45,7 +45,7 @@ const PostCard = ({ post }) => {
               {post.title}
             </div>
 
-            <div className="line-clamp-2 text-l mt-2 mb-2 text-gray-600 ">
+            <div className="line-clamp-2 text-sm mt-2 mb-2 text-gray-700 ">
               {post.description}
             </div>
           </div>
