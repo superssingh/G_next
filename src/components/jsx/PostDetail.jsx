@@ -52,7 +52,7 @@ const PostDetail = ({ post }) => {
             <div className=" text-md text-gray-600">
               {post.content.map((c, id) => (
                 <div className="my-6" key={id}>
-                  <Markdown>{c.html}</Markdown>
+                  <Markdown children={c.html}></Markdown>
                 </div>
               ))}
             </div>
