@@ -33,16 +33,15 @@ const About = () => {
                   className="object-cover shadow-lg rounded-full "
                 />
               </div>
-              <div className="text-white/50 font-bold ">
-                {" "}
+              <div className="text-white/50 font-bold text-lg ">
                 {TagName.founderData.name}
               </div>
             </div>
             <SocialWidget social={TagName.founderData.social} />
           </div>
 
-          <div className="text-xl p-4 text-left text-slate-400">
-            {TagName.founderData.des}
+          <div className="text-xl p-4  text-slate-400 text-justify">
+            <Markdown children={TagName.founderData.des}></Markdown>
           </div>
 
           <h1 className="p-4 text-3xl font-bold text-center">
