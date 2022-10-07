@@ -41,11 +41,7 @@ const About = () => {
           </div>
 
           <div className="text-xl p-4 text-left text-slate-400">
-            Hi, I'm <b>founder</b> of gogixer and full stack developer. I love
-            this profession and have a keen interest to teach people about web
-            development. I have learned web development skills from online and
-            build gogixer to document my journey as a software developer. I hope
-            you will enjoy it... 😇
+            {TagName.founderData.des}
           </div>
 
           <h1 className="p-4 text-3xl font-bold text-center">
