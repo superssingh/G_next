@@ -1,3 +1,4 @@
+import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import { TagName, SocialWidget } from "../../components/";
 
@@ -41,7 +42,7 @@ const About = () => {
           </div>
 
           <div className="text-xl p-4 text-left text-slate-400">
-            {TagName.founderData.des}
+            <Markdown>{TagName.founderData.des.html}</Markdown>
           </div>
 
           <h1 className="p-4 text-3xl font-bold text-center">
