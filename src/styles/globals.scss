@@ -368,3 +368,37 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.answer {
+  opacity: 0;
+  height: 0;
+  background: white;
+}
+
+.faq {
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+  #question {
+    z-index: 0;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background: #c2d8ed;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  &:active,
+  &:focus,
+  &:focus-within,
+  &:hover {
+    background: #f0f0f0;
+    .answer {
+      z-index: 0;
+      height: 100%;
+      opacity: 1;
+      padding: 10px;
+    }
+  }
+}

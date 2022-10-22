@@ -44,8 +44,8 @@ const About = () => {
             <Markdown children={TagName.founderData.des}></Markdown>
           </div>
 
-          <h1 className="p-4 text-3xl font-bold text-center">
-            🗣 Have a nice day and happing coding...
+          <h1 className="p-4 text-2xl font-bold text-center">
+            🗣 Have a nice day and happy coding...
           </h1>
         </div>
       </div>

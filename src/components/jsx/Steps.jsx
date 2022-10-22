@@ -42,7 +42,7 @@ const Steps = () => {
                         </svg>
                       </summary>
                       <div className="pt-6 pb-6 showFromTop animate ">
-                        <div className="text-left prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500 showFromTop animate">
+                        <div className="text-left prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500 ">
                           <span>{s.comment}</span>
                         </div>
                       </div>
