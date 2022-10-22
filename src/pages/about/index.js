@@ -6,15 +6,16 @@ const About = () => {
   return (
     <div className="grid w-full place-content-center p-2 ">
       <div className="grid w-fit max-w-2xl place-items-center shadow-slate-200 p-2   showFromTop ">
-        <div className="text-[3rem] text-slate-200 text-center font-semibold w-fit p-2 font-poppins">
+        <div className="text-[2rem] text-slate-200 text-center font-semibold w-fit p-2 font-poppins">
           About Us
           {/* <span className=" line-through">Us</span> Me*/}
         </div>
         <div className="relative p-2 text-slate-200 ">
-          <h1 className="text-3xl p-2 font-bold">👋 Hello world, </h1>
-          <div className="text-xl p-2 ">
-            Welcome to Gogixer. A website for Web Developers. Hope our content
-            help you to fulfil your desired outcome.
+          <div className="text-lg p-2 text-justify">
+            Welcome to <strong>Gogixer</strong>, an online learning platform for
+            web developers where you can learn skills like{" "}
+            <strong>Front-End, Back-End </strong> and{" "}
+            <strong>Full-Stack development. </strong>
           </div>
         </div>
 
@@ -23,12 +24,12 @@ const About = () => {
 
           <div className="relative m-4  rounded-b-lg ">
             <div className="grid w-full place-content-center">
-              <div className=" animate grid w-72 h-72 p-2 place-content-center rounded-full overflow-hidden z-[1] ">
+              <div className=" animate grid w-64 h-64 p-2 place-content-center rounded-full overflow-hidden z-[1] ">
                 <Image
                   src={TagName.founderData.image}
                   alt="Picture of the author"
-                  width={500}
-                  height={500}
+                  width={300}
+                  height={300}
                   priority
                   className="object-cover shadow-lg rounded-full "
                 />
@@ -40,11 +41,11 @@ const About = () => {
             <SocialWidget social={TagName.founderData.social} />
           </div>
 
-          <div className="text-xl p-4  text-slate-400 text-justify">
+          <div className="text-lg p-4  text-slate-400 text-justify">
             <Markdown children={TagName.founderData.des}></Markdown>
           </div>
 
-          <h1 className="p-4 text-2xl font-bold text-center">
+          <h1 className="p-4 text-xl font-bold text-center">
             🗣 Have a nice day and happy coding...
           </h1>
         </div>
