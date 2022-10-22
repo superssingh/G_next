@@ -1065,7 +1065,7 @@ export const founderData = {
   name: "Santosh Singh",
   profession: "Founder & Full Stack Developer",
   image: founder,
-  des: `<div>Hi 👋, I'm a <strong>full stack developer</strong> and the <strong>founder</strong> of gogixer. I'm
+  des: `<div>Hi 👋, I'm Santosh Singh, a <strong>full stack developer</strong> and the <strong>founder</strong> of gogixer. I'm
             passionate about my profession and have a keen interest to teach people about web
             development. I have learned web development skills from online and
             build gogixer to document my journey as a full stack developer to help others. I hope

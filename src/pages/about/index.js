@@ -33,9 +33,9 @@ const About = () => {
                   className="object-cover shadow-lg rounded-full "
                 />
               </div>
-              <div className="text-white/50 font-bold text-lg ">
+              {/* <div className="text-white/50 font-bold text-lg ">
                 {TagName.founderData.name}
-              </div>
+              </div> */}
             </div>
             <SocialWidget social={TagName.founderData.social} />
           </div>
