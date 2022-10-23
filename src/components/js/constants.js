@@ -1009,7 +1009,7 @@ export const steps = [
   {
     label: "Learn by doing.",
     comment:
-      "Best way to learn something is by doing. Don't be part of tutorial hell. Just do it.",
+      "Best way to learn coding is by doing. Don't be part of tutorial hell. Just start it.",
   },
   {
     label: "Read & follow the official documentation and Blogs.",

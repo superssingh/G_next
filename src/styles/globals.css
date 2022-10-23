@@ -22,6 +22,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slideOutTop {
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
+@keyframes slideOutTop {
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
 @-webkit-keyframes slideInBottom {
   0% {
     transform: translateY(20%);
@@ -38,6 +58,26 @@
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideOutBottom {
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutBottom {
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  0% {
     transform: translateY(0);
     opacity: 1;
   }
@@ -1068,33 +1108,41 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+input[type=checkbox] {
+  opacity: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.iconPointer {
+  transition: all 0.5s ease-in-out;
+}
+
 .answer {
   opacity: 0;
   height: 0;
-  background: white;
+  -webkit-animation: all 0.7s ease-out 0s 0 slideInBottom;
+          animation: all 0.7s ease-out 0s 0 slideInBottom;
 }
 
-.faq {
-  width: 100%;
-  background: #fff;
-  z-index: 1;
-}
-.faq #question {
-  z-index: 0;
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  background: #c2d8ed;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.faq:active, .faq:focus, .faq:focus-within, .faq:hover {
-  background: #f0f0f0;
-}
-.faq:active .answer, .faq:focus .answer, .faq:focus-within .answer, .faq:hover .answer {
-  z-index: 0;
-  height: 100%;
+input:checked[type=checkbox] ~ .answer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   opacity: 1;
-  padding: 10px;
+  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
+          animation: 0.7s ease-out 0s 1 slideInTop;
+}
+
+input:checked[type=checkbox] ~ .label {
+  color: rgb(87, 24, 197);
+}
+
+label:hover {
+  color: rgb(26, 5, 54);
+}
+
+input:checked[type=checkbox] ~ .iconPointer {
+  rotate: -180deg;
 }/*# sourceMappingURL=globals.css.map */

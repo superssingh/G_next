@@ -9,12 +9,33 @@
   }
 }
 
+@keyframes slideOutTop {
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
+
 @keyframes slideInBottom {
   0% {
     transform: translateY(20%);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutBottom {
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  0% {
     transform: translateY(0);
     opacity: 1;
   }

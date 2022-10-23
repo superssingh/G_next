@@ -1,4 +1,6 @@
 import { TagName } from "..";
+import FAQ from "./FAQ";
+
 const Steps = () => {
   return (
     <div className="bg-white/80 p-4 my-4">
@@ -17,39 +19,10 @@ const Steps = () => {
           </div>
           <div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6 text-center">
             <section>
-              <h3 className="text-sm font-semibold leading-7 text-slate-400">
+              <h3 className="text-sm font-semibold leading-7 text-slate-500">
                 Learning steps
               </h3>
-              {TagName.steps.map((s, i) => {
-                return (
-                  <div className="mt-2 divide-y divide-slate-100  " key={i}>
-                    <details className="group py-4 marker:content-[''] ">
-                      <summary className="  flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-indigo-600 [&amp;::-webkit-details-marker]:hidden ">
-                        {s.label}
-                        <svg
-                          className="mt-0.5 ml-4 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M18 12H6"></path>
-                          <path
-                            className="group-open:hidden"
-                            d="M12 6v12"
-                          ></path>
-                        </svg>
-                      </summary>
-                      <div className="pt-6 pb-6 showFromTop animate ">
-                        <div className="text-left prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500 ">
-                          <span>{s.comment}</span>
-                        </div>
-                      </div>
-                    </details>
-                  </div>
-                );
-              })}
+              <FAQ FAQ={TagName.steps} />
             </section>
           </div>
         </div>

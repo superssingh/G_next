@@ -369,36 +369,35 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+input[type="checkbox"] {
+  opacity: 0;
+  width: fit-content;
+}
+
+.iconPointer {
+  transition: all 0.5s ease-in-out;
+}
+
 .answer {
   opacity: 0;
   height: 0;
-  background: white;
+  animation: all 0.7s ease-out 0s 0 slideInBottom;
 }
 
-.faq {
-  width: 100%;
-  background: #fff;
-  z-index: 1;
-  #question {
-    z-index: 0;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    background: #c2d8ed;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  &:active,
-  &:focus,
-  &:focus-within,
-  &:hover {
-    background: #f0f0f0;
-    .answer {
-      z-index: 0;
-      height: 100%;
-      opacity: 1;
-      padding: 10px;
-    }
-  }
+input:checked[type="checkbox"] ~ .answer {
+  height: fit-content;
+  opacity: 1;
+  animation: 0.7s ease-out 0s 1 slideInTop;
+}
+
+input:checked[type="checkbox"] ~ .label {
+  color: rgb(87, 24, 197);
+}
+
+label:hover {
+  color: rgb(26, 5, 54);
+}
+
+input:checked[type="checkbox"] ~ .iconPointer {
+  rotate: -180deg;
 }
