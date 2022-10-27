@@ -36,26 +36,26 @@ const PostWidget = ({ posts, category, id }) => {
   }
 
   return (
-    <div className="w-fit showSlow widget relative transition-all duration-700 place-content-start shadow-lg drop-shadow-md  rounded-lg p-6 m-2  ">
+    <div className="grid w-full showSlow widget transition-all duration-700 place-content-start shadow-lg drop-shadow-md  rounded-lg p-6 m-2  ">
       <h3 className=" text-md text-gray-800 border-b border-slate-500/[.50] pb-2 ">
         {similar ? "Relevant Posts" : "Recent Posts"}
       </h3>
-      <div className="w-full  md:grid md:grid-cols-2 lg:block top-0 ">
+      <div className="grid w-full place-content-center  md:grid-cols-2 lg:block top-0 ">
         {similarPosts &&
           similarPosts.map((m) => {
             return (
               <Link href={`/posts/${m.node.slug}`} key={m.node.id}>
-                <div className=" w-full md:w-72 flex m-2  place-items-center  transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  rounded-lg hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45] ">
+                <div className="flex  m-2 transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  rounded-lg hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45] ">
                   <Image
                     src={m.node.featured_image[0].url}
                     alt={m.node.title}
-                    width={72}
+                    width={100}
                     height={72}
                     layout="fixed"
                     className="align-middle justify-self-stretch object-cover rounded-l-lg"
                   ></Image>
-                  <div className="w-fit px-2 ">
-                    <div className="text-gray-700 text-md font-semibold">
+                  <div className="w-full p-2 ">
+                    <div className="text-gray-700 text-md md:text-sm font-semibold line-clamp-1 md:line-clamp-2 ">
                       {m.node.title}
                     </div>
                     <div className="text-gray-800 text-xs ">

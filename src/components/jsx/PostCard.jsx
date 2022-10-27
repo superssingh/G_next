@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
       <div className="card hover:bg-teal-500/50 ">
-        <div className="relative h-56 w-full md:w-44 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
+        <div className="relative h-56 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
           <Image
             src={post.featured_image[0].url}
             alt={post.title}
@@ -16,9 +16,9 @@ const PostCard = ({ post }) => {
             className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
-        <div className=" h-32 w-full h-30 px-8 py-2">
+        <div className="h-32 md:h-36 w-full h-30 px-8 py-2">
           <div className="relative z-2 ">
-            <div className="absolute left-[-65px] bottom-[-60px] rotate-[-90deg] text-center align-middle flex uppercase tracking-wide text-xs ">
+            <div className="flex absolute left-[-65px] bottom-[-60px]  rotate-[-90deg] text-center  uppercase tracking-wide text-xs ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"
@@ -40,12 +40,12 @@ const PostCard = ({ post }) => {
               </div>
             </div>
           </div>
-          <div className="ml-2">
-            <div className="grid mt-2 text-xl font-semibold text-gray-800 uppercase">
+          <div className="pl-2">
+            <div className="grid mt-2 text-xl font-semibold text-gray-800 uppercase line-clamp-2">
               {post.title}
             </div>
 
-            <div className="line-clamp-2 text-sm mt-2 mb-2 text-gray-700 ">
+            <div className="line-clamp-2 text-md mt-2 mb-2 text-gray-600 ">
               {post.description}
             </div>
           </div>
