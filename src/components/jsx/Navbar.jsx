@@ -66,12 +66,10 @@ const Navbar = () => {
               <a
                 onClick={handleClicked}
                 data-text={m.name}
-                className="z-10 hoverEffect"
+                className="mobileMenu z-10 transition-all duration-300 rounded-md"
               >
-                <div className="icon w-auto " width={24} height={24}>
-                  {m.icon}
-                </div>
-                <div className="menuname w-fit">{m.name}</div>
+                <div className="icon w-auto ">{m.icon}</div>
+                <div className=" w-full text-md">{m.name}</div>
               </a>
             </Link>
           ))}

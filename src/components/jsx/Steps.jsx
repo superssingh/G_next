@@ -3,7 +3,7 @@ import FAQ from "./FAQ";
 
 const Steps = () => {
   return (
-    <div className="bg-white/80 p-4 my-4">
+    <div className="bg-gray-300 p-4 my-4">
       <section
         id="faqs"
         className="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8"
@@ -17,7 +17,7 @@ const Steps = () => {
               Everything you need to know
             </span>
           </div>
-          <div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6 text-center">
+          <div className="mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6 text-center">
             <section>
               <h3 className="text-sm font-semibold leading-7 text-slate-500">
                 Learning steps

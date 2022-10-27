@@ -445,26 +445,31 @@
     outline: 0;
     place-self: top;
     justify-content: end;
+    background: rgba(13, 13, 13, 0.737);
+    -webkit-backdrop-filter: blur(2rem);
+            backdrop-filter: blur(2rem);
   }
   .mobile-open .mobile-menus {
     place-self: top;
-    width: 13rem;
+    width: 100%;
     height: wrap;
     top: 0;
-    -webkit-backdrop-filter: blur(2rem);
-            backdrop-filter: blur(2rem);
-    background: rgba(13, 13, 13, 0.737);
+    background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
     box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
+    padding: 1rem;
+  }
+  .mobile-open .mobile-menus .mobileMenu:hover {
+    background: rgba(19, 177, 130, 0.931);
+    box-shadow: 0px 0px 5px 3px rgba(29, 3, 48, 0.54);
   }
   .mobile-open .mobile-menus a {
     display: flex;
     position: relative;
     width: 100%;
-    padding: 0.6rem;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    padding: 1rem;
     color: rgba(252, 252, 252, 0.981);
-    transition: 0.3s ease-in-out;
   }
   .mobile-open .mobile-menus a .icon {
     display: grid;
@@ -482,7 +487,7 @@
   }
   .mobile-open .social {
     width: 100%;
-    height: 1px;
+    height: 2px;
     place-self: top;
     top: 0;
   }
@@ -503,7 +508,7 @@
     height: fit-content;
     padding: 0.3rem;
     place-content: center;
-    -webkit-text-stroke: 2px rgba(204, 202, 202, 0.856);
+    -webkit-text-stroke: 2px rgba(203, 202, 204, 0.856);
     top: 0;
     transition: all 0.3s;
   }

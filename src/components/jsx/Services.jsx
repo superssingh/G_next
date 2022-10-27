@@ -2,11 +2,11 @@ import Link from "next/link";
 import { TagName } from "..";
 const Services = () => {
   return (
-    <div className="bg-black/30 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
-      <div className="relative text-center md:justify-center items-center text-slate-100 my-8">
-        <span className="text-xl text-slate-300 font-medium ">
+    <div className="bg-black/40 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+      <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
+        <h1 className="text-3xl text-slate-100 font-bold uppercase ">
           Our Services
-        </span>
+        </h1>
         <div className="grid w-full relative md:grid-cols-3 gap-0 md:gap-4 mt-4  ">
           {TagName.services.map((m) => {
             return (

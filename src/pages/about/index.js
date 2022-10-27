@@ -13,7 +13,7 @@ const About = () => {
         <div className="relative p-2 text-slate-200 ">
           <div className="text-lg p-2 text-justify">
             Welcome to <strong>Gogixer</strong>, an online learning platform for
-            web developers where you can learn skills like{" "}
+            students and web developers to learn web development skills like{" "}
             <strong>Front-End, Back-End </strong> and{" "}
             <strong>Full-Stack development. </strong>
           </div>

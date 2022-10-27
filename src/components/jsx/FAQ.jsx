@@ -4,10 +4,10 @@ const FAQ = ({ FAQ }) => {
       {FAQ.map((f, i) => {
         return (
           <section
-            className="grid relative p-2 place-content-center text-left overflow-hidden"
+            className="  grid relative p-2 place-content-center text-left overflow-hidden"
             key={"faq" + i}
           >
-            <div className="grid relative w-full max-w-lg grid-cols-8 gap-0 place-content-start rounded-md ">
+            <div className=" grid relative w-full max-w-lg grid-cols-8 gap-0 place-content-start rounded-md ">
               <input
                 type="checkbox"
                 id={"faq" + i}
