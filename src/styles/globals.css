@@ -442,7 +442,6 @@
     width: 100%;
     min-height: 100vh;
     height: wrap;
-    outline: 0;
     place-self: top;
     justify-content: end;
     background: rgba(13, 13, 13, 0.737);
@@ -458,17 +457,14 @@
     -webkit-backdrop-filter: blur(1rem);
             backdrop-filter: blur(1rem);
     box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
-    padding: 1rem;
   }
   .mobile-open .mobile-menus .mobileMenu:hover {
     background: rgba(19, 177, 130, 0.931);
     box-shadow: 0px 0px 5px 3px rgba(29, 3, 48, 0.54);
   }
   .mobile-open .mobile-menus a {
-    display: flex;
     position: relative;
     width: 100%;
-    padding: 1rem;
     color: rgba(252, 252, 252, 0.981);
   }
   .mobile-open .mobile-menus a .icon {
@@ -497,7 +493,7 @@
     width: inherit;
     height: inherit;
     place-content: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .mobile-open .social div a {
     width: -webkit-fit-content;
@@ -624,7 +620,6 @@
   display: flex;
   position: relative;
   padding: 10px;
-  margin: 0 10px;
 }
 
 .logo {

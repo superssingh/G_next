@@ -21,8 +21,8 @@ const SocialProof = () => {
                   <Image
                     className=" h-wrap w-wrap rounded-full rotate-[-45deg] "
                     src={r.image}
-                    width="100%"
-                    height="100%"
+                    width="100"
+                    height="100"
                     alt="ReviewerImage"
                   />
                 </div>

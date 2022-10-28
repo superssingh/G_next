@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="grid grid-cols-2 w-full p-4 place-items-start md:place-items-start">
           {TagName.footermenus.map((m) => (
             <Link key={m.name} href={m.path}>
-              <a
+              <div
                 tabIndex={1}
                 data-text={m.name}
                 className="underLine relative w-fit text-xs p-[5px]  transition-all duration-300"
               >
                 {m.name}
-              </a>
+              </div>
             </Link>
           ))}
         </div>

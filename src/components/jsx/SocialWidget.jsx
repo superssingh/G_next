@@ -6,7 +6,7 @@ const SocialWidget = ({ social }) => {
         social.map((s) => {
           return (
             <Link href={s.url} key={s.name}>
-              <a className={s.name}>{s.icon}</a>
+              <div className={s.name}>{s.icon}</div>
             </Link>
           );
         })}

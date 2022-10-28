@@ -14,20 +14,23 @@ const Navbar = () => {
     <div className="Navigation">
       <div>
         <header className="Navbar border-b border-slate-500/[.0] ">
-          <a
+          <Link
             className="w-48 center-center mx-8 hover:hue-rotate-180 transition-all duration-700"
             href="/"
           >
             <Image src={BrandName} alt={TagName.COMPANY_NAME} priority />
-          </a>
+          </Link>
 
           <ul className={TagName.MENU_DEFAULT}>
             <li>
-              <Link key={TagName.HomeMenu.name} href={TagName.HomeMenu.path}>
+              <Link
+                key={TagName.HomeMenu.name}
+                href={TagName.HomeMenu.path}
+                legacyBehavior
+              >
                 <div
-                  className=" transition-all duration-400 w-auto text-slate-200 p-3 rounded-full hoverEffect"
-                  width={24}
-                  height={24}
+                  className=" relative hoverEffect p-2 mx-2 rounded"
+                  tabIndex={1}
                 >
                   {TagName.HomeMenu.icon}
                 </div>
@@ -35,10 +38,15 @@ const Navbar = () => {
             </li>
             <li>
               {TagName.menus.map((m) => (
-                <Link key={m.name} href={m.path}>
-                  <a tabIndex={1} data-text={m.name}>
-                    {m.name}
-                  </a>
+                <Link
+                  key={m.name}
+                  href={m.path}
+                  div
+                  tabIndex={1}
+                  data-text={m.name}
+                  className="menu"
+                >
+                  {m.name}
                 </Link>
               ))}
             </li>
@@ -60,17 +68,17 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <div className="mobile-menus z-[5] ">
+        <div className="mobile-menus z-[5] p-4">
           {TagName.menus.map((m) => (
             <Link href={m.path} key={m.name}>
-              <a
+              <div
                 onClick={handleClicked}
                 data-text={m.name}
-                className="mobileMenu z-10 transition-all duration-300 rounded-md"
+                className="flex z-10 transition-all duration-300 rounded-md hoverEffect p-4"
               >
                 <div className="icon w-auto ">{m.icon}</div>
                 <div className=" w-full text-md">{m.name}</div>
-              </a>
+              </div>
             </Link>
           ))}
 

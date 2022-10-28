@@ -198,7 +198,6 @@
     width: 100%;
     min-height: 100vh;
     height: wrap;
-    outline: 0;
     place-self: top;
     justify-content: end;
     background: $mobileNavColor;
@@ -211,16 +210,13 @@
       background: $backgroundColor;
       backdrop-filter: blur(1rem);
       box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
-      padding: 1rem;
       .mobileMenu:hover {
         background: rgba(19, 177, 130, 0.931);
         box-shadow: 0px 0px 5px 3px rgba(29, 3, 48, 0.54);
       }
       a {
-        display: flex;
         position: relative;
         width: 100%;
-        padding: 1rem;
         color: $menusTextColors;
 
         .icon {
@@ -251,7 +247,7 @@
         width: inherit;
         height: inherit;
         place-content: center;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         a {
           width: fit-content;
           height: fit-content;

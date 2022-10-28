@@ -65,18 +65,26 @@ const Policy = () => {
           </div>
 
           <ul>
-            <li>Provide, operate, and maintain our website</li>
-            <li>Improve, personalize, and expand our website</li>
-            <li>Understand and analyze how you use our website</li>
-            <li>Develop new products, services, features, and functionality</li>
-            <li>
+            <li className="text-xs">
+              Provide, operate, and maintain our website
+            </li>
+            <li className="text-xs">
+              Improve, personalize, and expand our website
+            </li>
+            <li className="text-xs">
+              Understand and analyze how you use our website
+            </li>
+            <li className="text-xs">
+              Develop new products, services, features, and functionality
+            </li>
+            <li className="text-xs">
               Communicate with you, either directly or through one of our
               partners, including for customer service, to provide you with
               updates and other information relating to the website, and for
               marketing and promotional purposes
             </li>
-            <li>Send you emails</li>
-            <li>Find and prevent fraud</li>
+            <li className="text-xs">Send you emails</li>
+            <li className="text-xs">Find and prevent fraud</li>
           </ul>
 
           <h2>Log Files</h2>
@@ -139,8 +147,8 @@ const Policy = () => {
           <ul>
             <div>Google</div>
             <div>
-              <a href="policies.google.com/technologies/ads">
-                policies.google.com/technologies/ads
+              <a href="https://policies.google.com/technologies/ads">
+                https://policies.google.com/technologies/ads
               </a>
             </div>
           </ul>

@@ -7,7 +7,7 @@ const HeroPage = () => {
     <div className="">
       <div className=" grid px-8 place-content-center items-center sm:justify-center  relative transition-all duration-500 showFromTop ">
         <div className="grid md:flex text-slate-100 m-2 max-w-6xl">
-          <div className="grid md:flex  ">
+          <div className="grid md:flex relative ">
             <div className="">
               <div className="grid max-w-5xl justify-center">
                 <div className=" text-center md:text-left text-4xl font-semibold ">
@@ -19,13 +19,12 @@ const HeroPage = () => {
                   </h1>
                 </div>
                 <div className="grid place-content-center md:place-content-start py-2">
-                  <Link href="/courses">
-                    <div
-                      id="getStarted"
-                      className="w-32 font-bold p-4 text-lg "
-                    >
-                      Let's Go
-                    </div>
+                  <Link
+                    href="/courses"
+                    id="getStarted"
+                    className="w-32 font-bold p-4 text-lg "
+                  >
+                    Let's Go
                   </Link>
                 </div>
               </div>
@@ -35,7 +34,7 @@ const HeroPage = () => {
                 src={frontend}
                 width={500}
                 height={500}
-                className="absolute rounded-xl z-[2] "
+                className="relative rounded-xl z-[2] "
               />
             </div>
           </div>

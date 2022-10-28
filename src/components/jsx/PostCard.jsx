@@ -7,13 +7,14 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
       <div className="card hover:bg-teal-500/50 ">
-        <div className="relative h-56 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
+        <div className="relative overflow-hidden h-56 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
           <Image
             src={post.featured_image[0].url}
             alt={post.title}
-            layout="fill"
+            width={300}
+            height={300}
             priority
-            className="object-cover shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
+            className="object-fit w-full h-full shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
         <div className="h-32 md:h-36 w-full h-30 px-8 py-2">

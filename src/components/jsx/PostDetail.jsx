@@ -12,13 +12,14 @@ import { AuthorInfo, Back } from "../index";
 const PostDetail = ({ post }) => {
   return (
     <div className="w-full max-w-3xl grid relative place-content-center showSlow">
-      <div className="relative h-72 w-full overflow-hidden shadow-lg md:shrink-0 ">
+      <div className="relative h-72 w-full object-fit overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
           alt={post.title}
-          layout="fill"
+          width={500}
+          height={500}
           priority
-          className="object-cover shadow-lg rounded-t-lg"
+          className="object-cover w-full h-full shadow-lg rounded-t-lg"
         />
       </div>
       <div className=" bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
@@ -52,7 +53,19 @@ const PostDetail = ({ post }) => {
             <div className=" text-md text-gray-600">
               {post.content.map((c, id) => (
                 <div className="my-6" key={id}>
-                  <Markdown children={c.html}></Markdown>
+                  <Markdown children={c.html}></Markdown>{" "}
+                  dlskfjgldjkfgdjgljsdlgjk ddljf ldsjgljdsfgl jdl;gj ldfgjldjg
+                  l;djgljdlgjdlgj ldjgldsjglkj dlskfjgldjkfgdjgljsdlgjk ddljf
+                  ldsjgljdsfgl jdl;gj ldfgjldjg l;djgljdlgjdlgj ldjgldsjglkj
+                  dlskfjgldjkfgdjgljsdlgjk ddljf ldsjgljdsfgl jdl;gj ldfgjldjg
+                  l;djgljdlgjdlgj ldjgldsjglkj dlskfjgldjkfgdjgljsdlgjk ddljf
+                  ldsjgljdsfgl jdl;gj ldfgjldjg l;djgljdlgjdlgj ldjgldsjglkj
+                  dlskfjgldjkfgdjgljsdlgjk ddljf ldsjgljdsfgl jdl;gj ldfgjldjg
+                  l;djgljdlgjdlgj ldjgldsjglkj dlskfjgldjkfgdjgljsdlgjk ddljf
+                  ldsjgljdsfgl jdl;gj ldfgjldjg l;djgljdlgjdlgj ldjgldsjglkj
+                  dlskfjgldjkfgdjgljsdlgjk ddljf ldsjgljdsfgl jdl;gj ldfgjldjg
+                  l;djgljdlgjdlgj ldjgldsjglkj dlskfjgldjkfgdjgljsdlgjk ddljf
+                  ldsjgljdsfgl jdl;gj ldfgjldjg l;djgljdlgjdlgj ldjgldsjglkj
                 </div>
               ))}
             </div>

@@ -27,21 +27,21 @@ const Terms = () => {
             transfer of title, and under this license you may not:
           </div>
 
-          <ul>
-            <li>modify or copy the materials;</li>
-            <li>
+          <ul className="text-xs">
+            <li className="text-xs">modify or copy the materials;</li>
+            <li className="text-xs">
               use the materials for any commercial purpose or for any public
               display;
             </li>
-            <li>
+            <li className="text-xs">
               attempt to reverse engineer any software contained on Gogixer's
               Website;
             </li>
-            <li>
+            <li className="text-xs">
               remove any copyright or other proprietary notations from the
               materials; or
             </li>
-            <li>
+            <li className="text-xs">
               transferring the materials to another person or "mirror" the
               materials on any other server.
             </li>
@@ -112,10 +112,12 @@ const Terms = () => {
 
           <h2>8. Your Privacy</h2>
 
-          <div>
+          <div className="flex">
             <div>Please read our Privacy Policy.</div>
             <Link href={"/privacypolicy"}>
-              <a className="PolicyLink">Click Here</a>
+              <span className="mx-2 rounded bg-violet-500 p-1 font-medium text-white hover:bg-violet-700">
+                Click Here
+              </span>
             </Link>
           </div>
 
