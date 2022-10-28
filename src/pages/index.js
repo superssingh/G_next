@@ -4,13 +4,12 @@ import {
   HeroPage,
   Services,
   SocialProof,
-  FAQ,
   Features,
   CategoryFilter,
   Course,
   Team,
+  Steps,
 } from "../components/";
-import Steps from "../components/jsx/Steps";
 
 const Home = () => {
   return (
@@ -31,7 +30,6 @@ const Home = () => {
         <Steps />
         <SocialProof />
       </div>
-      {/* <FAQ /> */}
     </section>
   );
 };

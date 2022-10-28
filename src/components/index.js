@@ -32,6 +32,7 @@ export { default as deploy } from "./assets/deploy.svg";
 
 //JS Files---
 export * as TagName from "./js/constants";
+export { default as Paginate } from "./js/paginate";
 export { default as BlogContext } from "./contexts/blogContext";
 
 //JSX files
@@ -55,4 +56,5 @@ export { default as Features } from "./jsx/Features";
 export { default as HeroPage } from "./jsx/HeroPage";
 export { default as CategoryFilter } from "./jsx/tailwindExamples/CategoryFilter";
 export { default as Pagination } from "./jsx/Pagination";
-export { default as Paginate } from "./js/paginate";
+
+export { default as Steps } from "./jsx/Steps";
