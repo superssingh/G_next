@@ -308,7 +308,7 @@ body {
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-    border-radius: 5px;
+
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
     &:hover {
@@ -317,7 +317,7 @@ body {
         width: 100%;
         display: block;
       }
-      background: rgb(8, 146, 107);
+      background: rgba(126, 64, 227, 0.755);
     }
   }
 }
