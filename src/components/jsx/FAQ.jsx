@@ -15,13 +15,13 @@ const FAQ = ({ FAQ }) => {
               />
 
               <label
-                for={"faq" + i}
+                htmlFor={"faq" + i}
                 className="label col-span-7 w-full grid place-content-start p-4 uppercase text-gray-600"
               >
                 <strong>{f.label}</strong>
               </label>
               <label
-                for={"faq" + i}
+                htmlFor={"faq" + i}
                 className="iconPointer grid place-content-center  w-14"
               >
                 <svg

@@ -28,7 +28,6 @@ const Features = () => {
                   <div className="grid place-content-center ">
                     <Image src={s.image} />
                   </div>
-                  .3
                 </div>
               )) || (
                 <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8">
