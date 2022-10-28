@@ -1,6 +1,7 @@
 warning ../../../../package.json: No license field
 $ next build
 info  - Loaded env from /Users/santoshsingh/Documents/GitHub/ProjectGogixer/G_nextjs/.env
+warn  - The `app` dir is experimental. Please add `{experimental:{appDir: true}}` to your `next.config.js` to enable it
 info  - Linting and checking validity of types...
 info  - Creating an optimized production build...
 info  - Compiled successfully
@@ -13,33 +14,33 @@ info  - Generating static pages (18/18)
 info  - Finalizing page optimization...
 
 Route (pages)                                     Size     First Load JS
-┌ ○ /                                             1.22 kB         208 kB
-├   /_app                                         0 B             206 kB
-├ ○ /404                                          405 B           207 kB
-├ ○ /about (317 ms)                               857 B           207 kB
-├ λ /api/hello                                    0 B             206 kB
-├ ○ /contact                                      27.4 kB         234 kB
+┌ ○ /                                             421 B           201 kB
+├   /_app                                         0 B             200 kB
+├ ○ /404 (448 ms)                                 404 B           201 kB
+├ ○ /about                                        862 B           201 kB
+├ λ /api/hello                                    0 B             200 kB
+├ ○ /contact (504 ms)                             27.2 kB         227 kB
 ├   └ css/6c7987e2821e600c.css                    2.38 kB
-├ ○ /courses                                      262 B           207 kB
-├ ○ /courses/backend                              362 B           207 kB
-├ ○ /courses/deployment                           366 B           207 kB
-├ ○ /courses/frontend                             365 B           207 kB
-├ ○ /courses/fullstack                            364 B           207 kB
-├ ○ /courses/ui                                   360 B           207 kB
-├ ● /posts (ISR: 36000 Seconds) (538 ms)          973 B           207 kB
-├ ● /posts/[slug] (ISR: 60000 Seconds) (1789 ms)  546 B           207 kB
-├   ├ /posts/frontend-development (929 ms)
-├   └ /posts/responsive-ui (860 ms)
-├ ○ /privacypolicy                                3.42 kB         210 kB
-├ ○ /shop                                         417 B           207 kB
-├ ○ /shop/[id]                                    332 B           207 kB
-└ ○ /terms                                        1.99 kB         208 kB
-+ First Load JS shared by all                     220 kB
-  ├ chunks/framework-7751730b10fa0f74.js          45.5 kB
-  ├ chunks/main-7eb87239e78e8e4e.js               30.9 kB
-  ├ chunks/pages/_app-13e29f954024ece2.js         129 kB
-  ├ chunks/webpack-594d29d6fabe03ba.js            1.05 kB
-  └ css/4ef90e2be4c7b085.css                      13.2 kB
+├ ○ /courses                                      265 B           201 kB
+├ ○ /courses/backend (451 ms)                     370 B           201 kB
+├ ○ /courses/deployment                           371 B           201 kB
+├ ○ /courses/frontend                             367 B           201 kB
+├ ○ /courses/fullstack                            371 B           201 kB
+├ ○ /courses/ui                                   366 B           201 kB
+├ ● /posts (ISR: 36000 Seconds) (638 ms)          805 B           201 kB
+├ ● /posts/[slug] (ISR: 60000 Seconds) (1348 ms)  554 B           201 kB
+├   ├ /posts/responsive-ui (675 ms)
+├   └ /posts/frontend-development (673 ms)
+├ ○ /privacypolicy                                3.44 kB         204 kB
+├ ○ /shop                                         421 B           201 kB
+├ ○ /shop/[id]                                    341 B           201 kB
+└ ○ /terms                                        2.05 kB         202 kB
++ First Load JS shared by all                     214 kB
+  ├ chunks/framework-3b5a00d5d7e8d93b.js          45.4 kB
+  ├ chunks/main-2364f599a24c3599.js               25.7 kB
+  ├ chunks/pages/_app-7714d1087d1f4231.js         128 kB
+  ├ chunks/webpack-c63b1dbe2fa71ecf.js            1.05 kB
+  └ css/ae5ee8b67392edda.css                      13.3 kB
 
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)

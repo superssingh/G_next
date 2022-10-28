@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   // basePath: process.env.BASE_URL,
+
   images: {
     domains: [
       "media.graphcms.com",
@@ -14,6 +15,12 @@ module.exports = {
   },
   swcMinify: true,
 };
+
+{
+  experimental: {
+    appDir: true;
+  }
+}
 
 /**
 //  * @type {import('next').NextConfig}
