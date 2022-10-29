@@ -354,7 +354,6 @@
   border-radius: 100%;
   transition: 0.3s ease-in-out;
   color: rgba(252, 252, 252, 0.981);
-  font-weight: 500;
   outline: 1;
 }
 .menus li > a:hover, .menus li > a:focus, .menus li > a:active {

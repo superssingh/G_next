@@ -45,7 +45,7 @@ const Navbar = () => {
                   href={m.path}
                   tabIndex={1}
                   data-text={m.name}
-                  className="menu"
+                  className="menu font-bold"
                 >
                   {m.name}
                 </Link>
