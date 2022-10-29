@@ -35,6 +35,7 @@ const HeroPage = () => {
                 width={500}
                 height={500}
                 alt={"HeroImage"}
+                priority
                 className="relative rounded-xl z-[2] "
               />
             </div>
