@@ -14,15 +14,15 @@ const Services = () => {
                 <div className="grid relative transition-all duration-700 md:place-items-center ">
                   <div className="serviceCard w-full md:w-60 md:h-60 ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
-                      <div className="grid  place-content-center md:place-content-center p-2 ">
+                      <div className="grid  place-content-center md:place-content-center p-2 pl-4 ">
                         {m.icon}
                       </div>
-                      <div className="grid place-content-center">
-                        <div className="grid place-content-start md:place-content-center">
-                          <div className="p-2 text-slate-100  text-left text-xl md:text-md  uppercase font-semibold md:text-center shadow-none border-0 drop-shadow-none">
+                      <div className=" place-content-center">
+                        <div className="grid md:block relative h-full place-content-center ">
+                          <div className="p-2 text-slate-100 text-left text-xl md:text-md uppercase font-semibold md:text-center shadow-none border-0 drop-shadow-none">
                             {m.title}
                           </div>
-                          <div className="serviceDesc w-[100%] text-left text-slate-200 text-md px-2 pb-2">
+                          <div className="h-full serviceDesc w-[100%] text-left text-slate-200 text-md px-2 pb-2">
                             {m.description}
                           </div>
                         </div>
