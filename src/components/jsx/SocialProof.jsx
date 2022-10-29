@@ -5,7 +5,7 @@ const SocialProof = () => {
     <div className=" py-6 grid justify-center relative animate showFromTop px-4 ">
       <div className="grid relative text-center mx-2 ">
         <div className="text-xl text-white/50 mb-6 top-10 ">Testimonials</div>
-        <h1 className="text-xl text-white/80 mb-6 top-10 font-mono font-bold ">
+        <h1 className="text-xl text-white/80 mb-6 top-10 font-bold ">
           These are dummy comments for UI design. This will be completed in the
           upcoming backend tutorial project.
         </h1>

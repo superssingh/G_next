@@ -1,6 +1,9 @@
 warning ../../../../package.json: No license field
 $ next build
 info  - Loaded env from /Users/santoshsingh/Documents/GitHub/ProjectGogixer/G_nextjs/.env
+warn  - You have enabled experimental feature (fontLoaders) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
 warn  - The `app` dir is experimental. Please add `{experimental:{appDir: true}}` to your `next.config.js` to enable it
 info  - Linting and checking validity of types...
 info  - Creating an optimized production build...
@@ -16,21 +19,21 @@ info  - Finalizing page optimization...
 Route (pages)                                     Size     First Load JS
 ┌ ○ /                                             421 B           201 kB
 ├   /_app                                         0 B             200 kB
-├ ○ /404 (448 ms)                                 404 B           201 kB
-├ ○ /about                                        862 B           201 kB
+├ ○ /404                                          404 B           201 kB
+├ ○ /about (368 ms)                               862 B           201 kB
 ├ λ /api/hello                                    0 B             200 kB
-├ ○ /contact (504 ms)                             27.2 kB         227 kB
+├ ○ /contact (479 ms)                             27.2 kB         228 kB
 ├   └ css/6c7987e2821e600c.css                    2.38 kB
 ├ ○ /courses                                      265 B           201 kB
-├ ○ /courses/backend (451 ms)                     370 B           201 kB
-├ ○ /courses/deployment                           371 B           201 kB
+├ ○ /courses/backend (323 ms)                     370 B           201 kB
+├ ○ /courses/deployment (376 ms)                  371 B           201 kB
 ├ ○ /courses/frontend                             367 B           201 kB
 ├ ○ /courses/fullstack                            371 B           201 kB
 ├ ○ /courses/ui                                   366 B           201 kB
-├ ● /posts (ISR: 36000 Seconds) (638 ms)          805 B           201 kB
-├ ● /posts/[slug] (ISR: 60000 Seconds) (1348 ms)  554 B           201 kB
-├   ├ /posts/responsive-ui (675 ms)
-├   └ /posts/frontend-development (673 ms)
+├ ● /posts (ISR: 36000 Seconds) (510 ms)          805 B           201 kB
+├ ● /posts/[slug] (ISR: 60000 Seconds) (2953 ms)  554 B           201 kB
+├   ├ /posts/responsive-ui (1623 ms)
+├   └ /posts/frontend-development (1330 ms)
 ├ ○ /privacypolicy                                3.44 kB         204 kB
 ├ ○ /shop                                         421 B           201 kB
 ├ ○ /shop/[id]                                    341 B           201 kB
@@ -38,9 +41,9 @@ Route (pages)                                     Size     First Load JS
 + First Load JS shared by all                     214 kB
   ├ chunks/framework-3b5a00d5d7e8d93b.js          45.4 kB
   ├ chunks/main-2364f599a24c3599.js               25.7 kB
-  ├ chunks/pages/_app-7714d1087d1f4231.js         128 kB
-  ├ chunks/webpack-c63b1dbe2fa71ecf.js            1.05 kB
-  └ css/ae5ee8b67392edda.css                      13.3 kB
+  ├ chunks/pages/_app-9512c24f0ae32433.js         128 kB
+  ├ chunks/webpack-5a0a2ac833e7f2db.js            1.05 kB
+  └ css/4a1ba250fee60b6e.css                      13.8 kB
 
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)

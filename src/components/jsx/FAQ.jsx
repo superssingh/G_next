@@ -40,7 +40,7 @@ const FAQ = ({ FAQ }) => {
                 </svg>
               </label>
               <div className="answer  grid w-full max-w-lg col-span-8 px-2 place-centent-center rounded-md  bg-white/80 shadow-black/50 shadow-sm ">
-                <div className="w-full text-justify text-sm  p-4 text-gray-700 ">
+                <div className="w-full text-justify text-md  p-4 text-gray-700 ">
                   {f.comment}
                 </div>
               </div>

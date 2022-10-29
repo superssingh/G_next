@@ -1,10 +1,11 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { Layout, Footer } from "../components/";
-
+import { Poppins } from "@next/font/google";
+const customFont = Poppins({ weight: "400" });
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className={customFont.className}>
       <Layout>
         <Head>
           <meta charSet="utf-8" />

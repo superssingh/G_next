@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
+          {/* <link
             rel="preload"
             href="/fonts/Poppins-Light.ttf"
             as="font"
@@ -28,7 +28,7 @@ class MyDocument extends Document {
             href="/fonts/Poppins-Bold.ttf"
             as="font"
             crossOrigin="anonymous"
-          ></link>
+          ></link> */}
         </Head>
         <body>
           <Main></Main>

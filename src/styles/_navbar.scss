@@ -92,22 +92,20 @@
   align-items: center;
   margin-right: 2rem;
   height: inherit;
-  li {
-    a {
-      font-size: 0.9rem;
-      padding: 1rem 0.7rem;
-      margin: 0 0.2rem;
-      border-radius: 100%;
-      transition: 0.3s ease-in-out;
-      color: $menusTextColors;
-      font-weight: 500;
-      outline: 1;
-      &:hover,
-      &:focus,
-      &:active {
-        background: $menusColors;
-        box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);
-      }
+  li > a {
+    font-size: 0.9rem;
+    padding: 1rem 0.7rem;
+    margin: 0 0.2rem;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+    color: $menusTextColors;
+    font-weight: 500;
+    outline: 1;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $menusColors;
+      box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);
     }
   }
 }

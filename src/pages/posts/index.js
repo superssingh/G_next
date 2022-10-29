@@ -63,8 +63,8 @@ const Home = ({ posts }) => {
         </div>
 
         {posts && (
-          <div className=" w-full grid  md:col-span-8 lg:col-span-4 place-content-center lg:place-content-start">
-            <div className="w-full px-2 md:grid lg:sticky lg:place-content-start lg:w-78 ">
+          <div className="w-full p-2 relative  md:col-span-8 lg:col-span-4 place-content-center ">
+            <div className="w-full relative lg:sticky lg:place-content-start lg:w-78 ">
               <PostWidget posts={recentPosts} />
             </div>
           </div>

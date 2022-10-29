@@ -41,12 +41,12 @@ const PostCard = ({ post }) => {
               </div>
             </div>
           </div>
-          <div className="pl-2">
-            <div className="grid mt-2 text-xl font-semibold text-gray-800 uppercase line-clamp-2">
+          <div className="grid relative pl-2 pb-2">
+            <div className="grid mt-2 text-lg font-bold text-gray-800 uppercase line-clamp-2">
               {post.title}
             </div>
 
-            <div className="line-clamp-2 text-md mt-2 mb-2 text-gray-600 ">
+            <div className="line-clamp-2 text-md mt-2 mb-2 text-gray-700 ">
               {post.description}
             </div>
           </div>

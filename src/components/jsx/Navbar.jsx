@@ -18,30 +18,31 @@ const Navbar = () => {
             className="w-48 center-center mx-8 hover:hue-rotate-180 transition-all duration-700"
             href="/"
           >
-            <Image src={BrandName} alt={TagName.COMPANY_NAME} priority />
+            <Image
+              src={BrandName}
+              alt={TagName.COMPANY_NAME}
+              priority
+              placeholder="blur"
+            />
           </Link>
 
           <ul className={TagName.MENU_DEFAULT}>
             <li>
-              <Link
-                key={TagName.HomeMenu.name}
-                href={TagName.HomeMenu.path}
-                legacyBehavior
-              >
-                <div
-                  className=" relative hoverEffect p-2 mx-2 rounded"
-                  tabIndex={1}
+              <div className="grid relative px-2 rounded " tabIndex={1}>
+                <Link
+                  key={TagName.HomeMenu.name}
+                  href={TagName.HomeMenu.path}
+                  className="grid relative p-2 rounded hoverEffect"
                 >
                   {TagName.HomeMenu.icon}
-                </div>
-              </Link>
+                </Link>
+              </div>
             </li>
             <li>
               {TagName.menus.map((m) => (
                 <Link
                   key={m.name}
                   href={m.path}
-                  div
                   tabIndex={1}
                   data-text={m.name}
                   className="menu"
@@ -70,15 +71,15 @@ const Navbar = () => {
       >
         <div className="mobile-menus z-[5] p-4">
           {TagName.menus.map((m) => (
-            <Link href={m.path} key={m.name}>
-              <div
-                onClick={handleClicked}
-                data-text={m.name}
-                className="flex z-10 transition-all duration-300 rounded-md hover:bg-teal-500 font-medium  hover:shadow-md hover:shadow-black p-4"
-              >
-                <div className="icon w-auto ">{m.icon}</div>
-                <div className=" w-full text-md">{m.name}</div>
-              </div>
+            <Link
+              href={m.path}
+              key={m.name}
+              onClick={handleClicked}
+              data-text={m.name}
+              className="flex z-10 transition-all duration-300 rounded-md font-medium  hoverEffect   p-4"
+            >
+              <div className="icon w-auto ">{m.icon}</div>
+              <div className=" w-full text-md">{m.name}</div>
             </Link>
           ))}
 
@@ -94,6 +95,7 @@ const Navbar = () => {
                   alt={TagName.COMPANY_NAME}
                   width={80}
                   height={80}
+                  placeholder="blur"
                   onClick={handleClicked}
                 />
               </div>

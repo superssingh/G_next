@@ -14,13 +14,14 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   swcMinify: true,
-};
 
-{
   experimental: {
-    appDir: true;
-  }
-}
+    // appDir: true,
+    fontLoaders: [
+      { loader: "@next/font/google", options: { subsets: ["latin"] } },
+    ],
+  },
+};
 
 /**
 //  * @type {import('next').NextConfig}

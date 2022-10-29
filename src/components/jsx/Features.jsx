@@ -25,14 +25,14 @@ const Features = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="grid place-content-center ">
-                    <Image src={s.image} />
+                  <div className="grid place-content-center  object-fit overflow-hidden">
+                    <Image src={s.image} alt={s.name + "image"} />
                   </div>
                 </div>
               )) || (
                 <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8">
-                  <div className="grid place-content-center px-4">
-                    <Image src={s.image} />
+                  <div className="grid place-content-center px-4object-fit overflow-hidden">
+                    <Image src={s.image} alt={s.name + "image"} />
                   </div>
                   <div className="grid place-content-center">
                     <div className="grid p-4 ">

@@ -29,11 +29,12 @@ const HeroPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid w-wrap place-content-center md:right-0">
+            <div className="grid  place-content-center md:right-0 object-fit overflow-hidden">
               <Image
                 src={frontend}
                 width={500}
                 height={500}
+                alt={"HeroImage"}
                 className="relative rounded-xl z-[2] "
               />
             </div>
