@@ -41,28 +41,6 @@ export const HomeMenu = {
 
 export const menus = [
   {
-    name: "About",
-    path: "/about",
-    icon: (
-      <svg
-        fill="#fff"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="0"
-        width="24px"
-        height="24px"
-        className="h-6 w-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M 4.0097656 3 C 2.9179106 3 2.0097656 3.9049841 2.0097656 4.9980469 L 2 23 L 6 19 L 20 19 C 21.093063 19 22 18.093063 22 17 L 22 5 C 22 3.9069372 21.093063 3 20 3 L 4.0097656 3 z M 4.0097656 5 L 20 5 L 20 17 L 5.171875 17 L 4.0039062 18.167969 L 4.0097656 5 z M 11 7 L 11 9 L 13 9 L 13 7 L 11 7 z M 11 11 L 11 15 L 13 15 L 13 11 L 11 11 z"
-        />
-      </svg>
-    ),
-  },
-  {
     name: "Articles",
     path: "/posts",
     icon: (
@@ -105,26 +83,26 @@ export const menus = [
       </svg>
     ),
   },
-  {
-    name: "Shop",
-    path: "/shop",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   name: "Shop",
+  //   path: "/shop",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       className="h-6 w-6"
+  //       fill="none"
+  //       viewBox="0 0 24 24"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+  //       />
+  //     </svg>
+  //   ),
+  // },
   {
     name: "Contact",
     path: "/contact",
@@ -141,6 +119,28 @@ export const menus = [
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "About",
+    path: "/about",
+    icon: (
+      <svg
+        fill="#fff"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="0"
+        width="24px"
+        height="24px"
+        className="h-6 w-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M 4.0097656 3 C 2.9179106 3 2.0097656 3.9049841 2.0097656 4.9980469 L 2 23 L 6 19 L 20 19 C 21.093063 19 22 18.093063 22 17 L 22 5 C 22 3.9069372 21.093063 3 20 3 L 4.0097656 3 z M 4.0097656 5 L 20 5 L 20 17 L 5.171875 17 L 4.0039062 18.167969 L 4.0097656 5 z M 11 7 L 11 9 L 13 9 L 13 7 L 11 7 z M 11 11 L 11 15 L 13 15 L 13 11 L 11 11 z"
         />
       </svg>
     ),
