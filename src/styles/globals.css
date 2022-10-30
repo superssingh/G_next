@@ -225,7 +225,7 @@
 }
 
 .autoColorChange {
-  background: linear-gradient(245deg, #cf3709, #702507, #fe7f10, #a01eea, rgba(128, 29, 234, 0.9803921569), #2e075a);
+  background: linear-gradient(180deg, #07a03c, #0bc474, #135edf, #6c1eea, rgba(207, 16, 221, 0.9803921569), #e31c79, #e31c1c);
   background-size: 500% 500%;
   -webkit-animation: AnimationName 2000ms ease infinite;
   animation: AnimationName 10s ease infinite;
@@ -260,7 +260,7 @@
   height: wrap;
   position: fixed;
   top: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .Navigation div {
   width: inherit;
@@ -795,8 +795,8 @@ input[type=checkbox] {
 .answer {
   opacity: 0;
   height: 0;
-  -webkit-animation: all 0.7s ease-out 0s 0 slideInBottom;
-          animation: all 0.7s ease-out 0s 0 slideInBottom;
+  -webkit-animation: all 0.7s ease-out 0s 0 slideInTop;
+          animation: all 0.7s ease-out 0s 0 slideInTop;
 }
 
 input:checked[type=checkbox] + .faq > .answer {
@@ -808,23 +808,31 @@ input:checked[type=checkbox] + .faq > .answer {
           animation: 0.7s ease-out 0s 1 slideInTop;
 }
 
-input:checked[type=checkbox] ~ .faq > .label {
+input[type=checkbox]:not(:checked) + .faq > .answer {
+  height: 0px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=checkbox]:checked ~ .faq > .label {
   color: rgb(87, 24, 197);
+}
+
+input[type=checkbox]:checked ~ .faq > label > .iconPointer {
+  rotate: -180deg;
 }
 
 label:hover {
   color: rgb(26, 5, 54);
 }
 
-input:checked[type=checkbox] ~ .faq > label > .iconPointer {
-  rotate: -180deg;
-}
-
-.inputText:hover {
+.inputText:hover,
+.textArea:hover {
   background: rgba(19, 1, 37, 0.882);
 }
 
-.inputText:hover + .inputLabel {
+.inputText:hover + .inputLabel,
+.textArea:hover + .inputLabel {
   background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
   opacity: 1;
   margin: -1.2rem 0 0 0.5rem;
@@ -834,12 +842,15 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
 }
 
 .inputText:focus,
+.inputLabel,
+.textArea:focus,
 .inputLabel {
   box-shadow: 0px 2px 10px 1px rgb(2, 2, 2);
   transition: all 0.3s ease-in-out;
 }
 
-.inputText:valid + .inputLabel {
+.inputText:valid + .inputLabel,
+.textArea:valid + .inputLabel {
   opacity: 1;
   margin: -1.2rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -850,7 +861,8 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
   border-right: 2px solid rgba(23, 23, 23, 0.699);
 }
 
-.inputText:focus + .inputLabel {
+.inputText:focus + .inputLabel,
+.textArea:focus + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -861,7 +873,8 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
   border-right: 2px solid rgb(16, 199, 129);
 }
 
-.inputText:focus:invalid + .inputLabel {
+.inputText:focus:invalid + .inputLabel,
+.textArea:focus:invalid + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -872,20 +885,22 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
   border-right: 2px solid rgb(199, 37, 16);
 }
 
-.inputText:not(:-moz-placeholder-shown):invalid:not(:focus), .inputText:not(:-moz-placeholder-shown):invalid:focus {
+.inputText:not(:-moz-placeholder-shown):invalid:not(:focus), .inputText:not(:-moz-placeholder-shown):invalid:focus, .textArea:not(:-moz-placeholder-shown):invalid:not(:focus), .textArea:not(:-moz-placeholder-shown):invalid:focus {
   border: 2px solid #e3247a;
 }
 
-.inputText:not(:-ms-input-placeholder):invalid:not(:focus), .inputText:not(:-ms-input-placeholder):invalid:focus {
+.inputText:not(:-ms-input-placeholder):invalid:not(:focus), .inputText:not(:-ms-input-placeholder):invalid:focus, .textArea:not(:-ms-input-placeholder):invalid:not(:focus), .textArea:not(:-ms-input-placeholder):invalid:focus {
   border: 2px solid #e3247a;
 }
 
 .inputText:not(:placeholder-shown):invalid:not(:focus),
-.inputText:not(:placeholder-shown):invalid:focus {
+.inputText:not(:placeholder-shown):invalid:focus,
+.textArea:not(:placeholder-shown):invalid:not(:focus),
+.textArea:not(:placeholder-shown):invalid:focus {
   border: 2px solid #e3247a;
 }
 
-.inputText:not(:-moz-placeholder-shown):invalid + .inputLabel {
+.inputText:not(:-moz-placeholder-shown):invalid + .inputLabel, .textArea:not(:-moz-placeholder-shown):invalid + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -896,7 +911,7 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
   border-right: 2px solid rgb(199, 37, 16);
 }
 
-.inputText:not(:-ms-input-placeholder):invalid + .inputLabel {
+.inputText:not(:-ms-input-placeholder):invalid + .inputLabel, .textArea:not(:-ms-input-placeholder):invalid + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -907,7 +922,8 @@ input:checked[type=checkbox] ~ .faq > label > .iconPointer {
   border-right: 2px solid rgb(199, 37, 16);
 }
 
-.inputText:not(:placeholder-shown):invalid + .inputLabel {
+.inputText:not(:placeholder-shown):invalid + .inputLabel,
+.textArea:not(:placeholder-shown):invalid + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);

@@ -4,7 +4,7 @@ const FAQ = ({ FAQ }) => {
       {FAQ.map((f, i) => {
         return (
           <section
-            className="  grid relative py-2 place-content-center text-left overflow-hidden"
+            className=" animate grid relative py-2 place-content-center text-left overflow-hidden"
             key={"faq" + i}
           >
             <input
@@ -12,7 +12,7 @@ const FAQ = ({ FAQ }) => {
               id={"faq" + i}
               className="col-span-8 hidden"
             />
-            <div className="faq  grid relative w-full max-w-lg grid-cols-8 gap-0 place-items-start rounded-md ">
+            <div className="faq  grid relative w-full max-w-lg grid-cols-8 gap-0 place-items-start rounded-md animate">
               <label
                 htmlFor={"faq" + i}
                 className="label col-span-7 w-full grid place-content-start pl-2  uppercase text-gray-600 "
@@ -39,7 +39,7 @@ const FAQ = ({ FAQ }) => {
                 </svg>
               </label>
 
-              <div className="answer grid relative w-full max-w-lg col-span-8 pt-2 pb-2 place-items-center justify-items-center px-2 ">
+              <div className="answer grid relative w-full max-w-lg col-span-8 pt-2 pb-2 place-items-center justify-items-center px-2 animate">
                 <div className="w-full text-justify text-md text-gray-700 px-4 py-2 rounded-md  shadow-black/50 shadow-sm mx-2 bg-slate-100">
                   {f.comment}
                 </div>

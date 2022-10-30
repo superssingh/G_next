@@ -46,7 +46,6 @@ export { default as HeadTag } from "./jsx/HeadTag";
 export { default as PostDetail } from "./jsx/PostDetail";
 export { default as AuthorInfo } from "./jsx/AuthorInfo";
 export { default as SocialWidget } from "./jsx/SocialWidget";
-export { default as ContactForm } from "./jsx/ContactForm";
 export { default as Course } from "./jsx/Course";
 export { default as Services } from "./jsx/Services";
 export { default as SocialProof } from "./jsx/SocialProof";
