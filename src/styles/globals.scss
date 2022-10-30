@@ -402,3 +402,60 @@ label:hover {
 input:checked[type="checkbox"] ~ .iconPointer {
   rotate: -180deg;
 }
+
+.inputText:focus,
+.inputLabel {
+  transition: all 0.3s ease-in-out;
+}
+
+.inputText:valid + .inputLabel {
+  opacity: 1;
+  margin: -1.2rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: $GradientTeal;
+  border-left: 2px solid rgba(23, 23, 23, 0.699);
+  border-right: 2px solid rgba(23, 23, 23, 0.699);
+}
+
+.inputText:focus + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  border-left: 2px solid rgb(16, 199, 129);
+  border-right: 2px solid rgb(16, 199, 129);
+}
+.inputText:focus:invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+.inputText:not(:placeholder-shown):invalid:not(:focus) {
+  border: 2px solid #e3247a;
+}
+.inputText:not(:placeholder-shown):invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+
+// .inputText:invalid + .inputLabel {
+//   margin: -1.3rem 0 0 0.5rem;
+//   color: rgb(255, 255, 255);
+//   border-radius: 1rem 1rem 0 0;
+//   padding: 0 8px;
+//   border: 2px solid rgb(222, 62, 62);
+// }

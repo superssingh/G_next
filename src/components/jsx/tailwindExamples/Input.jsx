@@ -14,7 +14,7 @@
   }
   ```
 */
-export default function Example() {
+export default function InputExample() {
   return (
     <div>
       <label

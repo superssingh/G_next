@@ -1,4 +1,6 @@
 import { Back } from "../../components";
+import InputExample from "../../components/jsx/tailwindExamples/Input";
+import InputText from "../../components/jsx/tailwindExamples/InputText";
 const Shop = () => {
   return (
     <div
@@ -11,6 +13,12 @@ const Shop = () => {
       <div className=" w-full ">
         <Back />
       </div>
+
+      <InputText name="username" label="Username" />
+      <InputText name="password" label="Password" type="password" required />
+      <InputText name="email" type="email" label="Email ID" required />
+      <InputText name="email" type="number" label="Mobile No" required />
+      <InputText name="email" type="date" label="Mobile No" />
     </div>
   );
 };
