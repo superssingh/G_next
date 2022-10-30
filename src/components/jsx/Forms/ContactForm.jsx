@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useForm } from "react-hook-form";
@@ -24,6 +24,7 @@ const ContactForm = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const form = useRef();
 
   //Email service init------
   const EMAIL_SERVICE = {
@@ -34,7 +35,7 @@ const ContactForm = () => {
 
   const sendEmail = async (data) => {
     try {
-      await emailjs
+      emailjs
         .sendForm(
           EMAIL_SERVICE.SERVICE_ID,
           EMAIL_SERVICE.TEMPLATE_ID,
@@ -77,22 +78,21 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     if (success) return;
+
     const name = data.your_name;
     const message = data.message;
 
     if (name.trim() === "") {
-      data.your_name = "";
       alert("Your name required.");
       return;
     }
 
     if (message.trim() === "") {
-      data.message = "";
       alert("Your message required.");
       return;
     }
 
-    sendEmail(data);
+    sendEmail(form.current);
   };
 
   return (
@@ -113,7 +113,7 @@ const ContactForm = () => {
               Contact Us
             </div>
             {/* /-----------------------------------------------------------------------------form  */}
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
               <div className="grid relative w-96 md:w-fit p-4  ">
                 <div className="grid relative w-full  md:flex ">
                   <div className="grid p-2 mb-4 w-full">
@@ -159,6 +159,9 @@ const ContactForm = () => {
           </div>
         )}
         <div className="mt-4  p-2 ">
+          <div className="text-center text-gray-400 text-[2rem] mb-2">
+            Ohh Yeah... <br></br>🥳
+          </div>
           <div className="text-center text-gray-400 text-xs mb-2">
             Follow Us
           </div>
