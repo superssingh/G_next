@@ -76,7 +76,7 @@ const Navbar = () => {
               key={m.name}
               onClick={handleClicked}
               data-text={m.name}
-              className="flex z-10 transition-all duration-300 rounded-md font-medium  hoverEffect   p-4"
+              className="flex z-10 transition-all duration-300 rounded-md font-medium  hoverEffect  p-4"
             >
               <div className="icon w-auto ">{m.icon}</div>
               <div className=" w-full text-md">{m.name}</div>

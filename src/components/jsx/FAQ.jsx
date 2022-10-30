@@ -4,25 +4,24 @@ const FAQ = ({ FAQ }) => {
       {FAQ.map((f, i) => {
         return (
           <section
-            className="  grid relative p-2 place-content-center text-left overflow-hidden"
+            className="  grid relative py-2 place-content-center text-left overflow-hidden"
             key={"faq" + i}
           >
-            <div className=" grid relative w-full max-w-lg grid-cols-8 gap-0 place-content-start rounded-md ">
-              <input
-                type="checkbox"
-                id={"faq" + i}
-                className="col-span-8 hidden"
-              />
-
+            <input
+              type="checkbox"
+              id={"faq" + i}
+              className="col-span-8 hidden"
+            />
+            <div className="faq  grid relative w-full max-w-lg grid-cols-8 gap-0 place-items-start rounded-md ">
               <label
                 htmlFor={"faq" + i}
-                className="label col-span-7 w-full grid place-content-start p-4 uppercase text-gray-600"
+                className="label col-span-7 w-full grid place-content-start pl-2  uppercase text-gray-600 "
               >
                 <strong>{f.label}</strong>
               </label>
               <label
                 htmlFor={"faq" + i}
-                className="iconPointer grid place-content-center  w-14"
+                className="grid absolute place-items-end top-0  w-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +29,7 @@ const FAQ = ({ FAQ }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className=" w-6 h-6 font-bold rounded-full shadow-md shadow-black bg-white"
+                  className="iconPointer  grid  w-6 h-6 font-bold  rounded-full shadow-md shadow-black bg-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -39,8 +38,9 @@ const FAQ = ({ FAQ }) => {
                   />
                 </svg>
               </label>
-              <div className="answer  grid w-full max-w-lg col-span-8 px-2 place-centent-center rounded-md  bg-white/80 shadow-black/50 shadow-sm ">
-                <div className="w-full text-justify text-md  p-4 text-gray-700 ">
+
+              <div className="answer grid relative w-full max-w-lg col-span-8 pt-2 pb-2 place-items-center justify-items-center ml-2 ">
+                <div className="w-full text-justify text-md   text-gray-700 px-4 py-2 rounded-md  shadow-black/50 shadow-sm mr-2 bg-slate-100">
                   {f.comment}
                 </div>
               </div>

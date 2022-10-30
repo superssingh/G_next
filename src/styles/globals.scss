@@ -284,7 +284,7 @@ body {
         display: block;
         background: $GradientTeal;
       }
-      background: rgba(70, 16, 115, 0.471);
+      background: rgba(45, 7, 77, 0.643);
       border: 2px solid rgba(54, 243, 180, 0.742);
     }
   }
@@ -294,6 +294,7 @@ body {
   .courseCard {
     display: grid;
     padding: 10px 0;
+    border-radius: 10px;
     border: 2px solid rgba(215, 212, 212, 0.119);
     transition: all 0.5s ease;
     overflow: hidden;
