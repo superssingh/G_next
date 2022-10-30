@@ -29,7 +29,7 @@ const FAQ = ({ FAQ }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="iconPointer  grid  w-6 h-6 font-bold  rounded-full shadow-md shadow-black bg-white"
+                  className="iconPointer  grid  w-6 h-6 font-bold mr-2 rounded-full shadow-md shadow-black bg-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -39,8 +39,8 @@ const FAQ = ({ FAQ }) => {
                 </svg>
               </label>
 
-              <div className="answer grid relative w-full max-w-lg col-span-8 pt-2 pb-2 place-items-center justify-items-center ml-2 ">
-                <div className="w-full text-justify text-md   text-gray-700 px-4 py-2 rounded-md  shadow-black/50 shadow-sm mr-2 bg-slate-100">
+              <div className="answer grid relative w-full max-w-lg col-span-8 pt-2 pb-2 place-items-center justify-items-center px-2 ">
+                <div className="w-full text-justify text-md text-gray-700 px-4 py-2 rounded-md  shadow-black/50 shadow-sm mx-2 bg-slate-100">
                   {f.comment}
                 </div>
               </div>
