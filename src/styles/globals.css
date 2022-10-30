@@ -781,6 +781,133 @@
   font-size: 18px;
 }
 
+input[type=checkbox] {
+  opacity: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.iconPointer {
+  transition: all 0.5s ease-in-out;
+}
+
+.answer {
+  opacity: 0;
+  height: 0;
+  -webkit-animation: all 0.7s ease-out 0s 0 slideInBottom;
+          animation: all 0.7s ease-out 0s 0 slideInBottom;
+}
+
+input:checked[type=checkbox] ~ .answer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 1;
+  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
+          animation: 0.7s ease-out 0s 1 slideInTop;
+}
+
+input:checked[type=checkbox] ~ .label {
+  color: rgb(87, 24, 197);
+}
+
+label:hover {
+  color: rgb(26, 5, 54);
+}
+
+input:checked[type=checkbox] ~ .iconPointer {
+  rotate: -180deg;
+}
+
+.inputLabel {
+  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+}
+
+.inputText:focus + .inputLabel {
+  box-shadow: 0px 2px 10px 1px rgb(2, 2, 2);
+  transition: all 0.3s ease-in-out;
+}
+
+.inputText:valid + .inputLabel {
+  opacity: 1;
+  margin: -1.2rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+  border-left: 2px solid rgba(23, 23, 23, 0.699);
+  border-right: 2px solid rgba(23, 23, 23, 0.699);
+}
+
+.inputText:focus + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  box-shadow: 0px 2px 10px 1px rgb(2, 2, 2);
+  border-left: 2px solid rgb(16, 199, 129);
+  border-right: 2px solid rgb(16, 199, 129);
+}
+
+.inputText:focus:invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+
+.inputText:not(:-moz-placeholder-shown):invalid:not(:focus), .inputText:not(:-moz-placeholder-shown):invalid:focus {
+  border: 2px solid #e3247a;
+}
+
+.inputText:not(:-ms-input-placeholder):invalid:not(:focus), .inputText:not(:-ms-input-placeholder):invalid:focus {
+  border: 2px solid #e3247a;
+}
+
+.inputText:not(:placeholder-shown):invalid:not(:focus),
+.inputText:not(:placeholder-shown):invalid:focus {
+  border: 2px solid #e3247a;
+}
+
+.inputText:not(:-moz-placeholder-shown):invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+
+.inputText:not(:-ms-input-placeholder):invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+
+.inputText:not(:placeholder-shown):invalid + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: #e3247a;
+  border-left: 2px solid rgb(199, 53, 16);
+  border-right: 2px solid rgb(199, 37, 16);
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -1113,125 +1240,4 @@ h1 {
           animation: gradient 15s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-input[type=checkbox] {
-  opacity: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.iconPointer {
-  transition: all 0.5s ease-in-out;
-}
-
-.answer {
-  opacity: 0;
-  height: 0;
-  -webkit-animation: all 0.7s ease-out 0s 0 slideInBottom;
-          animation: all 0.7s ease-out 0s 0 slideInBottom;
-}
-
-input:checked[type=checkbox] ~ .answer {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  opacity: 1;
-  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
-          animation: 0.7s ease-out 0s 1 slideInTop;
-}
-
-input:checked[type=checkbox] ~ .label {
-  color: rgb(87, 24, 197);
-}
-
-label:hover {
-  color: rgb(26, 5, 54);
-}
-
-input:checked[type=checkbox] ~ .iconPointer {
-  rotate: -180deg;
-}
-
-.inputText:focus,
-.inputLabel {
-  transition: all 0.3s ease-in-out;
-}
-
-.inputText:valid + .inputLabel {
-  opacity: 1;
-  margin: -1.2rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
-  border-left: 2px solid rgba(23, 23, 23, 0.699);
-  border-right: 2px solid rgba(23, 23, 23, 0.699);
-}
-
-.inputText:focus + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  border-left: 2px solid rgb(16, 199, 129);
-  border-right: 2px solid rgb(16, 199, 129);
-}
-
-.inputText:focus:invalid + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
-}
-
-.inputText:not(:-moz-placeholder-shown):invalid:not(:focus) {
-  border: 2px solid #e3247a;
-}
-
-.inputText:not(:-ms-input-placeholder):invalid:not(:focus) {
-  border: 2px solid #e3247a;
-}
-
-.inputText:not(:placeholder-shown):invalid:not(:focus) {
-  border: 2px solid #e3247a;
-}
-
-.inputText:not(:-moz-placeholder-shown):invalid + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
-}
-
-.inputText:not(:-ms-input-placeholder):invalid + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
-}
-
-.inputText:not(:placeholder-shown):invalid + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
 }/*# sourceMappingURL=globals.css.map */
