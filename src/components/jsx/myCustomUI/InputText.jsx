@@ -18,17 +18,17 @@ const InputText = ({ name, label, type, error, required, register }) => {
         </label>
       </div>
       <div
-        className={`grid relative ${
-          error ? "pb-6 opacity-1 " : "pb-0 h-0 opacity-0 "
-        }  w-full  transition-all duration-500`}
+        className={`grid w-full relative ${
+          error ? " opacity-1 " : " h-0 opacity-0 "
+        }    transition-all duration-500`}
       >
-        <p
-          className={`${
+        <label
+          className={`w-full px-4 ${
             error ? "grid h-fit py-2 opacity-1 " : "h-0 opacity-0 "
-          }  w-full px-4 absolute text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
+          }    text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
         >
           {error}
-        </p>
+        </label>
       </div>
     </div>
   );
