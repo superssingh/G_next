@@ -218,8 +218,9 @@
 
         .icon {
           display: grid;
-          width: 1.5rem;
-          margin-right: 10px;
+          width: auto;
+          margin: 0 10px 0 12px;
+
           place-content: center;
         }
         .menuname {

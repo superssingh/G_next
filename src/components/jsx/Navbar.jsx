@@ -69,16 +69,16 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <div className="mobile-menus z-[5] p-4">
+        <div className="mobile-menus z-[5] px-4 py-2">
           {TagName.menus.map((m) => (
             <Link
               href={m.path}
               key={m.name}
               onClick={handleClicked}
               data-text={m.name}
-              className="flex z-10 transition-all duration-300 rounded-md font-medium  hoverEffect  p-4"
+              className="flex z-10 transition-all duration-300 rounded-md  hoverEffect py-2 my-2 "
             >
-              <div className="icon w-auto ">{m.icon}</div>
+              <div className="icon ">{m.icon}</div>
               <div className=" w-full text-md">{m.name}</div>
             </Link>
           ))}
