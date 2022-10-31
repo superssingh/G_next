@@ -115,8 +115,8 @@ const ContactForm = () => {
             {/* /-----------------------------------------------------------------------------form  */}
             <form ref={form} onSubmit={handleSubmit(onSubmit)}>
               <div className="relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
-                <div className=" relative md:flex ">
-                  <div className="grid relative p-2 mb-4 ">
+                <div className=" relative md:flex bg-white">
+                  <div className=" relative p-2 mb-4 ">
                     <InputText
                       name="your_name"
                       label="Name"
@@ -125,7 +125,7 @@ const ContactForm = () => {
                       register={register}
                     />
                   </div>
-                  <div className="grid relative p-2 mb-4 ">
+                  <div className=" relative p-2 mb-4 ">
                     <InputText
                       name="your_email"
                       label="Email"
