@@ -8,7 +8,7 @@ const InputText = ({ name, label, type, error, required, register }) => {
           placeholder={label}
           {...register(name)}
           required
-          className="inputText animate w-64 md:w-full bg-black/10  text-slate-100 focus:bg-black/60 hover:shadow-sm shadow-black border-black/30 border-2 focus:border-green-500 rounded-md "
+          className="inputText animate w-full bg-black/10  text-slate-100 focus:bg-black/60 hover:shadow-sm shadow-black border-black/30 border-2 focus:border-green-500 rounded-md "
         />
         <label
           htmlFor={name}
