@@ -1,6 +1,6 @@
 const InputText = ({ name, label, type, error, required, register }) => {
   return (
-    <div className=" relative my-2 w-full">
+    <div className=" relative my-2 w-full md:w-60">
       <div className="grid relative ">
         <input
           id={name}
@@ -8,7 +8,7 @@ const InputText = ({ name, label, type, error, required, register }) => {
           placeholder={label}
           {...register(name)}
           required
-          className="inputText animate w-full bg-black/10  text-slate-100 focus:bg-black/60 hover:shadow-sm shadow-black border-black/30 border-2 focus:border-green-500 rounded-md "
+          className="inputText animate w-full  bg-black/10  text-slate-100 focus:bg-black/60 hover:shadow-sm shadow-black border-black/30 border-2 focus:border-green-500 rounded-md "
         />
         <label
           htmlFor={name}
@@ -18,12 +18,12 @@ const InputText = ({ name, label, type, error, required, register }) => {
         </label>
       </div>
       <div
-        className={`grid w-full relative ${
+        className={` relative ${
           error ? " opacity-1 " : " h-0 opacity-0 "
         }    transition-all duration-500`}
       >
         <label
-          className={`w-full px-4 ${
+          className={` px-4 ${
             error ? "grid h-fit py-2 opacity-1 " : "h-0 opacity-0 "
           }    text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
         >
