@@ -97,7 +97,7 @@ const ContactForm = () => {
 
   return (
     <div className="grid place-content-center place-items-center">
-      <div className="grid w-fit place-content-center  p-4 py-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
+      <div className="relative  w-fit place-content-center p-2 py-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
             <div className=" text-green-400 pr-2">
@@ -114,9 +114,9 @@ const ContactForm = () => {
             </div>
             {/* /-----------------------------------------------------------------------------form  */}
             <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid relative w-fit  px-2 py-4 place-content-center   ">
-                <div className="grid relative w-full md-w-fit  md:flex ">
-                  <div className="grid p-2 mb-4 w-full">
+              <div className="relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
+                <div className=" grid w-full md-w-full  md:flex ">
+                  <div className="grid relative p-2 mb-4 ">
                     <InputText
                       name="your_name"
                       label="Name"
@@ -125,7 +125,7 @@ const ContactForm = () => {
                       register={register}
                     />
                   </div>
-                  <div className="grid w-full p-2 mb-4">
+                  <div className="grid relative p-2 mb-4 ">
                     <InputText
                       name="your_email"
                       label="Email"
@@ -135,12 +135,10 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
-                <div className="grid  p-2 ">
+                <div className="grid relative p-2 mb-4 ">
                   <TextArea
                     name="message"
                     label="Message"
-                    rows={5}
-                    cols={30}
                     required
                     error={errors.message?.message}
                     register={register}
@@ -148,7 +146,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="grid place-content-center m-2">
+              <div className="grid place-content-center mx-">
                 <input
                   type="submit"
                   value="Send"

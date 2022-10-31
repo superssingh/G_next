@@ -46,7 +46,7 @@ label:hover {
 .textArea:hover + .inputLabel {
   background: $backgroundColor;
   opacity: 1;
-  margin: -1.2rem 0 0 0.5rem;
+  margin: -1.2rem 0 0 0rem;
   color: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 0 8px;
@@ -63,7 +63,7 @@ label:hover {
 .inputText:valid + .inputLabel,
 .textArea:valid + .inputLabel {
   opacity: 1;
-  margin: -1.2rem 0 0 0.5rem;
+  margin: -1.2rem 0 0 0rem;
   color: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 0 8px;

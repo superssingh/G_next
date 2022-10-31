@@ -1,7 +1,7 @@
 const TextArea = ({ name, label, rows, cols, error, required, register }) => {
   return (
-    <div className="relative my-2">
-      <div className="grid w-full">
+    <div className="relative my-2 w-full">
+      <div className="grid relative">
         <textarea
           id={name}
           rows={rows || 4}
@@ -20,16 +20,16 @@ const TextArea = ({ name, label, rows, cols, error, required, register }) => {
       </div>
       <div
         className={`grid w-full relative ${
-          error ? "pb-4 opacity-1 " : "pb-0 h-0 opacity-0 "
+          error ? " opacity-1 " : " h-0 opacity-0 "
         }    transition-all duration-500`}
       >
-        <p
-          className={`${
+        <label
+          className={`w-full px-4 ${
             error ? "grid h-fit py-2 opacity-1 " : "h-0 opacity-0 "
-          }  w-full px-4 absolute text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
+          }    text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
         >
           {error}
-        </p>
+        </label>
       </div>
     </div>
   );
