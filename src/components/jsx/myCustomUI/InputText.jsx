@@ -1,6 +1,6 @@
 const InputText = ({ name, label, type, error, required, register }) => {
   return (
-    <div className="grid relative my-2">
+    <div className=" relative my-2">
       <div className="grid relative w-full">
         <input
           id={name}

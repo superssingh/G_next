@@ -17,33 +17,33 @@ info  - Generating static pages (18/18)
 info  - Finalizing page optimization...
 
 Route (pages)                                     Size     First Load JS
-┌ ○ /                                             421 B           201 kB
-├   /_app                                         0 B             200 kB
-├ ○ /404                                          404 B           201 kB
-├ ○ /about (368 ms)                               862 B           201 kB
-├ λ /api/hello                                    0 B             200 kB
-├ ○ /contact (479 ms)                             27.2 kB         228 kB
+┌ ○ /                                             421 B           150 kB
+├   /_app                                         0 B             149 kB
+├ ○ /404 (456 ms)                                 402 B           150 kB
+├ ○ /about (407 ms)                               862 B           150 kB
+├ λ /api/hello                                    0 B             149 kB
+├ ○ /contact (1216 ms)                            53.4 kB         203 kB
 ├   └ css/6c7987e2821e600c.css                    2.38 kB
-├ ○ /courses                                      265 B           201 kB
-├ ○ /courses/backend (323 ms)                     370 B           201 kB
-├ ○ /courses/deployment (376 ms)                  371 B           201 kB
-├ ○ /courses/frontend                             367 B           201 kB
-├ ○ /courses/fullstack                            371 B           201 kB
-├ ○ /courses/ui                                   366 B           201 kB
-├ ● /posts (ISR: 36000 Seconds) (510 ms)          805 B           201 kB
-├ ● /posts/[slug] (ISR: 60000 Seconds) (2953 ms)  554 B           201 kB
-├   ├ /posts/responsive-ui (1623 ms)
-├   └ /posts/frontend-development (1330 ms)
-├ ○ /privacypolicy                                3.44 kB         204 kB
-├ ○ /shop                                         421 B           201 kB
-├ ○ /shop/[id]                                    341 B           201 kB
-└ ○ /terms                                        2.05 kB         202 kB
-+ First Load JS shared by all                     214 kB
+├ ○ /courses                                      264 B           150 kB
+├ ○ /courses/backend (440 ms)                     370 B           150 kB
+├ ○ /courses/deployment                           371 B           150 kB
+├ ○ /courses/frontend                             367 B           150 kB
+├ ○ /courses/fullstack                            371 B           150 kB
+├ ○ /courses/ui                                   366 B           150 kB
+├ ● /posts (ISR: 36000 Seconds) (851 ms)          806 B           150 kB
+├ ● /posts/[slug] (ISR: 60000 Seconds) (1756 ms)  553 B           150 kB
+├   ├ /posts/responsive-ui (1369 ms)
+├   └ /posts/frontend-development (387 ms)
+├ ○ /privacypolicy                                3.44 kB         153 kB
+├ ○ /shop                                         423 B           150 kB
+├ ○ /shop/[id]                                    341 B           150 kB
+└ ○ /terms                                        2.05 kB         151 kB
++ First Load JS shared by all                     164 kB
   ├ chunks/framework-3b5a00d5d7e8d93b.js          45.4 kB
   ├ chunks/main-2364f599a24c3599.js               25.7 kB
-  ├ chunks/pages/_app-9512c24f0ae32433.js         128 kB
+  ├ chunks/pages/_app-c4ca21b9aeeddcf4.js         77.1 kB
   ├ chunks/webpack-5a0a2ac833e7f2db.js            1.05 kB
-  └ css/4a1ba250fee60b6e.css                      13.8 kB
+  └ css/a9f2679c0219e220.css                      14.4 kB
 
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
