@@ -19,13 +19,13 @@ const InputText = ({ name, label, type, error, required, register }) => {
       </div>
       <div
         className={`grid relative ${
-          error ? "pb-4 opacity-1 " : "pb-0 h-0 opacity-0 "
+          error ? "pb-6 opacity-1 " : "pb-0 h-0 opacity-0 "
         }  w-full  transition-all duration-500`}
       >
         <p
           className={`${
             error ? "grid h-fit py-2 opacity-1 " : "h-0 opacity-0 "
-          }  w-full px-4 absolute text-gray-100 text-sm bg-pink-700 rounded-b-md transition-all duration-500 `}
+          }  w-full px-4 absolute text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
         >
           {error}
         </p>

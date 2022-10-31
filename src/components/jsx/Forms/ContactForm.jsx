@@ -114,7 +114,7 @@ const ContactForm = () => {
             </div>
             {/* /-----------------------------------------------------------------------------form  */}
             <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid relative w-96 md:w-fit p-4  ">
+              <div className="grid relative w-80 md:w-fit p-4  ">
                 <div className="grid relative w-full  md:flex ">
                   <div className="grid p-2 mb-4 w-full">
                     <InputText
@@ -159,9 +159,11 @@ const ContactForm = () => {
           </div>
         )}
         <div className="mt-4  p-2 ">
-          <div className="text-center text-gray-400 text-[2rem] mb-2">
-            Ohh Yeah... <br></br>🥳
-          </div>
+          {success && (
+            <div className="text-center text-gray-400 text-[2rem] mb-2">
+              Ohh Yeah... <br></br>🥳
+            </div>
+          )}
           <div className="text-center text-gray-400 text-xs mb-2">
             Follow Us
           </div>

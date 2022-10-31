@@ -24,9 +24,9 @@ const TextArea = ({ name, label, rows, cols, error, required, register }) => {
         }    transition-all duration-500`}
       >
         <p
-          className={` w-full relative ${
+          className={`${
             error ? "grid h-fit py-2 opacity-1 " : "h-0 opacity-0 "
-          }   px-4 absolute text-gray-100 text-sm bg-pink-700 rounded-b-md transition-all duration-500 `}
+          }  w-full px-4 absolute text-gray-100 text-xs bg-pink-700 rounded-b-md transition-all duration-500 `}
         >
           {error}
         </p>
