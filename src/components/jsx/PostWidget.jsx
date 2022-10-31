@@ -49,7 +49,7 @@ const PostWidget = ({ posts, category, id }) => {
                 key={m.node.id}
                 className="flex md:block w-full p-2 place-content-start "
               >
-                <div className="flex w-full  transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  rounded-lg hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45] ">
+                <div className="flex w-full   transition-all duration-700 bg-white/20 shadow-md shadow-black/[.3]  rounded-lg hover:shadow-black/[.50] hover:shadow-lg hover:bg-white/[.45] ">
                   <div className="grid object-fit overflow-hidden">
                     <Image
                       src={m.node.featured_image[0].url}
@@ -59,8 +59,8 @@ const PostWidget = ({ posts, category, id }) => {
                       className="w-full h-full  object-cover rounded-l-lg"
                     />
                   </div>
-                  <div className="w-full p-2 grid place-content-start  ">
-                    <div className="w-full text-gray-700 text-md md:text-sm font-semibold line-clamp-1 md:line-clamp-2 ">
+                  <div className="w-full h-full p-2 grid place-content-start ">
+                    <div className="w-full text-gray-700 text-sm  font-semibold line-clamp-2 ">
                       {m.node.title}
                     </div>
                     <div className="text-gray-800 text-xs ">
