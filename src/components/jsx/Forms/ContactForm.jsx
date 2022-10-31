@@ -115,7 +115,7 @@ const ContactForm = () => {
             {/* /-----------------------------------------------------------------------------form  */}
             <form ref={form} onSubmit={handleSubmit(onSubmit)}>
               <div className="relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
-                <div className=" grid w-full md-w-full  md:flex ">
+                <div className=" relative md:flex ">
                   <div className="grid relative p-2 mb-4 ">
                     <InputText
                       name="your_name"
