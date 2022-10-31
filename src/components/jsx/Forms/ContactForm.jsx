@@ -96,8 +96,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="grid place-content-center ">
-      <div className="grid w-fit place-content-center m-2 p-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
+    <div className="grid place-content-center place-items-center">
+      <div className="grid w-fit place-content-center  p-4 py-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
         {(success && (
           <div className="flex showFromTop">
             <div className=" text-green-400 pr-2">
@@ -114,8 +114,8 @@ const ContactForm = () => {
             </div>
             {/* /-----------------------------------------------------------------------------form  */}
             <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid relative w-80 md:w-fit p-4  ">
-                <div className="grid relative w-full  md:flex ">
+              <div className="grid relative w-fit  px-2 py-4 place-content-center   ">
+                <div className="grid relative w-full md-w-fit  md:flex ">
                   <div className="grid p-2 mb-4 w-full">
                     <InputText
                       name="your_name"
