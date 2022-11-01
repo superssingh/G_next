@@ -12,7 +12,7 @@ import { AuthorInfo, Back } from "../index";
 const PostDetail = ({ post }) => {
   return (
     <div className="w-full max-w-4xl grid relative place-content-center showSlow">
-      <div className="relative h-72 w-full object-fit overflow-hidden shadow-lg md:shrink-0 ">
+      <div className="relative h-72 w-full object-cover overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0].url}
           alt={post.title}
@@ -54,20 +54,6 @@ const PostDetail = ({ post }) => {
               {post.content.map((c, id) => (
                 <div className="my-6" key={id}>
                   <Markdown children={c.html}></Markdown>
-                  Server Components The app/ directory introduces support for
-                  React's new Server Components architecture. Server and Client
-                  Components use the server and the client each for what they're
-                  best at - allowing you to build fast, highly-interactive apps
-                  with a single programming model that provides a great
-                  developer experience. With Server Components, we're laying the
-                  foundations to build complex interfaces while reducing the
-                  amount of JavaScript sent to the client, enabling faster
-                  initial page loads. When a route is loaded, the Next.js and
-                  React runtime will be loaded, which is cacheable and
-                  predictable in size. This runtime does not increase in size as
-                  your application grows. Further, the runtime is asynchronously
-                  loaded, enabling your HTML from the server to be progressively
-                  enhanced on the client.
                 </div>
               ))}
             </div>
