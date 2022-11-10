@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 const Policy = () => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow">
@@ -274,7 +274,7 @@ const Policy = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Policy;
+export default Policy

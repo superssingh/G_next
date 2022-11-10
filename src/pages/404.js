@@ -1,4 +1,4 @@
-import { Back } from "../components";
+import { Back } from "../components"
 export default function Custom404() {
   return (
     <div className="grid absolute w-full place-content-center  p-[1rem]">
@@ -9,5 +9,5 @@ export default function Custom404() {
         <Back path="" />
       </div>
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-import Head from "next/head";
-import { Layout, Footer } from "../components/";
-import { Poppins } from "@next/font/google";
+import "../styles/globals.css"
+import Head from "next/head"
+import { Layout, Footer } from "../components/"
+import { Poppins } from "@next/font/google"
 
-const customFont = Poppins({ weight: "400" });
+const customFont = Poppins({ weight: "400" })
 function MyApp({ Component, pageProps }) {
   return (
     <div className={customFont.className}>
@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
         </div>
       </Layout>
     </div>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

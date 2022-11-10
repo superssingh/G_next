@@ -1,7 +1,7 @@
-import React from "react";
-import { getPosts, getPostDetail } from "../../services/getBlogData";
-import { HeadTag, PostDetail, PostWidget } from "../../components";
-import moment from "moment";
+import React from "react"
+import { getPosts, getPostDetail } from "../../services/getBlogData"
+import { HeadTag, PostDetail, PostWidget } from "../../components"
+import moment from "moment"
 
 const Blog = ({ post, posts }) => {
   return (
@@ -27,15 +27,15 @@ const Blog = ({ post, posts }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-  const post = (await getPostDetail(params.slug)) || [];
-  const posts = (await getPosts()) || [];
+  const post = (await getPostDetail(params.slug)) || []
+  const posts = (await getPosts()) || []
   // const categories = (await getCategories()) || [];
   return {
     props: {
@@ -43,12 +43,12 @@ export async function getStaticProps({ params }) {
       posts,
     },
     revalidate: 60000,
-  };
+  }
 }
 
 export async function getStaticPaths() {
-  const posts = await getPosts();
-  const paths = posts.map(({ node: { slug } }) => ({ params: { slug } }));
+  const posts = await getPosts()
+  const paths = posts.map(({ node: { slug } }) => ({ params: { slug } }))
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: "blocking" }
 }

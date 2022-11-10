@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   HeroPage,
@@ -9,7 +9,7 @@ import {
   Course,
   Team,
   Steps,
-} from "../components/";
+} from "../components/"
 
 const Home = () => {
   return (
@@ -31,31 +31,7 @@ const Home = () => {
         <SocialProof />
       </div>
     </section>
-  );
-};
+  )
+}
 
-// // ISR- Intcremental Statice  pages- best for blog and ecommerce.
-// export async function getStaticProps({ params }) {
-//   return {
-//     props: {
-//       posts: await getPost(params.id),
-//     },
-//     revalidate: 60,
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const posts = await getPosts();
-
-//   // Get the paths we want to pre-render based on posts
-//   const paths = posts.map((p) => ({
-//     params: { id: p.node.id },
-//   }));
-
-//   // We'll pre-render only these paths at build time.
-//   // { fallback: blocking } will server-render pages
-//   // on-demand if the path doesn't exist.
-//   return { paths, fallback: "blocking" };
-// }
-
-export default Home;
+export default Home

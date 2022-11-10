@@ -1,4 +1,4 @@
-import { Back } from "../../components";
+import { Back } from "../../components"
 
 const Shop = () => {
   return (
@@ -15,7 +15,7 @@ const Shop = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Shop;
+export default Shop

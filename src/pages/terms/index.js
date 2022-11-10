@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 const Terms = () => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow ">
@@ -130,7 +130,7 @@ const Terms = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Terms;
+export default Terms

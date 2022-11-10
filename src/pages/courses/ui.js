@@ -5,7 +5,7 @@ const UI = () => {
         Coming soon...
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default UI;
+export default UI

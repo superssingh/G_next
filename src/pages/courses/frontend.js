@@ -5,7 +5,7 @@ const Frontend = () => {
         Coming soon...
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Frontend;
+export default Frontend

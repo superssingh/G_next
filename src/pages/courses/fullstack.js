@@ -5,7 +5,7 @@ const Fullstack = () => {
         Coming soon...
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Fullstack;
+export default Fullstack

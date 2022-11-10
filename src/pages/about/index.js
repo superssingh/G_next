@@ -1,6 +1,6 @@
-import Markdown from "markdown-to-jsx";
-import Image from "next/image";
-import { TagName, SocialWidget } from "../../components/";
+import Markdown from "markdown-to-jsx"
+import Image from "next/image"
+import { TagName, SocialWidget } from "../../components/"
 
 const About = () => {
   return (
@@ -51,7 +51,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

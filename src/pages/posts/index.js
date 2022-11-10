@@ -1,21 +1,21 @@
-import React, { useEffect, useContext, useState } from "react";
-import { getPosts } from "../../services/getBlogData";
+import React, { useEffect, useContext, useState } from "react"
+import { getPosts } from "../../services/getBlogData"
 
-import moment from "moment";
-import _ from "lodash";
-import { PostCard, PostWidget, Paginate, Pagination } from "../../components";
+import moment from "moment"
+import _ from "lodash"
+import { PostCard, PostWidget, Paginate, Pagination } from "../../components"
 
 const Home = ({ posts }) => {
-  const [recentPosts, setRecentPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 6;
+  const [recentPosts, setRecentPosts] = useState([])
+  const [filteredPosts, setFilteredPosts] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const pageSize = 6
 
   useEffect(() => {
     if (filteredPosts.length == 0) {
-      getLatestPosts();
+      getLatestPosts()
     }
-  }, [filteredPosts]);
+  }, [filteredPosts])
 
   async function getLatestPosts() {
     try {
@@ -24,22 +24,22 @@ const Home = ({ posts }) => {
           posts,
           (a) => moment(a.node.createdAt).format("YYYYMMDD"),
           "desc"
-        );
-        setRecentPosts(recent);
-        handlePageChange(currentPage);
+        )
+        setRecentPosts(recent)
+        handlePageChange(currentPage)
       }
     } catch (error) {
-      console.log("Error: ", error);
+      console.log("Error: ", error)
     }
   }
 
   const handlePageChange = async (pageNumber) => {
     if (currentPage != pageNumber) {
-      setCurrentPage(pageNumber);
+      setCurrentPage(pageNumber)
     }
-    const filtered = await Paginate(recentPosts, pageNumber, pageSize);
-    setFilteredPosts(await filtered);
-  };
+    const filtered = await Paginate(recentPosts, pageNumber, pageSize)
+    setFilteredPosts(await filtered)
+  }
 
   return (
     <div>
@@ -71,12 +71,12 @@ const Home = ({ posts }) => {
         )}
       </div>
     </div>
-  );
-};
-export default Home;
+  )
+}
+export default Home
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getPosts()) || []
   // const categories = (await getCategories()) || [];
-  return { props: { posts }, revalidate: 36000 };
+  return { props: { posts }, revalidate: 36000 }
 }

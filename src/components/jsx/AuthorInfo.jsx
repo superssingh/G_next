@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 const AuthorInfo = ({ author }) => {
   return (
     <div className=" bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 my-2">
@@ -23,13 +23,13 @@ const AuthorInfo = ({ author }) => {
 
           <div className="text-sm font-bold">
             {author.social.map((s, i) => {
-              return <div key={i}> {s}</div>;
+              return <div key={i}> {s}</div>
             })}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AuthorInfo;
+export default AuthorInfo

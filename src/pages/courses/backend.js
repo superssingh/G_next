@@ -5,7 +5,7 @@ const Backend = () => {
         Coming soon...
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Backend;
+export default Backend

@@ -5,7 +5,7 @@ const Deployment = () => {
         Coming soon...
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Deployment;
+export default Deployment
