@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path")
 
 module.exports = {
   // basePath: process.env.BASE_URL,
@@ -21,7 +21,7 @@ module.exports = {
       { loader: "@next/font/google", options: { subsets: ["latin"] } },
     ],
   },
-};
+}
 
 /**
 //  * @type {import('next').NextConfig}

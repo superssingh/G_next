@@ -1,13 +1,5 @@
 "use strict";
-import {
-  founderPic2,
-  founder,
-  founderPic,
-  frontend,
-  backend,
-  fullstack,
-  deploy,
-} from "../index";
+import { founder, frontend, backend, fullstack, deploy } from "../index"
 export const COMPANY_NAME = "Gogixer";
 export const ACTION_INVALID = "INVALID ACTION";
 export const NETWORK_ERROR = "Network connection error";
@@ -887,7 +879,7 @@ export const team = [
   {
     name: "Santosh Singh",
     job: "Founder",
-    image: founderPic,
+    image: founder,
     social: [
       {
         name: "twitter",
@@ -1003,7 +995,7 @@ export const team = [
   //     },
   //   ],
   // },
-];
+]
 
 export const steps = [
   {

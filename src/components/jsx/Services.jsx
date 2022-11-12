@@ -14,7 +14,7 @@ const Services = () => {
                 <div className="grid relative transition-all duration-700 md:place-items-center ">
                   <div className="serviceCard w-full md:w-60 md:h-60 ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
-                      <div className="grid  place-content-center md:place-content-center p-2 pl-4 ">
+                      <div className="grid relative  place-content-center md:place-content-center p-2 pl-4 ">
                         {m.icon}
                       </div>
                       <div className=" place-content-center">
@@ -31,7 +31,7 @@ const Services = () => {
                   </div>
                 </div>
               </Link>
-            );
+            )
           })}
         </div>
       </div>

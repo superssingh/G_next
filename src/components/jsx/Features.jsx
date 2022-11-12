@@ -9,7 +9,7 @@ const Features = () => {
           <div key={i} className="grid justify-center my-8 px-4 ">
             <div className="">
               {(i % 2 == 0 && (
-                <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8 px-4">
+                <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8 px-4  ">
                   <div className="grid place-content-center ">
                     <div className="grid  ">
                       <h1 className=" text-4xl font-bold mb-2 text-center md:text-left">
@@ -57,7 +57,7 @@ const Features = () => {
               )}
             </div>
           </div>
-        );
+        )
       })}
     </div>
   );
