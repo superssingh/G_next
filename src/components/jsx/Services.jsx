@@ -2,7 +2,7 @@ import Link from "next/link";
 import { TagName } from "..";
 const Services = () => {
   return (
-    <div className="bg-black/40 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+    <div className="bg-black/20 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
         <h1 className="text-3xl text-slate-100 font-bold uppercase ">
           Our Services
@@ -11,10 +11,10 @@ const Services = () => {
           {TagName.services.map((m) => {
             return (
               <Link href={m.path} key={m.title}>
-                <div className="grid relative transition-all duration-700 md:place-items-center ">
+                <div className="grid relative transition-all duration-700 md:place-items-center md:m-2">
                   <div className="serviceCard w-full md:w-60 md:h-60 ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
-                      <div className="grid relative  place-content-center md:place-content-center p-2 pl-4 ">
+                      <div className="grid relative place-content-center md:place-content-center px-4 py-2 ">
                         {m.icon}
                       </div>
                       <div className=" place-content-center">
@@ -36,7 +36,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Services;

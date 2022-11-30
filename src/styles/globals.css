@@ -936,6 +936,61 @@ label:hover {
   border-right: 2px solid rgb(199, 37, 16);
 }
 
+.animatedNav {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+}
+.animatedNav div {
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.2em;
+  overflow: hidden;
+  font-size: 2em;
+  justify-items: center;
+  line-height: 1.2em;
+  position: relative;
+  padding: 0 1.2em;
+}
+.animatedNav div span.inner {
+  transform: translateY(0);
+  transition: transform 0.6s;
+}
+.animatedNav div:hover span.inner {
+  transform: translateY(-100%);
+  color: rgb(80, 79, 79);
+}
+.animatedNav .dropdown {
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+  top: 0;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.6s;
+}
+.animatedNav .dropdown ul {
+  list-style-type: none;
+  margin-bottom: 5em;
+  margin-left: 3em;
+}
+.animatedNav .dropdown ul li {
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  transition-delay: 0.3s;
+  transform: translateY(40px);
+  padding: 0.5em 1.2em;
+  font-size: 2rem;
+}
+.animatedNav:hover .dropdown {
+  transform: translateY(0);
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -1148,28 +1203,27 @@ body {
   }
   .serviceCard {
     display: grid;
-    border: 2px solid rgba(166, 164, 166, 0.109);
     transition: all 0.5s ease;
     overflow: hidden;
+    background: #742bdb;
     border-radius: 10px;
   }
   .serviceCard * {
     fill: rgb(241, 247, 242);
   }
   .serviceCard:hover {
-    background: rgba(42, 4, 72, 0.571);
-    border: 2px solid rgba(22, 229, 157, 0.897);
+    background: rgba(41, 3, 70, 0.78);
   }
   .serviceCard:hover * {
-    fill: rgb(17, 202, 144);
+    fill: rgb(89, 203, 167);
   }
   .serviceCard:hover .serviceDesc {
+    display: block;
     width: 100%;
     padding: 10px 14px;
     -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
             animation: 0.7s ease-out 0s 1 slideInBottom;
-    display: block;
-    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
+    background: rgb(62, 153, 130);
   }
   .courseCard {
     display: grid;

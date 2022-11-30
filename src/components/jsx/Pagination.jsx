@@ -1,8 +1,5 @@
 import React from "react";
-import _ from "lodash";
-// import Pagination from "@mui/material/Pagination";
-
-// import Stack from "@mui/material/Stack";
+import _ from "lodash"
 
 const Pagination = ({ itemCount, pageSize, currentPage, onPageChange }) => {
   const pageCount = Math.ceil(itemCount / pageSize);
@@ -98,16 +95,6 @@ const Pagination = ({ itemCount, pageSize, currentPage, onPageChange }) => {
         </ul>
       </nav>
 
-      {/* <Stack spacing={2}>
-        <Pagination
-          count={pages.length}
-          defaultPage={currentPage}
-          onChange={handleChange}
-          variant="outlined"
-          shape="rounded"
-          color="secondary"
-        />
-      </Stack> */}
     </nav>
   );
 };

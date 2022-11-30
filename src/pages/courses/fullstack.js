@@ -1,9 +1,8 @@
+import { NotFound } from "../../components"
 const Fullstack = () => {
   return (
-    <div className="showSlow  m-4">
-      <div className="animate-pulse text-3xl font-extrabold p-3 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white ">
-        Coming soon...
-      </div>
+    <div className="grid relative ">
+      <NotFound message="{ Coming soon... }" returnPath="/" />
     </div>
   )
 }

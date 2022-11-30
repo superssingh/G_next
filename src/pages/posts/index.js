@@ -3,7 +3,13 @@ import { getPosts } from "../../services/getBlogData"
 
 import moment from "moment"
 import _ from "lodash"
-import { PostCard, PostWidget, Paginate, Pagination } from "../../components"
+import {
+  PostCard,
+  PostWidget,
+  Paginate,
+  Pagination,
+  NotFound,
+} from "../../components"
 
 const Home = ({ posts }) => {
   const [recentPosts, setRecentPosts] = useState([])
@@ -43,33 +49,35 @@ const Home = ({ posts }) => {
 
   return (
     <div>
-      <div className="grid  relative w-full lg:grid-cols-12 gap-4 ">
-        <div className="grid w-full  md:col-span-8 max-w-5xl">
-          <div className="grid w-full px-2 justify-center place-self-start content-center md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
-            {filteredPosts.map((p) => (
-              <PostCard post={p.node} key={p.node.id} />
-            ))}
-          </div>
-          <div className="grid place-content-center bottom-0  ">
-            <div className="text-white  place-content-center">
-              <Pagination
-                itemCount={recentPosts.length}
-                pageSize={pageSize}
-                currentPage={currentPage}
-                onPageChange={handlePageChange}
-              />
+      {(recentPosts && (
+        <div className="grid  relative w-full lg:grid-cols-12 gap-4 ">
+          <div className="grid w-full  md:col-span-8 max-w-5xl">
+            <div className="grid w-full px-2 justify-center place-self-start content-center md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
+              {filteredPosts.map((p) => (
+                <PostCard post={p.node} key={p.node.id} />
+              ))}
+            </div>
+            <div className="grid place-content-center bottom-0  ">
+              <div className="text-white  place-content-center">
+                <Pagination
+                  itemCount={recentPosts.length}
+                  pageSize={pageSize}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {posts && (
-          <div className="w-full grid p-2 relative  md:col-span-8 lg:col-span-4 place-content-center lg:place-content-start ">
-            <div className="w-fit relative lg:sticky lg:place-content-start lg:w-78 ">
-              <PostWidget posts={recentPosts} />
+          {posts && (
+            <div className="w-full grid p-2 relative  md:col-span-8 lg:col-span-4 place-content-center lg:place-content-start ">
+              <div className="w-fit relative lg:sticky lg:place-content-start lg:w-78 ">
+                <PostWidget posts={recentPosts} />
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )) || <NotFound message="{ No blog found! }" returnPath="/" />}
     </div>
   )
 }

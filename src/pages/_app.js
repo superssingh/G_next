@@ -3,7 +3,7 @@ import Head from "next/head"
 import { Layout, Footer } from "../components/"
 import { Poppins } from "@next/font/google"
 
-const customFont = Poppins({ weight: "400" })
+const customFont = Poppins({ weight: "300", subsets: "latin-ext" })
 function MyApp({ Component, pageProps }) {
   return (
     <div className={customFont.className}>

@@ -1,37 +1,36 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { SocialWidget, TagName } from "../../";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { InputText, TextArea } from "../../jsx/myCustomUI";
+import React, { useRef, useState } from "react"
+import emailjs from "@emailjs/browser"
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+import { SocialWidget, TagName } from "../../"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { InputText, TextArea } from "../../jsx/myCustomUI"
 
 const schema = yup.object({
   your_name: yup.string().min(3).max(24).required(),
   your_email: yup.string().email().required(),
   message: yup.string().min(10).max(200).required(),
-});
+})
 
 const ContactForm = () => {
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
-  });
-  const form = useRef();
+  })
+  const form = useRef()
 
   //Email service init------
   const EMAIL_SERVICE = {
     SERVICE_ID: "service_qgsohfe",
     TEMPLATE_ID: "template_yfvxx4s",
     PUBLIC_KEY: "1IbTNiS-_C1i67RVo",
-  };
+  }
 
   const sendEmail = async (data) => {
     try {
@@ -44,8 +43,8 @@ const ContactForm = () => {
         )
         .then(
           (result) => {
-            console.log("result success-", result);
-            setSuccess(true);
+            console.log("result success-", result)
+            setSuccess(true)
             toast.success("📧 Message sent! 🤩", {
               position: "bottom-left",
               autoClose: 5000,
@@ -54,7 +53,7 @@ const ContactForm = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-            });
+            })
           },
           (error) => {
             toast.warn("Error : " + error.text, {
@@ -65,35 +64,35 @@ const ContactForm = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-            });
+            })
           }
         )
         .catch((e) => {
-          console.log("Error ON Email-", e);
-        });
+          console.log("Error ON Email-", e)
+        })
     } catch (e) {
-      console.log("Error ON Email-", e);
+      console.log("Error ON Email-", e)
     }
-  };
+  }
 
   const onSubmit = async (data) => {
-    if (success) return;
+    if (success) return
 
-    const name = data.your_name;
-    const message = data.message;
+    const name = data.your_name
+    const message = data.message
 
     if (name.trim() === "") {
-      alert("Your name required.");
-      return;
+      alert("Your name required.")
+      return
     }
 
     if (message.trim() === "") {
-      alert("Your message required.");
-      return;
+      alert("Your message required.")
+      return
     }
 
-    sendEmail(form.current);
-  };
+    sendEmail(form.current)
+  }
 
   return (
     <div className="grid place-content-center place-items-center">
@@ -101,7 +100,18 @@ const ContactForm = () => {
         {(success && (
           <div className="flex showFromTop">
             <div className=" text-green-400 pr-2">
-              <CheckCircleIcon />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </div>
             <div className=" font-medium text-lg ">
               Message sent successfully.
@@ -183,7 +193,7 @@ const ContactForm = () => {
         pauseOnHover
       />
     </div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

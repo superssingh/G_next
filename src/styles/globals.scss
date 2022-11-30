@@ -11,6 +11,7 @@
 @import "./pagination";
 @import "./post_detail";
 @import "./inputs";
+@import "./dropdown";
 
 html {
   scroll-behavior: smooth;
@@ -241,27 +242,28 @@ body {
 
   .serviceCard {
     display: grid;
-    border: 2px solid rgba(166, 164, 166, 0.109);
+    // border: 2px solid rgba(112, 189, 145, 0.32);
     transition: all 0.5s ease;
     overflow: hidden;
+    background: #742bdb;
     border-radius: 10px;
     * {
       fill: rgba(241, 247, 242, 1);
     }
     &:hover {
       * {
-        fill: rgb(17, 202, 144);
+        fill: rgb(89, 203, 167);
       }
       .serviceDesc {
+        display: block;
         width: 100%;
         padding: 10px 14px;
         animation: 0.7s ease-out 0s 1 slideInBottom;
-        display: block;
-        background: $GradientTeal;
+        background: rgb(62, 153, 130);
       }
 
-      background: rgba(42, 4, 72, 0.571);
-      border: 2px solid rgba(22, 229, 157, 0.897);
+      background: rgba(41, 3, 70, 0.78);
+      // border: 2px solid #3b3b3b22;
     }
   }
 

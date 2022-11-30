@@ -4,11 +4,11 @@ import Image from "next/image";
 import { TagName, BrandName, Logo, SocialWidget } from "..";
 
 const Navbar = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(false)
 
   const handleClicked = async () => {
-    setClicked(!clicked);
-  };
+    setClicked(!clicked)
+  }
 
   return (
     <div className="Navigation">
@@ -38,6 +38,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </li>
+          
             <li>
               {TagName.menus.map((m) => (
                 <Link
@@ -104,7 +105,7 @@ const Navbar = () => {
         </div>
       </ul>
     </div>
-  );
-};
+  )
+}
 
 export default Navbar;

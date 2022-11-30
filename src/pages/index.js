@@ -11,6 +11,7 @@ import {
   Steps,
 } from "../components/"
 
+
 const Home = () => {
   return (
     <section className="">
@@ -24,6 +25,7 @@ const Home = () => {
         </span>
       </div>
       <div className="">
+      
         <HeroPage />
         <Services />
         <Features />
