@@ -13,9 +13,8 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-
+  reactStrictMode: true,
   swcMinify: true,
-
   experimental: {
     // appDir: true,
     fontLoaders: [
