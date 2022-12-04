@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TagName } from "..";
-const Course = ({ returnPath }) => {
+const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center  ">
@@ -9,7 +9,7 @@ const Course = ({ returnPath }) => {
         <div className="grid relative md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m) => {
             return (
-              <Link href={m.path} key={m.title} returnPath={returnPath}>
+              <Link href={m.path} key={m.title}>
                 <div className="relative w-full transition-all duration-700 text-left sm:place-items-center ">
                   <div className="courseCard w-full h-fit md:w-fit md:h-52 ">
                     <div className="flex relative w-full h-full place-content-start md:grid md:w-60 md:place-content-center ">

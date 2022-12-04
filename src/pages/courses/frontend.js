@@ -1,8 +1,8 @@
 import { NotFound } from "../../components"
-const Frontend = ({ returnPath }) => {
+const Frontend = () => {
   return (
     <div className="grid relative ">
-      <NotFound message="{ Coming soon... }" returnPath={returnPath} />
+      <NotFound message="{ Coming soon... }" returnPath="/courses" />
     </div>
   )
 }

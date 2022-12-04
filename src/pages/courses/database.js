@@ -1,5 +1,5 @@
 import { NotFound } from "../../components"
-const Backend = () => {
+const Database = () => {
   return (
     <div className="grid relative ">
       <NotFound message="{ Coming soon... }" returnPath="/courses" />
@@ -7,4 +7,4 @@ const Backend = () => {
   )
 }
 
-export default Backend
+export default Database
