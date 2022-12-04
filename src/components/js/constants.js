@@ -736,7 +736,7 @@ export const courses = [
 
   {
     title: "Full Stack Development",
-    description: "Learn databases MongoDB, PostgreSQL & GraphQL from scratch.",
+    description: "Learn to build a full stack web app.",
     icon: (
       <svg
         version="1.1"
