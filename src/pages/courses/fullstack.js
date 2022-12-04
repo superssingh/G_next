@@ -1,8 +1,8 @@
 import { NotFound } from "../../components"
-const Fullstack = () => {
+const Fullstack = ({ returnPath }) => {
   return (
     <div className="grid relative ">
-      <NotFound message="{ Coming soon... }" returnPath="/courses" />
+      <NotFound message="{ Coming soon... }" returnPath={returnPath} />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Course } from "../../components"
 const Courses = () => {
   return (
     <div>
-      <Course />
+      <Course returnPath="/courses" />
     </div>
   )
 }
