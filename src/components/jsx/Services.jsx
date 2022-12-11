@@ -2,7 +2,7 @@ import Link from "next/link";
 import { TagName } from "..";
 const Services = () => {
   return (
-    <div className="bg-black/30 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+    <div className="bgBlack py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
         <h1 className="text-3xl text-slate-100 font-bold uppercase ">
           Our Services
@@ -12,7 +12,7 @@ const Services = () => {
             return (
               <Link href={m.path} key={m.title}>
                 <div className="grid relative transition-all duration-700 md:place-items-center md:m-2">
-                  <div className="serviceCard w-full md:w-60 md:h-60 lg:w-80 lg:h-80 md:rounded-md">
+                  <div className="serviceCard w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
                       <div className="grid relative place-content-center md:place-content-center px-4 py-2">
                         {m.icon}

@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx"
 import Image from "next/image"
 import { TagName, SocialWidget } from "../../components/"
 
+
 const About = () => {
   return (
     <div className="grid w-full place-content-center p-2 ">
@@ -42,7 +43,9 @@ const About = () => {
           </div>
 
           <div className="text-lg p-4  text-slate-400 text-justify">
-            <Markdown children={TagName.founderData.des}></Markdown>
+            <Markdown options={{ wrapper: "article" }}>
+              {TagName.founderData.des}
+            </Markdown>
           </div>
 
           <h1 className="p-4 text-xl font-bold text-center">

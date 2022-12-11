@@ -26,8 +26,6 @@
   backdrop-filter: blur(2em);
   padding: 1rem 0.5rem;
   position: fixed;
-  // background: rgba(72, 27, 112, 0.337);
-  // border-bottom: 1px solid rgba(91, 90, 90, 0.235);
   top: 0;
   .brandLogo {
     width: wrap;
@@ -215,12 +213,10 @@
         position: relative;
         width: 100%;
         color: $menusTextColors;
-
         .icon {
           display: grid;
           width: auto;
           margin: 0 10px 0 12px;
-
           place-content: center;
         }
         .menuname {
@@ -254,7 +250,6 @@
           -webkit-text-stroke: 2px rgba(203, 202, 204, 0.856);
           top: 0;
           transition: all 0.3s;
-
           svg {
             display: flex;
             position: relative;

@@ -33,6 +33,7 @@ const Home = ({ posts }) => {
         )
         setRecentPosts(recent)
         handlePageChange(currentPage)
+        console.log(recent)
       }
     } catch (error) {
       console.log("Error: ", error)

@@ -216,6 +216,22 @@ body {
   background: $GradientWhiteColor;
 }
 
+.bgTeal {
+  background: $GradientTeal;
+}
+
+.bgTeal1 {
+  background: $GradientTeal1;
+}
+
+
+.bgBlack {
+  background: $GradientBlack;
+}
+.bgBlack3 {
+  background: $GradientBlack3;
+}
+
 .bgDefault {
   background: $cardColor;
 }
@@ -242,33 +258,31 @@ body {
   
   .serviceCard {
     display: grid;
-    border: 1px solid rgba(70, 244, 116, 0.202);
+    border: 1px solid rgba(189, 189, 189, 0.5);
     transition: all 0.5s ease;
     overflow: hidden;    
-    background: rgba(11, 11, 11, 0.77);
-    
+    // background: $GradientTeal;
+    // background: rgba(249, 249, 249, 0.264);    
     * {
       fill: rgba(241, 247, 242, 1);
     }
     &:hover {    
-      border: 2px solid rgba(14, 14, 14, 1);
+    color: #fff;
+    background: $GradientTeal1;
+    box-shadow: 0px 8px 5px 5px rgba(24, 24, 24, 0.85);      
+    // background: $GradientBlack;
       * {
-        fill: rgb(89, 203, 167);
+        // fill: rgb(89, 203, 167);
       }
       .serviceDesc {
         display: block;      
         width:100%;  
         padding: 10px 14px;
         animation: 0.7s ease-out 0s 1 slideInBottom;
-        background: rgb(48, 141, 93);
+        background: $GradientBlack;
+        box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);    
+        // background: rgb(48, 141, 93);
       }
-
-      background: rgba(22, 22, 22, 0.972);
-      
-      border: 5px solid rgba(70, 244, 116, 0);
-      box-shadow: 0px 0px 5px 5px rgba(80, 236, 155, 0.789);
-      // box-shadow: 0px 0px 3px 0px rgba(35, 35, 35, 0);
-      // border: 2px solid #3b3b3b22;
     }
   }
 
@@ -318,16 +332,18 @@ body {
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
     &:hover {
+      background: $GradientTeal;
+      box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
       .serviceDesc {
         bottom: 0px;
         width: 100%;
-        display: block;
+        display: block;        
+        animation: 0.7s ease-out 0s 1 slideInBottom;
       }
-      background: rgba(11, 158, 102, 0.755);
+      // background: rgba(12, 129, 90, 0.885);
     }
   }
 }
@@ -377,4 +393,23 @@ h1 {
   animation: gradient 15s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.PostContent{
+  h1{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  h3{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
 }

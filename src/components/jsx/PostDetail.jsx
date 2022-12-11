@@ -1,13 +1,9 @@
-import React, { Suspense } from "react";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import moment from "moment";
-import Markdown from "markdown-to-jsx";
-import { AuthorInfo, Back } from "../index";
-
-// const DynamicAuthorInfo = dynamic(() => import("../jsx/AuthorInfo"), {
-//   suspense: true,
-// });
+import React from "react"
+import Image from "next/image"
+import moment from "moment"
+import Markdown from "markdown-to-jsx"
+import parse from "html-react-parser"
+import { AuthorInfo, Back } from "../index"
 
 const PostDetail = ({ post }) => {
   return (
@@ -49,11 +45,10 @@ const PostDetail = ({ post }) => {
                 {moment(post.createdAt).format("MMM DD, YYYY")}
               </div>
             </div>
-
             <div className=" text-md text-gray-600">
               {post.content.map((c, id) => (
-                <div className="my-6" key={id}>
-                  <Markdown children={c.html}></Markdown>
+                <div className="PostContent my-6" key={id}>
+                  {parse(c.html)}
                 </div>
               ))}
             </div>
@@ -70,6 +65,6 @@ const PostDetail = ({ post }) => {
       )} */}
     </div>
   )
-};
+}
 
-export default PostDetail;
+export default PostDetail
