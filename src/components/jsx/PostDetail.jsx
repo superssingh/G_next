@@ -48,7 +48,7 @@ const PostDetail = ({ post }) => {
             <div className=" text-md text-gray-600">
               {post.content.map((c, id) => (
                 <div className="PostContent my-6" key={id}>
-                  {parse(c.html)}
+                  {parse("" + c.html)}
                 </div>
               ))}
             </div>
