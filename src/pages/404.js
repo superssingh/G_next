@@ -6,7 +6,7 @@ export default function Custom404() {
         {`{ ` + "404 - Page Not Found" + ` }`}
       </div>
       <div className=" w-full ">
-        <Back path="" />
+        <Back />
       </div>
     </div>
   )

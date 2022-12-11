@@ -1,7 +1,7 @@
 import Link from "next/link";
-const Back = ({ path = "" }) => {
+const Back = ({ path = "/" }) => {
   return (
-    <Link href={`/${path}`}>
+    <Link href={path}>
       <div id="backButton" className=" top-0 w-fit h-fit animate-pulse">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const Back = ({ path = "" }) => {
         </svg>
       </div>
     </Link>
-  );
-};
+  )
+}
 
 export default Back;

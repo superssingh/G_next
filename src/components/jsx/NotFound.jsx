@@ -10,7 +10,7 @@ const NotFound = ({ message, returnPath }) => {
         {message || "Not Found!"}
       </div>
       <div className="">
-        <Back path={returnPath || ""} />
+        <Back path={returnPath} />
       </div>
     </div>
   )

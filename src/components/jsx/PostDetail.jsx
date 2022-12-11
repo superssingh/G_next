@@ -60,7 +60,7 @@ const PostDetail = ({ post }) => {
           </div>
         </div>
       </div>
-      <Back path="posts" />
+      <Back path="/posts" />
       {post.author && <AuthorInfo author={post.author} />}
       {/*       
       {post.author && (
@@ -69,7 +69,7 @@ const PostDetail = ({ post }) => {
         </Suspense>
       )} */}
     </div>
-  );
+  )
 };
 
 export default PostDetail;

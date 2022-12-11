@@ -245,24 +245,24 @@ body {
     // border: 2px solid rgba(112, 189, 145, 0.32);
     transition: all 0.5s ease;
     overflow: hidden;
-    background: #742bdb;
-    border-radius: 10px;
+    background: #201b29;
+    
     * {
       fill: rgba(241, 247, 242, 1);
     }
-    &:hover {
+    &:hover {    
       * {
         fill: rgb(89, 203, 167);
       }
       .serviceDesc {
-        display: block;
-        width: 100%;
+        display: block;      
+        width:100%;  
         padding: 10px 14px;
         animation: 0.7s ease-out 0s 1 slideInBottom;
-        background: rgb(62, 153, 130);
+        background: rgb(48, 141, 93);
       }
 
-      background: rgba(41, 3, 70, 0.78);
+      background: rgba(22, 22, 22, 0.972);
       // border: 2px solid #3b3b3b22;
     }
   }
@@ -322,7 +322,7 @@ body {
         width: 100%;
         display: block;
       }
-      background: rgba(126, 64, 227, 0.755);
+      background: rgba(39, 3, 58, 0.755);
     }
   }
 }
