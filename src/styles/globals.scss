@@ -239,18 +239,19 @@ body {
   .courseDesc {
     display: none;
   }
-
+  
   .serviceCard {
     display: grid;
-    // border: 2px solid rgba(112, 189, 145, 0.32);
+    border: 1px solid rgba(70, 244, 116, 0.202);
     transition: all 0.5s ease;
-    overflow: hidden;
-    background: #201b29;
+    overflow: hidden;    
+    background: rgba(11, 11, 11, 0.77);
     
     * {
       fill: rgba(241, 247, 242, 1);
     }
     &:hover {    
+      border: 2px solid rgba(14, 14, 14, 1);
       * {
         fill: rgb(89, 203, 167);
       }
@@ -263,6 +264,10 @@ body {
       }
 
       background: rgba(22, 22, 22, 0.972);
+      
+      border: 5px solid rgba(70, 244, 116, 0);
+      box-shadow: 0px 0px 5px 5px rgba(80, 236, 155, 0.789);
+      // box-shadow: 0px 0px 3px 0px rgba(35, 35, 35, 0);
       // border: 2px solid #3b3b3b22;
     }
   }
@@ -322,7 +327,7 @@ body {
         width: 100%;
         display: block;
       }
-      background: rgba(39, 3, 58, 0.755);
+      background: rgba(11, 158, 102, 0.755);
     }
   }
 }

@@ -257,7 +257,7 @@ export const services = [
     path: "/courses",
   },
   {
-    title: "Website Development",
+    title: "Work",
     description: "We build websites on demand.",
     icon: (
       <svg
@@ -329,7 +329,7 @@ export const services = [
     ),
     path: "/contact",
   },
-];
+]
 
 export const courses = [
   {

@@ -1203,15 +1203,19 @@ body {
   }
   .serviceCard {
     display: grid;
+    border: 1px solid rgba(70, 244, 116, 0.202);
     transition: all 0.5s ease;
     overflow: hidden;
-    background: #201b29;
+    background: rgba(11, 11, 11, 0.77);
   }
   .serviceCard * {
     fill: rgb(241, 247, 242);
   }
   .serviceCard:hover {
+    border: 2px solid rgb(14, 14, 14);
     background: rgba(22, 22, 22, 0.972);
+    border: 5px solid rgba(70, 244, 116, 0);
+    box-shadow: 0px 0px 5px 5px rgba(80, 236, 155, 0.789);
   }
   .serviceCard:hover * {
     fill: rgb(89, 203, 167);
@@ -1271,7 +1275,7 @@ body {
     transition: all 0.5s ease;
   }
   .serviceCard:hover {
-    background: rgba(39, 3, 58, 0.755);
+    background: rgba(11, 158, 102, 0.755);
   }
   .serviceCard:hover .serviceDesc {
     bottom: 0px;
