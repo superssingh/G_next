@@ -794,14 +794,21 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: rgb(255, 255, 255);
+  background: rgb(38, 36, 44);
+  color: white;
   display: block;
   position: relative;
+  border-radius: 0.3rem;
+  white-space: nowrap;
   font-size: 12px;
-  padding: 0 10px;
+  padding: 5px 10px;
   box-shadow: 0 0px 3px 0px rgba(28, 7, 61, 0.26);
 }
-
+.PostContent blockquote {
+  border-left: 5px solid #ccc;
+  padding: 1em 1em 1em 2em;
+  margin: 1em 0;
+}
 input[type=checkbox] {
   opacity: 0;
   width: -webkit-fit-content;
