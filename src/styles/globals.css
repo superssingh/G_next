@@ -688,18 +688,20 @@
 
 .policy,
 .terms {
-  background: rgba(255, 255, 255, 0.87);
+  background: rgba(239, 238, 238, 0.854);
   padding: 0.5rem;
 }
+.policy h1,
 .policy h2,
 .policy h3,
+.terms h1,
 .terms h2,
 .terms h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(43, 42, 42);
+  color: rgb(51, 50, 50);
   border-top: 2px solid rgb(58, 58, 58);
-  margin-top: 10px;
+  padding: 12px 0;
 }
 .policy p,
 .policy ul,
@@ -750,15 +752,8 @@
   color: white;
 }
 .PostDetail {
-  width: 100%;
-  display: flexbox;
-  position: relative;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  background: rgb(255, 255, 255);
-  border-radius: 0.5em 0.5em;
-  padding: 1rem 0.3rem;
-  margin-top: -3em;
 }
 
 .author {
@@ -1344,14 +1339,20 @@ h1 {
 }
 
 .PostContent h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-.PostContent h2 {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 14px 0;
+}
+.PostContent h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 12px 0;
 }
 .PostContent h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  margin: 10px 0;
+}
+.PostContent p {
+  margin: 10px 0;
 }/*# sourceMappingURL=globals.css.map */

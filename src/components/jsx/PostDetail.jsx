@@ -18,9 +18,9 @@ const PostDetail = ({ post }) => {
           className="object-cover w-full h-full shadow-lg rounded-t-lg"
         />
       </div>
-      <div className=" bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 mb-4">
-        <div className="PostDetail">
-          <div className="text-gray-700 text-3xl font-semibold p-4 mb-4 ">
+      <div className="grid relative w-full bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] md:rounded-b-lg md:p-4 mb-4">
+        <div className="grid relative bg-white/90 md:m-4 md:mt-[-5rem] rounded-sm md:rounded-md ">
+          <div className=" bg-white m-2 md:mb-4 md:mx-4 mt-[-2rem] uppercase shadow-md rounded-md text-gray-800 text-2xl md:text-3xl font-semibold p-4 mb-4  ">
             {post.title}
           </div>
           <div className="relative px-4 pb-2">
@@ -45,9 +45,12 @@ const PostDetail = ({ post }) => {
                 {moment(post.createdAt).format("MMM DD, YYYY")}
               </div>
             </div>
-            <div className=" text-md text-gray-600">
+            <div className="w-full">
               {post.content.map((c, id) => (
-                <div className="PostContent my-6" key={id}>
+                <div
+                  className="PostContent my-6 text-sm md:text-base text-gray-600"
+                  key={id}
+                >
                   {parse("" + c.html)}
                 </div>
               ))}

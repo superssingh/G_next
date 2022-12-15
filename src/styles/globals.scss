@@ -271,9 +271,9 @@ body {
     background: $GradientTeal1;
     box-shadow: 0px 8px 5px 5px rgba(24, 24, 24, 0.85);      
     // background: $GradientBlack;
-      * {
-        // fill: rgb(89, 203, 167);
-      }
+      // * {
+      //   fill: rgb(89, 203, 167);
+      // }
       .serviceDesc {
         display: block;      
         width:100%;  
@@ -397,18 +397,25 @@ h1 {
 
 .PostContent{
   h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    margin: 14px 0;
   }
   
   h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    margin: 12px 0;
   }
   
   h3{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    margin: 10px 0;
+  }
+
+  p{
+    margin: 10px 0;
   }
 
 

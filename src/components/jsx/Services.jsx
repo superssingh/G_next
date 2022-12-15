@@ -2,7 +2,7 @@ import Link from "next/link";
 import { TagName } from "..";
 const Services = () => {
   return (
-    <div className="bgBlack py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+    <div className="bg-black/20 py-4 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
         <h1 className="text-3xl text-slate-100 font-bold uppercase ">
           Our Services
