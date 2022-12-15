@@ -16,6 +16,37 @@
   }
 }
 
-.postContent {
-  font-size: 18px;
+.PostContent{
+  h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 14px 0;
+  }
+  
+  h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 12px 0;
+  }
+  
+  h3{
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+
+  p{
+    margin: 10px 0;
+  }
+
+  code{
+
+    background-color: $background-image1;
+    display: block;
+    position: relative;
+    min-width: 300px;
+    font-size:12px;
+  }
+
 }
+
