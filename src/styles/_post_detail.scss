@@ -40,12 +40,13 @@
   }
 
   code{
-
-    background-color: $background-image1;
+    width:fit-content;
+    background: rgb(255, 255, 255);
     display: block;
-    position: relative;
-    min-width: 300px;
+    position: relative;    
     font-size:12px;
+    padding: 0 10px;
+    box-shadow: 0 0px 3px 0px rgba(28, 7, 61, 0.26);
   }
 
 }
