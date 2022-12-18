@@ -2,7 +2,7 @@ import Link from "next/link";
 const Back = ({ path = "/" }) => {
   return (
     <Link href={path}>
-      <div id="backButton" className=" top-0 w-fit h-fit animate-pulse">
+      <div id="backButton" className=" top-0 w-fit h-fit animate-pulse mt-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"

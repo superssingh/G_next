@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image"
 
 const PostWidget = ({ posts, category, id }) => {
-  const [similarPosts, setSimilarPosts] = useState([]);
-  const [similar, setSimilar] = useState(false);
+  const [similarPosts, setSimilarPosts] = useState([])
+  const [similar, setSimilar] = useState(false)
 
   useEffect(() => {
     if (posts) {
-      setData();
+      setData()
     }
-  }, [posts]);
+  }, [posts])
 
   async function setData() {
     if (!category && !id) {
-      setSimilarPosts(posts);
-      setSimilar(false);
+      setSimilarPosts(posts)
+      setSimilar(false)
     } else {
       const relevant = await posts.filter((p) => {
-        return p.node?.categories[0]?.name === category && p.node.id != id;
-      });
+        return p.node?.categories[0]?.name === category && p.node.id != id
+      })
 
       if (relevant.length) {
-        setSimilarPosts(relevant);
-        setSimilar(true);
+        setSimilarPosts(relevant)
+        setSimilar(true)
       } else {
         const otherPosts = await posts.filter((p) => {
-          return p.node.id != id;
-        });
-        setSimilarPosts(otherPosts);
-        setSimilar(false);
+          return p.node.id != id
+        })
+        setSimilarPosts(otherPosts)
+        setSimilar(false)
       }
     }
   }
@@ -56,7 +56,8 @@ const PostWidget = ({ posts, category, id }) => {
                       alt={m.node.title}
                       width={72}
                       height={72}
-                      className="w-full h-full  object-cover rounded-l-lg"
+                      layout="intrinsic"
+                      className=" rounded-l-lg"
                     />
                   </div>
                   <div className="w-full h-full p-2 grid place-content-start ">
@@ -69,11 +70,11 @@ const PostWidget = ({ posts, category, id }) => {
                   </div>
                 </div>
               </Link>
-            );
+            )
           })}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default PostWidget;

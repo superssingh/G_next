@@ -25,7 +25,6 @@ export { default as Paginate } from "./js/paginate";
 export { default as BlogContext } from "./contexts/blogContext";
 
 //JSX files
-export { default as Layout } from "./jsx/Layout";
 export { default as Navbar } from "./jsx/Navbar";
 export { default as Footer } from "./jsx/Footer";
 export { default as PostCard } from "./jsx/PostCard";

@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { TagName } from "../index";
+import Image from "next/legacy/image"
+import Link from "next/link"
+import { TagName } from "../index"
 const Features = () => {
   return (
     <div>
@@ -28,13 +28,21 @@ const Features = () => {
                     </div>
                   </div>
                   <div className="grid place-content-center px-4 object-fit overflow-hidden ">
-                    <Image src={s.image} alt={s.name + "image"} />
+                    <Image
+                      src={s.image}
+                      alt={s.name + "image"}
+                      layout="intrinsic"
+                    />
                   </div>
                 </div>
               )) || (
                 <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8">
                   <div className="grid place-content-center px-4 object-cover overflow-hidden ">
-                    <Image src={s.image} alt={s.name + "image"} />
+                    <Image
+                      src={s.image}
+                      alt={s.name + "image"}
+                      layout="intrinsic"
+                    />
                   </div>
                   <div className="grid place-content-center">
                     <div className="grid p-4 ">
@@ -60,7 +68,7 @@ const Features = () => {
         )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

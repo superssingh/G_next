@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { TagName, BrandName, Logo, SocialWidget } from "..";
+import Image from "next/legacy/image"
+import { TagName, BrandName, Logo, SocialWidget } from ".."
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false)
@@ -11,9 +11,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="Navigation">
+    <div className="Navigation  ">
       <div>
-        <header className="Navbar border-b border-slate-500/[.0] ">
+        <header className="Navbar">
           <Link
             className="w-48 center-center mx-8 hover:hue-rotate-180 transition-all duration-700"
             href="/"
@@ -38,7 +38,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </li>
-          
+
             <li>
               {TagName.menus.map((m) => (
                 <Link
@@ -70,14 +70,14 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <div className="mobile-menus z-[5] px-4 py-2">
+        <div className="mobile-menus z-[5] px-4 py-2 ">
           {TagName.menus.map((m) => (
             <Link
               href={m.path}
               key={m.name}
               onClick={handleClicked}
               data-text={m.name}
-              className="flex z-10 transition-all duration-300 rounded-md  hoverEffect py-2 my-2 "
+              className="mobileMenu flex z-10 transition-all duration-300 rounded-md hoverEffect py-2 my-2"
             >
               <div className="icon ">{m.icon}</div>
               <div className=" w-full text-md">{m.name}</div>

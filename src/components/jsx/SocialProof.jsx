@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { TagName } from "..";
+import Image from "next/legacy/image"
+import { TagName } from ".."
 const SocialProof = () => {
   return (
     <div className=" py-6 grid justify-center relative animate showFromTop px-4 ">
@@ -23,6 +23,7 @@ const SocialProof = () => {
                     src={r.image}
                     width="100"
                     height="100"
+                    layout="intrinsic"
                     alt="ReviewerImage"
                   />
                 </div>
@@ -41,12 +42,12 @@ const SocialProof = () => {
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SocialProof;
+export default SocialProof

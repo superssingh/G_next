@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import moment from "moment";
+import Image from "next/legacy/image"
+import Link from "next/link"
+import moment from "moment"
 
 const PostCard = ({ post }) => {
   return (
@@ -14,7 +14,8 @@ const PostCard = ({ post }) => {
             width={300}
             height={300}
             priority
-            className="object-fit w-full h-full shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
+            layout="fill"
+            className="shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
         <div className="h-32 md:h-36 w-full px-8 py-2">
@@ -54,6 +55,6 @@ const PostCard = ({ post }) => {
       </div>
     </Link>
   )
-};
+}
 
 export default PostCard;

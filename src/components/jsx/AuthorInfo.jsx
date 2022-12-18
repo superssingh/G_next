@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 const AuthorInfo = ({ author }) => {
   return (
     <div className=" bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 my-2">
@@ -9,6 +9,7 @@ const AuthorInfo = ({ author }) => {
             alt="Picture of the author"
             width={72}
             height={72}
+            layout="intrinsic"
             priority
             className="object-cover shadow-lg rounded-full rotate-[-45deg]"
           />

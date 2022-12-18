@@ -1,6 +1,7 @@
 import "../styles/globals.css"
 import Head from "next/head"
-import { Layout, Footer } from "../components/"
+import Layout from "./Layout"
+import { Footer } from "../components/"
 import { Poppins, Lato } from "@next/font/google"
 
 const customFont = Poppins({ weight: "400", subsets: "latin-ext" })
@@ -49,7 +50,7 @@ function MyApp({ Component, pageProps }) {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <div className="w-full flex flex-col min-h-screen">
-          <div className="containerbox flex-grow mt-24 mb-10  ">
+          <div className=" flex-grow  mb-10  ">
             <Component {...pageProps} />
           </div>
           <Footer />

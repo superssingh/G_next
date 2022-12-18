@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { frontend } from "..";
+import Image from "next/legacy/image"
+import Link from "next/link"
+import { frontend } from ".."
 
 const HeroPage = () => {
   return (
     <div className="">
-      <div className=" grid px-8 place-content-center items-center sm:justify-center  relative transition-all duration-500 showFromTop ">
+      <div className="grid px-8 place-content-center items-center sm:justify-center  relative transition-all duration-500 showFromTop ">
         <div className="grid md:flex text-slate-100 m-2 max-w-6xl">
           <div className="grid md:flex relative ">
             <div className="">
@@ -29,12 +29,13 @@ const HeroPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid  place-content-center md:right-0 object-fit overflow-hidden">
+            <div className="grid place-content-center md:right-0 object-fit overflow-hidden">
               <Image
                 src={frontend}
                 width={500}
                 height={500}
                 alt={"HeroImage"}
+                layout="intrinsic"
                 priority
                 className="relative rounded-xl z-[2] "
               />
@@ -43,7 +44,7 @@ const HeroPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroPage;
+export default HeroPage

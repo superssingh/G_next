@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import moment from "moment"
 import Markdown from "markdown-to-jsx"
 import parse from "html-react-parser"
@@ -15,7 +15,8 @@ const PostDetail = ({ post }) => {
           width={500}
           height={500}
           priority
-          className="object-cover w-full h-full shadow-lg rounded-t-lg"
+          layout="fill"
+          className="shadow-lg rounded-t-lg"
         />
       </div>
       <div className="grid relative w-auto md:w-full bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] md:rounded-b-lg md:p-4 mb-4">

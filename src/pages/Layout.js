@@ -1,7 +1,7 @@
 import React from "react"
 import dynamic from "next/dynamic"
 
-const Navbar = dynamic(() => import("../jsx/Navbar"), {
+const Navbar = dynamic(() => import("../components/jsx/Navbar"), {
   ssr: false,
 })
 
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <React.StrictMode>
       <div className="containerBox flex flex-col min-w-screen min-h-screen ">
         <Navbar />
-        <div>{children}</div>
+        <div className="pt-24">{children}</div>
       </div>
     </React.StrictMode>
   )

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { TagName, SocialWidget, Logo } from "../index";
+import Image from "next/legacy/image"
+import { TagName, SocialWidget, Logo } from "../index"
 
 const Footer = () => {
   return (
@@ -28,6 +28,7 @@ const Footer = () => {
                 alt={TagName.COMPANY_NAME}
                 width={100}
                 height={100}
+                layout="fixed"
                 placeholder="blur"
                 className="logo"
               />
@@ -48,7 +49,7 @@ const Footer = () => {
         {/* <div>Made by Santosh Singh [superssingh@gmail.com]</div> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Footer;

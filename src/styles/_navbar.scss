@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   transition: 0.2s ease-in-out;
+ 
   div {
     width: inherit;
     position: -webkit-sticky;
@@ -22,8 +23,8 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  place-items: center;
-  backdrop-filter: blur(2em);
+  place-items: center;  
+  backdrop-filter: blur(5em);
   padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
@@ -142,7 +143,7 @@
     width: auto;
     height: $height;
     justify-content: space-between;
-    position: -webkit-sticky;
+    position: -webkit-sticky;    
     position: sticky;
     top: 0;
   }
@@ -195,19 +196,19 @@
     height: wrap;
     place-self: top;
     justify-content: end;
-    background: $mobileNavColor;
-    backdrop-filter: blur(1rem);
+    // background: $mobileNavColor;
+    backdrop-filter: blur(2em);
     .mobile-menus {
       place-self: top;
       width: 100%;
       height: wrap;
-      top: 0;
-      background: $backgroundColor;
-      backdrop-filter: blur(1rem);
-      box-shadow: 0px 0 0px 1px rgba(193, 192, 193, 0.154);
+      top: 0;      
+      background: $navBarColor;
+      backdrop-filter: blur(2em);
+      box-shadow: 0px 0px 0px 1px rgba(193, 192, 193, 0.154);
       .mobileMenu:hover {
-        background: rgba(19, 177, 130, 0.931);
-        box-shadow: 0px 0px 5px 3px rgba(29, 3, 48, 0.54);
+        animation: 0.7s ease-out 0s 1 slideInLeft;    
+        box-shadow: -5px 0px 0px 0px rgb(255, 255, 255)
       }
       a {
         position: relative;

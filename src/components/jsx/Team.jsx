@@ -1,5 +1,5 @@
 import { TagName, SocialWidget } from "../index";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Team = () => {
   return (
