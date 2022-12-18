@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${post.slug}`}>
       <div className="card hover:bg-teal-500/50 ">
-        <div className="relative overflow-hidden h-56 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
+        <div className=" relative overflow-hidden h-52 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
           <Image
             src={post.featured_image[0].url}
             alt={post.title}
@@ -17,7 +17,7 @@ const PostCard = ({ post }) => {
             className="object-fit w-full h-full shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
-        <div className="h-32 md:h-36 w-full h-30 px-8 py-2">
+        <div className="h-32 md:h-36 w-full px-8 py-2">
           <div className="relative z-2 ">
             <div className="flex absolute left-[-65px] bottom-[-60px]  rotate-[-90deg] text-center  uppercase tracking-wide text-xs ">
               <svg
@@ -46,14 +46,14 @@ const PostCard = ({ post }) => {
               {post.title}
             </div>
 
-            <div className="text-md md:text-md mb-2 text-gray-600 line-clamp-2">
+            <div className="text-sm md:text-base mb-2 text-gray-600 line-clamp-2">
               {post.description}
             </div>
           </div>
         </div>
       </div>
     </Link>
-  );
+  )
 };
 
 export default PostCard;
