@@ -25,7 +25,7 @@ const Navbar = () => {
                 className="brandLogo"
                 onClick={async () => {
                   if (clicked) {
-                    setClicked(false)
+                    await setClicked(false)
                   }
                 }}
               />
