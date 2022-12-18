@@ -1,7 +1,6 @@
 import Markdown from "markdown-to-jsx"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { TagName, SocialWidget } from "../../components/"
-
 
 const About = () => {
   return (
@@ -32,20 +31,19 @@ const About = () => {
                   width={300}
                   height={300}
                   priority
-                  className="object-cover shadow-lg rounded-full "
+                  layout="fixed"
+                  className=" shadow-lg rounded-full "
                 />
               </div>
               {/* <div className="text-white/50 font-bold text-lg ">
                 {TagName.founderData.name}
               </div> */}
             </div>
-            <SocialWidget social={TagName.founderData.social} />
           </div>
 
-          <div className="text-lg p-4  text-slate-400 text-justify">
-            <Markdown options={{ wrapper: "article" }}>
-              {TagName.founderData.des}
-            </Markdown>
+          <SocialWidget social={TagName.founderData.social} />
+          <div className="text-lg p-4  text-gray-200 text-justify">
+            <Markdown>{TagName.founderData.des}</Markdown>
           </div>
 
           <h1 className="p-4 text-xl font-bold text-center">

@@ -474,25 +474,6 @@
             animation: 0.7s ease-out 0s 1 slideInLeft;
     box-shadow: -5px 0px 0px 0px rgb(255, 255, 255);
   }
-  .mobile-open .mobile-menus a {
-    position: relative;
-    width: 100%;
-    color: rgba(252, 252, 252, 0.981);
-  }
-  .mobile-open .mobile-menus a .icon {
-    display: grid;
-    width: auto;
-    margin: 0 10px 0 12px;
-    place-content: center;
-  }
-  .mobile-open .mobile-menus a .menuname {
-    display: grid;
-    align-items: center;
-  }
-  .mobile-open .mobile-menus li {
-    width: 100%;
-    height: wrap;
-  }
   .mobile-open .social {
     width: 100%;
     height: 2px;
@@ -616,6 +597,14 @@
   color: #fff;
   background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
   box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
+}
+
+.activeFocus:hover {
+  -webkit-animation: 0.7s ease-in-out slideInBottom;
+          animation: 0.7s ease-in-out slideInBottom;
+}
+.activeFocus:focus, .activeFocus:active {
+  background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
 }
 
 .footer {

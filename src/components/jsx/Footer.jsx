@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="grid w-full h-fit place-items-center top-0 px-2 md:grid-cols-3 ">
         <div className="grid grid-cols-2 w-full p-4 place-items-start md:place-items-start">
           {TagName.footermenus.map((m) => (
-            <Link key={m.name} href={m.path}>
+            <Link key={m.name} href={m.path} legacyBehavior>
               <div
                 tabIndex={1}
                 data-text={m.name}
@@ -21,7 +21,7 @@ const Footer = () => {
           ))}
         </div>
         <div className=" top-0 w-fit animate-pulse">
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <div>
               <Image
                 src={Logo}
@@ -49,7 +49,7 @@ const Footer = () => {
         {/* <div>Made by Santosh Singh [superssingh@gmail.com]</div> */}
       </div>
     </div>
-  )
+  );
 }
 
 export default Footer;

@@ -114,7 +114,7 @@ const Terms = () => {
 
           <div className="flex">
             <div>Please read our Privacy Policy.</div>
-            <Link href={"/privacypolicy"}>
+            <Link href={"/privacypolicy"} legacyBehavior>
               <span className="mx-2 rounded bg-violet-500 p-1 font-medium text-white hover:bg-violet-700">
                 Click Here
               </span>
@@ -130,7 +130,7 @@ const Terms = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Terms

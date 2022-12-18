@@ -5,14 +5,12 @@ import moment from "moment"
 
 const PostCard = ({ post }) => {
   return (
-    <Link href={`/posts/${post.slug}`}>
+    <Link href={`/posts/${post.slug}`} legacyBehavior>
       <div className="card hover:bg-teal-500/50 ">
         <div className=" relative overflow-hidden h-52 w-full md:w-52 md:h-44 md:shrink-0  lg:h-52 lg:w-full">
           <Image
             src={post.featured_image[0].url}
-            alt={post.title}
-            width={300}
-            height={300}
+            alt={post.title}           
             priority
             layout="fill"
             className="shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
@@ -54,7 +52,7 @@ const PostCard = ({ post }) => {
         </div>
       </div>
     </Link>
-  )
+  );
 }
 
 export default PostCard;

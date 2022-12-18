@@ -31,9 +31,8 @@ const Home = ({ posts }) => {
           (a) => moment(a.node.createdAt).format("YYYYMMDD"),
           "desc"
         )
-        setRecentPosts(recent)
-        handlePageChange(currentPage)
-        console.log(recent)
+        await setRecentPosts(recent)
+        await handlePageChange(currentPage)
       }
     } catch (error) {
       console.log("Error: ", error)

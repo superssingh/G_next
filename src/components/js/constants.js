@@ -1193,7 +1193,7 @@ export const founderData = {
             passionate about my profession and have a keen interest to teach people about web
             development. I have learned web development skills from online and
             build gogixer to document my journey as a full stack developer to help others. I hope
-            you will enjoy it... 😇 </d>`,
+            you will enjoy it... 😇 </div>`,
   social: [
     {
       name: "twitter",
@@ -1226,4 +1226,4 @@ export const founderData = {
       ),
     },
   ],
-};
+}

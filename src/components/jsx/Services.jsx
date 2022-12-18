@@ -10,7 +10,7 @@ const Services = () => {
         <div className="serviceList grid w-full relative md:grid-cols-3 gap-0 md:gap-0 mt-4">
           {TagName.services.map((m) => {
             return (
-              <Link href={m.path} key={m.title}>
+              <Link href={m.path} key={m.title} legacyBehavior>
                 <div className="grid relative transition-all duration-700 md:place-items-center md:m-2">
                   <div className="serviceCard w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md ">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
@@ -33,12 +33,12 @@ const Services = () => {
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Services;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 const LikeButton = ({ handleLike }) => {
   return (
-    <Link href="#">
+    <Link href="#" legacyBehavior>
       <div id="LikeButton" className="top-10 right-5 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

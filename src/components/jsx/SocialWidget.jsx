@@ -5,7 +5,7 @@ const SocialWidget = ({ social }) => {
       {social &&
         social.map((s) => {
           return (
-            <Link href={s.url} key={s.name}>
+            <Link href={s.url} key={s.name} legacyBehavior>
               <div className={s.name}>{s.icon}</div>
             </Link>
           );

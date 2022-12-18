@@ -20,7 +20,7 @@ const Features = () => {
                       </div>
                     </div>
                     <div className="grid place-content-center md:place-content-start">
-                      <Link href={s.url}>
+                      <Link href={s.url} legacyBehavior>
                         <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                           Let's Started
                         </div>
@@ -53,7 +53,7 @@ const Features = () => {
                         {s.des}
                       </div>
                       <div className="grid place-content-center md:place-content-end">
-                        <Link href={s.url}>
+                        <Link href={s.url} legacyBehavior>
                           <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                             Let's Started
                           </div>
@@ -65,10 +65,10 @@ const Features = () => {
               )}
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
 export default Features

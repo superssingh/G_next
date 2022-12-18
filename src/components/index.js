@@ -1,5 +1,6 @@
 export { default as Logo } from "../../public/images/gogixerlogo.png";
 export { default as BrandName } from "../../public/images/gogixer.png";
+export { default as BrandLogo } from "../../public/images/gogixer-sm.png"
 
 export { default as founder } from "./assets/santoshsingh.jpg";
 export { default as coding } from "./assets/coding.svg";
