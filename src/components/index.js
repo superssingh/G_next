@@ -46,4 +46,5 @@ export { default as CategoryFilter } from "./jsx/tailwindExamples/CategoryFilter
 export { default as Pagination } from "./jsx/Pagination"
 export { default as Steps } from "./jsx/Steps";
 export { default as NotFound } from "./jsx/NotFound"
+export { default as Comment } from "./jsx/Comment"
 

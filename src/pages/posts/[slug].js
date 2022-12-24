@@ -1,6 +1,12 @@
 import React from "react"
 import { getPosts, getPostDetail } from "../../services/getBlogData"
-import { HeadTag, PostDetail, PostWidget } from "../../components"
+import {
+  HeadTag,
+  PostDetail,
+  PostWidget,
+  Comment,
+  AuthorInfo,
+} from "../../components"
 import moment from "moment"
 
 const Blog = ({ post, posts }) => {
@@ -12,6 +18,7 @@ const Blog = ({ post, posts }) => {
         <div className="grid relative w-full md:px-4 pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
           <div className=" grid max-w-4xl place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
+            <Comment />
           </div>
           <div className="grid w-full md:col-span-8 lg:col-span-4">
             <div className="place-content-center md:flex lg:grid lg:sticky lg:place-content-start">

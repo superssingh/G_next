@@ -1,4 +1,6 @@
 import Image from "next/legacy/image"
+import { TagName, SocialWidget } from ".."
+
 const AuthorInfo = ({ author }) => {
   return (
     <div className=" bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 my-2">
@@ -22,11 +24,12 @@ const AuthorInfo = ({ author }) => {
           </div>
           <div className="text-sm font-semibold">{author.profession}</div>
 
-          <div className="text-sm font-bold">
+          {/* <div className="text-sm font-bold">
             {author.social.map((s, i) => {
               return <div key={i}> {s}</div>
             })}
-          </div>
+          </div> */}
+          <SocialWidget social={TagName.founderData.social} />
         </div>
       </div>
     </div>

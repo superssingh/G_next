@@ -12,8 +12,6 @@ const PostDetail = ({ post }) => {
         <Image
           src={post.featured_image[0].url}
           alt={post.title}
-          width={500}
-          height={500}
           priority
           layout="fill"
           className="shadow-lg rounded-t-lg"
