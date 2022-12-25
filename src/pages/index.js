@@ -24,7 +24,7 @@ const Home = () => {
           learn web development skills.
         </span>
       </div>
-      <div className="">      
+      <div className="">
         <HeroPage />
         <Services />
         <Features />

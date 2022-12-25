@@ -1,4 +1,6 @@
 import React from "react"
+import { createClient } from "@supabase/supabase-js"
+import { Auth, ThemeSupa } from "@supabase/auth-ui-react"
 import { getPosts, getPostDetail } from "../../services/getBlogData"
 import {
   HeadTag,
@@ -9,12 +11,27 @@ import {
 } from "../../components"
 import moment from "moment"
 
+const supabase = createClient(
+  process.env.local.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.local.NEXT_PUBLIC_SUPABASE_ANON_KEY
+)
+
 const Blog = ({ post, posts }) => {
   return (
-    <div className="showSlow">
+    <div className=" showSlow">
       <HeadTag post={post} />
 
-      <div className="">
+      <div className="grid ">
+        <div className="grid z-20 p-2 w-full h-full bg-purple-700/80  absolute place-content-center place-items-center">
+          <div className="grid z-10 p-4 w-fit bg-black/80 absolute place-content-center place-items-center">
+            <Auth
+              supabaseClient={supabase}
+              appearance={{ theme: ThemeSupa }}
+              providers={["google", "github", "twitter"]}
+              className="grid w-fit absolute z-10"
+            />
+          </div>
+        </div>
         <div className="grid relative w-full md:px-4 pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
           <div className=" grid max-w-4xl place-self-center content-center md:col-span-8">
             <PostDetail post={post} />
@@ -29,6 +46,7 @@ const Blog = ({ post, posts }) => {
                   id={post.id}
                 />
               )}
+              <div></div>
             </div>
           </div>
         </div>
