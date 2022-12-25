@@ -12,8 +12,8 @@ import {
 import moment from "moment"
 
 const supabase = createClient(
-  process.env.local.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.local.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 )
 
 const Blog = ({ post, posts }) => {

@@ -1,7 +1,7 @@
 const Comment = ({ comments }) => {
   return (
     <div>
-      {comments && (
+      {!comments && (
         <div className="grid relative bg-white/[.30] rounded-sm p-2">
           <div className="grid w-full  text-green-100 font-semibold">
             Comments

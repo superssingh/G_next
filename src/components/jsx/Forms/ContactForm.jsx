@@ -27,9 +27,9 @@ const ContactForm = () => {
 
   //Email service init------
   const EMAIL_SERVICE = {
-    SERVICE_ID: "service_qgsohfe",
-    TEMPLATE_ID: "template_yfvxx4s",
-    PUBLIC_KEY: "1IbTNiS-_C1i67RVo",
+    SERVICE_ID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+    PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
   }
 
   const sendEmail = async (data) => {
@@ -104,12 +104,12 @@ const ContactForm = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </div>
