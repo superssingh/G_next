@@ -16,7 +16,7 @@
   }
 }
 
-.PostContent{
+.PostContent{  
   h1{
     font-size: 1.5rem;
     font-weight: 600;
@@ -36,29 +36,30 @@
   }
 
   p{
+    font-size: 1rem;
     margin: 10px 0;
   }
 
   code{
-    width:fit-content;
+    display: block;
+    position: relative;
+    width:wrap;
     background: rgb(38, 36, 44);
     color: white;
-    display: block;
     position: relative;             
     border-radius: 0.3rem;      
     white-space: nowrap;   
-    font-size: 14px;
-    padding: 5px 10px;
-    box-shadow: 0 0px 3px 0px rgba(28, 7, 61, 0.26);
+    font-size: 12px;
+    padding: 5px 5px;
   }
 
- 
 
   blockquote {
     border-left: 5px solid #ccc;
-    padding: 1em 1em 1em 2em;
+    padding: 1em 1em 1em 1em;
     margin: 1em 0;
   }
+
   blockquote.somethingElse {
     
   }
