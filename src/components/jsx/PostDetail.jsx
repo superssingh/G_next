@@ -1,9 +1,8 @@
 import React from "react"
 import Image from "next/legacy/image"
 import moment from "moment"
-import Markdown from "markdown-to-jsx"
-import parse from "html-react-parser"
-import { AuthorInfo, Back } from "../index"
+import Markdown from 'markdown-to-jsx';
+import { AuthorInfo, Back } from '../index';
 
 const PostDetail = ({ post }) => {
   return (
@@ -35,19 +34,41 @@ const PostDetail = ({ post }) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <rect
+                  x="3"
+                  y="4"
+                  width="18"
+                  height="18"
+                  rx="2"
+                  ry="2"
+                ></rect>
+                <line
+                  x1="16"
+                  y1="2"
+                  x2="16"
+                  y2="6"
+                ></line>
+                <line
+                  x1="8"
+                  y1="2"
+                  x2="8"
+                  y2="6"
+                ></line>
+                <line
+                  x1="3"
+                  y1="10"
+                  x2="21"
+                  y2="10"
+                ></line>
               </svg>
               <div className="pl-1 text-gray-400">
-                {moment(post.createdAt).format("MMM DD, YYYY")}
+                {moment(post.createdAt).format('MMM DD, YYYY')}
               </div>
             </div>
             <div className="relative">
               {post.content.map((c, id) => (
                 <div
-                  className="PostContent relative my-6 text-sm md:text-base text-gray-600"
+                  className="PostContent relative my-6 text-base text-gray-600"
                   key={id}
                 >
                   <Markdown>{c.html}</Markdown>
@@ -66,7 +87,7 @@ const PostDetail = ({ post }) => {
         </Suspense>
       )} */}
     </div>
-  )
-}
+  );
+};
 
 export default PostDetail

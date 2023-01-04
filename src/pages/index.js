@@ -1,16 +1,12 @@
-import React from "react"
-
+import React from 'react';
 import {
   HeroPage,
   Services,
   SocialProof,
   Features,
-  CategoryFilter,
-  Course,
   Team,
   Steps,
-} from "../components/"
-
+} from '../components/';
 
 const Home = () => {
   return (
@@ -32,7 +28,7 @@ const Home = () => {
         <SocialProof />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

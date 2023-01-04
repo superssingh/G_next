@@ -13,8 +13,8 @@ const About = () => {
         <div className="relative p-2 text-slate-200 ">
           <div className="text-lg p-2 text-justify">
             Welcome to <strong>Gogixer</strong>, an online learning platform for
-            students and web developers to learn web development skills like{" "}
-            <strong>Front-End, Back-End </strong> and{" "}
+            students and web developers to learn web development skills like{' '}
+            <strong>Front-End, Back-End </strong> and{' '}
             <strong>Full-Stack development. </strong>
           </div>
         </div>
@@ -40,7 +40,6 @@ const About = () => {
               </div> */}
             </div>
           </div>
-
           <SocialWidget social={TagName.founderData.social} />
           <div className="text-lg p-4  text-gray-200 text-justify">
             <Markdown>{TagName.founderData.des}</Markdown>
@@ -52,7 +51,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default About

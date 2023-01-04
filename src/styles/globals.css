@@ -779,7 +779,7 @@
   margin: 12px 0;
 }
 .PostContent h3 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   margin: 10px 0;
 }
@@ -796,7 +796,7 @@
   position: relative;
   border-radius: 0.3rem;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 14px;
   padding: 5px 10px;
   box-shadow: 0 0px 3px 0px rgba(28, 7, 61, 0.26);
 }
@@ -1053,8 +1053,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: rgb(9, 9, 9);
   background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+  color: rgb(9, 9, 9);
   background-attachment: fixed;
   background-size: cover;
   font-family: Poppins;

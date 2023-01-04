@@ -9,17 +9,6 @@ export { default as backend } from "./assets/backend.svg";
 export { default as fullstack } from "./assets/fullstack.svg";
 export { default as deploy } from "./assets/deploy.svg";
 
-// export {
-//   founderPic,
-//   founder,
-//   founderPic2,
-//   coding,
-//   frontend,
-//   backend,
-//   fullstack,
-//   deploy,
-// };
-
 //JS Files---
 export * as TagName from "./js/constants";
 export { default as Paginate } from "./js/paginate";
