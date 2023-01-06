@@ -1,6 +1,6 @@
-import Image from "next/legacy/image"
-import Link from "next/link"
-import { frontend } from ".."
+import Image from 'next/legacy/image';
+import Link from 'next/link';
+import { frontend } from '..';
 
 const HeroPage = () => {
   return (
@@ -12,15 +12,18 @@ const HeroPage = () => {
               <div className="grid max-w-5xl justify-center">
                 <div className=" text-center md:text-left text-4xl font-semibold ">
                   <h1 className=" py-4 text-4xl font-bold text-gray-900 sm:text-5xl md:text-5xl text-center md:text-left">
-                    <div className="text-7xl pb-2">{"Hello,"}</div>
+                    <div className="text-7xl pb-2">{'Hello,'}</div>
                     <span className="">
                       Let's build something amazing by doing.
                     </span>
                   </h1>
                 </div>
                 <div className="grid place-content-center md:place-content-start py-2">
-                  <Link href="/courses">
-                    <div className="hoverEffect w-32 font-bold p-4 text-lg text-center bgTeal1 shadow-xl shadow-black rounded-full  ">
+                  <Link
+                    href="/courses"
+                    className="z-10"
+                  >
+                    <div className=" hoverEffect w-32 font-bold p-4 text-lg text-center bgTeal1 shadow-xl shadow-black rounded-full ">
                       Let's Go
                     </div>
                   </Link>
@@ -32,7 +35,7 @@ const HeroPage = () => {
                 src={frontend}
                 width={500}
                 height={500}
-                alt={"HeroImage"}
+                alt={'HeroImage'}
                 layout="intrinsic"
                 priority
                 className="relative rounded-xl z-[2] "
@@ -42,7 +45,7 @@ const HeroPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroPage
+export default HeroPage;
