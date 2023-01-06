@@ -21,7 +21,7 @@ const HeroPage = () => {
                 <div className="grid place-content-center md:place-content-start py-2">
                   <Link
                     href="/courses"
-                    className="z-10"
+                    className="z-1"
                   >
                     <div className=" hoverEffect w-32 font-bold p-4 text-lg text-center bgTeal1 shadow-xl shadow-black rounded-full ">
                       Let's Go
