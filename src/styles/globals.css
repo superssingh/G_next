@@ -1071,7 +1071,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.card {
+.cardColor {
   background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
   transition: 0.5s ease-in-out;
 }
@@ -1237,17 +1237,16 @@ body {
   }
   .serviceCard {
     display: grid;
-    border: 1px solid rgba(189, 189, 189, 0.5);
     transition: all 0.5s ease;
     overflow: hidden;
+    box-shadow: 0 3px 2px 0px rgba(34, 4, 62, 0.704);
   }
   .serviceCard * {
     fill: rgb(241, 247, 242);
   }
   .serviceCard:hover {
     color: #fff;
-    background: linear-gradient(180deg, rgb(21, 213, 171) 0%, rgb(17, 145, 117) 100%);
-    box-shadow: 0px 8px 5px 5px rgba(24, 24, 24, 0.85);
+    box-shadow: 0px 8px 5px 5px rgb(24, 24, 24);
   }
   .serviceCard:hover .serviceDesc {
     display: block;
@@ -1255,7 +1254,7 @@ body {
     padding: 10px 14px;
     -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
             animation: 0.7s ease-out 0s 1 slideInBottom;
-    background: linear-gradient(0deg, rgba(8, 8, 8, 0.8431372549), rgba(87, 89, 88, 0.7215686275));
+    background: linear-gradient(180deg, rgba(21, 213, 171, 0.859) 0%, rgba(17, 145, 117, 0.859) 100%);
     box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
   }
   .courseCard {

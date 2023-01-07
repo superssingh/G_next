@@ -6,7 +6,10 @@ const Features = () => {
     <div>
       {TagName.Skills.map((s, i) => {
         return (
-          <div key={i} className="grid justify-center my-8 px-4 ">
+          <div
+            key={i}
+            className="grid justify-center my-8 px-4 "
+          >
             <div className="">
               {(i % 2 == 0 && (
                 <div className="grid align-middle h-full md:grid-cols-2 max-w-6xl my-8 px-4  ">
@@ -20,7 +23,10 @@ const Features = () => {
                       </div>
                     </div>
                     <div className="grid place-content-center md:place-content-start">
-                      <Link href={s.url} legacyBehavior>
+                      <Link
+                        href={s.url}
+                        legacyBehavior
+                      >
                         <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                           Let's Started
                         </div>
@@ -30,7 +36,7 @@ const Features = () => {
                   <div className="grid place-content-center px-4 object-fit overflow-hidden ">
                     <Image
                       src={s.image}
-                      alt={s.name + "image"}
+                      alt={s.name + 'image'}
                       layout="intrinsic"
                     />
                   </div>
@@ -40,7 +46,7 @@ const Features = () => {
                   <div className="grid place-content-center px-4 object-cover overflow-hidden ">
                     <Image
                       src={s.image}
-                      alt={s.name + "image"}
+                      alt={s.name + 'image'}
                       layout="intrinsic"
                     />
                   </div>
@@ -53,7 +59,10 @@ const Features = () => {
                         {s.des}
                       </div>
                       <div className="grid place-content-center md:place-content-end">
-                        <Link href={s.url} legacyBehavior>
+                        <Link
+                          href={s.url}
+                          legacyBehavior
+                        >
                           <div className="w-fit bg-violet-600/30 customShadow p-4 rounded-full mx-2 my-4 text-white font-bold hover:bg-purple-500/70 animate">
                             Let's Started
                           </div>
