@@ -16,7 +16,7 @@ const Services = () => {
                 legacyBehavior
               >
                 <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2 ">
-                  <div className="serviceCard bg-gray-800/50 w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md">
+                  <div className="serviceCard  w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md drop">
                     <div className="w-full flex place-content-start md:grid  md:place-content-center ">
                       <div className="grid relative place-content-center md:place-content-center px-4 py-2">
                         {m.icon}

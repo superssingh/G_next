@@ -1,7 +1,6 @@
 import React from 'react';
 import { getPosts, getPostDetail } from '../../services/getBlogData';
 import { HeadTag, PostDetail, PostWidget, Comment } from '../../components';
-import moment from 'moment';
 
 // const supabase = createClient(
 //   process.env.NEXT_PUBLIC_SUPABASE_URL,
