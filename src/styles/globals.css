@@ -665,14 +665,15 @@
   border-top: 2px solid rgb(58, 58, 58);
   padding: 12px 0;
 }
-.policy p,
+.policy p, .policy a,
 .policy ul,
 .terms p,
+.terms a,
 .terms ul {
   margin: 10px 0;
   padding: 0 10px;
   text-align: justify;
-  font-size: 14px;
+  font-size: 12px;
 }
 .policy .PolicyLink,
 .terms .PolicyLink {
@@ -688,6 +689,7 @@
   content: "✅";
   padding: 10px 10px 10px 0;
   font-weight: 500;
+  font-size: 12px;
 }
 
 .paginationButton {

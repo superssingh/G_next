@@ -12,12 +12,12 @@
     padding: 12px 0;
   }
 
-  p,
+  p,a,
   ul {
     margin: 10px 0;
     padding: 0 10px;
     text-align: justify;
-    font-size: 14px;
+    font-size: 12px;
   }
   .PolicyLink {
     background: rgb(3, 184, 9);
@@ -30,5 +30,6 @@
     content: "✅";
     padding: 10px 10px 10px 0;
     font-weight: 500;
+    font-size: 12px;
   }
 }

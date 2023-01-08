@@ -25,7 +25,7 @@ const Policy = () => {
             that they shared and/or collect in gogixer.com. This policy is not
             applicable to any information collected offline or via channels
             other than this website. Our Privacy Policy was created with the
-            help of the{" "}
+            help of the{' '}
             <a href="https://privacypolicygenerator.info">
               Free Privacy Policy Generator
             </a>
@@ -129,7 +129,10 @@ const Policy = () => {
             internet. However, visitors may choose to decline the use of DART
             cookies by visiting the Google ad and content network Privacy Policy
             at the following URL –
-            <a href="policies.google.com/technologies/ads">
+            <a
+              href="policies.google.com/technologies/ads"
+              className="text-xs"
+            >
               policies.google.com/technologies/ads
             </a>
           </div>
@@ -147,7 +150,10 @@ const Policy = () => {
           <ul>
             <div>Google</div>
             <div>
-              <a href="https://policies.google.com/technologies/ads">
+              <a
+                href="https://policies.google.com/technologies/ads"
+                className="text-xs"
+              >
                 https://policies.google.com/technologies/ads
               </a>
             </div>
@@ -274,7 +280,7 @@ const Policy = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Policy
