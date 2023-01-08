@@ -1,6 +1,4 @@
 import React from 'react';
-// import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
-// import { SessionContextProvider } from '@supabase/auth-helpers-react';
 import '../styles/globals.css';
 import Head from 'next/head';
 import { SessionProvider } from 'next-auth/react';
@@ -9,7 +7,6 @@ import { Poppins } from '@next/font/google';
 const customFont = Poppins({ weight: '400', subsets: 'latin-ext' });
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-  // const [supabase] = useState(() => createBrowserSupabaseClient());
   return (
     <div className={customFont.className}>
       <Head>
@@ -69,10 +66,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           content="#ffffff"
         />
       </Head>
-      {/* <SessionContextProvider
-        supabaseClient={supabase}
-        initialSession={pageProps.initialSession}
-      > */}
       <Layout>
         <div className="flex min-h-screen w-full flex-col">
           <div className=" mb-10  flex-grow  ">
@@ -82,7 +75,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           </div>
         </div>
       </Layout>
-      {/* </SessionContextProvider> */}
     </div>
   );
 }

@@ -5,7 +5,7 @@ const AuthorInfo = ({ author }) => {
   return (
     <div className=" bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-b-lg p-4 my-2">
       <div className="grid w-full place-content-center">
-        <div className="AuthorPic animate grid w-20 p-1 place-content-center mt-[-30px] rotate-[45deg] rounded-full overflow-hidden z-[1] hover:bg-purple-200">
+        <div className="AuthorPic grid w-20 p-1 place-content-center mt-[-30px]  rounded-full overflow-hidden z-[1] hover:bg-purple-200">
           <Image
             src={author.photo.url}
             alt="Picture of the author"
@@ -13,7 +13,7 @@ const AuthorInfo = ({ author }) => {
             height={72}
             layout="intrinsic"
             priority
-            className="object-cover shadow-lg rounded-full rotate-[-45deg]"
+            className="object-cover shadow-lg rounded-full "
           />
         </div>
       </div>

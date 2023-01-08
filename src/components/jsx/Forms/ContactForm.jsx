@@ -123,7 +123,10 @@ const ContactForm = () => {
               Contact Us
             </div>
             {/* /-----------------------------------------------------------------------------form  */}
-            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+            <form
+              ref={form}
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <div className="grid relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
                 <div className="grid relative w-64 md:flex md:w-full ">
                   <div className=" relative p-2 mb-4 ">
@@ -160,7 +163,7 @@ const ContactForm = () => {
                 <input
                   type="submit"
                   value="Send"
-                  className=" rounded-full autoColorChange p-4 shadow-lg shadow-black/50"
+                  className="fancyBtn rounded-full randomBG1 p-4 hover:bg-black/50"
                 />
               </div>
             </form>
@@ -193,7 +196,7 @@ const ContactForm = () => {
         pauseOnHover
       />
     </div>
-  )
+  );
 }
 
 export default ContactForm

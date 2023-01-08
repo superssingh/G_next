@@ -23,8 +23,10 @@ const HeroPage = () => {
                     href="/courses"
                     className="z-1"
                   >
-                    <div className=" hoverEffect w-32 font-bold p-4 text-lg text-center bgTeal1 shadow-xl shadow-black rounded-full ">
-                      Let's Go
+                    <div className="w-fit font-bold p-4 text-lg fancyRadius1 text-center randomBG hoverEffect shadow-xl shadow-black rounded-full">
+                      <div className=" font-bold p-4 text-lg fancyRadius1 text-center randomBG1 hoverEffect shadow-xl shadow-black rounded-full animate-pulse hover:animate-none">
+                        <span>Let's Go</span>
+                      </div>
                     </div>
                   </Link>
                 </div>

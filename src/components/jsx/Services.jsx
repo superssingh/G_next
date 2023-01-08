@@ -2,7 +2,7 @@ import Link from "next/link";
 import { TagName } from "..";
 const Services = () => {
   return (
-    <div className=" py-5 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+    <div className="  py-5 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
       <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
         <h1 className="text-3xl text-slate-400 font-bold uppercase ">
           Our Services
@@ -15,21 +15,21 @@ const Services = () => {
                 key={m.title}
                 legacyBehavior
               >
-                <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2 ">
-                  <div className="serviceCard  w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md drop">
-                    <div className="w-full flex place-content-start md:grid  md:place-content-center ">
-                      <div className="grid relative place-content-center md:place-content-center px-4 py-2">
-                        {m.icon}
+                <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2  ">
+                  <div className="serviceCard z-2 w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md transition duration-700 ">
+                    <div className="w-full flex place-content-start md:grid md:place-content-center ">
+                      <div className="service grid w-fit place-content-center place-self-center randomBG2 fancyRadius p-6 md:p-8 shadow-black ">
+                        <div className="grid w-full h-10 relative place-content-center md:place-content-center p-2 md:p-4">
+                          {m.icon}
+                        </div>
+                        <span className=" text-center text-base md:text-xl pt-4 md:font-semibold">
+                          {m.title}
+                        </span>
                       </div>
-                      <div className=" place-content-center">
-                        <div className="relative h-full  place-content-center ">
-                          <div className=" p-2 text-slate-100 text-left text-xl md:text-md lg:text-3xl uppercase font-bold md:text-center drop-shadow-none">
-                            {m.title}
-                          </div>
-                          <div className=" lg:mx-4 lg:w-fit">
-                            <div className="w-full serviceDesc text-left lg:text-center text-slate-200 text-md px-2 lg:rounded-md">
-                              {m.description}
-                            </div>
+                      <div className="grid  place-content-center ">
+                        <div className="grid lg:mx-2 lg:w-fit">
+                          <div className=" serviceDesc text-left text-slate-200 text-base p-4 rounded-full lg:rounded-lg">
+                            {m.description}
                           </div>
                         </div>
                       </div>

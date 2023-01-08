@@ -1,5 +1,7 @@
-import { request, gql } from "graphql-request";
-const graphAPI = process.env.GRAPH_PUBLIC_ENDPOINT;
+import { throws } from 'assert';
+import { request, gql } from 'graphql-request';
+const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT;
+
 export const getPosts = async () => {
   const query = gql`
     query getPosts {
@@ -43,8 +45,8 @@ export const getPosts = async () => {
     }
   `;
 
-  const results = await request(graphAPI, query);
-  return results.postsConnection.edges;
+  const result = await request(graphAPI, query);
+  return result.postsConnection.edges;
 };
 
 export const getCategories = async () => {

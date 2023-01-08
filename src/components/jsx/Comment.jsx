@@ -1,6 +1,10 @@
+import LoginBtn from './login_btn';
 const Comment = ({ comments }) => {
   return (
     <div>
+      <div className="w-fit text-white bg-purple-700/70 rounded-md p-4">
+        <LoginBtn />
+      </div>
       {comments && (
         <div className="grid relative bg-white/[.30] rounded-sm p-2">
           <div className="grid w-full  text-green-100 font-semibold">
@@ -38,7 +42,7 @@ const Comment = ({ comments }) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Comment
+export default Comment;

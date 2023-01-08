@@ -1,11 +1,17 @@
 import Link from "next/link";
 const Back = ({ path = "/" }) => {
   return (
-    <Link href={path} legacyBehavior>
-      <div id="backButton" className=" top-0 w-fit h-fit animate-pulse mt-4">
+    <Link
+      href={path}
+      legacyBehavior
+    >
+      <div
+        id="backButton"
+        className="grid absolute w-10 h-10 md:w-12 md:h-12 p-2 md:p-3 rounded-full top-0 mt-[-12px] "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className=""
           fill="none"
           viewBox="0 0 24 24"
           stroke="#000000"
