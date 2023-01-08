@@ -10,7 +10,7 @@ const SocialWidget = ({ social }) => {
               key={s.name}
               legacyBehavior
             >
-              <div className={`${s.name} p-1 `}>{s.icon}</div>
+              <div className={s.name}>{s.icon}</div>
             </Link>
           );
         })}
