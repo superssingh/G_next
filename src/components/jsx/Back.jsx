@@ -14,7 +14,7 @@ const Back = ({ path = "/" }) => {
           className=""
           fill="none"
           viewBox="0 0 24 24"
-          stroke="#000000"
+          stroke="#fff"
         >
           <path
             strokeLinecap="round"

@@ -33,8 +33,8 @@ export const HomeMenu = {
 
 export const menus = [
   {
-    name: "Articles",
-    path: "/posts",
+    name: 'Articles',
+    path: '/posts',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +54,8 @@ export const menus = [
   },
 
   {
-    name: "Courses",
-    path: "/courses",
+    name: 'Courses',
+    path: '/courses',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -96,8 +96,8 @@ export const menus = [
   //   ),
   // },
   {
-    name: "Contact",
-    path: "/contact",
+    name: 'Contact',
+    path: '/contact',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -116,18 +116,16 @@ export const menus = [
     ),
   },
   {
-    name: "About",
-    path: "/about",
+    name: 'About',
+    path: '/about',
     icon: (
       <svg
-        fill="#fff"
         xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         stroke="currentColor"
         strokeWidth="0"
-        width="24px"
-        height="24px"
-        className="h-6 w-6"
+        fill="#fff"
       >
         <path
           strokeLinecap="round"

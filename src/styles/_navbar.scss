@@ -198,20 +198,20 @@
     min-height: 100vh;
     height: wrap;
     place-self: top;
-    justify-content: end;
-    // background: $mobileNavColor;
+    justify-content: end;        
     backdrop-filter: blur(2em);
-    .mobile-menus {
+    .mobile-menus {        
       place-self: top;
-      width: 100%;
+      width: fit-content;
       height: wrap;
-      top: 0;      
-      background: $navBarColor;
-      backdrop-filter: blur(2em);
-      box-shadow: 0px 0px 0px 1px rgba(193, 192, 193, 0.154);
-      .mobileMenu:hover {
-        animation: 0.7s ease-out 0s 1 slideInLeft;    
-        box-shadow: -5px 0px 0px 0px rgb(255, 255, 255)
+      top: 0;   
+      background: $background-image1;
+      .mobileMenu{
+        width: 100%;
+      }         
+      .mobileMenu:hover {   
+        background: $GradientTeal;              
+        box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);       
       }
       
     }

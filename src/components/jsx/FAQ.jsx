@@ -28,8 +28,8 @@ const FAQ = ({ FAQ }) => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="iconPointer  grid  w-6 h-6 font-bold mr-2 rounded-full shadow-md shadow-black bg-white"
+                  stroke="#fff"
+                  className="iconPointer  grid  w-6 h-6 font-bold mr-2 rounded-full shadow-md shadow-black randomBG1 hover:animate-pulse"
                 >
                   <path
                     strokeLinecap="round"

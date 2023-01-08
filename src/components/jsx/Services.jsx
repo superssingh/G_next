@@ -15,14 +15,14 @@ const Services = () => {
                 key={m.title}
                 legacyBehavior
               >
-                <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2  ">
+                <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2 pl-2 ">
                   <div className="serviceCard z-2 w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md transition duration-700 ">
                     <div className="w-full flex place-content-start md:grid md:place-content-center ">
-                      <div className="service grid w-fit place-content-center place-self-center randomBG fancyRadius p-6 md:p-8 shadow-black md:hover:animate-pulse">
-                        <div className="grid w-full h-10 relative place-content-center md:place-content-center p-2 md:p-4">
+                      <div className="service grid w-fit h-fit place-content-center place-self-center randomBG fancyRadius p-6 md:p-8 shadow-black md:hover:animate-pulse">
+                        <div className="grid w-full h-8 relative place-content-center place-self-center p-4 md:p-8">
                           {m.icon}
                         </div>
-                        <span className=" text-center text-base md:text-xl pt-4 md:font-semibold">
+                        <span className="grid text-center place-self-center text-base md:text-xl pt-4 md:font-semibold">
                           {m.title}
                         </span>
                       </div>

@@ -47,7 +47,7 @@ const Navbar = () => {
                   href={TagName.HomeMenu.path}
                   legacyBehavior
                 >
-                  <div className="grid relative p-2 rounded hoverEffect ">
+                  <div className="grid relative p-2 rounded-full randomBG1 hover:animate-pulse hover:bg-black/50 shadow-xl shadow-black ">
                     {TagName.HomeMenu.icon}
                   </div>
                 </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
         className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
         onClick={handleClicked}
       >
-        <div className="mobile-menus z-[5] px-4 py-2 ">
+        <div className="mobile-menus z-[5] px-4 py-2  ">
           {TagName.menus.map((m) => (
             <Link
               href={m.path}
@@ -96,10 +96,10 @@ const Navbar = () => {
             >
               <div
                 onClick={handleClicked}
-                className="flex relative w-full z-10 transition-all duration-300 rounded-md hoverEffect py-2 px-4 my-2"
+                className="mobileMenu flex relative w-full z-10 transition-all duration-300 rounded-md hover:shadow-lg shadow-black hover:bg-teal-600 py-2 px-4 my-2 text-white"
               >
                 {m.icon}
-                <div className="pl-4 w-full text-md">{m.name}</div>
+                <div className="pl-4 w-full text-base ">{m.name}</div>
               </div>
             </Link>
           ))}
