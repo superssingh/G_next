@@ -247,12 +247,12 @@ body {
       fill: rgba(241, 247, 242, 1);
     }
     .service{
-      box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.55);
+      box-shadow: 0px 8px 6px 2px rgba(24, 24, 24, 1);
     } 
     &:hover {    
     color: #fff;
     .service{
-      box-shadow: 0px 8px 5px 2px rgba(227, 110, 246, 0.821);
+      box-shadow: 0px 14px 10px 0px rgba(16, 17, 17, 0.821)
     } 
     // background: $GradientTeal1;
     // box-shadow: 0px 5px 2px 2px rgba(24, 24, 24, 1);      
@@ -317,13 +317,17 @@ body {
     padding: 10px 0;    
     border: 2px solid rgba(12, 219, 133, 0);
     transition: all 0.5s ease;
+    .service{
+      transition: all 0.5s ease;
+      box-shadow: 0px 6px 4px 0px rgba(24, 24, 24, 1);
+    } 
     .serviceDesc {      
       background: $background-image1;
        box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
     }
     &:hover {  
       .service{
-        box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
+        box-shadow: 0px 12px 6px 0px rgb(26, 25, 26);
       } 
       .serviceDesc {
         bottom: 0px;
