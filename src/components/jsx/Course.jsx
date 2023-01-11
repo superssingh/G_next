@@ -9,9 +9,13 @@ const Course = () => {
         <div className="grid relative md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m) => {
             return (
-              <Link href={m.path} key={m.title} legacyBehavior>
+              <Link
+                href={m.path}
+                key={m.title}
+                legacyBehavior
+              >
                 <div className="relative w-full transition-all duration-700 text-left sm:place-items-center ">
-                  <div className="courseCard w-full h-fit md:w-fit md:h-52 ">
+                  <div className="courseCard w-full h-fit md:w-fit md:h-52 rounded-lg bg-black/30 shadow-lg md:m-2 shadow-black">
                     <div className="flex relative w-full h-full place-content-start md:grid md:w-60 md:place-content-center ">
                       <div className=" grid place-self-center place-content-center text-center place-items-center px-4 p-2 ">
                         {m.icon}

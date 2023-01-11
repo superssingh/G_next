@@ -1233,13 +1233,11 @@ body {
   }
   .courseCard {
     display: grid;
-    border: 2px solid rgba(207, 214, 210, 0.194);
     transition: all 0.5s ease;
     overflow: hidden;
   }
   .courseCard:hover {
     background: rgba(45, 7, 77, 0.643);
-    border: 2px solid rgba(207, 214, 210, 0);
   }
   .courseCard:hover * {
     fill: rgb(94, 246, 198);
