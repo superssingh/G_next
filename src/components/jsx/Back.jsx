@@ -7,7 +7,7 @@ const Back = ({ path = "/" }) => {
     >
       <div
         id="backButton"
-        className="grid absolute w-10 h-10 md:w-12 md:h-12 p-2 md:p-3 rounded-full top-0 mt-[-12px] "
+        className="grid absolute w-10 h-10 md:w-12 md:h-12 p-2 md:p-3 rounded-full top-0 mt-[-12px] animate-pulse hover:animate-none "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
