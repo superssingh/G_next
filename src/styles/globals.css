@@ -1208,7 +1208,6 @@ body {
     display: grid;
     position: relative;
     transition: all 0.5s ease;
-    overflow: hidden;
   }
   .serviceCard * {
     fill: rgb(241, 247, 242);
