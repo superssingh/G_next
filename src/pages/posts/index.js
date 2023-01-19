@@ -1,33 +1,34 @@
 import React, { useEffect, useContext, useState } from "react"
 import { getPosts } from "../../services/getBlogData"
-
-import moment from "moment"
-import _ from "lodash"
+import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
+import moment from 'moment';
+import _ from 'lodash';
 import {
   PostCard,
   PostWidget,
   Paginate,
   Pagination,
   NotFound,
-} from "../../components"
+} from '../../components';
 
-const Home = ({ posts }) => {
+const Posts = ({ posts }) => {
+  const { data } = useQuery({
+    queryKey: ['posts'],
+    queryFn: getPosts,
+    initialData: posts,
+  });
   const [recentPosts, setRecentPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 6;
 
-  useEffect(() => {
-    if (filteredPosts.length == 0) {
-      getLatestPosts();
-    }
-  }, [filteredPosts]);
+  getLatestPosts();
 
   async function getLatestPosts() {
-    if (posts) {
+    if (data) {
       try {
         const recent = await _.orderBy(
-          posts,
+          data,
           (a) => moment(a.node.createdAt).format('YYYYMMDD'),
           'desc'
         );
@@ -50,9 +51,9 @@ const Home = ({ posts }) => {
   return (
     <div>
       {(recentPosts.length >= 1 && (
-        <div className="grid  relative w-full lg:grid-cols-12 gap-4 ">
-          <div className="grid w-full  md:col-span-8 max-w-5xl">
-            <div className="grid w-full px-2 justify-center place-self-start content-center md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
+        <div className="relative  grid w-full gap-4 lg:grid-cols-12 ">
+          <div className="grid w-full  max-w-5xl md:col-span-8">
+            <div className="grid w-full content-center justify-center place-self-start px-2 md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
               {filteredPosts.map((p) => (
                 <PostCard
                   post={p.node}
@@ -60,8 +61,8 @@ const Home = ({ posts }) => {
                 />
               ))}
             </div>
-            <div className="grid place-content-center bottom-0  ">
-              <div className="text-white  place-content-center">
+            <div className="bottom-0 grid place-content-center  ">
+              <div className="place-content-center  text-white">
                 <Pagination
                   itemCount={recentPosts.length}
                   pageSize={pageSize}
@@ -72,8 +73,8 @@ const Home = ({ posts }) => {
             </div>
           </div>
 
-          <div className="w-full grid p-2 relative  md:col-span-8 lg:col-span-4 place-content-center lg:place-content-start ">
-            <div className="w-fit relative lg:sticky lg:place-content-start lg:w-78 ">
+          <div className="relative grid w-full place-content-center  p-2 md:col-span-8 lg:col-span-4 lg:place-content-start ">
+            <div className="lg:w-78 relative w-fit lg:sticky lg:place-content-start ">
               <PostWidget posts={recentPosts} />
             </div>
           </div>
@@ -87,10 +88,9 @@ const Home = ({ posts }) => {
     </div>
   );
 };
-export default Home;
+export default Posts;
 
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
-  // const categories = (await getCategories()) || [];
   return { props: { posts }, revalidate: 90000 };
 }
