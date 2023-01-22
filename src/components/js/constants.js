@@ -1157,29 +1157,29 @@ export const steps = [
 
 export const Skills = [
   {
-    name: "Frontend Development",
-    des: "In this section, you're going to learn HTML, CSS/SCSS, TailwindCSS, Javascript libraries such as ReactJS and NextJS, and GitHub Version Control. These skills help you to build responsive user interfaces and connect them with third-party REST API data through ReactJS and NextJS.",
+    name: 'Frontend Development',
+    des: "In this section, you're going to learn HTML, CSS/SCSS, TailwindCSS, Javascript libraries (ReactJS and NextJS) and GitHub Version Control. These skills help you to build responsive user interfaces and connect them with third-party REST API data through ReactJS and NextJS.",
     image: frontend,
-    url: "courses/frontend",
+    url: 'courses/frontend',
   },
   {
-    name: "Backend Development",
-    des: "For Backend development, you need to learn about various types of databases and Javascript libraries NodeJS and ExpressJS to build your own secure backend APIs from scratch and connect with the Frontend.",
+    name: 'Backend Development',
+    des: 'For Backend development, you need to learn about various types of databases and Javascript libraries NodeJS and ExpressJS to build your own secure backend APIs from scratch and connect with the Frontend.',
     image: backend,
-    url: "courses/backend",
+    url: 'courses/backend',
   },
   {
-    name: "Deployment",
+    name: 'Deployment',
     des: "Deployment is the easiest and less time-consuming. In this part, you're going to config the project and then deploy it into the cloud. We often deploy on Github, Netlify & Vercel.",
     image: deploy,
-    url: "courses/deployment",
+    url: 'courses/deployment',
   },
   {
-    name: "Full Stack Development",
+    name: 'Full Stack Development',
 
-    des: "A Full Stack Developer can develop both client and server software which includes all three; frontend, backend and deployment. In this part, you have to create a project yourself. In addition, you gonna learn how to be a problem-solving contributor in open-source communities on Github.",
+    des: 'A Full Stack Developer can develop both client and server software which includes all three; frontend, backend and deployment. In this part, you have to create a project yourself. In addition, you gonna learn how to be a problem-solving contributor in open-source communities on Github.',
     image: fullstack,
-    url: "courses/fullstack",
+    url: 'courses/fullstack',
   },
 ];
 
