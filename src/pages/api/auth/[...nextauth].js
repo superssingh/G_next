@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import TwitterProvider from 'next-auth/providers/twitter';
+import { BrandLogo, Logo } from '../../../components';
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
@@ -37,6 +38,12 @@ export const authOptions = {
       session.accessToken = token.accessToken;
       return session;
     },
+  },
+  theme: {
+    colorScheme: 'light', // "auto" | "dark" | "light"
+    brandColor: '', // Hex color code
+    logo: 'https://www.gogixer.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgogixerlogo.324c2afe.png&w=128&q=75', // Absolute URL to image
+    buttonText: '', // Hex color code
   },
 };
 export default NextAuth(authOptions);
