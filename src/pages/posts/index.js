@@ -15,7 +15,7 @@ const Posts = ({ posts }) => {
   const { data } = useQuery({
     queryKey: ['posts'],
     queryFn: getPosts,
-    initialData: posts,
+    // initialData: posts,
   });
   const [recentPosts, setRecentPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);

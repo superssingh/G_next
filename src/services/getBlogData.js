@@ -1,4 +1,3 @@
-import { throws } from 'assert';
 import { request, gql } from 'graphql-request';
 const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT;
 

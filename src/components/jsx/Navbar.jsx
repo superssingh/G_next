@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/legacy/image"
-import { TagName, BrandName, Logo, SocialWidget } from ".."
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/legacy/image';
+import { TagName, BrandName, Logo, SocialWidget } from '..';
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
             legacyBehavior
             className="grid w-28"
           >
-            <div className="relative overflow-hidden mx-4 hover:hue-rotate-180 transition-all duration-700">
+            <div className="relative mx-4 overflow-hidden transition-all duration-700 hover:hue-rotate-180">
               <Image
                 src={BrandName}
                 alt={TagName.COMPANY_NAME}
@@ -39,7 +40,7 @@ const Navbar = () => {
           <ul className={TagName.MENU_DEFAULT}>
             <li>
               <div
-                className="grid relative px-2 rounded "
+                className="relative grid rounded px-2 "
                 tabIndex={1}
               >
                 <Link
@@ -47,7 +48,7 @@ const Navbar = () => {
                   href={TagName.HomeMenu.path}
                   legacyBehavior
                 >
-                  <div className="grid relative p-2 rounded-full randomBG1 hover:animate-pulse hover:bg-black/50 shadow-xl shadow-black ">
+                  <div className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50 ">
                     {TagName.HomeMenu.icon}
                   </div>
                 </Link>
@@ -96,10 +97,10 @@ const Navbar = () => {
             >
               <div
                 onClick={handleClicked}
-                className="mobileMenu flex relative w-full z-10 transition-all duration-300 rounded-md hover:shadow-lg shadow-black hover:bg-teal-600 py-2 px-4 my-2 text-white"
+                className="mobileMenu relative z-10 my-2 flex w-full rounded-md py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
               >
                 {m.icon}
-                <div className="pl-4 w-full text-base ">{m.name}</div>
+                <div className="w-full pl-4 text-base ">{m.name}</div>
               </div>
             </Link>
           ))}
