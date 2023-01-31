@@ -338,3 +338,9 @@
       background: $menusColors;     
     }
 }
+
+.bgNavbar{  
+  background: $backgroundColor;
+  background-attachment: fixed;
+  background-size: cover;
+}

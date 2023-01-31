@@ -12,14 +12,13 @@ const Blog = ({ post, posts }) => {
       <HeadTag post={post} />
 
       <div className="grid ">
-        <div className="grid relative w-full md:px-4 pb-4 lg:grid-cols-12 gap-x-6 gap-y-4 place-content-center ">
-          <div className=" grid max-w-4xl place-self-center content-center md:col-span-8">
+        <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
+          <div className=" grid max-w-4xl content-center place-self-center md:col-span-8">
             <PostDetail post={post} />
-
             <Comment />
           </div>
           <div className="grid w-full md:col-span-8 lg:col-span-4">
-            <div className="place-content-center md:flex lg:grid lg:sticky lg:place-content-start">
+            <div className="place-content-center md:flex lg:sticky lg:grid lg:place-content-start">
               {posts && (
                 <PostWidget
                   posts={posts}

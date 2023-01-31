@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="Navigation  ">
       <div>
-        <header className="Navbar ">
+        <header className="Navbar bgNavbar">
           <Link
             href="/"
             legacyBehavior
@@ -48,7 +48,7 @@ const Navbar = () => {
                   href={TagName.HomeMenu.path}
                   legacyBehavior
                 >
-                  <div className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50 ">
+                  <div className=" randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black transition-shadow duration-700 hover:shadow-md hover:shadow-black ">
                     {TagName.HomeMenu.icon}
                   </div>
                 </Link>

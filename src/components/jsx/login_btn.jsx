@@ -5,16 +5,26 @@ export default function LoginBtn() {
 
   if (session) {
     return (
-      <div className="bg-gray-100">
+      <div>
         Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button
+          onClick={() => signOut()}
+          className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50"
+        >
+          Sign out
+        </button>
       </div>
     );
   }
   return (
-    <>
+    <div>
       Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
-    </>
+      <button
+        onClick={() => signIn()}
+        className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50"
+      >
+        Sign in
+      </button>
+    </div>
   );
 }
