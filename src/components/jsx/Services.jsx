@@ -15,20 +15,20 @@ const Services = () => {
                 key={m.title}
                 legacyBehavior
               >
-                <div className=" grid relative transition-all duration-700 md:place-items-center md:m-2 pl-2 ">
-                  <div className="serviceCard z-2 w-full md:w-60 md:h-60 lg:w-80 lg:h-60 md:rounded-md transition duration-700 ">
-                    <div className="w-full flex place-content-start md:grid md:place-content-center  ">
-                      <div className="service grid w-fit h-fit place-content-center place-self-center randomBG fancyRadius p-6 md:p-8 shadow-black md:hover:animate-pulse">
-                        <div className="grid w-full h-8 relative place-content-center place-self-center p-4 md:p-8">
+                <div className=" relative grid pl-2 transition-all duration-700 md:m-2 md:place-items-center ">
+                  <div className="serviceCard z-2 w-full transition duration-700 md:h-60 md:w-60 md:rounded-md lg:h-60 lg:w-80 ">
+                    <div className="grid w-full place-content-center md:grid ">
+                      <div className="service randomBG1 fancyRadius grid h-fit w-fit place-content-center place-self-center p-6 shadow-black md:p-8 md:hover:animate-pulse">
+                        <div className="relative grid h-8 w-full place-content-center place-self-center p-4 md:p-8">
                           {m.icon}
                         </div>
-                        <span className="grid text-center place-self-center text-base md:text-xl pt-4 md:font-semibold">
+                        <span className="grid place-self-center pt-4 text-center text-base md:text-xl md:font-semibold">
                           {m.title}
                         </span>
                       </div>
                       <div className="grid  place-content-center ">
                         <div className="grid w-fit lg:mx-2 lg:w-fit ">
-                          <div className="w-fit serviceDesc text-left text-slate-200 text-sm md:text-base p-4 rounded-md lg:rounded-lg">
+                          <div className="serviceDesc w-fit rounded-md bg-gray-900/50 p-4 text-left text-sm text-slate-200 md:text-base lg:rounded-lg">
                             {m.description}
                           </div>
                         </div>
