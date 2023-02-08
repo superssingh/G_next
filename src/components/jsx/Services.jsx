@@ -22,7 +22,7 @@ const Services = () => {
                         <div className="relative grid h-8 w-full place-content-center place-self-center p-4 md:p-8">
                           {m.icon}
                         </div>
-                        <span className="grid place-self-center pt-4 text-center text-base md:text-xl md:font-semibold">
+                        <span className="grid place-self-center pt-4 text-center text-base font-bold md:text-xl md:font-semibold">
                           {m.title}
                         </span>
                       </div>
