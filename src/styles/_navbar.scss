@@ -24,7 +24,8 @@
   align-items: center;
   align-content: center;
   place-items: center;    
-  backdrop-filter: blur(2em);
+  backdrop-filter: blur(1em);
+  background:$navBarColor;
   padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
@@ -339,8 +340,3 @@
     }
 }
 
-.bgNavbar{  
-  background: $backgroundColor;
-  background-attachment: fixed;
-  background-size: cover;
-}

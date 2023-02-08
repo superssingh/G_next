@@ -2,16 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@-webkit-keyframes slideInTop {
-  0% {
-    transform: translateY(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes slideInTop {
   0% {
     transform: translateY(-20%);
@@ -20,16 +10,6 @@
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes slideOutTop {
-  100% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  0% {
-    transform: translateY(-20%);
-    opacity: 0;
   }
 }
 @keyframes slideOutTop {
@@ -42,32 +22,12 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes slideInBottom {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes slideInBottom {
   0% {
     transform: translateY(20%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slideOutBottom {
-  100% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  0% {
     transform: translateY(0);
     opacity: 1;
   }
@@ -82,29 +42,9 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes slideInLeft {
-  0% {
-    transform: translateX(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 @keyframes slideInLeft {
   0% {
     transform: translateX(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slideInRight {
-  0% {
-    transform: translateX(20%);
     opacity: 0;
   }
   100% {
@@ -122,14 +62,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes slowShow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes slowShow {
   0% {
     opacity: 0;
@@ -138,31 +70,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes rotate90 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
 @keyframes rotate90 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(90deg);
-  }
-}
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 @keyframes gradient {
@@ -215,20 +128,7 @@
 .autoColorChange {
   background: linear-gradient(180deg, #5e2ac6, #8546f8, rgb(150, 76, 199), rgb(148, 94, 233), rgba(194, 72, 203, 0.9803921569), #b52a9a, #b31190);
   background-size: 500% 500%;
-  -webkit-animation: AnimationName 2000ms ease infinite;
   animation: AnimationName 10s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 78%;
-  }
-  50% {
-    background-position: 100% 23%;
-  }
-  100% {
-    background-position: 0% 78%;
-  }
 }
 @keyframes AnimationName {
   0% {
@@ -252,7 +152,6 @@
 }
 .Navigation div {
   width: inherit;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -266,8 +165,9 @@
   align-items: center;
   align-content: center;
   place-items: center;
-  -webkit-backdrop-filter: blur(2em);
-          backdrop-filter: blur(2em);
+  -webkit-backdrop-filter: blur(1em);
+          backdrop-filter: blur(1em);
+  background: rgba(134, 114, 213, 0.768627451);
   padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
@@ -381,8 +281,7 @@
   }
   .mobile-open {
     opacity: 1;
-    -webkit-animation: 0.3s ease-out 0s 1 slideInRight;
-            animation: 0.3s ease-out 0s 1 slideInRight;
+    animation: 0.3s ease-out 0s 1 slideInRight;
   }
   .mobile-menus {
     display: block;
@@ -391,7 +290,6 @@
     width: auto;
     height: 4rem;
     justify-content: space-between;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
   }
@@ -445,7 +343,6 @@
   }
   .mobile-open .mobile-menus {
     place-self: top;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: wrap;
@@ -474,10 +371,8 @@
     margin-top: 1.5rem;
   }
   .mobile-open .social div a {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 0.3rem;
@@ -503,8 +398,7 @@
   }
   .mobile-close {
     display: none;
-    -webkit-animation: 0.5s ease-out 0s 1 slideInLeft;
-            animation: 0.5s ease-out 0s 1 slideInLeft;
+    animation: 0.5s ease-out 0s 1 slideInLeft;
   }
   .mobile-close .mobileMenus {
     opacity: 0;
@@ -561,7 +455,6 @@
 
 .copyright {
   display: grid;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: wrap;
@@ -573,24 +466,16 @@
 }
 
 .activeFocus:hover {
-  -webkit-animation: 0.7s ease-in-out slideInBottom;
-          animation: 0.7s ease-in-out slideInBottom;
+  animation: 0.7s ease-in-out slideInBottom;
 }
 .activeFocus:focus, .activeFocus:active {
   background: linear-gradient(180deg, rgb(18, 174, 164) 0%, rgb(14, 121, 100) 100%);
-}
-
-.bgNavbar {
-  background: linear-gradient(0deg, hsl(264deg, 84%, 17%) 0%, hsl(263deg, 75%, 21%) 11%, hsl(261deg, 68%, 26%) 22%, hsl(260deg, 61%, 31%) 33%, hsl(258deg, 54%, 36%) 44%, hsl(257deg, 48%, 42%) 56%, hsl(255deg, 43%, 48%) 67%, hsl(254deg, 45%, 54%) 78%, hsl(252deg, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .footer {
   bottom: 0;
   width: 100%;
   height: 100%;
-  min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   margin-top: auto;
@@ -737,7 +622,6 @@
   position: relative;
   align-items: center;
   margin-top: -2.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background: rgba(113, 25, 201, 0.76);
@@ -785,7 +669,6 @@
 }
 input[type=checkbox] {
   opacity: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -796,24 +679,20 @@ input[type=checkbox] {
 
 .answer {
   width: 100%;
-  -webkit-animation: 0.7s ease-in-out slideOutTop;
-          animation: 0.7s ease-in-out slideOutTop;
+  animation: 0.7s ease-in-out slideOutTop;
   height: 0;
   visibility: collapse;
 }
 
 input:checked[type=checkbox] + .faq > .answer {
-  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
-          animation: 0.7s ease-out 0s 1 slideInTop;
-  height: -webkit-fit-content;
+  animation: 0.7s ease-out 0s 1 slideInTop;
   height: -moz-fit-content;
   height: fit-content;
   visibility: visible;
 }
 
 input[type=checkbox]:not(:checked) + .faq > .answer {
-  -webkit-animation: 0.7s ease-in-out slideOutTop;
-          animation: 0.7s ease-in-out slideOutTop;
+  animation: 0.7s ease-in-out slideOutTop;
   height: 0;
   visibility: collapse;
 }
@@ -892,10 +771,6 @@ input[type=checkbox]:checked ~ .faq > label > .iconPointer {
   border: 2px solid #e3247a;
 }
 
-.inputText:not(:-ms-input-placeholder):invalid:not(:focus), .inputText:not(:-ms-input-placeholder):invalid:focus, .textArea:not(:-ms-input-placeholder):invalid:not(:focus), .textArea:not(:-ms-input-placeholder):invalid:focus {
-  border: 2px solid #e3247a;
-}
-
 .inputText:not(:placeholder-shown):invalid:not(:focus),
 .inputText:not(:placeholder-shown):invalid:focus,
 .textArea:not(:placeholder-shown):invalid:not(:focus),
@@ -904,17 +779,6 @@ input[type=checkbox]:checked ~ .faq > label > .iconPointer {
 }
 
 .inputText:not(:-moz-placeholder-shown):invalid + .inputLabel, .textArea:not(:-moz-placeholder-shown):invalid + .inputLabel {
-  opacity: 1;
-  margin: -1.1rem 0 0 0.5rem;
-  color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem 0 0;
-  padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
-}
-
-.inputText:not(:-ms-input-placeholder):invalid + .inputLabel, .textArea:not(:-ms-input-placeholder):invalid + .inputLabel {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
@@ -1016,18 +880,15 @@ html {
 header,
 .card,
 .showFromTop {
-  -webkit-animation: 0.7s ease-out 0s 1 slideInTop;
-          animation: 0.7s ease-out 0s 1 slideInTop;
+  animation: 0.7s ease-out 0s 1 slideInTop;
 }
 
 .showFromBottom {
-  -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
-          animation: 0.7s ease-out 0s 1 slideInBottom;
+  animation: 0.7s ease-out 0s 1 slideInBottom;
 }
 
 .showSlow {
-  -webkit-animation: 0.7s ease-out 0s 1 slowShow;
-          animation: 0.7s ease-out 0s 1 slowShow;
+  animation: 0.7s ease-out 0s 1 slowShow;
 }
 
 body {
@@ -1207,7 +1068,7 @@ body {
 
 @media (min-width: 768px) {
   .serviceDesc,
-.courseDesc {
+  .courseDesc {
     display: none;
   }
   .serviceCard {
@@ -1231,8 +1092,7 @@ body {
     display: block;
     width: 100%;
     padding: 10px 14px;
-    -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
-            animation: 0.7s ease-out 0s 1 slideInBottom;
+    animation: 0.7s ease-out 0s 1 slideInBottom;
     background: linear-gradient(180deg, rgba(17, 173, 139, 0.859) 0%, rgba(12, 143, 115, 0.859) 100%);
     border-radius: 10px;
     box-shadow: 0px 3px 5px 0px rgba(24, 24, 24, 0.55);
@@ -1251,8 +1111,7 @@ body {
   .courseCard:hover .courseDesc {
     width: 100%;
     padding: 10px 14px;
-    -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
-            animation: 0.7s ease-out 0s 1 slideInBottom;
+    animation: 0.7s ease-out 0s 1 slideInBottom;
     display: block;
     background: linear-gradient(180deg, rgb(15, 155, 124) 0%, rgb(17, 145, 117) 100%);
   }
@@ -1296,8 +1155,7 @@ body {
     display: block;
     background: linear-gradient(180deg, rgb(15, 155, 124) 0%, rgb(17, 145, 117) 100%);
     box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
-    -webkit-animation: 0.7s ease-out 0s 1 slideInBottom;
-            animation: 0.7s ease-out 0s 1 slideInBottom;
+    animation: 0.7s ease-out 0s 1 slideInBottom;
   }
 }
 .iconColor {
@@ -1337,8 +1195,7 @@ h1 {
   will-change: transform;
   background: linear-gradient(-45deg, #e3247a, #edeff1, #cf32f2, #f3dc33);
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1360,7 +1217,7 @@ h1 {
 }
 
 .fancyRadius {
-  border-radius: 66% 34% 26% 74%/77% 64% 36% 23%;
+  border-radius: 0 30% 30% 30%;
 }
 
 .fancyRadius1 {

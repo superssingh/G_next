@@ -9,6 +9,7 @@ import {
   Paginate,
   Pagination,
   NotFound,
+  Loading,
 } from '../../components';
 
 const Posts = ({ posts }) => {
@@ -79,12 +80,7 @@ const Posts = ({ posts }) => {
             </div>
           </div>
         </div>
-      )) || (
-        <NotFound
-          message="{ No blog found! }"
-          returnPath="/"
-        />
-      )}
+      )) || <Loading />}
     </div>
   );
 };

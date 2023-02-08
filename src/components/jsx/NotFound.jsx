@@ -4,9 +4,9 @@ const NotFound = ({ message, returnPath }) => {
   return (
     <div
       className="showSlow  
-      grid relative w-full place-content-center p-2 pt-4 "
+      relative grid w-full place-content-center p-2 pt-4 "
     >
-      <div className="px-4 py-8 animate-pulse text-xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-500 m-4 bg-black/30 shadow-md shadow-black ">
+      <div className="fancyRadius m-4 animate-pulse bg-black/30 bg-gradient-to-r from-red-300 to-red-500 bg-clip-text px-4 py-8 text-xl font-extrabold text-transparent shadow-md shadow-black ">
         {message || 'Not Found!'}
       </div>
       <div className="">
