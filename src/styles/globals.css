@@ -89,6 +89,16 @@
     background-position: 0% 50%;
   }
 }
+.LeftSlide {
+  animation-duration: 3s;
+  animation-name: slideInLeft;
+}
+
+.RightSlide {
+  animation-duration: 3s;
+  animation-name: slideInRight;
+}
+
 /**
 *
 * Testing
@@ -687,20 +697,12 @@ input[type=checkbox] {
   width: 100%;
   animation: 0.7s ease-in-out slideOutTop;
   height: 0;
-  visibility: collapse;
 }
 
 input:checked[type=checkbox] + .faq > .answer {
   animation: 0.7s ease-out 0s 1 slideInTop;
   height: -moz-fit-content;
   height: fit-content;
-  visibility: visible;
-}
-
-input[type=checkbox]:not(:checked) + .faq > .answer {
-  animation: 0.7s ease-in-out slideOutTop;
-  height: 0;
-  visibility: collapse;
 }
 
 input[type=checkbox]:checked ~ .faq > .label {

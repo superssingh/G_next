@@ -10,6 +10,16 @@ import {
 } from '../components/';
 
 const Home = () => {
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((e) => {
+  //     if (e.isIntersecting) {
+  //       e.target.classList.add('Show');
+  //     } else {
+  //       e.target.classList.add('');
+  //     }
+  //   });
+  // });
+
   return (
     <section className="">
       <div className="description">

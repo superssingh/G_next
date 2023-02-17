@@ -93,3 +93,14 @@
     background-position: 0% 50%;
   }
 }
+
+.LeftSlide{
+  animation-duration: 3s;
+  animation-name: slideInLeft;
+}
+
+.RightSlide{
+  animation-duration: 3s;
+  animation-name: slideInRight;
+}
+
