@@ -1,15 +1,21 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
-export default function LoginBtn() {
+export default function LoginBtn({ label }) {
   const { data: session } = useSession();
   console.log('userData:', session);
 
   if (session) {
     return (
-      <div>
-        Signed in as {session.user.email} <br />
+      <div className="text-gray-200">
+        <p>
+          Hello <strong>{session.user.name}</strong>, please leave your
+          comment..
+        </p>
+        {/* <p>
+          You have signed in as {session.user.email} <br />
+        </p> */}
         <button
           onClick={() => signOut()}
-          className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50"
+          className="randomBG1 relative grid rounded-full py-2 px-4 shadow-xl text-white font-semibold shadow-black hover:animate-pulse hover:bg-black/50"
         >
           Sign out
         </button>
@@ -18,10 +24,9 @@ export default function LoginBtn() {
   }
   return (
     <div>
-      Not signed in <br />
       <button
         onClick={() => signIn()}
-        className="randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black hover:animate-pulse hover:bg-black/50"
+        className="randomBG1 relative grid rounded-full py-2 px-4 shadow-xl text-white font-semibold shadow-black/10 hover:animate-pulse hover:bg-black/50"
       >
         Sign in
       </button>

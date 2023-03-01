@@ -95,7 +95,7 @@ export const menus = [
   //     </svg>
   //   ),
   // },
-  {
+  { 
     name: 'Contact',
     path: '/contact',
     icon: (

@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
           <div className="pt-24">{children}</div>
           <Footer />
         </div>
-
         <ReactQueryDevtools />
       </QueryClientProvider>
     </React.StrictMode>

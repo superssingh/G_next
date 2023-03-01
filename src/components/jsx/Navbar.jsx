@@ -15,11 +15,7 @@ const Navbar = () => {
     <div className="Navigation  ">
       <div>
         <header className="Navbar bgNavbar">
-          <Link
-            href="/"
-            legacyBehavior
-            className="grid w-28"
-          >
+          <Link href="/" legacyBehavior className="grid w-28">
             <div className="relative mx-4 overflow-hidden transition-all duration-700 hover:hue-rotate-180">
               <Image
                 src={BrandName}
@@ -39,10 +35,7 @@ const Navbar = () => {
 
           <ul className={TagName.MENU_DEFAULT}>
             <li>
-              <div
-                className="relative grid rounded px-2 "
-                tabIndex={1}
-              >
+              <div className="relative grid rounded px-2 " tabIndex={1}>
                 <Link
                   key={TagName.HomeMenu.name}
                   href={TagName.HomeMenu.path}
@@ -69,6 +62,22 @@ const Navbar = () => {
                 </Link>
               ))}
             </li>
+
+            <li>
+              <div className="relative grid rounded px-2 " tabIndex={1}>
+                <div className=" grid w-10 p-1 place-content-center mt-[-30px]  rounded-full overflow-hidden z-[1] hover:bg-purple-200">
+                  {/* <Image
+                    src={TagName.Profile.photo.url}
+                    alt="Picture of the author"
+                    width={72}
+                    height={72}
+                    layout="intrinsic"
+                    priority
+                    className="object-cover shadow-lg rounded-full "
+                  /> */}
+                </div>
+              </div>
+            </li>
           </ul>
           <div
             id="hamburger"
@@ -89,12 +98,7 @@ const Navbar = () => {
       >
         <div className="mobile-menus z-[5] px-4 py-2  ">
           {TagName.menus.map((m) => (
-            <Link
-              href={m.path}
-              key={m.name}
-              data-text={m.name}
-              legacyBehavior
-            >
+            <Link href={m.path} key={m.name} data-text={m.name} legacyBehavior>
               <div
                 onClick={handleClicked}
                 className="mobileMenu relative z-10 my-2 flex w-full rounded-md py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
@@ -110,10 +114,7 @@ const Navbar = () => {
           </li>
 
           <li className="navLogo z-10">
-            <Link
-              href="/"
-              legacyBehavior
-            >
+            <Link href="/" legacyBehavior>
               <div className="grid place-content-center">
                 <Image
                   src={Logo}
