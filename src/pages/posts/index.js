@@ -12,7 +12,9 @@ import {
   Loading,
 } from '../../components';
 
-const Posts = ({ posts }) => {
+
+
+const Posts = () => {
   const { data } = useQuery({
     queryKey: ['posts'],
     queryFn: getPosts,
@@ -83,7 +85,7 @@ const Posts = ({ posts }) => {
 };
 export default Posts;
 
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return { props: { posts }, revalidate: 90000 };
-}
+// export async function getStaticProps() {
+//   const posts = (await getPosts()) || [];
+//   return { props: { posts }, revalidate: 90000 };
+// }

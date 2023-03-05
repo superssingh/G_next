@@ -19,10 +19,7 @@ const HeroPage = () => {
                   </h1>
                 </div>
                 <div className="grid place-content-center md:place-content-start py-2">
-                  <Link
-                    href="/courses"
-                    className="z-1"
-                  >
+                  <Link href="/courses" className="z-1" legacyBehavior>
                     <div className="w-fit font-bold p-4 text-lg fancyRadius1 text-center randomBG hoverEffect shadow-xl shadow-black rounded-full">
                       <div className=" font-bold p-4 text-lg fancyRadius1 text-center randomBG1 hoverEffect shadow-xl shadow-black rounded-full animate-pulse hover:animate-none">
                         <span>Let's Go</span>
