@@ -17,7 +17,7 @@ const Blog = ({ post, posts }) => {
             <PostDetail post={post} />
             <Comment />
           </div>
-          <div className="grid w-full md:col-span-8 lg:col-span-4">
+          <div className="grid w-full md:col-span-8 lg:col-span-4 lg:place-content-start place-items-center">
             <div className="place-content-center md:flex lg:sticky lg:grid lg:place-content-start">
               {posts && (
                 <PostWidget

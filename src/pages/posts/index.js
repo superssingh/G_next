@@ -56,10 +56,7 @@ const Posts = ({ posts }) => {
           <div className="grid w-full  max-w-5xl md:col-span-8">
             <div className="grid w-full content-center justify-center place-self-start px-2 md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
               {filteredPosts.map((p) => (
-                <PostCard
-                  post={p.node}
-                  key={p.node.id}
-                />
+                <PostCard post={p.node} key={p.node.id} />
               ))}
             </div>
             <div className="bottom-0 grid place-content-center  ">

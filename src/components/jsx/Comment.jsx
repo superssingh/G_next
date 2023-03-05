@@ -24,6 +24,7 @@ const Comment = ({ comments }) => {
   const form = useRef();
 
   const onSubmit = async (data) => {
+    data.preventDefault();
     // if (success) return;
     if (session) {
       data.name = session.user.name;
