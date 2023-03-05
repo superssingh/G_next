@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import { SessionProvider } from 'next-auth/react';
 import Layout from './Layout';
-import { Poppins } from '@next/font/google';
+import { Poppins } from 'next/font/google';
 const customFont = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
