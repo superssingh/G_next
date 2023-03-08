@@ -19,7 +19,7 @@ const PostCard = ({ post }) => {
             className="shadow-lg rounded-t-lg md:rounded-l-lg md:rounded-none"
           />
         </div>
-        <div className="h-32 lg:h-36 w-full px-8 py-2">
+        <div className="relative h-32 lg:h-36 w-full px-8 py-3 ">
           <div className="relative z-2 ">
             <div className="flex absolute left-[-65px] bottom-[-60px]  rotate-[-90deg] text-center  uppercase tracking-wide text-xs ">
               <svg

@@ -3,42 +3,33 @@ import moment from "moment";
 import Link from "next/link";
 import Image from "next/legacy/image"
 
-const PostWidget = ({ posts, category, id }) => {
-  const [similarPosts, setSimilarPosts] = useState([])
-  const [similar, setSimilar] = useState(false)
+const PostWidget = ({ posts, id }) => {
+  const [similarPosts, setSimilarPosts] = useState([]);
+  const [similar, setSimilar] = useState(false);
 
   useEffect(() => {
     if (posts) {
-      setData()
+      setData();
     }
-  }, [posts])
+  }, []);
 
   async function setData() {
-    if (!category && !id) {
-      setSimilarPosts(posts)
-      setSimilar(false)
-    } else {
-      const relevant = await posts.filter((p) => {
-        return p.node?.categories[0]?.name === category && p.node.id != id
-      })
+    const relevant = await posts.filter((p) => {
+      return p.node.id != id;
+    });
 
-      if (relevant.length) {
-        setSimilarPosts(relevant)
-        setSimilar(true)
-      } else {
-        const otherPosts = await posts.filter((p) => {
-          return p.node.id != id
-        })
-        setSimilarPosts(otherPosts)
-        setSimilar(false)
-      }
+    if (relevant.length) {
+      setSimilarPosts(relevant);
+      setSimilar(true);
+    } else {
+      return;
     }
   }
 
   return (
     <div className="grid w-full showSlow widget transition-all duration-700 place-content-center shadow-lg drop-shadow-md  rounded-lg p-4   ">
       <h3 className=" text-md text-gray-800 border-b border-slate-500/[.50] pb-2 ">
-        {similar ? "Relevant Posts" : "Recent Posts"}
+        {similar ? 'Relevant Posts' : 'Recent Posts'}
       </h3>
       <div className=" w-full  md:grid md:grid-cols-2 lg:block top-0  my-2">
         {similarPosts &&
@@ -66,17 +57,17 @@ const PostWidget = ({ posts, category, id }) => {
                         {m.node.title}
                       </div>
                       <div className="text-gray-800 text-xs ">
-                        {moment(m.node.createdAt).format("MMM DD, YYYY")}
+                        {moment(m.node.createdAt).format('MMM DD, YYYY')}
                       </div>
                     </div>
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PostWidget;

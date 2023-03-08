@@ -1,4 +1,6 @@
 import { request, gql } from 'graphql-request';
+
+import { QueryClient, dehydrate } from '@tanstack/react-query';
 const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT;
 
 export const getPosts = async () => {
@@ -33,10 +35,6 @@ export const getPosts = async () => {
               url
             }
             description
-            categories {
-              id
-              name
-            }
             createdAt
           }
         }
@@ -92,10 +90,7 @@ export const getPostDetail = async (slug) => {
           url
         }
         description
-        categories {
-          id
-          name
-        }
+
         createdAt
       }
     }
@@ -147,3 +142,11 @@ export const getPostsByCategory = async (category) => {
   const results = await request(graphAPI, query, { category });
   return results.posts;
 };
+
+// export async function getData() {
+//   const queryClient = new QueryClient();
+//   await queryClient.prefetchQuery(['posts'], getPosts);
+//   return {
+//     props: { dehydrateState: dehydrate(queryClient) },
+//   };
+// }

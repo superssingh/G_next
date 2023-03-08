@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Footer, Navbar } from '../components/';
+import { getPosts } from '../services/getBlogData';
 
 // const Navbar = dynamic(() => import('../components/jsx/Navbar'), {
 //   ssr: false,
@@ -12,9 +13,14 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       // ✅ globally default to 20 seconds
-      staleTime: 10000 * 9000,
+      staleTime: 9000 * 60 * 60,
     },
   },
+});
+
+queryClient.prefetchQuery({
+  queryKey: ['posts'],
+  queryFn: getPosts,
 });
 
 const Layout = ({ children }) => {

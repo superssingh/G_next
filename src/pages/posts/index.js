@@ -1,5 +1,5 @@
-import React, { useEffect, useContext, useState } from "react"
-import { getPosts } from "../../services/getBlogData"
+import React, { useState } from 'react';
+import { getPosts } from '../../services/getBlogData';
 import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
 import moment from 'moment';
 import _ from 'lodash';
@@ -12,14 +12,7 @@ import {
   Loading,
 } from '../../components';
 
-
-
 const Posts = () => {
-  const { data } = useQuery({
-    queryKey: ['posts'],
-    queryFn: getPosts,
-    // initialData: posts,
-  });
   const [recentPosts, setRecentPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,10 +21,23 @@ const Posts = () => {
   getLatestPosts();
 
   async function getLatestPosts() {
-    if (data) {
+    const {
+      isLoading,
+      isError,
+      data: blogs,
+      error,
+    } = useQuery({
+      queryKey: ['posts'],
+      queryFn: getPosts,
+    });
+
+    if (isLoading) return <Loading />;
+    if (isError) return <NotFound message={error.message} />;
+
+    if (blogs) {
       try {
         const recent = await _.orderBy(
-          data,
+          blogs,
           (a) => moment(a.node.createdAt).format('YYYYMMDD'),
           'desc'
         );
@@ -53,12 +59,15 @@ const Posts = () => {
 
   return (
     <div>
-      {(recentPosts.length >= 1 && (
+      {recentPosts.length >= 1 && (
         <div className="relative  grid w-full gap-4 lg:grid-cols-12 ">
           <div className="grid w-full  max-w-5xl md:col-span-8">
             <div className="grid w-full content-center justify-center place-self-start px-2 md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
               {filteredPosts.map((p) => (
-                <PostCard post={p.node} key={p.node.id} />
+                <PostCard
+                  post={p.node}
+                  key={p.node.id}
+                />
               ))}
             </div>
             <div className="bottom-0 grid place-content-center  ">
@@ -79,7 +88,7 @@ const Posts = () => {
             </div>
           </div>
         </div>
-      )) || <Loading />}
+      )}
     </div>
   );
 };

@@ -9,7 +9,7 @@ const PostDetail = ({ post }) => {
     <div className="sm:w-fit md:max-w-4xl grid relative place-content-center showSlow">
       <div className="relative h-72 w-full  overflow-hidden shadow-lg md:shrink-0 ">
         <Image
-          src={post.featured_image[0].url}
+          src={post.featured_image[0]?.url}
           alt={post.title}
           priority
           layout="fill"
