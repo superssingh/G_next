@@ -19,16 +19,21 @@ const Post = () => {
     queryFn: getPosts,
   })
 
+  // const post = useQuery({
+  //   queryKey: ['posts', id],
+  //   enabled: postsQuery.status == 'success',
+  //   queryFn: () =>
+  //     postsQuery?.data.find(({ node: { slug } }) => slug == id) || [],
+  // })
+
   const post = useQuery({
     queryKey: ['posts', id],
-    enabled: postsQuery.status == 'success',
-    queryFn: () =>
-      postsQuery?.data.find(({ node: { slug } }) => slug == id) || [],
+    queryFn: () => getPostDetail(id),
   })
 
   const getPost = async () => {
     await console.log(id)
-    await console.log(post)
+    await console.log('Post:', post)
     await console.log(postsQuery)
     // return postsQuery?.data.find(({ node: { slug } }) => slug == id)
   }
@@ -37,26 +42,30 @@ const Post = () => {
 
   return (
     <div className=" showSlow">
-      {/* <HeadTag post={post} /> */}
+      {post?.data && (
+        <>
+          <HeadTag post={post} />
 
-      <div className="grid ">
-        <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
-          <div className=" grid max-w-4xl content-center place-self-center md:col-span-8">
-            {/* <PostDetail post={post} /> */}
-            <Comment />
-          </div>
-          <div className="grid w-full md:col-span-8 lg:col-span-4 lg:place-content-start place-items-center">
-            <div className="place-content-center md:flex lg:sticky lg:grid lg:place-content-start">
-              {/* {posts && (
-                <PostWidget
-                  posts={posts}
-                  id={post.id}
-                />
-              )} */}
+          <div className="grid ">
+            <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
+              <div className=" grid max-w-4xl content-center place-self-center md:col-span-8">
+                <PostDetail post={post.data} />
+                <Comment />
+              </div>
+              <div className="grid w-full md:col-span-8 lg:col-span-4 lg:place-content-start place-items-center">
+                <div className="place-content-center md:flex lg:sticky lg:grid lg:place-content-start">
+                  {postsQuery?.data && (
+                    <PostWidget
+                      posts={postsQuery.data}
+                      id={post.data.id}
+                    />
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   )
 }
