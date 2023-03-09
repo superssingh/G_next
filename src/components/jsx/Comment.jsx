@@ -30,8 +30,7 @@ const Comment = ({ comments }) => {
       data.name = session.user.name;
       data.email = session.user.email;
       data.image = session.user.image;
-      data.datetime = new Date().toJSON();
-      console.log('LoggedData: ', data);
+      data.datetime = new Date().toJSON()      
       return;
     }
   };

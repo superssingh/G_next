@@ -1,7 +1,5 @@
-import { request, gql } from 'graphql-request';
-
-import { QueryClient, dehydrate } from '@tanstack/react-query';
-const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT;
+import { request, gql } from 'graphql-request'
+const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT
 
 export const getPosts = async () => {
   const query = gql`
@@ -40,11 +38,11 @@ export const getPosts = async () => {
         }
       }
     }
-  `;
+  `
 
-  const result = await request(graphAPI, query);
-  return result.postsConnection.edges;
-};
+  const result = await request(graphAPI, query)
+  return result.postsConnection.edges
+}
 
 export const getCategories = async () => {
   const query = gql`
@@ -54,11 +52,11 @@ export const getCategories = async () => {
         name
       }
     }
-  `;
+  `
 
-  const results = await request(graphAPI, query);
-  return results.categories;
-};
+  const results = await request(graphAPI, query)
+  return results.categories
+}
 
 export const getPostDetail = async (slug) => {
   const query = gql`
@@ -90,15 +88,14 @@ export const getPostDetail = async (slug) => {
           url
         }
         description
-
         createdAt
       }
     }
-  `;
+  `
 
-  const results = await request(graphAPI, query, { slug });
-  return results.post;
-};
+  const results = await request(graphAPI, query, { slug })
+  return results.post
+}
 
 export const getPostsByCategory = async (category) => {
   const query = gql`
@@ -137,16 +134,8 @@ export const getPostsByCategory = async (category) => {
         createdAt
       }
     }
-  `;
+  `
 
-  const results = await request(graphAPI, query, { category });
-  return results.posts;
-};
-
-// export async function getData() {
-//   const queryClient = new QueryClient();
-//   await queryClient.prefetchQuery(['posts'], getPosts);
-//   return {
-//     props: { dehydrateState: dehydrate(queryClient) },
-//   };
-// }
+  const results = await request(graphAPI, query, { category })
+  return results.posts
+}

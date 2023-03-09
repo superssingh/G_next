@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { getPosts } from '../../services/getBlogData';
-import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
-import moment from 'moment';
-import _ from 'lodash';
+import React, { useState, useEffect } from 'react'
+import { getPosts } from '../../services/getBlogData'
+import { useQuery } from '@tanstack/react-query'
+import moment from 'moment'
+import _ from 'lodash'
 import {
   PostCard,
   PostWidget,
@@ -10,56 +10,46 @@ import {
   Pagination,
   NotFound,
   Loading,
-} from '../../components';
+} from '../../components'
 
 const Posts = () => {
-  const [recentPosts, setRecentPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 6;
-
-  getLatestPosts();
+  const [recentPosts, setRecentPosts] = useState([])
+  const [filteredPosts, setFilteredPosts] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const pageSize = 6
+  const posts = useQuery({
+    queryKey: ['posts'],
+    queryFn: getPosts,
+    staleTime: 1000 * 60 * 5,
+  })
 
   async function getLatestPosts() {
-    const {
-      isLoading,
-      isError,
-      data: blogs,
-      error,
-    } = useQuery({
-      queryKey: ['posts'],
-      queryFn: getPosts,
-    });
-
-    if (isLoading) return <Loading />;
-    if (isError) return <NotFound message={error.message} />;
-
-    if (blogs) {
-      try {
-        const recent = await _.orderBy(
-          blogs,
-          (a) => moment(a.node.createdAt).format('YYYYMMDD'),
-          'desc'
-        );
-        await setRecentPosts(recent);
-        await handlePageChange(currentPage);
-      } catch (error) {
-        console.log('Error: ', error.message);
-      }
+    if (posts.status === 'success') {
+      const recent = await _.orderBy(
+        posts.data,
+        (p) => moment(p.node.createdAt).format('YYYYMMDD'),
+        'desc'
+      )
+      await setRecentPosts(recent)
+      await handlePageChange(currentPage)
     }
   }
 
+  getLatestPosts()
+
   const handlePageChange = async (pageNumber) => {
     if (currentPage != pageNumber) {
-      setCurrentPage(pageNumber);
+      setCurrentPage(pageNumber)
     }
-    const filtered = await Paginate(recentPosts, pageNumber, pageSize);
-    setFilteredPosts(await filtered);
-  };
+    const filtered = await Paginate(recentPosts, pageNumber, pageSize)
+    setFilteredPosts(await filtered)
+  }
+
+  //getting latestposts.....
 
   return (
     <div>
-      {recentPosts.length >= 1 && (
+      {(recentPosts.length >= 1 && (
         <div className="relative  grid w-full gap-4 lg:grid-cols-12 ">
           <div className="grid w-full  max-w-5xl md:col-span-8">
             <div className="grid w-full content-center justify-center place-self-start px-2 md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
@@ -88,11 +78,11 @@ const Posts = () => {
             </div>
           </div>
         </div>
-      )}
+      )) || <Loading />}
     </div>
-  );
-};
-export default Posts;
+  )
+}
+export default Posts
 
 // export async function getStaticProps() {
 //   const posts = (await getPosts()) || [];

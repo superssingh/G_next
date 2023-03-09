@@ -13,10 +13,10 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       // ✅ globally default to 20 seconds
-      staleTime: 9000 * 60 * 60,
+      staleTime: 1000 * 60 * 50,
     },
   },
-});
+})
 
 queryClient.prefetchQuery({
   queryKey: ['posts'],
