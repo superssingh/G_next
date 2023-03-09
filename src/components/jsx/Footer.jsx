@@ -31,6 +31,8 @@ const Footer = () => {
                 layout="fixed"
                 placeholder="blur"
                 className="logo"
+                as="image"
+            priority={true}
               />
             </div>
           </Link>

@@ -23,6 +23,9 @@ const Team = () => {
                         src={m.image}
                         width="500"
                         height="500"
+                        as="image"
+            priority={true}
+            
                         alt="Team Member Pic"
                       />
                     </div>

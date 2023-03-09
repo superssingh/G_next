@@ -10,9 +10,10 @@ const PostDetail = ({ post }) => {
       <div className="relative h-72 w-full  overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0]?.url}
-          alt={post.title}
-          priority
+          alt={post.title}         
           layout="fill"
+          as="image"
+          priority={true}
           className="shadow-lg rounded-t-lg"
         />
       </div>

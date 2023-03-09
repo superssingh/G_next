@@ -23,6 +23,8 @@ const Navbar = () => {
                 priority
                 width={200}
                 height={45}
+                as="image"
+            priority={true}
                 className="brandLogo"
                 onClick={async () => {
                   if (clicked) {

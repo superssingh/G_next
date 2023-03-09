@@ -13,7 +13,7 @@ const Features = () => {
           >
             <div className="">
               {(i % 2 == 0 && (
-                <div                 
+                <div
                   className={`my-8 grid h-full max-w-6xl px-4 align-middle md:grid-cols-2`}
                 >
                   <div className="grid place-content-center ">
@@ -41,11 +41,13 @@ const Features = () => {
                       src={s.image}
                       alt={s.name + 'image'}
                       layout="intrinsic"
+                      as="image"
+                      priority={true}
                     />
                   </div>
                 </div>
               )) || (
-                <div                  
+                <div
                   className={`my-8 grid h-full max-w-6xl align-middle md:grid-cols-2 `}
                 >
                   <div className="grid place-content-center overflow-hidden object-cover px-4 ">
@@ -53,6 +55,8 @@ const Features = () => {
                       src={s.image}
                       alt={s.name + 'image'}
                       layout="intrinsic"
+                      as="image"
+                      priority={true}
                     />
                   </div>
                   <div className="grid place-content-center">

@@ -36,7 +36,8 @@ const HeroPage = () => {
                 height={500}
                 alt={'HeroImage'}
                 layout="intrinsic"
-                priority
+                as="image"
+            priority={true}
                 className="relative rounded-xl z-[2] "
               />
             </div>

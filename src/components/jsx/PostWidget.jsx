@@ -49,6 +49,8 @@ const PostWidget = ({ posts, id }) => {
                         width={80}
                         height={80}
                         layout="intrinsic"
+                        as="image"
+            priority={true}
                         className=" rounded-l-lg"
                       />
                     </div>

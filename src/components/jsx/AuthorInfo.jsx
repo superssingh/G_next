@@ -12,7 +12,8 @@ const AuthorInfo = ({ author }) => {
             width={72}
             height={72}
             layout="intrinsic"
-            priority
+            as="image"
+            priority={true}
             className="object-cover shadow-lg rounded-full "
           />
         </div>
@@ -33,7 +34,7 @@ const AuthorInfo = ({ author }) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default AuthorInfo
