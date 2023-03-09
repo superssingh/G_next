@@ -9,9 +9,9 @@ const PostWidget = ({ posts, id }) => {
 
   useEffect(() => {
     if (posts) {
-      setData();
+      setData()
     }
-  }, []);
+  }, [similarPosts])
 
   async function setData() {
     const relevant = await posts.filter((p) => {
@@ -19,8 +19,8 @@ const PostWidget = ({ posts, id }) => {
     });
 
     if (relevant.length) {
-      setSimilarPosts(relevant);
-      setSimilar(true);
+      setSimilarPosts(relevant)
+      // setSimilar(true);
     } else {
       return;
     }
