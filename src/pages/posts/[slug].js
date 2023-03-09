@@ -4,6 +4,7 @@ import { HeadTag, PostDetail, PostWidget, Comment } from '../../components';
 import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
 import { useParams } from 'react';
 import { useRouter } from 'next/router';
+
 // const supabase = createClient(
 //   process.env.NEXT_PUBLIC_SUPABASE_URL,
 //   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -12,33 +13,22 @@ import { useRouter } from 'next/router';
 
 const Post = () => {
   const router = useRouter()
-  const { slug: id } = router.query
+  const { slug } = router.query
 
   const postsQuery = useQuery({
     queryKey: ['posts'],
     queryFn: getPosts,
   })
 
-  // const post = useQuery({
-  //   queryKey: ['posts', id],
-  //   enabled: postsQuery.status == 'success',
-  //   queryFn: () =>
-  //     postsQuery?.data.find(({ node: { slug } }) => slug == id) || [],
-  // })
-
   const post = useQuery({
-    queryKey: ['posts', id],
-    queryFn: () => getPostDetail(id),
+    queryKey: ['posts', slug],
+    queryFn: () => getPostDetail(slug),
   })
 
-  const getPost = async () => {
-    await console.log(id)
-    await console.log('Post:', post)
-    await console.log(postsQuery)
-    // return postsQuery?.data.find(({ node: { slug } }) => slug == id)
-  }
-
-  getPost()
+  // const getPost = async () => {
+  // return postsQuery?.data.find(({ node: { slug } }) => slug == id)
+  // }
+  // getPost()
 
   return (
     <div className=" showSlow">
