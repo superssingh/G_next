@@ -49,10 +49,10 @@ const Posts = () => {
 
   return (
     <div>
-      {(recentPosts.length >= 1 && (
-        <div className="relative  grid w-full gap-4 lg:grid-cols-12 ">
-          <div className="grid w-full  max-w-5xl md:col-span-8">
-            <div className="grid w-full content-center justify-center place-self-start px-2 md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
+      {(recentPosts.length > 0 && (
+        <div className="relative sm:grid w-full place-content-center gap-4 lg:grid-cols-12  ">
+          <div className="grid w-full max-w-5xl md:col-span-8 px-2">
+            <div className="w-full content-center justify-center place-self-start  md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
               {filteredPosts.map((p) => (
                 <PostCard
                   post={p.node}
@@ -72,8 +72,8 @@ const Posts = () => {
             </div>
           </div>
 
-          <div className="relative grid w-full place-content-center  p-2 md:col-span-8 lg:col-span-4 lg:place-content-start ">
-            <div className="lg:w-78 relative w-fit lg:sticky lg:place-content-start ">
+          <div className="relative w-full grid place-content-center p-2 md:col-span-8 lg:col-span-4 lg:place-content-start ">
+            <div className="w-fit grid lg:w-78 lg:sticky  lg:place-content-start ">
               <PostWidget posts={recentPosts} />
             </div>
           </div>

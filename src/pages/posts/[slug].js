@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { getPosts, getPostDetail } from '../../services/getBlogData';
-import { HeadTag, PostDetail, PostWidget, Comment } from '../../components';
-import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
-import { useParams } from 'react';
-import { useRouter } from 'next/router';
+import {
+  HeadTag,
+  PostDetail,
+  PostWidget,
+  Comment,
+  Loading,
+} from '../../components'
+import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query'
+import { useParams } from 'react'
+import { useRouter } from 'next/router'
 
 // const supabase = createClient(
 //   process.env.NEXT_PUBLIC_SUPABASE_URL,
 //   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 // );
-
 
 const Post = () => {
   const router = useRouter()
@@ -32,13 +37,13 @@ const Post = () => {
 
   return (
     <div className=" showSlow">
-      {post?.data && (
+      {(post?.data && (
         <>
           <HeadTag post={post} />
 
           <div className="grid ">
             <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
-              <div className=" grid max-w-4xl content-center place-self-center md:col-span-8">
+              <div className=" grid max-w-4xl content-center place-self-center md:col-span-8 ">
                 <PostDetail post={post.data} />
                 <Comment />
               </div>
@@ -55,7 +60,7 @@ const Post = () => {
             </div>
           </div>
         </>
-      )}
+      )) || <Loading />}
     </div>
   )
 }

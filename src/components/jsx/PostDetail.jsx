@@ -6,11 +6,11 @@ import { AuthorInfo, Back } from '../index';
 
 const PostDetail = ({ post }) => {
   return (
-    <div className="sm:w-fit md:max-w-4xl grid relative place-content-center showSlow">
+    <div className="grid relative w-full md:max-w-4xl place-content-center showSlow">
       <div className="relative h-72 w-full  overflow-hidden shadow-lg md:shrink-0 ">
         <Image
           src={post.featured_image[0]?.url}
-          alt={post.title}         
+          alt={post.title}
           layout="fill"
           as="image"
           priority={true}
@@ -18,7 +18,7 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="grid relative w-auto md:w-full bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] md:rounded-b-lg md:p-4 mb-4">
-        <div className="grid relative bg-white px-2 md:m-4 md:px-6 md:mt-[-5rem] rounded-sm md:rounded-md ">
+        <div className="grid relative bg-white px-3 md:m-4 md:px-6 md:mt-[-5rem] rounded-sm md:rounded-md ">
           <div className=" bg-white m-2 md:mb-4 md:mx-2 mt-[-2rem] uppercase shadow-md rounded-md text-gray-800 text-xl md:text-2xl font-semibold p-4 mb-4  ">
             {post.title}
           </div>
@@ -88,7 +88,7 @@ const PostDetail = ({ post }) => {
         </Suspense>
       )} */}
     </div>
-  );
+  )
 };
 
 export default PostDetail

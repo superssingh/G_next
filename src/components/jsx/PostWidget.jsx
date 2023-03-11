@@ -27,11 +27,11 @@ const PostWidget = ({ posts, id }) => {
   }
 
   return (
-    <div className="grid w-full showSlow widget transition-all duration-700 place-content-center shadow-lg drop-shadow-md  rounded-lg p-4   ">
+    <div className="relative grid w-full showSlow widget transition-all duration-700 place-content-center shadow-lg drop-shadow-md  rounded-lg p-4   ">
       <h3 className=" text-md text-gray-800 border-b border-slate-500/[.50] pb-2 ">
         {similar ? 'Relevant Posts' : 'Recent Posts'}
       </h3>
-      <div className=" w-full  md:grid md:grid-cols-2 lg:block top-0  my-2">
+      <div className=" w-full md:grid md:grid-cols-2 lg:block top-0  my-2">
         {similarPosts &&
           similarPosts.map((m) => {
             return (
