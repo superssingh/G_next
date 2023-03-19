@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/globals.css';
 import Head from 'next/head';
 import { SessionProvider } from 'next-auth/react';
-import Layout from './Layout';
+import Layout from './layout'
 import { Poppins } from 'next/font/google';
 const customFont = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
