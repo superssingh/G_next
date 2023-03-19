@@ -1,27 +1,28 @@
-import { useRef, useState } from 'react';
-import LoginBtn from './login_btn';
-import TextArea from './myCustomUI/TextArea';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { useSession, signIn, signOut } from 'next-auth/react';
+'use client'
+import { useRef, useState } from 'react'
+import LoginBtn from './login_btn'
+import TextArea from './myCustomUI/TextArea'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 const schema = yup.object({
   comment: yup.string().min(3).max(100).required(),
-});
+})
 
 const Comment = ({ comments }) => {
-  const { data: session } = useSession();
-  const [success, setSuccess] = useState(false);
+  const { data: session } = useSession()
+  const [success, setSuccess] = useState(false)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
-  });
+  })
 
-  const form = useRef();
+  const form = useRef()
 
   const onSubmit = async (data) => {
     // if (success) return;
@@ -40,7 +41,10 @@ const Comment = ({ comments }) => {
       <div className="grid w-full p-4 ">
         {(session && (
           <div>
-            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+            <form
+              ref={form}
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <div className="grid md:flex w-full place-content-center place-items-center rounded-md bg-black/20 p-4 text-white">
                 <TextArea
                   className="w-full p-2 m-2 bg-black/40"
@@ -114,7 +118,7 @@ const Comment = ({ comments }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Comment;
+export default Comment
