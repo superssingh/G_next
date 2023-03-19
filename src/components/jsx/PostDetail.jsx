@@ -19,7 +19,7 @@ const PostDetail = ({ post }) => {
       </div>
       <div className="grid relative w-auto md:w-full bg-white/[.5] shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] md:rounded-b-lg md:p-4 mb-4">
         <div className="grid relative bg-white px-3 md:m-4 md:px-6 md:mt-[-5rem] rounded-sm md:rounded-md ">
-          <div className=" bg-white m-2 md:mb-4 md:mx-2 mt-[-2rem] uppercase shadow-md rounded-md text-gray-800 text-xl md:text-2xl font-semibold p-4 mb-4  ">
+          <div className=" bg-gray-700/[.96] md:mb-4 md:mx-2 mt-[-1.5rem] uppercase shadow-md shadow-gray-600 rounded-lg text-white text-lg md:text-2xl font-semibold p-2 px-3 mb-4  ">
             {post.title}
           </div>
           <div className="relative px-2 md:px-4 pb-2">

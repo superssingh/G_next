@@ -24,16 +24,16 @@ const Comment = ({ comments }) => {
   const form = useRef();
 
   const onSubmit = async (data) => {
-    data.preventDefault();
     // if (success) return;
     if (session) {
-      data.name = session.user.name;
-      data.email = session.user.email;
-      data.image = session.user.image;
-      data.datetime = new Date().toJSON()      
-      return;
+      data.name = session.user.name
+      data.email = session.user.email
+      data.image = session.user.image
+      data.datetime = new Date().toJSON()
+      console.log('commentData: ', data)
+      return
     }
-  };
+  }
 
   return (
     <div>

@@ -25,10 +25,10 @@ export default function LoginBtn({ label }) {
     <div>
       <button
         onClick={() => signIn()}
-        className="randomBG1 relative grid rounded-full py-2 px-4 shadow-xl text-white font-semibold shadow-black/10 hover:animate-pulse hover:bg-black/50"
+        className="randomBG1 relative grid rounded-full py-2 px-4 shadow-xl text-white font-semibold shadow-black/10 animate-pulse hover:animate-none"
       >
         Sign in
       </button>
     </div>
-  );
+  )
 }

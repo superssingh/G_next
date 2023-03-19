@@ -7,14 +7,13 @@ import {
   Comment,
   Loading,
 } from '../../components'
-import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query'
-import { useParams } from 'react'
 import { useRouter } from 'next/router'
+import { useQuery } from '@tanstack/react-query'
+import { supabase } from '../../lib/supabaseClient'
 
-// const supabase = createClient(
-//   process.env.NEXT_PUBLIC_SUPABASE_URL,
-//   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-// );
+const getComments = async (slug) => {
+  return await supabase.from('blogs-comment').select()
+}
 
 const Post = () => {
   const router = useRouter()
@@ -28,6 +27,11 @@ const Post = () => {
   const post = useQuery({
     queryKey: ['posts', slug],
     queryFn: () => getPostDetail(slug),
+  })
+
+  const comments = useQuery({
+    queryKey: ['comments', slug],
+    queryFn: () => getComments(slug),
   })
 
   // const getPost = async () => {
