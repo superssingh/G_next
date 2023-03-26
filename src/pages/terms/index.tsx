@@ -1,5 +1,5 @@
-import Link from "next/link"
-const Terms = () => {
+import Link from 'next/link'
+const Terms = (): JSX.Element => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow ">
       <div className="gradientbg max-w-3xl shadow-lg drop-shadow-md border-y-2 border-slate-200/[.65] rounded-lg p-6 mb-6 md:mx-2">
@@ -52,7 +52,7 @@ const Terms = () => {
             restrictions. Upon termination, your viewing right will also be
             terminated and you should destroy any downloaded materials in your
             possession whether it is printed or electronic format. These Terms
-            of Service has been created with the help of the{" "}
+            of Service has been created with the help of the{' '}
             <a href="https://www.termsofservicegenerator.net">
               Terms Of Service Generator
             </a>
@@ -114,7 +114,10 @@ const Terms = () => {
 
           <div className="flex">
             <div>Please read our Privacy Policy.</div>
-            <Link href={"/privacypolicy"} legacyBehavior>
+            <Link
+              href={'/privacypolicy'}
+              legacyBehavior
+            >
               <span className="mx-2 rounded bg-violet-500 p-1 font-medium text-white hover:bg-violet-700">
                 Click Here
               </span>
@@ -130,7 +133,7 @@ const Terms = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Terms

@@ -1,7 +1,7 @@
 const TextArea = ({ name, label, rows, cols, error, required, register }) => {
   return (
-    <div className="relative my-2 w-full">
-      <div className="grid relative">
+    <div className="relative my-2 w-full p-2 m-2">
+      <div className="grid relative ">
         <textarea
           id={name}
           rows={rows || 4}
@@ -32,7 +32,7 @@ const TextArea = ({ name, label, rows, cols, error, required, register }) => {
         </label>
       </div>
     </div>
-  );
+  )
 };
 
 export default TextArea;

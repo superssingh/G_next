@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { getPosts, getPostDetail } from '../../services/getBlogData';
-import {
-  HeadTag,
-  PostDetail,
-  PostWidget,
-  Loading,
-  Comment,
-} from '../../components'
+import React, { useState } from 'react'
+import { getPosts, getPostDetail } from '../../services/getBlogData'
+import { HeadTag, PostDetail, PostWidget, Loading } from '../../components'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from '../../lib/supabaseClient'
-
-const getComments = async (slug) => {
-  return await supabase.from('blogs-comment').select()
+import Comment from '../../components/tsx/Comment'
+import comment from '../../components/ts/interfaces'
+interface commentListProps {
+  comments: comment[]
+}
+const getComments = async (slug: string) => {
+  // return await supabase.from('blogs-comment').select()
 }
 
 const Post = () => {
@@ -31,13 +29,8 @@ const Post = () => {
 
   const comments = useQuery({
     queryKey: ['comments', slug],
-    queryFn: () => getComments(slug),
+    queryFn: () => getComments(slug.toString()),
   })
-
-  // const getPost = async () => {
-  // return postsQuery?.data.find(({ node: { slug } }) => slug == id)
-  // }
-  // getPost()
 
   return (
     <div className=" showSlow">

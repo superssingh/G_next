@@ -1,5 +1,5 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
-export default function LoginBtn({ label }) {
+export default function LoginBtn() {
   const { data: session } = useSession()
 
   if (session) {
@@ -19,7 +19,7 @@ export default function LoginBtn({ label }) {
           Sign out
         </button>
       </div>
-    );
+    )
   }
   return (
     <div>

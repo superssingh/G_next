@@ -1,9 +1,9 @@
-import React from "react"
-import dynamic from "next/dynamic"
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Footer, Navbar } from '../components'
-import { getPosts } from '../services/getBlogData';
+import { getPosts } from '../services/getBlogData'
 
 // const Navbar = dynamic(() => import('../components/jsx/Navbar'), {
 //   ssr: false,
@@ -21,7 +21,7 @@ const queryClient = new QueryClient({
 queryClient.prefetchQuery({
   queryKey: ['posts'],
   queryFn: getPosts,
-});
+})
 
 const Layout = ({ children }) => {
   return (
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
         <ReactQueryDevtools />
       </QueryClientProvider>
     </React.StrictMode>
-  );
-};
+  )
+}
 
 export default Layout

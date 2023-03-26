@@ -1,5 +1,5 @@
-import Link from "next/link"
-const Policy = () => {
+import Link from 'next/link'
+const Policy = (): JSX.Element => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow">
       <div className="gradientbg max-w-3xl shadow-lg drop-shadow-md border-y-2 border-slate-200/[.65] rounded-lg p-6 mb-6 md:mx-2">
@@ -280,7 +280,7 @@ const Policy = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Policy

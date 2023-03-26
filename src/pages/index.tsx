@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   HeroPage,
@@ -7,19 +7,9 @@ import {
   Features,
   Team,
   Steps,
-} from '../components/';
+} from '../components'
 
 const Home = () => {
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((e) => {
-  //     if (e.isIntersecting) {
-  //       e.target.classList.add('Show');
-  //     } else {
-  //       e.target.classList.add('');
-  //     }
-  //   });
-  // });
-
   return (
     <section className="">
       <div className="description">
@@ -39,7 +29,7 @@ const Home = () => {
         <SocialProof />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
