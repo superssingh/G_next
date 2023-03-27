@@ -1,4 +1,4 @@
-const path = require("path")
+const path = import('path')
 
 module.exports = {
   reactStrictMode: true,
@@ -13,5 +13,4 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-};
-
+}
