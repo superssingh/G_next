@@ -11,6 +11,6 @@ module.exports = {
     ],
   },
   sassOptions: {
-    includePaths: [p.join(__dirname, 'styles')],
+    includePaths: [(__dirname, 'styles')],
   },
 }
