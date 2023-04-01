@@ -1,13 +1,8 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
+import React, { ReactElement } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Footer, Navbar } from '../components'
 import { getPosts } from '../services/getBlogData'
-
-// const Navbar = dynamic(() => import('../components/jsx/Navbar'), {
-//   ssr: false,
-// });
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,7 +18,10 @@ queryClient.prefetchQuery({
   queryFn: getPosts,
 })
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode
+}
+const Layout = ({ children }: LayoutProps): ReactElement => {
   return (
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>

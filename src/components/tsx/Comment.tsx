@@ -1,24 +1,28 @@
 'use client'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import LoginBtn from '../jsx/login_btn'
 import TextArea from '../jsx/myCustomUI/TextArea'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { useSession, signIn, signOut } from 'next-auth/react'
-import comment from '../ts/interfaces'
+import { useSession, signOut } from 'next-auth/react'
 
-interface commentListProps {
-  comments: comment[]
+type CommentsProps = {
+  comments: {
+    name: string
+    email: string
+    image: string
+    datetime: string
+    comment: string
+  }[]
 }
 
 const schema = yup.object({
   comment: yup.string().min(3).max(100).required(),
 })
 
-const Comment = ({ comments }: commentListProps) => {
+const Comment = ({ comments }: CommentsProps) => {
   const { data: session } = useSession()
-  const [success, setSuccess] = useState(false)
   const {
     register,
     handleSubmit,
@@ -27,29 +31,26 @@ const Comment = ({ comments }: commentListProps) => {
     resolver: yupResolver(schema),
   })
 
-  const form = useRef()
-
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     // if (success) return;
     if (session) {
-      data.name = session.user.name
-      data.email = session.user.email
-      data.image = session.user.image
+      data.name = session.user?.name
+      data.email = session.user?.email
+      data.image = session.user?.image
       data.datetime = new Date().toJSON()
       console.log('commentData: ', data)
       return
     }
   }
 
+  const form = useRef()
+
   return (
     <div>
       <div className="grid w-full p-4 ">
         {(session && (
           <div>
-            <form
-              ref={form}
-              onSubmit={handleSubmit(onSubmit)}
-            >
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:flex w-full place-content-center place-items-center rounded-md bg-black/20 p-4 text-white">
                 <TextArea
                   name="comment"
@@ -99,24 +100,6 @@ const Comment = ({ comments }: commentListProps) => {
               <div className="pl-2 text-right text-xs font-light text-gray-500 ">
                 {`(OCT 19, 2022)`}
               </div>
-            </div>
-            <div className="pl-12 text-xs text-gray-800 ">
-              Review or Comment
-            </div>
-          </div>
-
-          <div className="m-2 rounded-md bg-white/[.60] p-2 hover:bg-white/[.80] ">
-            <div className="relative flex w-full place-items-center px-2 pb-2  ">
-              <div className="h-8 w-8 rounded-full bg-black/[.30]"></div>
-              <div className="pl-2 text-xs font-semibold text-gray-700 ">
-                Reviewer Name
-              </div>
-              <div className="pl-2 text-right text-xs font-light text-gray-500">
-                {`(OCT 19, 2022)`}
-              </div>
-            </div>
-            <div className="pl-12 text-xs text-gray-800 ">
-              Review or Comment
             </div>
           </div>
         </div>

@@ -156,9 +156,9 @@ export const getPosts = () => {
   return postsURL;
 };
 
-export const getImagePath = () => {
-  return imageURL;
-};
+// export const getImagePath = () => {
+//   return imageURL;
+// };
 
 export const services = [
   {
