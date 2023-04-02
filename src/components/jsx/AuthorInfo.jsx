@@ -11,9 +11,7 @@ const AuthorInfo = ({ author }) => {
             alt="Picture of the author"
             width={72}
             height={72}
-            layout="intrinsic"
-            as="image"
-            priority={true}
+            priority
             className="object-cover shadow-lg rounded-full "
           />
         </div>
@@ -24,12 +22,6 @@ const AuthorInfo = ({ author }) => {
             {author.name}
           </div>
           <div className="text-sm font-semibold">{author.profession}</div>
-
-          {/* <div className="text-sm font-bold">
-            {author.social.map((s, i) => {
-              return <div key={i}> {s}</div>
-            })}
-          </div> */}
           <SocialWidget social={TagName.founderData.social} />
         </div>
       </div>

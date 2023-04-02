@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { TagName } from "..";
+import Link from 'next/link'
+import { TagName } from '..'
 const Services = () => {
   return (
     <>
@@ -9,11 +9,11 @@ const Services = () => {
             Our Services
           </h1>
           <div className="serviceList grid w-full relative md:grid-cols-3 gap-0 md:gap-0 mt-4">
-            {TagName.services.map((m) => {
+            {TagName.services.map(({ path, title, icon, description }) => {
               return (
                 <Link
-                  href={m.path}
-                  key={m.title}
+                  href={path}
+                  key={title}
                   passHref
                   legacyBehavior
                 >
@@ -22,16 +22,16 @@ const Services = () => {
                       <div className="grid w-full place-content-center md:grid ">
                         <div className="service randomBG1 fancyRadius grid h-fit w-fit place-content-center place-self-center p-6 shadow-black md:p-8 md:hover:animate-pulse">
                           <div className="relative grid h-8 w-full place-content-center place-self-center p-4 md:p-8">
-                            {m.icon}
+                            {icon}
                           </div>
                           <span className="grid place-self-center pt-4 text-center text-base font-bold md:text-xl md:font-semibold">
-                            {m.title}
+                            {title}
                           </span>
                         </div>
                         <div className="grid  place-content-center ">
                           <div className="grid w-fit lg:mx-2 lg:w-fit ">
                             <div className="serviceDesc w-fit rounded-md bg-gray-900/50 p-4 text-left text-sm text-slate-200 md:text-base lg:rounded-lg">
-                              {m.description}
+                              {description}
                             </div>
                           </div>
                         </div>
@@ -46,6 +46,6 @@ const Services = () => {
       </div>
     </>
   )
-};
+}
 
-export default Services;
+export default Services

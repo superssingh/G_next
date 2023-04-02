@@ -1,7 +1,11 @@
 import Link from "next/link";
 const Back = ({ path = "/" }) => {
   return (
-    <Link href={path} legacyBehavior>
+    <Link
+      href={path}
+      passHref
+      legacyBehavior
+    >
       <div
         id="backButton"
         className="absolute top-0 mt-[-1rem] grid h-10 w-10 rounded-full p-2 ml-2 md:h-12 md:w-12  "
@@ -22,7 +26,7 @@ const Back = ({ path = "/" }) => {
         </svg>
       </div>
     </Link>
-  );
+  )
 }
 
 export default Back;

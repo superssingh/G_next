@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   return (
     <Link
       href={`/posts/${post.slug}`}
-      legacyBehavior
+      passHref legacyBehavior
     >
       <div className="card cardColor hover:bg-teal-500/50 ">
         <div className=" relative overflow-hidden h-52 w-full sm:w-52 sm:h-44 sm:shrink-0  lg:h-52 lg:w-full">

@@ -29,9 +29,10 @@ const Features = () => {
                       <Link
                         href={s.url}
                         legacyBehavior
+                        passHref
                       >
                         <div className="customShadow animate mx-2 my-4 w-fit rounded-full bg-violet-600/30 p-4 font-bold text-white hover:bg-purple-500/70">
-                          Let's Started
+                          {`Let's Started`}
                         </div>
                       </Link>
                     </div>
@@ -41,8 +42,7 @@ const Features = () => {
                       src={s.image}
                       alt={s.name + 'image'}
                       layout="intrinsic"
-                      as="image"
-                      priority={true}
+                      priority
                     />
                   </div>
                 </div>
@@ -54,9 +54,7 @@ const Features = () => {
                     <Image
                       src={s.image}
                       alt={s.name + 'image'}
-                      layout="intrinsic"
-                      as="image"
-                      priority={true}
+                      priority
                     />
                   </div>
                   <div className="grid place-content-center">
@@ -70,10 +68,11 @@ const Features = () => {
                       <div className="grid place-content-center md:place-content-end">
                         <Link
                           href={s.url}
+                          passHref
                           legacyBehavior
                         >
                           <div className="customShadow animate mx-2 my-4 w-fit rounded-full bg-violet-600/30 p-4 font-bold text-white hover:bg-purple-500/70">
-                            Let's Started
+                            {`Let's Started`}
                           </div>
                         </Link>
                       </div>

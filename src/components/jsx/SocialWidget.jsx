@@ -9,11 +9,12 @@ const SocialWidget = ({ social }) => {
             <Link
               href={s.url}
               key={s.name}
-              legacyBehavior
+              as="image"
+              passHref legacyBehavior
             >
               <div className={s.name}>{s.icon}</div>
             </Link>
-          );
+          )
         })}
     </div>
   );

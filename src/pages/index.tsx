@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { HeroPage, Services, SocialProof, Features, Steps } from '../components'
+import {
+  HeroPage,
+  Services,
+  SocialProof,
+  Features,
+  Steps,
+} from '../components/tsx'
 
 const Home = () => {
   return (

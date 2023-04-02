@@ -23,9 +23,7 @@ const Team = () => {
                         src={m.image}
                         width="500"
                         height="500"
-                        as="image"
-            priority={true}
-            
+                        priority={true}
                         alt="Team Member Pic"
                       />
                     </div>
@@ -42,7 +40,7 @@ const Team = () => {
                     <SocialWidget social={m.social} />
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>

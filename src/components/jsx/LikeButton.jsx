@@ -1,8 +1,15 @@
 import Link from "next/link";
 const LikeButton = ({ handleLike }) => {
   return (
-    <Link href="#" legacyBehavior>
-      <div id="LikeButton" className="top-10 right-5 ">
+    <Link
+      href="#"
+      passHref
+      legacyBehavior
+    >
+      <div
+        id="LikeButton"
+        className="top-10 right-5 "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -19,7 +26,7 @@ const LikeButton = ({ handleLike }) => {
         </svg>
       </div>
     </Link>
-  );
+  )
 };
 
 export default LikeButton;

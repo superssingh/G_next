@@ -1,5 +1,3 @@
-const p = import('path')
-
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,

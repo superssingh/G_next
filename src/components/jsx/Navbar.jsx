@@ -17,6 +17,7 @@ const Navbar = () => {
         <header className="Navbar bgNavbar">
           <Link
             href="/"
+            passHref
             legacyBehavior
             className="grid w-28"
           >
@@ -27,7 +28,6 @@ const Navbar = () => {
                 priority
                 width={200}
                 height={45}
-                as="image"
                 className="brandLogo"
                 onClick={async () => {
                   if (clicked) {
@@ -47,6 +47,7 @@ const Navbar = () => {
                 <Link
                   key={TagName.HomeMenu.name}
                   href={TagName.HomeMenu.path}
+                  passHref
                   legacyBehavior
                 >
                   <div className=" randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black transition-shadow duration-700 hover:shadow-md hover:shadow-black ">
@@ -64,6 +65,7 @@ const Navbar = () => {
                   tabIndex={1}
                   data-text={m.name}
                   className="menu font-bold"
+                  passHref
                   legacyBehavior
                 >
                   {m.name}
@@ -81,8 +83,7 @@ const Navbar = () => {
                     src={TagName.Profile.photo.url}
                     alt="Picture of the author"
                     width={72}
-                    height={72}
-                    layout="intrinsic"
+                    height={72}                    
                     priority
                     className="object-cover shadow-lg rounded-full "
                   /> */}
@@ -113,6 +114,7 @@ const Navbar = () => {
               href={m.path}
               key={m.name}
               data-text={m.name}
+              passHref
               legacyBehavior
             >
               <div
@@ -132,6 +134,7 @@ const Navbar = () => {
           <li className="navLogo z-10">
             <Link
               href="/"
+              passHref
               legacyBehavior
             >
               <div className="grid place-content-center">

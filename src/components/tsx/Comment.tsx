@@ -9,11 +9,12 @@ import { useSession, signOut } from 'next-auth/react'
 
 type CommentsProps = {
   comments: {
+    id: string
     name: string
     email: string
     image: string
-    datetime: string
     comment: string
+    date: string
   }[]
 }
 

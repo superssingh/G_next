@@ -12,6 +12,7 @@ const Course = () => {
               <Link
                 href={m.path}
                 key={m.title}
+                passHref
                 legacyBehavior
               >
                 <div className="relative w-full transition-all duration-700 text-left sm:place-items-center ">
@@ -32,7 +33,7 @@ const Course = () => {
                   </div>
                 </div>
               </Link>
-            );
+            )
           })}
         </div>
       </div>

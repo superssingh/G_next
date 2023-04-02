@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
-import moment from "moment";
-import Link from "next/link";
-import Image from "next/legacy/image"
+import React, { useState, useEffect } from 'react'
+import moment from 'moment'
+import Link from 'next/link'
+import Image from 'next/legacy/image'
+import { Post } from '../ts/types' // replace with your actual type definition
 
-const PostWidget = ({ posts, id }) => {
-  const [similarPosts, setSimilarPosts] = useState([]);
-  const [similar, setSimilar] = useState(false);
+type PostWidgetProps = {
+  posts: Post[]
+  id: string
+}
+
+const PostWidget = ({ posts, id }: PostWidgetProps) => {
+  const [similarPosts, setSimilarPosts] = useState<Post[]>([])
+  const [similar, setSimilar] = useState<boolean>(false)
 
   useEffect(() => {
     if (posts) {
@@ -15,14 +21,14 @@ const PostWidget = ({ posts, id }) => {
 
   async function setData() {
     const relevant = await posts.filter((p) => {
-      return p.node.id != id;
-    });
+      return p.node.id !== id
+    })
 
     if (relevant.length) {
       setSimilarPosts(relevant)
       // setSimilar(true);
     } else {
-      return;
+      return
     }
   }
 
@@ -68,7 +74,7 @@ const PostWidget = ({ posts, id }) => {
           })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PostWidget;
+export default PostWidget

@@ -8,7 +8,12 @@ const Categories = ({ categories }) => {
       <div className="flex place-content-start ">
         {categories &&
           categories.map((m) => (
-            <Link href={`/categories/${m.name}`} key={m.id} legacyBehavior>
+            <Link
+              href={`/categories/${m.name}`}
+              key={m.id}
+              passHref
+              legacyBehavior
+            >
               <div className="text-center transition-all duration-700 bg-white/50 shadow-lg shadow-slate-700/[.50] rounded-lg mt-2 mx-1 hover:bg-white">
                 <div className="w-fit p-2 ">
                   <span className="text-gray-800">{m.name}</span>
@@ -18,7 +23,7 @@ const Categories = ({ categories }) => {
           ))}
       </div>
     </div>
-  );
+  )
 };
 
 export default Categories;

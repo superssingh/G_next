@@ -6,7 +6,10 @@ import { Poppins } from 'next/font/google'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 
-const customFont = Poppins({ weight: ['400', '600'], subsets: ['latin'] })
+const customFont = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { session, ...rest } = pageProps
