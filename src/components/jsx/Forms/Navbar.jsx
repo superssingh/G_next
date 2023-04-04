@@ -144,6 +144,7 @@ const Navbar = () => {
                   width={80}
                   height={80}
                   placeholder="blur"
+                  loading="lazy"
                   onClick={handleClicked}
                 />
               </div>

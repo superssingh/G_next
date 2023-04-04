@@ -1,5 +1,6 @@
 import Image from "next/legacy/image"
-import { TagName, SocialWidget } from ".."
+import { TagName } from '..'
+import { SocialWidget } from '../tsx'
 
 const AuthorInfo = ({ author }) => {
   return (

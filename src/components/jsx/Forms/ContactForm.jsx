@@ -3,10 +3,11 @@ import emailjs from "@emailjs/browser"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import { SocialWidget, TagName } from "../../"
-import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import { InputText, TextArea } from "../../jsx/myCustomUI"
+import { TagName } from '../../'
+import { SocialWidget } from '../../tsx'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { InputText, TextArea } from '../../jsx/myCustomUI'
 
 const schema = yup.object({
   your_name: yup.string().min(3).max(24).required(),
@@ -23,7 +24,8 @@ const ContactForm = () => {
   } = useForm({
     resolver: yupResolver(schema),
   })
-  const form = useRef()
+
+  const formRef = useRef()
 
   //Email service init------
   const EMAIL_SERVICE = {
@@ -34,7 +36,7 @@ const ContactForm = () => {
 
   const sendEmail = async (data) => {
     try {
-      emailjs
+      await emailjs
         .sendForm(
           EMAIL_SERVICE.SERVICE_ID,
           EMAIL_SERVICE.TEMPLATE_ID,
@@ -43,10 +45,9 @@ const ContactForm = () => {
         )
         .then(
           (result) => {
-            console.log("result success-", result)
             setSuccess(true)
-            toast.success("📧 Message sent! 🤩", {
-              position: "bottom-left",
+            toast.success('📧 Message sent! 🤩', {
+              position: 'bottom-left',
               autoClose: 5000,
               hideProgressBar: false,
               closeOnClick: true,
@@ -54,10 +55,11 @@ const ContactForm = () => {
               draggable: true,
               progress: undefined,
             })
+            return result
           },
           (error) => {
-            toast.warn("Error : " + error.text, {
-              position: "bottom-left",
+            return toast.warn('Error : ' + error.text, {
+              position: 'bottom-left',
               autoClose: 5000,
               hideProgressBar: false,
               closeOnClick: true,
@@ -67,11 +69,8 @@ const ContactForm = () => {
             })
           }
         )
-        .catch((e) => {
-          console.log("Error ON Email-", e)
-        })
     } catch (e) {
-      console.log("Error ON Email-", e)
+      return e
     }
   }
 
@@ -81,17 +80,17 @@ const ContactForm = () => {
     const name = data.your_name
     const message = data.message
 
-    if (name.trim() === "") {
-      alert("Your name required.")
+    if (name.trim() === '') {
+      alert('Your name required.')
       return
     }
 
-    if (message.trim() === "") {
-      alert("Your message required.")
+    if (message.trim() === '') {
+      alert('Your message required.')
       return
     }
 
-    sendEmail(form.current)
+    const result = sendEmail(formRef.current)
   }
 
   return (
@@ -122,9 +121,8 @@ const ContactForm = () => {
             <div className="text-3xl mt-[-42px] mx-2 text-center">
               Contact Us
             </div>
-            {/* /-----------------------------------------------------------------------------form  */}
             <form
-              ref={form}
+              ref={formRef}
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="grid relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
@@ -142,13 +140,14 @@ const ContactForm = () => {
                     <InputText
                       name="your_email"
                       label="Email"
+                      type="email"
                       required
                       error={errors.your_email?.message}
                       register={register}
                     />
                   </div>
                 </div>
-                <div className="grid relative p-2 mb-4 ">
+                <div className="grid place-items-center w-full  mb-4 ">
                   <TextArea
                     name="message"
                     label="Message"
@@ -196,7 +195,7 @@ const ContactForm = () => {
         pauseOnHover
       />
     </div>
-  );
+  )
 }
 
 export default ContactForm

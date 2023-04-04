@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { TagName } from '../index'
+import { TagName} from '../index'
 const Features = () => {
   return (
     <>
@@ -16,6 +16,7 @@ const Features = () => {
                   <div
                     className={`my-8 grid h-full max-w-6xl px-4 align-middle md:grid-cols-2`}
                   >
+
                     <div className="grid place-content-center ">
                       <div className="grid  ">
                         <h1 className=" mb-2 text-center text-4xl font-bold md:text-left">
@@ -41,7 +42,7 @@ const Features = () => {
                       <Image
                         src={s.image}
                         alt={s.name + 'image'}
-                        priority
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -53,7 +54,7 @@ const Features = () => {
                       <Image
                         src={s.image}
                         alt={s.name + 'image'}
-                        priority
+                        loading="lazy"
                       />
                     </div>
                     <div className="grid place-content-center">

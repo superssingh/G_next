@@ -1,4 +1,4 @@
-import ContactForm from "../../components/jsx/Forms/ContactForm"
+import {ContactForm} from "../../components/tsx"
 
 const Contact = () => {
   return (

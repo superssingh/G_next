@@ -25,7 +25,7 @@ const SocialProof = () => {
                       width="100"
                       height="100"
                       alt="Reviewer Image"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="socialCard animate grid relative pt-2 place-items-start bg-slate-300 blur-sm">

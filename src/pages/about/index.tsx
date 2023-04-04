@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx"
 import Image from "next/legacy/image"
-import { TagName, SocialWidget } from "../../components/"
+import { TagName } from '../../components'
+import { SocialWidget } from '../../components/tsx'
 
 const About = () => {
   return (
@@ -8,7 +9,6 @@ const About = () => {
       <div className="grid w-fit max-w-2xl place-items-center shadow-slate-200 p-2   showFromTop ">
         <div className="text-[2rem] text-slate-200 text-center font-semibold w-fit p-2 font-poppins">
           About Us
-          {/* <span className=" line-through">Us</span> Me*/}
         </div>
         <div className="relative p-2 text-slate-200 ">
           <div className="text-lg p-2 text-justify">
@@ -27,17 +27,11 @@ const About = () => {
               <div className=" animate grid w-64 h-64 p-2 place-content-center rounded-full overflow-hidden z-[1] ">
                 <Image
                   src={TagName.founderData.image}
-                  alt="Picture of the author"
-                  width={300}
-                  height={300}
-                  priority
-                  layout="fixed"
+                  alt="Picture of the author"                  
+                  priority                  
                   className=" shadow-lg rounded-full "
                 />
               </div>
-              {/* <div className="text-white/50 font-bold text-lg ">
-                {TagName.founderData.name}
-              </div> */}
             </div>
           </div>
           <SocialWidget social={TagName.founderData.social} />
@@ -51,7 +45,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default About

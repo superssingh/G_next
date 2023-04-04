@@ -27,7 +27,7 @@ const Posts = () => {
     if (posts.status === 'success') {
       const recent = await _.orderBy(
         posts.data,
-        (p) => moment(p.node.createdAt).format('YYYYMMDD'),
+        ({ p }) => moment(p.node.createdAt).format('YYYYMMDD'),
         'desc'
       )
       await setRecentPosts(recent)
@@ -45,18 +45,16 @@ const Posts = () => {
     setFilteredPosts(await filtered)
   }
 
-  //getting latestposts.....
-
   return (
     <div>
       {(recentPosts.length > 0 && (
         <div className="relative sm:grid w-full place-content-center gap-4 lg:grid-cols-12  ">
           <div className="grid w-full max-w-5xl md:col-span-8 px-2">
             <div className="w-full content-center justify-center place-self-start  md:grid md:w-full lg:grid-cols-2  2xl:grid-cols-3 ">
-              {filteredPosts.map((p) => (
+              {filteredPosts.map(({ node }) => (
                 <PostCard
-                  post={p.node}
-                  key={p.node.id}
+                  post={node}
+                  key={node.id}
                 />
               ))}
             </div>
@@ -85,6 +83,6 @@ const Posts = () => {
 export default Posts
 
 // export async function getStaticProps() {
-//   const posts = (await getPosts()) || [];
-//   return { props: { posts }, revalidate: 90000 };
+//   const posts = (await getPosts()) || []
+//   return { props: { posts }, revalidate: 90000 }
 // }

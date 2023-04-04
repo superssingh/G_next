@@ -34,9 +34,6 @@ input[type="checkbox"]:checked ~ .faq > label > .iconPointer {
   background-size: cover;
 }
 
-// label:hover {
-//   color: rgb(225, 202, 246);
-// }
 
 .inputText:hover,
 .textArea:hover {
@@ -46,7 +43,7 @@ input[type="checkbox"]:checked ~ .faq > label > .iconPointer {
 //---
 .inputText:hover + .inputLabel,
 .textArea:hover + .inputLabel {
-  background: $backgroundColor;
+  background: rgb(67, 113, 190);
   opacity: 1;
   margin: -1.2rem 0 0 0rem;
   color: rgb(255, 255, 255);
@@ -54,12 +51,27 @@ input[type="checkbox"]:checked ~ .faq > label > .iconPointer {
   padding: 0 8px;
 }
 
+.inputText + .inputLabel,
+.textArea + .inputLabel {
+  opacity: 1;
+  margin: -1.1rem 0 0 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 8px;
+  background: $GradientTeal;
+  box-shadow: 0px 2px 10px 1px rgb(2, 2, 2);
+  border-left: 2px solid rgb(4, 23, 16);
+  border-right: 2px solid rgb(16, 199, 129);
+  transition: all ease-in-out 0.3;
+}
+
+
 .inputText:focus,
 .inputLabel,
 .textArea:focus,
 .inputLabel {
   box-shadow: 0px 5px 10px 1px rgb(2, 2, 2);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .inputText:valid + .inputLabel,
@@ -69,34 +81,37 @@ input[type="checkbox"]:checked ~ .faq > label > .iconPointer {
   color: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 0 8px;
-  background: $GradientTeal;
   border-left: 2px solid rgba(23, 23, 23, 0.699);
   border-right: 2px solid rgba(23, 23, 23, 0.699);
+  transition: all ease-in-out 0.5;
 }
 
 .inputText:focus + .inputLabel,
-.textArea:focus + .inputLabel {
+.textArea:focus + .inputLabel,
+.inputText:hover + .inputLabel,
+.textArea:hover + .inputLabel  {
   opacity: 1;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 0 8px;
+  background: $GradientTeal;
   box-shadow: 0px 2px 10px 1px rgb(2, 2, 2);
-  border-left: 2px solid rgb(16, 199, 129);
+  border-left: 2px solid rgb(4, 23, 16);
   border-right: 2px solid rgb(16, 199, 129);
+  transition: all ease-in-out 0.3;
 }
 
-.inputText:focus:invalid + .inputLabel,
-.textArea:focus:invalid + .inputLabel {
-  opacity: 1;
+.inputText:invalid + .inputLabel, .inputText:not(:valid) + .inputLabel,
+.textArea:invalid + .inputLabel, .textArea:not(:valid)+ .inputLabel {
+  opacity: 0;
   margin: -1.1rem 0 0 0.5rem;
   color: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 0 8px;
-  background: #e3247a;
-  border-left: 2px solid rgb(199, 53, 16);
-  border-right: 2px solid rgb(199, 37, 16);
+  transition: all ease-in-out 0.3;
 }
+
 .inputText:not(:placeholder-shown):invalid:not(:focus),
 .inputText:not(:placeholder-shown):invalid:focus,
 .textArea:not(:placeholder-shown):invalid:not(:focus),

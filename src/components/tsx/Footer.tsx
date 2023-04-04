@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/legacy/image'
 import { TagName, Logo } from '../index'
-import SocialWidget from './SocialWidget'
+import { SocialWidget } from '.'
 
 const Footer = () => {
   return (
@@ -38,10 +38,8 @@ const Footer = () => {
                 alt={TagName.COMPANY_NAME}
                 width={100}
                 height={100}
-                // layout="fixed"
-                // placeholder="blur"
+                loading="lazy"
                 className="logo"
-                priority
               />
             </div>
           </Link>

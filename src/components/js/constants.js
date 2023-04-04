@@ -1,23 +1,28 @@
 "use strict";
-import { founder, frontend, backend, fullstack, deploy } from "../index"
-export const COMPANY_NAME = "Gogixer";
-export const ACTION_INVALID = "INVALID ACTION";
-export const NETWORK_ERROR = "Network connection error";
-export const HAMBURGER_CLOSE = "hamburger-close";
-export const HAMBURGER_OPEN = "hamburger-open";
-export const HAMBURGER_LINE = "hamburger_lines";
-export const MENU_DEFAULT = "menus";
-export const MOBILE_OPEN = "mobile-open";
-export const MOBILE_CLOSE = "mobile-close";
+import {
+  founderJPG,
+  frontendSVG,
+  backendSVG,
+  fullstackSVG,
+  deploySVG,
+} from '../index'
+export const COMPANY_NAME = 'Gogixer'
+export const ACTION_INVALID = 'INVALID ACTION'
+export const NETWORK_ERROR = 'Network connection error'
+export const HAMBURGER_CLOSE = 'hamburger-close'
+export const HAMBURGER_OPEN = 'hamburger-open'
+export const HAMBURGER_LINE = 'hamburger_lines'
+export const MENU_DEFAULT = 'menus'
+export const MOBILE_OPEN = 'mobile-open'
+export const MOBILE_CLOSE = 'mobile-close'
 
-const postsURL = process.env.GRAPH_PUBLIC_ENDPOINT;
-// const imageURL=""
+const postsURL = process.env.GRAPH_PUBLIC_ENDPOINT
 
-const imageFit = "&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60";
+const imageFit = '&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
 
 export const HomeMenu = {
-  name: "Home",
-  path: "/",
+  name: 'Home',
+  path: '/',
   icon: (
     <svg
       fill="#ffffff"
@@ -29,7 +34,7 @@ export const HomeMenu = {
       <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z" />
     </svg>
   ),
-};
+}
 
 export const menus = [
   {
@@ -95,7 +100,7 @@ export const menus = [
   //     </svg>
   //   ),
   // },
-  { 
+  {
     name: 'Contact',
     path: '/contact',
     icon: (
@@ -135,26 +140,26 @@ export const menus = [
       </svg>
     ),
   },
-];
+]
 
 export const footermenus = [
-  { name: "👤-About", path: "/about" },
-  { name: "📝-Articles", path: "/posts" },
-  { name: "📨-Contact", path: "/contact" },
-  { name: "📚-Courses", path: "/courses" },
-  { name: "🔏-Privacy Policy", path: "/privacypolicy" },
-  { name: "🏠-Shop", path: "/shop" },
-  { name: "📜-Terms", path: "/terms" },
-];
+  { name: '👤-About', path: '/about' },
+  { name: '📝-Articles', path: '/posts' },
+  { name: '📨-Contact', path: '/contact' },
+  { name: '📚-Courses', path: '/courses' },
+  { name: '🔏-Privacy Policy', path: '/privacypolicy' },
+  { name: '🏠-Shop', path: '/shop' },
+  { name: '📜-Terms', path: '/terms' },
+]
 
 export const categories = [
-  { name: "Programming", image: "", id: "1" },
-  { name: "Technology", image: "", id: "3" },
-];
+  { name: 'Programming', image: '', id: '1' },
+  { name: 'Technology', image: '', id: '3' },
+]
 
 export const getPosts = () => {
-  return postsURL;
-};
+  return postsURL
+}
 
 // export const getImagePath = () => {
 //   return imageURL;
@@ -162,8 +167,8 @@ export const getPosts = () => {
 
 export const services = [
   {
-    title: "Blogging",
-    description: "Blogs on programming and technology.",
+    title: 'Blogging',
+    description: 'Blogs on programming and technology.',
     icon: (
       <svg
         version="1.1"
@@ -227,11 +232,11 @@ export const services = [
         <g></g>
       </svg>
     ),
-    path: "/posts",
+    path: '/posts',
   },
   {
-    title: "Education",
-    description: "Learn web development for free.",
+    title: 'Education',
+    description: 'Learn web development for free.',
     icon: (
       <svg
         width={56}
@@ -252,11 +257,11 @@ export const services = [
         />
       </svg>
     ),
-    path: "/courses",
+    path: '/courses',
   },
   {
-    title: "Work",
-    description: "We build websites on demand.",
+    title: 'Work',
+    description: 'We build websites on demand.',
     icon: (
       <svg
         version="1.1"
@@ -279,12 +284,21 @@ export const services = [
         </g>
         <g>
           <g>
-            <rect x="256" y="71.442" width="202.419" height="35.721" />
+            <rect
+              x="256"
+              y="71.442"
+              width="202.419"
+              height="35.721"
+            />
           </g>
         </g>
         <g>
           <g>
-            <circle cx="71.442" cy="89.302" r="23.814" />
+            <circle
+              cx="71.442"
+              cy="89.302"
+              r="23.814"
+            />
           </g>
         </g>
         <g>
@@ -325,15 +339,15 @@ export const services = [
         <g></g>
       </svg>
     ),
-    path: "/contact",
+    path: '/contact',
   },
 ]
 
 export const courses = [
   {
-    title: "Responsive Design",
+    title: 'Responsive Design',
     description:
-      "Learn responsive user interface design with CSS, SASS, SCSS & tailwindCSS.",
+      'Learn responsive user interface design with CSS, SASS, SCSS & tailwindCSS.',
     icon: (
       <svg
         version="1.1"
@@ -417,7 +431,7 @@ export const courses = [
         <g></g>
       </svg>
     ),
-    path: "/courses/ui",
+    path: '/courses/ui',
   },
   // {
   //   title: "Data Structure & Algorithum",
@@ -496,8 +510,8 @@ export const courses = [
   // },
 
   {
-    title: "Frontend Development",
-    description: "Learn most demanding skills- Javascript, ReactJS & NextJS.",
+    title: 'Frontend Development',
+    description: 'Learn most demanding skills- Javascript, ReactJS & NextJS.',
 
     icon: (
       <svg
@@ -510,57 +524,112 @@ export const courses = [
       >
         <g>
           <g>
-            <rect x="71.68" y="102.4" width="92.16" height="20.48" />
+            <rect
+              x="71.68"
+              y="102.4"
+              width="92.16"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="184.32" y="102.4" width="51.2" height="20.48" />
+            <rect
+              x="184.32"
+              y="102.4"
+              width="51.2"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="71.68" y="256" width="92.16" height="20.48" />
+            <rect
+              x="71.68"
+              y="256"
+              width="92.16"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="184.32" y="256" width="51.2" height="20.48" />
+            <rect
+              x="184.32"
+              y="256"
+              width="51.2"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="71.68" y="204.8" width="61.44" height="20.48" />
+            <rect
+              x="71.68"
+              y="204.8"
+              width="61.44"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="296.96" y="204.8" width="30.72" height="20.48" />
+            <rect
+              x="296.96"
+              y="204.8"
+              width="30.72"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="153.6" y="204.8" width="122.88" height="20.48" />
+            <rect
+              x="153.6"
+              y="204.8"
+              width="122.88"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="204.8" y="153.6" width="40.96" height="20.48" />
+            <rect
+              x="204.8"
+              y="153.6"
+              width="40.96"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="71.68" y="153.6" width="112.64" height="20.48" />
+            <rect
+              x="71.68"
+              y="153.6"
+              width="112.64"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="266.24" y="153.6" width="153.6" height="20.48" />
+            <rect
+              x="266.24"
+              y="153.6"
+              width="153.6"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="71.68" y="307.2" width="153.6" height="20.48" />
+            <rect
+              x="71.68"
+              y="307.2"
+              width="153.6"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
@@ -594,17 +663,32 @@ export const courses = [
         </g>
         <g>
           <g>
-            <rect x="276.48" y="389.12" width="20.48" height="20.48" />
+            <rect
+              x="276.48"
+              y="389.12"
+              width="20.48"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="235.52" y="389.12" width="20.48" height="20.48" />
+            <rect
+              x="235.52"
+              y="389.12"
+              width="20.48"
+              height="20.48"
+            />
           </g>
         </g>
         <g>
           <g>
-            <rect x="194.56" y="389.12" width="20.48" height="20.48" />
+            <rect
+              x="194.56"
+              y="389.12"
+              width="20.48"
+              height="20.48"
+            />
           </g>
         </g>
         <g></g>
@@ -624,11 +708,11 @@ export const courses = [
         <g></g>
       </svg>
     ),
-    path: "/courses/frontend",
+    path: '/courses/frontend',
   },
   {
-    title: "Database Development",
-    description: "Learn databases MongoDB, PostgreSQL & GraphQL from scratch.",
+    title: 'Database Development',
+    description: 'Learn databases MongoDB, PostgreSQL & GraphQL from scratch.',
     icon: (
       <svg
         version="1.1"
@@ -712,12 +796,12 @@ export const courses = [
         <g></g>
       </svg>
     ),
-    path: "/courses/database",
+    path: '/courses/database',
   },
   {
-    title: "Backend Development",
+    title: 'Backend Development',
     description:
-      "Learn how to built backend with NodeJS & ExpressJS from scratch.",
+      'Learn how to built backend with NodeJS & ExpressJS from scratch.',
     icon: (
       <svg
         viewBox="0 0 930 930"
@@ -729,12 +813,12 @@ export const courses = [
         <path d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z" />
       </svg>
     ),
-    path: "/courses/backend",
+    path: '/courses/backend',
   },
 
   {
-    title: "Full Stack Development",
-    description: "Learn to build a full stack web app.",
+    title: 'Full Stack Development',
+    description: 'Learn to build a full stack web app.',
     icon: (
       <svg
         version="1.1"
@@ -821,12 +905,12 @@ export const courses = [
         <g></g>
       </svg>
     ),
-    path: "/courses/fullstack",
+    path: '/courses/fullstack',
   },
 
   {
-    title: "App Deployment ",
-    description: "Learn deployment web app scratch.",
+    title: 'App Deployment ',
+    description: 'Learn deployment web app scratch.',
     icon: (
       <svg
         version="1.1"
@@ -880,14 +964,14 @@ export const courses = [
         <g></g>
       </svg>
     ),
-    path: "/courses/deployment",
+    path: '/courses/deployment',
   },
 ]
 
 export const socialLinks = [
   {
-    name: "youtube",
-    url: "https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA",
+    name: 'youtube',
+    url: 'https://www.youtube.com/channel/UC1-UohTcazossMwQY1ns2nA',
     icon: (
       <svg
         fill="none"
@@ -901,8 +985,8 @@ export const socialLinks = [
     ),
   },
   {
-    name: "twitter",
-    url: "https://twitter.com/gogixer",
+    name: 'twitter',
+    url: 'https://twitter.com/gogixer',
     icon: (
       <svg
         fill="none"
@@ -916,8 +1000,8 @@ export const socialLinks = [
     ),
   },
   {
-    name: "linkedin",
-    url: "https://www.linkedin.com/company/gogixer",
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/company/gogixer',
     icon: (
       <svg
         fill="none"
@@ -931,8 +1015,8 @@ export const socialLinks = [
     ),
   },
   {
-    name: "instagram",
-    url: "https://www.instagram.com/gogixer/",
+    name: 'instagram',
+    url: 'https://www.instagram.com/gogixer/',
     icon: (
       <svg
         fill="none"
@@ -945,71 +1029,71 @@ export const socialLinks = [
       </svg>
     ),
   },
-];
+]
 
 export const reviews = [
   {
-    name: "User Name 1",
-    job: "Web Developer",
+    name: 'User Name 1',
+    job: 'Web Developer',
     comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio velit rem eum facere minus?",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio velit rem eum facere minus?',
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9' +
       imageFit,
   },
   {
-    name: "User Name  2",
-    job: "Full Stack Developer",
+    name: 'User Name  2',
+    job: 'Full Stack Developer',
     comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae optio commodi expedita? Temporibus facere deleniti nisi cumque eos vel.",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae optio commodi expedita? Temporibus facere deleniti nisi cumque eos vel.',
     image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
+      'https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8' +
       imageFit,
   },
   {
-    name: "User Name 3",
-    job: "Business Startup",
+    name: 'User Name 3',
+    job: 'Business Startup',
     comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam iure facilis ea enim. Molestiae consequatur earum voluptas.",
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam iure facilis ea enim. Molestiae consequatur earum voluptas.',
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9' +
       imageFit,
   },
   {
-    name: "User Name 4",
-    job: "Frontend Developer",
+    name: 'User Name 4',
+    job: 'Frontend Developer',
     comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis amet aliquam eligendi quas iste.",
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis amet aliquam eligendi quas iste.',
     image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
+      'https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8' +
       imageFit,
   },
   {
-    name: "User Name 5",
-    job: "Web Developer",
+    name: 'User Name 5',
+    job: 'Web Developer',
     comment:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur est earum sit. Atque, iusto.",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur est earum sit. Atque, iusto.',
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" +
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9' +
       imageFit,
   },
   {
-    name: "User Name 6",
-    job: "DevOps Developer",
+    name: 'User Name 6',
+    job: 'DevOps Developer',
     comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt laboriosam cupiditate sapiente enim iste voluptates nihil consectetur nisi totam.",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt laboriosam cupiditate sapiente enim iste voluptates nihil consectetur nisi totam.',
 
     image:
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" +
+      'https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8' +
       imageFit,
   },
-];
+]
 
 export const team = [
   {
     name: 'Santosh Singh',
     job: 'Founder',
-    image: founder,
+    image: founderJPG,
     social: [
       {
         name: 'twitter',
@@ -1047,19 +1131,19 @@ export const team = [
 
 export const steps = [
   {
-    label: "Learn by doing.",
+    label: 'Learn by doing.',
     comment:
       "Best way to learn coding is by doing. Don't be part of tutorial hell. Just start it.",
   },
   {
-    label: "Read & follow the official documentation and Blogs.",
+    label: 'Read & follow the official documentation and Blogs.',
     comment:
-      "Video tutorial is good if you have no issues. But the best way to start learning is through reading the official documentation and blogs. So read the documentation. Seriously, this solves most issues.",
+      'Video tutorial is good if you have no issues. But the best way to start learning is through reading the official documentation and blogs. So read the documentation. Seriously, this solves most issues.',
   },
   {
-    label: "Build your logic with small & simple projects.",
+    label: 'Build your logic with small & simple projects.',
     comment:
-      "Just try to build simple and small projects. Apps like taking notes, making reminders and calculator. They will improve your logical skill.",
+      'Just try to build simple and small projects. Apps like taking notes, making reminders and calculator. They will improve your logical skill.',
   },
   {
     label: "Don't repeat.",
@@ -1067,44 +1151,44 @@ export const steps = [
       "Never repeat your code. To learn more about it search on Google - Programming principle Don't Repeat Yourself (DRY).",
   },
   {
-    label: "Contribute to open source projects on GitHub.",
+    label: 'Contribute to open source projects on GitHub.',
     comment:
-      "This is the most important part and it helps you to get better job opportunities.",
+      'This is the most important part and it helps you to get better job opportunities.',
   },
-];
+]
 
 export const Skills = [
   {
     name: 'Frontend Development',
     des: "In this section, you're going to learn HTML, CSS/SCSS, TailwindCSS, Javascript libraries (ReactJS and NextJS) and GitHub Version Control. These skills help you to build responsive user interfaces and connect them with third-party REST API data through ReactJS and NextJS.",
-    image: frontend,
+    image: frontendSVG,
     url: 'courses/frontend',
   },
   {
     name: 'Backend Development',
     des: 'For Backend development, you need to learn about various types of databases and Javascript libraries NodeJS and ExpressJS to build your own secure backend APIs from scratch and connect with the Frontend.',
-    image: backend,
+    image: backendSVG,
     url: 'courses/backend',
   },
   {
     name: 'Deployment',
     des: "Deployment is the easiest and less time-consuming. In this part, you're going to config the project and then deploy it into the cloud. We often deploy on Github, Netlify & Vercel.",
-    image: deploy,
+    image: deploySVG,
     url: 'courses/deployment',
   },
   {
     name: 'Full Stack Development',
 
     des: 'A Full Stack Developer can develop both client and server software which includes all three; frontend, backend and deployment. In this part, you have to create a project yourself. In addition, you gonna learn how to be a problem-solving contributor in open-source communities on Github.',
-    image: fullstack,
+    image: fullstackSVG,
     url: 'courses/fullstack',
   },
-];
+]
 
 export const founderData = {
-  name: "Santosh Singh",
-  profession: "Founder & Full Stack Developer",
-  image: founder,
+  name: 'Santosh Singh',
+  profession: 'Founder & Full Stack Developer',
+  image: founderJPG,
   des: `<div>👋 Hi, I'm Santosh Singh, a <strong>Full-Stack Developer</strong> and the <strong>founder</strong> of gogixer. I'm
             passionate about my profession and have a keen interest to teach people about web
             development. I have learned web development skills from online and
@@ -1112,8 +1196,8 @@ export const founderData = {
             you will enjoy it... 😇 </div>`,
   social: [
     {
-      name: "twitter",
-      url: "https://twitter.com/superssingh",
+      name: 'twitter',
+      url: 'https://twitter.com/superssingh',
       icon: (
         <svg
           fill="none"
@@ -1127,8 +1211,8 @@ export const founderData = {
       ),
     },
     {
-      name: "linkedin",
-      url: "https://www.linkedin.com/in/santossingh",
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/santossingh',
       icon: (
         <svg
           fill="none"

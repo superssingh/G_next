@@ -1,5 +1,5 @@
 import { TagName } from "..";
-import FAQ from "./FAQ";
+import { FAQ } from '.'
 
 const Steps = () => {
   return (

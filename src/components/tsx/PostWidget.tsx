@@ -55,7 +55,7 @@ const PostWidget = ({ posts, id }: PostWidgetProps) => {
                         alt={m.node.title}
                         width={80}
                         height={80}
-                        priority
+                        loading="lazy"
                         className=" rounded-l-lg"
                       />
                     </div>

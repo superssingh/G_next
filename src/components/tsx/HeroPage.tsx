@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { frontend } from '..'
+import { frontendSVG } from '..'
 
 const HeroPage = () => {
   return (
@@ -36,12 +36,11 @@ const HeroPage = () => {
             </div>
             <div className="grid place-content-center md:right-0 object-fit overflow-hidden">
               <Image
-                src={frontend}
+                src={frontendSVG}
                 width={500}
                 height={500}
                 alt={'HeroImage'}
-                layout="intrinsic"
-                priority={true}
+                priority
                 className="relative rounded-xl z-[2] "
               />
             </div>
