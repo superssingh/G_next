@@ -1,5 +1,5 @@
-import { NotFound } from '../../../components'
-const UI = () => {
+import { NotFound } from '../../components'
+const Backend = () => {
   return (
     <div className="grid relative ">
       <NotFound
@@ -10,4 +10,4 @@ const UI = () => {
   )
 }
 
-export default UI
+export default Backend

@@ -1,5 +1,5 @@
-import { NotFound } from '../../../components'
-const Deployment = () => {
+import { NotFound } from '../../components'
+const Fullstack = () => {
   return (
     <div className="grid relative ">
       <NotFound
@@ -10,4 +10,4 @@ const Deployment = () => {
   )
 }
 
-export default Deployment
+export default Fullstack
