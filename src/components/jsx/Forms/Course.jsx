@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { TagName } from "..";
-const Course=()=>{
+const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
-      </div>
-
       <div className="relative text-center md:justify-center items-center  ">
         <h1 className="text-3xl font-bold uppercase ">Courses</h1>
 
@@ -40,7 +38,7 @@ const Course=()=>{
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Course;

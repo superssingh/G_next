@@ -12,12 +12,12 @@ module.exports = {
     includePaths: [(__dirname, './src/styles')],
   },
 
-  experimental: {
-    optimizeFonts: true,
-    optimizeImages: true,
-  },
-  font: {
-    // Disable loading fonts from Google Fonts
-    loadGoogleFonts: false,
-  },
+  // experimental: {
+  //   optimizeFonts: true,
+  //   optimizeImages: true,
+  // },
+  // font: {
+  //   // Disable loading fonts from Google Fonts
+  //   loadGoogleFonts: false,
+  // },
 }
