@@ -1,5 +1,4 @@
-import { TagName } from "..";
-import { FAQ } from '.'
+import { TagName, FAQ } from '..'
 
 const Steps = () => {
   return (
@@ -34,4 +33,4 @@ const Steps = () => {
   )
 }
 
-export default Steps;
+export default Steps

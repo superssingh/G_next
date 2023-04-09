@@ -33,7 +33,8 @@
     "src/**/*.tsx",
     "src/components/ts/*.ts",
     "src/components/tsx/*.tsx",
-    "src/pages/posts/index.js"
+    "src/pages/posts/index.tsx",
+    "src/pages/courses/ui/ui.tsx"
   ],
   "exclude": ["node_modules"]
 }

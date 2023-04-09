@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { TagName} from '../index'
+import { TagName } from '..'
 const Features = () => {
   return (
     <>

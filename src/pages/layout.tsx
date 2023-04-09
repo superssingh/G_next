@@ -1,8 +1,8 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { Footer, Navbar } from '../components/tsx'
-import { getPosts } from '../services/getBlogData'
+import { Footer, Navbar } from '../components'
+import { getPosts } from '../components/js/services/getBlogData'
 
 const queryClient = new QueryClient({
   defaultOptions: {

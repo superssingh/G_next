@@ -1,26 +1,26 @@
 'use client'
-import { useRef } from 'react'
-import LoginBtn from '../jsx/login_btn'
-import TextArea from '../jsx/myCustomUI/TextArea'
 import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import * as z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useSession, signOut } from 'next-auth/react'
+import { LoginBtn, TextArea } from '..'
+
+const CommentFormValidator = z.object({
+  id: z.string().optional(),
+  name: z.string(),
+  email: z.string().email(),
+  avatar: z.string().url().optional(),
+  comment: z.string().refine((val) => val.trim().length > 0, {
+    message: 'Message field cannot be blank',
+  }),
+  date: z.string(),
+})
+
+type FormData = z.infer<typeof CommentFormValidator>
 
 type CommentsProps = {
-  comments: {
-    id: string
-    name: string
-    email: string
-    image: string
-    comment: string
-    date: string
-  }[]
+  comments: FormData[]
 }
-
-const schema = yup.object({
-  comment: yup.string().min(3).max(100).required(),
-})
 
 const Comment = ({ comments }: CommentsProps) => {
   const { data: session } = useSession()
@@ -28,26 +28,23 @@ const Comment = ({ comments }: CommentsProps) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  })
+  } = useForm<FormData>({ resolver: zodResolver(CommentFormValidator) })
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormData) => {
     // if (success) return;
-    if (session) {
-      data.name = session.user?.name
-      data.email = session.user?.email
-      data.image = session.user?.image
-      data.datetime = new Date().toJSON()
+    if (session && session.user) {
+      data.name = session.user.name || ''
+      data.email = session.user.email || ''
+      data.avatar = session.user.image || undefined
+      data.date = new Date().toJSON() || ''
+
       console.log('commentData: ', data)
       return
     }
   }
 
-  const form = useRef()
-
   return (
-    <div>
+    <>
       <div className="grid w-full p-4 ">
         {(session && (
           <div>
@@ -105,7 +102,7 @@ const Comment = ({ comments }: CommentsProps) => {
           </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
