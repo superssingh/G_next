@@ -1,9 +1,10 @@
 import React from 'react'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react'
-import Layout from './layout'
 import { Poppins } from 'next/font/google'
-import type { AppProps } from 'next/app'
+import Layout from './layout'
+import '../components/js/abortController'
 import '../styles/globals.css'
 
 const customFont = Poppins({

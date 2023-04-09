@@ -34,7 +34,8 @@
     "src/components/ts/*.ts",
     "src/components/tsx/*.tsx",
     "src/pages/posts/index.tsx",
-    "src/pages/courses/ui/ui.tsx"
+    "src/pages/courses/ui/ui.tsx",
+    "src/components/js/abortController.js"
   ],
   "exclude": ["node_modules"]
 }
