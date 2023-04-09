@@ -14,7 +14,7 @@ const PostWidget: React.FC<PostWidgetProps> = ({ posts, id }) => {
 
   useEffect(() => {
     findSimilarData()
-  }, [posts])
+  }, [])
 
   async function findSimilarData() {
     if (posts.length <= 0) {
