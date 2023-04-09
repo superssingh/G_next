@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -12,9 +12,7 @@ const PostWidget: React.FC<PostWidgetProps> = ({ posts, id }) => {
   const [similarPosts, setSimilarPosts] = useState<any[]>([])
   const [similar, setSimilar] = useState(false)
 
-  useEffect(() => {
-    findSimilarData()
-  }, [])
+  findSimilarData()
 
   async function findSimilarData() {
     if (posts.length <= 0) {
