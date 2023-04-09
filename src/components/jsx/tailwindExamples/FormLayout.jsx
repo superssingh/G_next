@@ -31,7 +31,10 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form
+              action="#"
+              method="POST"
+            >
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-3 gap-6">
@@ -71,7 +74,7 @@ export default function Example() {
                         rows={3}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="you@example.com"
-                        defaultValue={""}
+                        defaultValue={''}
                       />
                     </div>
                     <p className="mt-2 text-sm text-gray-500">
@@ -158,7 +161,10 @@ export default function Example() {
         </div>
       </div>
 
-      <div className="hidden sm:block" aria-hidden="true">
+      <div
+        className="hidden sm:block"
+        aria-hidden="true"
+      >
         <div className="py-5">
           <div className="border-t border-gray-200" />
         </div>
@@ -177,7 +183,10 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form
+              action="#"
+              method="POST"
+            >
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -327,7 +336,10 @@ export default function Example() {
         </div>
       </div>
 
-      <div className="hidden sm:block" aria-hidden="true">
+      <div
+        className="hidden sm:block"
+        aria-hidden="true"
+      >
         <div className="py-5">
           <div className="border-t border-gray-200" />
         </div>
@@ -341,12 +353,15 @@ export default function Example() {
                 Notifications
               </h3>
               <p className="mt-1 text-sm text-gray-600">
-                Decide which communications you'd like to receive and how.
+                Decide which communications you&apos;d like to receive and how.
               </p>
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form
+              action="#"
+              method="POST"
+            >
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <fieldset>
@@ -492,5 +507,5 @@ export default function Example() {
         </div>
       </div>
     </>
-  );
+  )
 }

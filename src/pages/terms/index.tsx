@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 const Terms = (): JSX.Element => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow ">
@@ -22,7 +23,7 @@ const Terms = (): JSX.Element => {
 
           <div>
             Permission is granted to temporarily download one copy of the
-            materials on Gogixer's Website for personal, non-commercial
+            materials on Gogixer&apos;s Website for personal, non-commercial
             transitory viewing only. This is the grant of a license, not a
             transfer of title, and under this license you may not:
           </div>
@@ -34,16 +35,16 @@ const Terms = (): JSX.Element => {
               display;
             </li>
             <li className="text-xs">
-              attempt to reverse engineer any software contained on Gogixer's
-              Website;
+              attempt to reverse engineer any software contained on
+              Gogixer&apos;s Website;
             </li>
             <li className="text-xs">
               remove any copyright or other proprietary notations from the
               materials; or
             </li>
             <li className="text-xs">
-              transferring the materials to another person or "mirror" the
-              materials on any other server.
+              transferring the materials to another person or &apos;mirror&apos;
+              the materials on any other server.
             </li>
           </ul>
 
@@ -52,22 +53,22 @@ const Terms = (): JSX.Element => {
             restrictions. Upon termination, your viewing right will also be
             terminated and you should destroy any downloaded materials in your
             possession whether it is printed or electronic format. These Terms
-            of Service has been created with the help of the{' '}
+            of Service has been created with the help of the&apos;
             <a href="https://www.termsofservicegenerator.net">
               Terms Of Service Generator
             </a>
-            .
+            &apos; .
           </div>
 
           <h2>3. Disclaimer</h2>
 
           <div>
-            All the materials on Gogixer’s Website are provided "as is". Gogixer
-            makes no warranties, may it be expressed or implied, therefore
-            negates all other warranties. Furthermore, Gogixer does not make any
-            representations concerning the accuracy or reliability of the use of
-            the materials on its Website or otherwise relating to such materials
-            or any sites linked to this Website.
+            All the materials on Gogixer’s Website are provided &apos;as
+            is&apos;. Gogixer makes no warranties, may it be expressed or
+            implied, therefore negates all other warranties. Furthermore,
+            Gogixer does not make any representations concerning the accuracy or
+            reliability of the use of the materials on its Website or otherwise
+            relating to such materials or any sites linked to this Website.
           </div>
 
           <h2>4. Limitations</h2>
@@ -115,7 +116,7 @@ const Terms = (): JSX.Element => {
           <div className="flex">
             <div>Please read our Privacy Policy.</div>
             <Link
-              href={'/privacypolicy'}
+              href="/privacypolicy"
               legacyBehavior
             >
               <span className="mx-2 rounded bg-violet-500 p-1 font-medium text-white hover:bg-violet-700">
@@ -127,8 +128,8 @@ const Terms = (): JSX.Element => {
           <h2>9. Governing Law</h2>
 
           <div>
-            Any claim related to Gogixer's Website shall be governed by the laws
-            of in without regards to its conflict of law provisions.
+            Any claim related to Gogixer&apos;s Website shall be governed by the
+            laws of in without regards to its conflict of law provisions.
           </div>
         </div>
       </div>
