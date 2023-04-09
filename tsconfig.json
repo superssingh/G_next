@@ -35,7 +35,12 @@
     "src/components/tsx/*.tsx",
     "src/pages/posts/index.tsx",
     "src/pages/courses/ui/ui.js",
-    "src/components/js/abortController.js"
-, "src/pages/courses/index.js", "src/pages/courses/fullstack/fullstack.js", "src/pages/courses/frontend/frontend.js", "src/pages/courses/deployment/deployment.js", "src/pages/courses/backend/backend.js"  ],
+    "src/components/js/abortController.js",
+    "src/pages/courses/index.tsx",
+    "src/pages/courses/fullstack/fullstack.js",
+    "src/pages/courses/frontend/frontend.js",
+    "src/pages/courses/deployment/deployment.js",
+    "src/pages/courses/backend/backend.js"
+  ],
   "exclude": ["node_modules"]
 }

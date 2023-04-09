@@ -1,5 +1,4 @@
-'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { getPosts } from '../../components/js/services/getBlogData'
 import { useQuery } from '@tanstack/react-query'
 import moment from 'moment'
@@ -25,12 +24,6 @@ const Posts = () => {
       return err
     },
   })
-
-  // useEffect(() => {
-  //   if (isLoading == false && data.length >= 0) {
-  //     getLatestPosts(data)
-  //   }
-  // }, [isLoading, data])
 
   if (isLoading) {
     return (
