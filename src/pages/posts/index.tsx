@@ -26,11 +26,11 @@ const Posts = () => {
     },
   })
 
-  useEffect(() => {
-    if (isLoading == false && data.length >= 0) {
-      getLatestPosts(data)
-    }
-  }, [isLoading, data])
+  // useEffect(() => {
+  //   if (isLoading == false && data.length >= 0) {
+  //     getLatestPosts(data)
+  //   }
+  // }, [isLoading, data])
 
   if (isLoading) {
     return (
@@ -43,6 +43,10 @@ const Posts = () => {
   if (error) {
     const errorMessage = (error as Error & { message: string }).message
     return <div>Error: {errorMessage}</div>
+  }
+
+  if (!isLoading && data.length > 0) {
+    getLatestPosts(data)
   }
 
   async function getLatestPosts(data: any) {
