@@ -1,7 +1,6 @@
 import Markdown from "markdown-to-jsx"
 import Image from "next/legacy/image"
-import { TagName } from '../../components'
-import { SocialWidget } from '../../components/tsx'
+import { TagName, SocialWidget } from '../../components'
 
 const About = () => {
   return (
