@@ -2,13 +2,12 @@ import React from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react'
-import { Poppins } from 'next/font/google'
 import Layout from './layout'
-import '../components/js/abortController'
+import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 
-const customFont = Poppins({
-  weight: ['400', '600', '700'],
+const customFont = Inter({
+  weight: ['400', '700'],
   subsets: ['latin'],
 })
 
