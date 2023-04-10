@@ -1,4 +1,3 @@
-'use client'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -38,7 +37,6 @@ const Comment = ({ comments }: CommentsProps) => {
       data.avatar = session.user.image || undefined
       data.date = new Date().toJSON() || ''
 
-      console.log('commentData: ', data)
       return
     }
   }

@@ -16,8 +16,6 @@ export const MENU_DEFAULT = 'menus'
 export const MOBILE_OPEN = 'mobile-open'
 export const MOBILE_CLOSE = 'mobile-close'
 
-const postsURL = process.env.GRAPH_PUBLIC_ENDPOINT
-
 const imageFit = '&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
 
 export const HomeMenu = {
@@ -157,9 +155,6 @@ export const categories = [
   { name: 'Technology', image: '', id: '3' },
 ]
 
-export const getPosts = () => {
-  return postsURL
-}
 
 // export const getImagePath = () => {
 //   return imageURL;

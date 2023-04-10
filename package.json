@@ -25,6 +25,8 @@
     "@trpc/next": "^10.9.0",
     "@trpc/react-query": "^10.9.0",
     "@trpc/server": "^10.9.0",
+    "abort-controller": "^3.0.0",
+    "abortcontroller-polyfill": "^1.7.5",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
     "lodash": "^4.17.21",

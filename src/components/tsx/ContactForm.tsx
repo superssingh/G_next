@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import emailjs from '@emailjs/browser'
-import 'react-toastify/dist/ReactToastify.css'
 import { TagName, SocialWidget, InputText, TextArea } from '..'
 import { ToastContainer, toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
+import 'react-toastify/dist/ReactToastify.css'
 
 const schema = z.object({
   name: z

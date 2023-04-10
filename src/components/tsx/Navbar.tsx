@@ -10,12 +10,6 @@ const Navbar = () => {
     setClicked(!clicked)
   }
 
-  const handleLogoClicked = () => {
-    if (clicked) {
-      setClicked(false)
-    }
-  }
-
   return (
     <>
       <div className="Navigation ">

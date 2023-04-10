@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getPosts } from '../../components/js/services/getBlogData'
 import { useQuery } from '@tanstack/react-query'
 import moment from 'moment'
@@ -26,19 +26,14 @@ const Posts = () => {
   })
 
   if (isLoading) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    )
+    return <Loading />
   }
 
   if (error) {
     const errorMessage = (error as Error & { message: string }).message
     return <div>Error: {errorMessage}</div>
   }
-
-  if (!isLoading && data.length > 0) {
+  if (data.length > 0) {
     getLatestPosts(data)
   }
 
@@ -68,12 +63,13 @@ const Posts = () => {
           <div className="relative sm:grid w-full place-content-center gap-4 lg:grid-cols-12">
             <div className="grid w-full max-w-5xl md:col-span-8 px-2">
               <div className="w-full content-center justify-center place-self-start md:grid md:w-full lg:grid-cols-2 2xl:grid-cols-3">
-                {filteredPosts.map(({ node }: any) => (
+                <PostCard posts={filteredPosts} />
+                {/* {filteredPosts.map(({ node }: any) => (
                   <PostCard
                     post={node}
                     key={node.id}
                   />
-                ))}
+                ))} */}
               </div>
               <div className="bottom-0 grid place-content-center">
                 <div className="place-content-center text-white">

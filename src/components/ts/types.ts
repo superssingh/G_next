@@ -32,20 +32,20 @@ export const PostValidator = z.object({
 export type Post = z.infer<typeof PostValidator>
 export type Posts = z.infer<typeof PostValidator>[]
 
-const postSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  slug: z.string(),
-  content: z.string(),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-  featured_image: z.array(
-    z.object({
-      url: z.string(),
-      alt: z.string().optional(),
-      width: z.number().optional(),
-      height: z.number().optional(),
-    })
-  ),
-  description: z.string(),
-})
+// const postSchema = z.object({
+//   id: z.string(),
+//   title: z.string(),
+//   slug: z.string(),
+//   content: z.string(),
+//   createdAt: z.date(),
+//   updatedAt: z.date(),
+//   featured_image: z.array(
+//     z.object({
+//       url: z.string(),
+//       alt: z.string().optional(),
+//       width: z.number().optional(),
+//       height: z.number().optional(),
+//     })
+//   ),
+//   description: z.string(),
+// })
