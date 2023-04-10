@@ -18,7 +18,7 @@ export { default as getBlogData } from './js/services/getBlogData'
 //JSX files
 
 //TS files
-export { default as inferTypes } from './ts/inferTypes'
+
 export { default as interfaces } from './ts/interfaces'
 export { default as Paginate } from './ts/paginate'
 export { default as types } from './ts/types'
