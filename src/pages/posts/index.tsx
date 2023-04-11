@@ -23,7 +23,13 @@ const Posts = () => {
     onError: (err) => {
       return err
     },
+    staleTime: 60000 * 20, // Cache for 1 minute
+    enabled: true,
   })
+
+  useEffect(() => {
+    getLatestPosts(data)
+  }, [data])
 
   if (isLoading) {
     return <Loading />

@@ -1,7 +1,7 @@
 import { request, gql } from 'graphql-request'
 const graphAPI = process.env.NEXT_PUBLIC_GRAPH_PUBLIC_ENDPOINT
 
-export const getPosts = async () => {
+const getPosts = async () => {
   const query = gql`
     query getPosts {
       postsConnection {
@@ -43,7 +43,8 @@ export const getPosts = async () => {
   const result = await request(graphAPI, query)
   return result.postsConnection.edges
 }
-export const getPostDetail = async (slug) => {
+
+const getPostDetail = async (slug) => {
   const query = gql`
     query getPost($slug: String!) {
       post(where: { slug: $slug }) {
@@ -81,6 +82,8 @@ export const getPostDetail = async (slug) => {
   const results = await request(graphAPI, query, { slug })
   return results.post
 }
+
+export { getPosts, getPostDetail }
 
 // export const getPostsByCategory = async (category) => {
 //   const query = gql`
