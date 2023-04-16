@@ -1,7 +1,7 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { SessionProvider } from 'next-auth/react'
+import { ClerkProvider } from '@clerk/nextjs'
 import Layout from './layout'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
@@ -12,7 +12,6 @@ const customFont = Inter({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { session, ...rest } = pageProps
   return (
     <div className={customFont.className}>
       <Head>
@@ -72,15 +71,16 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="#ffffff"
         />
       </Head>
-      <SessionProvider session={session}>
+
+      <ClerkProvider {...pageProps}>
         <Layout>
           <div className="flex min-h-screen w-full flex-col">
             <div className=" mb-10  flex-grow  ">
-              <Component {...rest} />
+              <Component {...pageProps} />;
             </div>
           </div>
         </Layout>
-      </SessionProvider>
+      </ClerkProvider>
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useSession, signOut } from 'next-auth/react'
-import { LoginBtn, TextArea } from '..'
+import { TextArea } from '..'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { useUser } from '@clerk/clerk-react'
 
 const CommentFormValidator = z.object({
   id: z.string().optional(),
@@ -22,30 +23,33 @@ type CommentsProps = {
 }
 
 const Comment = ({ comments }: CommentsProps) => {
-  const { data: session } = useSession()
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(CommentFormValidator) })
 
-  const onSubmit = async (data: FormData) => {
-    // if (success) return;
-    if (session && session.user) {
-      data.name = session.user.name || ''
-      data.email = session.user.email || ''
-      data.avatar = session.user.image || undefined
-      data.date = new Date().toJSON() || ''
+  // const { isLoaded, isSignedIn, user } = useUser()
 
-      return
-    }
+  const onSubmit = async (data: FormData) => {
+    // if (isLoaded && isSignedIn) {
+    //   console.log(user)
+    // data.name = user.firstName || ''
+    // data.email = user.emailAddresses || ''
+    // data.avatar = user.profileImageUrl || undefined
+    // data.date = new Date().toJSON() || ''
+    //   return
+    // }
   }
 
   return (
     <>
       <div className="grid w-full p-4 ">
-        {(session && (
-          <div>
+        <>
+          <SignedIn>
+            {/* Mount the UserButton component */}
+            <UserButton />
+
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:flex w-full place-content-center place-items-center rounded-md bg-black/20 p-4 text-white">
                 <TextArea
@@ -64,30 +68,31 @@ const Comment = ({ comments }: CommentsProps) => {
                 />
               </div>
             </form>
-            <button
-              onClick={() => signOut()}
-              className="randomBG1 relative grid rounded-full py-1 px-2 shadow-xl text-white font-semibold shadow-black hover:animate-pulse hover:bg-black/50"
-            >
-              Sign out
-            </button>
-          </div>
-        )) || (
-          <div className="grid w-full place-content-center place-items-center">
-            <div className="flex  p-2 bg-black/30 rounded-full ">
-              <div className=" text-gray-300/50 font-bold px-4 py-2 ">
-                Wanna leave comment
+          </SignedIn>
+        </>
+        <>
+          <SignedOut>
+            <div className="grid w-full place-content-center place-items-center">
+              <div className="flex  p-2 bg-black/30 rounded-full ">
+                <div className=" text-gray-300/50 font-bold px-4 py-2 ">
+                  Wanna leave comment
+                </div>
+                {/* Signed out users get sign in button */}
+                <div className="randomBG1 relative grid w-fit rounded-full px-4 py-2 font-semibold text-white shadow-xl shadow-black transition-all duration-700 hover:animate-pulse hover:bg-black/50">
+                  <SignInButton />
+                </div>
               </div>
-              <LoginBtn />
             </div>
-          </div>
-        )}
+          </SignedOut>
+        </>
       </div>
-      {comments && (
+
+      {comments.length > 0 && (
         <div className="relative grid rounded-sm bg-white/[.30] p-2">
           <div className="grid w-full  font-semibold text-green-100">
             Comments
           </div>
-          <div className="m-2 rounded-md bg-white/[.60] p-2 hover:bg-white/[.80] ">
+          <div className="m-2 rounded-md bg-violet-200 p-2 hover:bg-white/[.80] ">
             <div className="relative flex w-full place-items-center px-2 pb-2  ">
               <div className="h-8 w-8 rounded-full bg-black/[.30]"></div>
               <div className="pl-2 text-xs font-semibold text-gray-700 ">

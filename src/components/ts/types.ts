@@ -29,6 +29,18 @@ export const PostValidator = z.object({
     .optional(),
 })
 
+const CommentFormValidator = z.object({
+  id: z.string().optional(),
+  name: z.string(),
+  email: z.string().email(),
+  avatar: z.string().url().optional(),
+  comment: z.string().refine((val) => val.trim().length > 0, {
+    message: 'Message field cannot be blank',
+  }),
+  date: z.string(),
+})
+
+
 export type Post = z.infer<typeof PostValidator>
 export type Posts = z.infer<typeof PostValidator>[]
 
