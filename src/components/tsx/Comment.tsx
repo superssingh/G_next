@@ -29,17 +29,17 @@ const Comment = ({ comments }: CommentsProps) => {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(CommentFormValidator) })
 
-  // const { isLoaded, isSignedIn, user } = useUser()
+  const { isLoaded, isSignedIn, user } = useUser()
 
   const onSubmit = async (data: FormData) => {
-    // if (isLoaded && isSignedIn) {
-    //   console.log(user)
-    // data.name = user.firstName || ''
-    // data.email = user.emailAddresses || ''
-    // data.avatar = user.profileImageUrl || undefined
-    // data.date = new Date().toJSON() || ''
-    //   return
-    // }
+    if (isLoaded && isSignedIn) {
+      console.log(user)
+      // data.name = user.firstName || ''
+      // data.email = user.emailAddresses || ''
+      // data.avatar = user.profileImageUrl || undefined
+      // data.date = new Date().toJSON() || ''
+      return
+    }
   }
 
   return (
