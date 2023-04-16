@@ -3,13 +3,13 @@ import {
   getPosts,
   getPostDetail,
 } from '../../components/js/services/getBlogData'
-// import {
-//   HeadTag,
-//   PostDetail,
-//   PostWidget,
-//   Loading,
-//   Comment,
-// } from '../../components'
+import {
+  HeadTag,
+  PostDetail,
+  PostWidget,
+  Loading,
+  Comment,
+} from '../../components'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
 // import * as z from 'zod'
@@ -43,7 +43,7 @@ const Post = () => {
               <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
                 <div className=" grid max-w-4xl content-center place-self-center md:col-span-8 ">
                   <PostDetail post={post.data} />
-                  {/* <Comment comments={[]} /> */}
+                  <Comment comments={[]} />
                 </div>
                 <div className="grid w-full md:col-span-8 lg:col-span-4 lg:place-content-start place-items-center">
                   <div className="place-content-center md:flex lg:sticky lg:grid lg:place-content-start">
