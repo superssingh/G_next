@@ -33,7 +33,7 @@ const Comment = ({ comments }: CommentsProps) => {
 
   const onSubmit = async (data: FormData) => {
     if (isLoaded && isSignedIn) {
-      console.log(user)
+      // console.log(user)
       // data.name = user.firstName || ''
       // data.email = user.emailAddresses || ''
       // data.avatar = user.profileImageUrl || undefined
