@@ -3,6 +3,7 @@ export { default as BrandName } from "../../public/images/gogixer.png";
 export { default as BrandLogo } from "../../public/images/gogixer-sm.png"
 
 export { default as founderJPG } from './assets/santoshsingh.jpg'
+export { default as founderJPG1 } from './assets/santoshsingh1.jpg'
 export { default as codingSVG } from './assets/coding.svg'
 export { default as frontendSVG } from './assets/frontend.svg'
 export { default as backendSVG } from './assets/backend.svg'

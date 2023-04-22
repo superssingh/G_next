@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menuMotion">
+              <div className="flex space-x-1 place-items-center menus">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}

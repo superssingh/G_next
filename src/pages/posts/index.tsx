@@ -47,7 +47,7 @@ const Posts = () => {
 
   useEffect(() => {
     getLatestPosts(data)
-  }, [])
+  }, [data])
 
   if (isLoading) {
     return <Loading />
@@ -61,40 +61,32 @@ const Posts = () => {
   if (data.length > 0) getLatestPosts(data)
 
   return (
-    <>
-      <div>
-        {recentPosts.length > 0 && (
-          <div className="relative sm:grid w-full place-content-center gap-4 lg:grid-cols-12">
-            <div className="grid w-full max-w-5xl md:col-span-8 px-2">
-              <div className="w-full content-center justify-center place-self-start md:grid md:w-full lg:grid-cols-2 2xl:grid-cols-3">
-                <PostCard posts={filteredPosts} />
-                {/* {filteredPosts.map(({ node }: any) => (
-                  <PostCard
-                    post={node}
-                    key={node.id}
-                  />
-                ))} */}
-              </div>
-              <div className="bottom-0 grid place-content-center">
-                <div className="place-content-center text-white">
-                  <Pagination
-                    itemCount={recentPosts.length}
-                    pageSize={pageSize}
-                    currentPage={currentPage}
-                    onPageChange={handlePageChange}
-                  />
-                </div>
-              </div>
+    <div>
+      {recentPosts.length > 0 && (
+        <div className="relative sm:grid w-full place-content-center gap-4 lg:grid-cols-12">
+          <div className="grid w-full max-w-5xl md:col-span-8 px-2">
+            <div className="w-full content-center justify-center place-self-start md:grid md:w-full lg:grid-cols-2 2xl:grid-cols-3">
+              <PostCard posts={filteredPosts} />
             </div>
-            <div className="relative w-full grid place-content-center p-2 md:col-span-8 lg:col-span-4 lg:place-content-start">
-              <div className="w-fit grid lg:w-78 lg:sticky lg:place-content-start">
-                <PostWidget posts={recentPosts} />
+            <div className="bottom-0 grid place-content-center">
+              <div className="place-content-center text-white">
+                <Pagination
+                  itemCount={recentPosts.length}
+                  pageSize={pageSize}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+                />
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </>
+          <div className="relative w-full grid place-content-center p-2 md:col-span-8 lg:col-span-4 lg:place-content-start">
+            <div className="w-fit grid lg:w-78 lg:sticky lg:place-content-start">
+              <PostWidget posts={recentPosts} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

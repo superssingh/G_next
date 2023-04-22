@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx"
 import Image from "next/legacy/image"
 import { TagName, SocialWidget } from '../../components'
+import Gallery from '~/components/tsx/AnimatedSlider'
 
 const About = () => {
   return (
@@ -12,10 +13,16 @@ const About = () => {
           </div>
           <div className="relative p-2 text-slate-200 ">
             <div className="text-lg p-2 text-justify">
-              Welcome to <strong>Gogixer</strong>, an online learning platform
-              for students and web developers to learn web development skills
-              like <strong>Front-End, Back-End </strong> and{' '}
-              <strong>Full-Stack development. </strong>
+              <strong>Gogixer</strong> is the ultimate online learning
+              destination for students and web developers who are serious about
+              mastering the art of web development. This platform offers a
+              dynamic and immersive learning experience, providing access to
+              top-tier courses in Front-End, Back-End, and Full-Stack
+              development. You&apos;ll gain the skills and knowledge you need to
+              succeed in this rapidly evolving industry. Whether you&apos;re a
+              beginner or an experienced developer, Gogixer is the perfect
+              partner for your educational journey. Welcome to the future of
+              online learning.
             </div>
           </div>
 
@@ -36,13 +43,23 @@ const About = () => {
             </div>
             <SocialWidget social={TagName.founderData.social} />
             <div className="text-lg p-4  text-gray-200 text-justify">
-              <Markdown>{TagName.founderData.des}</Markdown>
+              {/* <Markdown>{TagName.founderData.des}</Markdown> */}
+              Hello, I&apos;m <strong>Santosh Singh</strong>, a Full-Stack
+              Developer and founder of Gogixer. My passion is web development
+              and helping others learn to code. I built Gogixer to share my
+              journey and provide a comprehensive learning experience for
+              students of all levels. Whether you&apos;re new to web development
+              or looking to enhance your skills, I&apos;m here to guide you on
+              your journey. Join me and the Gogixer community and let&apos;s
+              explore the exciting world of web development together!
             </div>
 
             <h1 className="p-4 text-xl font-bold text-center">
-              🗣 Have a nice day and happy coding...
+              🗣 Happy coding...
             </h1>
           </div>
+
+          <Gallery />
         </div>
       </div>
     </>
