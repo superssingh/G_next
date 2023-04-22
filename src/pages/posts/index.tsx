@@ -27,20 +27,12 @@ const Posts = () => {
     enabled: true,
   })
 
-  useEffect(() => {
-    getLatestPosts(data)
-  }, [data])
-
-  if (isLoading) {
-    return <Loading />
-  }
-
-  if (error) {
-    const errorMessage = (error as Error & { message: string }).message
-    return <div>Error: {errorMessage}</div>
-  }
-  if (data.length > 0) {
-    getLatestPosts(data)
+  const handlePageChange = async (pageNumber: number) => {
+    if (currentPage !== pageNumber) {
+      setCurrentPage(pageNumber)
+    }
+    const filtered = await Paginate(recentPosts, pageNumber, pageSize)
+    setFilteredPosts(filtered)
   }
 
   async function getLatestPosts(data: any) {
@@ -53,14 +45,20 @@ const Posts = () => {
     await handlePageChange(currentPage)
   }
 
-  const handlePageChange = async (pageNumber: number) => {
-    if (currentPage !== pageNumber) {
-      setCurrentPage(pageNumber)
-    }
+  useEffect(() => {
+    getLatestPosts(data)
+  }, [])
 
-    const filtered = await Paginate(recentPosts, pageNumber, pageSize)
-    setFilteredPosts(filtered)
+  if (isLoading) {
+    return <Loading />
   }
+
+  if (error) {
+    const errorMessage = (error as Error & { message: string }).message
+    return <div>Error: {errorMessage}</div>
+  }
+
+  if (data.length > 0) getLatestPosts(data)
 
   return (
     <>

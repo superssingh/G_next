@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { TagName } from "..";
+import AnimatedTab from './AnimatedTab'
 const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center  ">
-        <h1 className="text-3xl font-bold uppercase ">Courses</h1>
+        <h1 className="text-3xl font-bold uppercase ">Courses</h1>        
         <div className="grid relative md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m: any) => {
             return (

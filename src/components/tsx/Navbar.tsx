@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/legacy/image'
+import { motion } from 'framer-motion'
 import { TagName, BrandName, Logo, SocialWidget } from '..'
 
 const Navbar = () => {
+  const [activeTab, setActiveTab] = useState(TagName.menus[0].name)
   const [clicked, setClicked] = useState(false)
 
   const handleClicked = () => {
@@ -12,9 +14,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="Navigation ">
+      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md">
         <div>
-          <header className="Navbar bgNavbar">
+          <header className="flex py-3 place-items-center ">
             <Link
               href="/"
               legacyBehavior
@@ -24,10 +26,10 @@ const Navbar = () => {
                 <Image
                   src={BrandName}
                   alt={TagName.COMPANY_NAME}
+                  width={260}
+                  height={60}
                   priority
-                  width={200}
-                  height={45}
-                  className="brandLogo"
+                  className="brandLogo w-fit h-fit"
                   onClick={() => {
                     setClicked(false)
                   }}
@@ -35,50 +37,47 @@ const Navbar = () => {
               </div>
             </Link>
 
-            <ul className={TagName.MENU_DEFAULT}>
-              <li>
-                <div
-                  className="relative grid rounded px-2 "
-                  tabIndex={1}
-                >
+            <ul className="grid w-full place-items-end px-4">
+              <div className="flex space-x-1 place-items-center menuMotion">
+                {TagName.menus.map((tab) => (
                   <Link
-                    key={TagName.HomeMenu.name}
-                    href={TagName.HomeMenu.path}
-                    legacyBehavior
+                    key={tab.name}
+                    href={tab.path}
+                    onClick={() => setActiveTab(tab.name)}
+                    className={`${
+                      activeTab === tab.name ? '' : 'hover:text-white/70'
+                    }  relative rounded-full p-3 text-sm font-medium text-white outline-slate-100 transition focus-visible:outline-2 `}
+                    style={{
+                      WebkitTapHighlightColor: 'transparent',
+                    }}
                   >
-                    <div className=" randomBG1 relative grid rounded-full p-2 shadow-xl shadow-black transition-shadow duration-700 hover:shadow-md hover:shadow-black ">
-                      {TagName.HomeMenu.icon}
-                    </div>
-                  </Link>
-                </div>
-              </li>
-
-              <li>
-                {TagName.menus.map((m) => (
-                  <Link
-                    href={m.path}
-                    key={m.name}
-                    tabIndex={1}
-                    data-text={m.name}
-                    className="menu font-bold"
-                    legacyBehavior
-                  >
-                    {m.name}
+                    {activeTab === tab.name && (
+                      <motion.div
+                        layoutId="bubble"
+                        className="absolute py-2 inset-0 z-10 mix-blend-difference RedGradient fancyRadius1 shadow-md shadow-black hover:animate-pulse "
+                        transition={{
+                          type: 'spring',
+                          bounce: 0.3,
+                          duration: 0.7,
+                        }}
+                      />
+                    )}
+                    {tab.name == 'Home' ? tab.icon : tab.name}
                   </Link>
                 ))}
-              </li>
-            </ul>
-            <div
-              id="hamburger"
-              onClick={handleClicked}
-              className={`${
-                clicked ? TagName.HAMBURGER_OPEN : TagName.HAMBURGER_CLOSE
-              } z-50`}
-            >
-              <div>
-                <div className="hamburger_lines"></div>
               </div>
-            </div>
+              <div
+                id="hamburger"
+                onClick={handleClicked}
+                className={`${
+                  clicked ? TagName.HAMBURGER_OPEN : TagName.HAMBURGER_CLOSE
+                } z-30 `}
+              >
+                <div>
+                  <div className="hamburger_lines"></div>
+                </div>
+              </div>
+            </ul>
           </header>
         </div>
         <ul
@@ -95,7 +94,7 @@ const Navbar = () => {
               >
                 <div
                   onClick={handleClicked}
-                  className="mobileMenu relative z-10 my-2 flex w-full rounded-md py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
+                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
                 >
                   {m.icon}
                   <div className="w-full pl-4 text-base ">{m.name}</div>

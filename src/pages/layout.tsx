@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
       <QueryClientProvider client={queryClient}>
         <div className="containerBox min-w-screen flex min-h-screen flex-col ">
           <Navbar />
-          <div className="pt-24">{children}</div>
+          <div className="pt-10">{children}</div>
           <Footer />
         </div>
         <ReactQueryDevtools />

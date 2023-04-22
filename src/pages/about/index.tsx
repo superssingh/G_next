@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <div className="grid w-full place-content-center p-2 ">
-        <div className="grid w-fit max-w-2xl place-items-center shadow-slate-200 p-2   showFromTop ">
+        <div className="grid w-fit max-w-2xl place-items-center shadow-slate-200 p-2 showFromTop ">
           <div className="text-[2rem] text-slate-200 text-center font-semibold w-fit p-2 font-poppins">
             About Us
           </div>
