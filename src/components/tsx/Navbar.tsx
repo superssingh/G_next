@@ -82,11 +82,9 @@ const Navbar = () => {
           </header>
         </div>
         <ul
-          className={
-            `bg-black/60 backdrop:blur-md w-full ` + clicked
-              ? TagName.MOBILE_OPEN
-              : TagName.MOBILE_CLOSE
-          }
+          className={`bg-black/50 backdrop:blur-md w-full  ${
+            clicked == true ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE
+          } `}
           onClick={handleClicked}
         >
           <div className="mobile-menus z-[5] px-4 py-2  ">

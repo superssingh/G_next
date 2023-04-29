@@ -128,6 +128,7 @@
     place-self: top;
     justify-content: end;        
     backdrop-filter: blur(2em);
+  
     .mobile-menus {        
       place-self: top;
       width: fit-content;
@@ -141,8 +142,7 @@
         background: $GradientTeal;              
         box-shadow: 0px 5px 5px 1px rgba(43, 4, 64, 0.729);       
       }
-      
-    }
+  }
 
     .social {
       width: 100%;
@@ -183,7 +183,7 @@
       cursor: pointer;
     }
   }
-
+  
   .mobile-close {
     display: none;
     animation: 0.5s ease-out 0s 1 slideInLeft;
