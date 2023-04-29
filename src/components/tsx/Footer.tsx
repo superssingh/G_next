@@ -26,7 +26,7 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-          <div className=" top-0 w-fit animate-pulse">
+          <div className=" top-0 w-fit hover:animate-pulse">
             <Link
               href="/"
               passHref

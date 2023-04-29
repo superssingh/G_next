@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/legacy/image'
 import { motion } from 'framer-motion'
 import { TagName, BrandName, Logo, SocialWidget } from '..'
+import { Navigation } from './Navbar/Navigation'
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState(TagName.menus[0].name)
@@ -46,7 +47,7 @@ const Navbar = () => {
                     onClick={() => setActiveTab(tab.name)}
                     className={`${
                       activeTab === tab.name ? '' : 'hover:text-white/70'
-                    }  relative rounded-full p-3 text-sm font-medium text-white outline-slate-100 transition focus-visible:outline-2 `}
+                    }  relative rounded-full p-3 text-sm font-medium text-white outline-gray-100 transition focus-visible:outline-2 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',
                     }}
@@ -81,7 +82,11 @@ const Navbar = () => {
           </header>
         </div>
         <ul
-          className={clicked ? TagName.MOBILE_OPEN : TagName.MOBILE_CLOSE}
+          className={
+            `bg-black/60 backdrop:blur-md w-full ` + clicked
+              ? TagName.MOBILE_OPEN
+              : TagName.MOBILE_CLOSE
+          }
           onClick={handleClicked}
         >
           <div className="mobile-menus z-[5] px-4 py-2  ">

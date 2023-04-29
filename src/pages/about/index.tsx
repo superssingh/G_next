@@ -58,8 +58,6 @@ const About = () => {
               🗣 Happy coding...
             </h1>
           </div>
-
-          <Gallery />
         </div>
       </div>
     </>
