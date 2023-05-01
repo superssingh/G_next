@@ -16,7 +16,7 @@ const Course = () => {
                 legacyBehavior
               >
                 <div className="relative w-full transition-all duration-700 text-left sm:place-items-center ">
-                  <div className="courseCard w-full h-fit md:w-fit md:h-52 rounded-lg bg-black/30 shadow-lg md:m-2 shadow-black">
+                  <div className="courseCard w-full h-fit md:w-fit md:h-52 rounded-lg bg-black/20 shadow-md md:m-2 shadow-black">
                     <div className="flex relative w-full h-full place-content-start md:grid md:w-60 md:place-content-center ">
                       <div className=" grid place-self-center place-content-center text-center place-items-center px-4 p-2 ">
                         {m.icon}
