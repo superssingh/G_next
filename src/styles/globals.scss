@@ -55,26 +55,12 @@ body {
     "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  // background-color: #1bc1ff;
-  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23091ade'/%3E%3Cstop offset='1' stop-color='%23091ade' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232274b1'/%3E%3Cstop offset='1' stop-color='%232274b1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23601dd6'/%3E%3Cstop offset='1' stop-color='%23601dd6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2310B7B5'/%3E%3Cstop offset='1' stop-color='%2310B7B5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DC09FF'/%3E%3Cstop offset='1' stop-color='%23DC09FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233646A9'/%3E%3Cstop offset='1' stop-color='%233646A9' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
-  // background-attachment: fixed;
-  // background-size: cover;
-  // background-repeat: repeat;
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23091ade'/%3E%3Cstop offset='1' stop-color='%23091ade' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232274b1'/%3E%3Cstop offset='1' stop-color='%232274b1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23601dd6'/%3E%3Cstop offset='1' stop-color='%23601dd6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2310B7B5'/%3E%3Cstop offset='1' stop-color='%2310B7B5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DC09FF'/%3E%3Cstop offset='1' stop-color='%23DC09FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233646A9'/%3E%3Cstop offset='1' stop-color='%233646A9' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
-
-  // transition: all 0.5s ease-in-out;
   
   background: $backgroundColor;
   background-attachment: fixed;
   background-size: cover;
-  
-  color: $fontColor;
-  font-family: Poppins;
 
+  color: $fontColor;  
 }
 
 
@@ -93,6 +79,11 @@ body {
   margin-top: 6rem;
   min-height: 100%;
   transition: all 0.5s ease-in-out;
+}
+
+.bgColor{
+  background: $backgroundColor;
+  // background:$background-image;
 }
 
 .cardColor {
@@ -191,9 +182,9 @@ body {
 }
 
 .customShadow {
-  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+  box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
   &:focus {
-    box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+    box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
   }
 }
 
@@ -255,16 +246,13 @@ body {
       fill: rgba(241, 247, 242, 1);
     }
     .service{
-      box-shadow: 0px 8px 6px 2px rgba(24, 24, 24, 1);
+      box-shadow: 0px 5px 5px 2px rgba(24, 24, 24, 1);
     } 
     &:hover {    
     color: #fff;
     .service{
       box-shadow: 0px 14px 10px 0px rgba(16, 17, 17, 0.821)
-    } 
-    // background: $GradientTeal1;
-    // box-shadow: 0px 5px 2px 2px rgba(24, 24, 24, 1);      
-    // background: $GradientBlack;   
+    }   
       .serviceDesc {
         display: block;      
         width:100%;  
@@ -273,15 +261,11 @@ body {
         background: $GradientTeal;
         border-radius: 10px;
         box-shadow: 0px 3px 5px 0px rgba(24, 24, 24, 0.55);    
-        // background: rgb(48, 141, 93);
       }
     }
   }
 
-  
-
   .courseCard {
-    // background: $GradientTeal;
     display: grid;    
     transition: all 0.5s ease;
     overflow: hidden;
@@ -303,6 +287,10 @@ body {
 }
 
 @include media("<tablet") {
+  .serviceDesc,
+  .courseDesc {
+    display: none;
+  }  
   .courseCard {
     display: grid;
     padding: 10px 0;
@@ -312,7 +300,7 @@ body {
     overflow: hidden;
 
     &:hover {
-      .serviceDesc {
+      .courseDesc {
         width: 100%;
         display: block;
       }
@@ -335,14 +323,7 @@ body {
       .service{
         box-shadow: 0px 12px 6px 0px rgb(25, 26, 26);
       } 
-      .serviceDesc {        
-        bottom: 0px;
-        width: 100%;
-        display: block;        
-        box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);  
-        background:$GradientTeal;     
-      }
-      // background: rgba(12, 129, 90, 0.885);
+            
     }
   }
 }
@@ -392,19 +373,16 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-
-
 .hoverEffect {
-  color: $menusTextColors;
-  font-weight: 500;
+  color: $menusTextColors;  
+  background: $backgroundColor;
   outline: 1;
   transition: all 0.3s ease-in-out;
   &:hover,
   &:focus,
   &:active {    
     color: #fff;
-    background: $GradientTeal2;
-    box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
+    box-shadow: 0px 4px 4px 0px rgba(24, 24, 24, 0.85);
   }
 }
 

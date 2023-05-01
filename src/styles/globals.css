@@ -111,14 +111,16 @@
   background-size: cover;
 }
 
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .randomBG {
-  background-color: #280455;
+  background-color: rgba(169, 19, 129, 0.5725490196);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236e04ab'/%3E%3Cstop offset='1' stop-color='%236e04ab' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23046cb0'/%3E%3Cstop offset='1' stop-color='%23046cb0' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b6fff'/%3E%3Cstop offset='1' stop-color='%230b6fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23280455'/%3E%3Cstop offset='1' stop-color='%23280455' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D406FF'/%3E%3Cstop offset='1' stop-color='%23D406FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2311FF65'/%3E%3Cstop offset='1' stop-color='%2311FF65' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   background-size: cover;
 }
 
 .randomBG1 {
-  background-color: #A914BD;
+  background-color: #bd147f;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%235545db'/%3E%3Cstop offset='1' stop-color='%235545db' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23501dbf'/%3E%3Cstop offset='1' stop-color='%23501dbf' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%235590d5'/%3E%3Cstop offset='1' stop-color='%235590d5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23A914BD'/%3E%3Cstop offset='1' stop-color='%23A914BD' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2391C5DE'/%3E%3Cstop offset='1' stop-color='%2391C5DE' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23264CC0'/%3E%3Cstop offset='1' stop-color='%23264CC0' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   background-size: cover;
 }
@@ -150,6 +152,12 @@
 .randomGreen {
   background-color: #0CB21F;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2309801c'/%3E%3Cstop offset='1' stop-color='%2309801c' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2309670e'/%3E%3Cstop offset='1' stop-color='%2309670e' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2305360a'/%3E%3Cstop offset='1' stop-color='%2305360a' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CB21F'/%3E%3Cstop offset='1' stop-color='%230CB21F' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23064E14'/%3E%3Cstop offset='1' stop-color='%23064E14' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23031E03'/%3E%3Cstop offset='1' stop-color='%23031E03' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.gradientWhite {
+  background-color: #FFF2FD;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbf5ff'/%3E%3Cstop offset='1' stop-color='%23fbf5ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbf7ff'/%3E%3Cstop offset='1' stop-color='%23fbf7ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f9f9ff'/%3E%3Cstop offset='1' stop-color='%23f9f9ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FFF2FD'/%3E%3Cstop offset='1' stop-color='%23FFF2FD' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F7F7FF'/%3E%3Cstop offset='1' stop-color='%23F7F7FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FBFBFF'/%3E%3Cstop offset='1' stop-color='%23FBFBFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   background-size: cover;
 }
 
@@ -305,7 +313,7 @@
     width: fit-content;
     height: wrap;
     top: 0;
-    background: linear-gradient(0deg, hsl(264, 84%, 17%) 0%, hsl(263, 75%, 21%) 11%, hsl(261, 68%, 26%) 22%, hsl(260, 61%, 31%) 33%, hsl(258, 54%, 36%) 44%, hsl(257, 48%, 42%) 56%, hsl(255, 43%, 48%) 67%, hsl(254, 45%, 54%) 78%, hsl(252, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+    background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
   }
   .mobile-open .mobile-menus .mobileMenu {
     width: 100%;
@@ -861,12 +869,10 @@ body {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(0deg, hsl(264, 84%, 17%) 0%, hsl(263, 75%, 21%) 11%, hsl(261, 68%, 26%) 22%, hsl(260, 61%, 31%) 33%, hsl(258, 54%, 36%) 44%, hsl(257, 48%, 42%) 56%, hsl(255, 43%, 48%) 67%, hsl(254, 45%, 54%) 78%, hsl(252, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
   background-attachment: fixed;
   background-size: cover;
   color: rgb(9, 9, 9);
-  font-family: Poppins;
 }
 
 .containerBox {
@@ -884,6 +890,10 @@ body {
   margin-top: 6rem;
   min-height: 100%;
   transition: all 0.5s ease-in-out;
+}
+
+.bgColor {
+  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
 }
 
 .cardColor {
@@ -983,10 +993,10 @@ body {
 }
 
 .customShadow {
-  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+  box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
 }
 .customShadow:focus {
-  box-shadow: 0px 1px 12px 1px rgb(2, 2, 2);
+  box-shadow: 0px 1px 10px 1px rgb(2, 2, 2);
 }
 
 .widget {
@@ -994,7 +1004,7 @@ body {
 }
 
 .gradientbg {
-  background: linear-gradient(0deg, hsl(264, 84%, 17%) 0%, hsl(263, 75%, 21%) 11%, hsl(261, 68%, 26%) 22%, hsl(260, 61%, 31%) 33%, hsl(258, 54%, 36%) 44%, hsl(257, 48%, 42%) 56%, hsl(255, 43%, 48%) 67%, hsl(254, 45%, 54%) 78%, hsl(252, 51%, 61%) 89%, rgb(144, 124, 222) 100%);
+  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
 }
 
 .contactbox {
@@ -1046,7 +1056,7 @@ body {
     fill: rgb(241, 247, 242);
   }
   .serviceCard .service {
-    box-shadow: 0px 8px 6px 2px rgb(24, 24, 24);
+    box-shadow: 0px 5px 5px 2px rgb(24, 24, 24);
   }
   .serviceCard:hover {
     color: #fff;
@@ -1083,6 +1093,10 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .serviceDesc,
+  .courseDesc {
+    display: none;
+  }
   .courseCard {
     display: grid;
     padding: 10px 0;
@@ -1094,7 +1108,7 @@ body {
   .courseCard:hover {
     border: 2px solid rgb(59, 221, 81);
   }
-  .courseCard:hover .serviceDesc {
+  .courseCard:hover .courseDesc {
     width: 100%;
     display: block;
   }
@@ -1113,13 +1127,6 @@ body {
   }
   .serviceCard:hover .service {
     box-shadow: 0px 12px 6px 0px rgb(25, 26, 26);
-  }
-  .serviceCard:hover .serviceDesc {
-    bottom: 0px;
-    width: 100%;
-    display: block;
-    box-shadow: 0px 2px 5px 0px rgba(24, 24, 24, 0.55);
-    background: linear-gradient(180deg, rgba(17, 173, 139, 0.859) 0%, rgba(12, 143, 115, 0.859) 100%);
   }
 }
 .iconColor {
@@ -1166,14 +1173,13 @@ h1 {
 
 .hoverEffect {
   color: rgba(252, 252, 252, 0.981);
-  font-weight: 500;
+  background: linear-gradient(0deg, hsl(286, 84%, 17%) 0%, hsl(284, 76%, 21%) 11%, hsl(284, 68%, 26%) 22%, hsl(283, 54%, 36%) 44%, hsl(285, 48%, 42%) 56%, hsl(282, 43%, 48%) 67%, hsl(282, 45%, 54%) 78%, hsl(289, 51%, 61%) 89%, rgb(204, 124, 222) 100%);
   outline: 1;
   transition: all 0.3s ease-in-out;
 }
 .hoverEffect:hover, .hoverEffect:focus, .hoverEffect:active {
   color: #fff;
-  background: linear-gradient(180deg, rgb(18, 174, 164) 0%, rgb(14, 121, 100) 100%);
-  box-shadow: 0px 8px 5px 0px rgba(24, 24, 24, 0.85);
+  box-shadow: 0px 4px 4px 0px rgba(24, 24, 24, 0.85);
 }
 
 .fancyBtn {

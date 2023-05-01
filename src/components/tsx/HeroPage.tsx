@@ -25,8 +25,8 @@ const HeroPage = () => {
                     passHref
                     legacyBehavior
                   >
-                    <div className="w-fit font-bold p-4 text-lg fancyRadius1 text-center randomBG hoverEffect shadow-xl shadow-black rounded-full">
-                      <div className=" font-bold p-4 text-lg fancyRadius1 text-center randomBG1 hoverEffect shadow-xl shadow-black rounded-full animate-pulse hover:animate-none">
+                    <div className="w-fit font-bold p-4 text-lg fancyRadius1 text-center randomBG shadow-md shadow-black rounded-full group">
+                      <div className=" font-bold p-4 text-lg fancyRadius1 text-center randomBG1  shadow-lg shadow-black rounded-full animate-pulse hover:animate-none group-hover:bg-green-500">
                         <span>{`Let's Go`}</span>
                       </div>
                     </div>

@@ -1,7 +1,8 @@
 $height: 4rem;
 //--
 
-$background-image1: linear-gradient(
+
+$background-image: linear-gradient(
   0deg,
   hsl(264deg 84% 17%) 0%,
   hsl(263deg 75% 21%) 11%,
@@ -13,7 +14,20 @@ $background-image1: linear-gradient(
   hsl(254deg 45% 54%) 78%,
   hsl(252deg 51% 61%) 89%,
   rgb(144, 124, 222) 100%
-);
+  );
+  
+  $background-image1: linear-gradient(
+    0deg,
+    hsl(286, 84%, 17%) 0%,
+    hsl(284, 76%, 21%) 11%,
+    hsl(284, 68%, 26%) 22%,
+    hsl(283, 54%, 36%) 44%,
+    hsl(285, 48%, 42%) 56%,
+    hsl(282, 43%, 48%) 67%,
+    hsl(282, 45%, 54%) 78%,
+    hsl(289, 51%, 61%) 89%,
+    rgb(204, 124, 222) 100%
+  );
 
 $background-image2: linear-gradient(
   0deg,
@@ -59,15 +73,6 @@ $GradientWhiteColor: linear-gradient(90deg, #cacccbc2, #ffffffc2, #cacccbc2);
 $GradientGreenColor: linear-gradient(90deg, #09120bc2, #02fb02, #050906c2);
 $GradientLime: linear-gradient(90deg, #7fad8bc2, #c3f9c3c2, #7fad8bc2);
 
-//RGBA Colors
-$transparentBlack: rgba(13, 13, 13, 0.737);
-$whiteColor: rgba(252, 252, 252, 0.981);
-$GlassColor: rgba(24, 24, 24, 0.733);
-//Basic Color
-
-$grayColor: rgb(75, 75, 75);
-$blackColor: rgb(9, 9, 9);
-
 .heroBG{
 background-color: #2C0449;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239e0aa3'/%3E%3Cstop offset='1' stop-color='%239e0aa3' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23480680'/%3E%3Cstop offset='1' stop-color='%23480680' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23cb0bda'/%3E%3Cstop offset='1' stop-color='%23cb0bda' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232C0449'/%3E%3Cstop offset='1' stop-color='%232C0449' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F01CA5'/%3E%3Cstop offset='1' stop-color='%23F01CA5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236007B8'/%3E%3Cstop offset='1' stop-color='%236007B8' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
@@ -75,10 +80,23 @@ background-attachment: fixed;
 background-size: cover;
 }
 
+//RGBA Colors
+$transparentBlack: rgba(13, 13, 13, 0.737);
+$whiteColor: rgba(252, 252, 252, 0.981);
+$GlassColor: rgba(24, 24, 24, 0.733);
+
+//Basic Color
+$grayColor: rgb(75, 75, 75);
+$blackColor: rgb(9, 9, 9);
+$darkBlue:  #242945;
+$darkGray: #262833;
+
 
 //---- Color Variables
 $fontColor: $blackColor;
+// $backgroundColor: $darkBlue;
 $backgroundColor: $background-image1;
+
 // $backgroundColor: $GradientBlack;
 // $backgroundColor: rgb(122, 70, 162);
 
@@ -92,15 +110,18 @@ $cardColor: $GradientLime;
 $SocialPicColor: linear-gradient(180deg, #fffdfcec 0%, #b54ae2c4 100%);
 $SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 
+$royalBG: linear-gradient(to bottom, #2d4867, #273a60); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$whiteBG: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 .randomBG{
-  background-color: #280455;
+  background-color: #a9138192;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236e04ab'/%3E%3Cstop offset='1' stop-color='%236e04ab' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23046cb0'/%3E%3Cstop offset='1' stop-color='%23046cb0' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b6fff'/%3E%3Cstop offset='1' stop-color='%230b6fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23280455'/%3E%3Cstop offset='1' stop-color='%23280455' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D406FF'/%3E%3Cstop offset='1' stop-color='%23D406FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2311FF65'/%3E%3Cstop offset='1' stop-color='%2311FF65' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   // background-attachment: fixed;
   background-size: cover;
 }
 
 .randomBG1{
-  background-color: #A914BD;
+  background-color: #bd147f;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%235545db'/%3E%3Cstop offset='1' stop-color='%235545db' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23501dbf'/%3E%3Cstop offset='1' stop-color='%23501dbf' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%235590d5'/%3E%3Cstop offset='1' stop-color='%235590d5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23A914BD'/%3E%3Cstop offset='1' stop-color='%23A914BD' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2391C5DE'/%3E%3Cstop offset='1' stop-color='%2391C5DE' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23264CC0'/%3E%3Cstop offset='1' stop-color='%23264CC0' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
   // background-attachment: fixed;
   background-size: cover;
@@ -135,6 +156,13 @@ background-size: cover;
 .randomGreen{
   background-color: #0CB21F;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2309801c'/%3E%3Cstop offset='1' stop-color='%2309801c' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2309670e'/%3E%3Cstop offset='1' stop-color='%2309670e' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2305360a'/%3E%3Cstop offset='1' stop-color='%2305360a' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CB21F'/%3E%3Cstop offset='1' stop-color='%230CB21F' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23064E14'/%3E%3Cstop offset='1' stop-color='%23064E14' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23031E03'/%3E%3Cstop offset='1' stop-color='%23031E03' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+// background-attachment: fixed;
+background-size: cover;
+}
+
+.gradientWhite{
+  background-color: #FFF2FD;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbf5ff'/%3E%3Cstop offset='1' stop-color='%23fbf5ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbf7ff'/%3E%3Cstop offset='1' stop-color='%23fbf7ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f9f9ff'/%3E%3Cstop offset='1' stop-color='%23f9f9ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FFF2FD'/%3E%3Cstop offset='1' stop-color='%23FFF2FD' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F7F7FF'/%3E%3Cstop offset='1' stop-color='%23F7F7FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FBFBFF'/%3E%3Cstop offset='1' stop-color='%23FBFBFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
 // background-attachment: fixed;
 background-size: cover;
 }

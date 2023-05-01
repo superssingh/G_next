@@ -20,7 +20,7 @@ const Posts = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['posts'],
     queryFn: getPosts,
-    onError: (err) => {
+    onError: (err: string) => {
       return err
     },
     staleTime: 60000 * 20, // Cache for 1 minute
@@ -47,15 +47,15 @@ const Posts = () => {
 
   useEffect(() => {
     getLatestPosts(data)
-  }, [data])
+  }, [data, error])
 
-  if (isLoading) {
+  if (isLoading && !error) {
     return <Loading />
   }
 
   if (error) {
-    const errorMessage = (error as Error & { message: string }).message
-    return <div>Error: {errorMessage}</div>
+    console.log(error)
+    return <div>Error: {error}</div>
   }
 
   if (data.length > 0) getLatestPosts(data)

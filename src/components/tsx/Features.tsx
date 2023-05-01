@@ -16,7 +16,6 @@ const Features = () => {
                   <div
                     className={`my-8 grid h-full max-w-6xl px-4 align-middle md:grid-cols-2`}
                   >
-
                     <div className="grid place-content-center ">
                       <div className="grid  ">
                         <h1 className=" mb-2 text-center text-4xl font-bold md:text-left">
@@ -32,7 +31,7 @@ const Features = () => {
                           legacyBehavior
                           passHref
                         >
-                          <div className="customShadow animate mx-2 my-4 w-fit rounded-full bg-violet-600/30 p-4 font-bold text-white hover:bg-purple-500/70">
+                          <div className="customShadow animate mx-2 my-4 w-fit rounded-full  p-4 font-bold text-white hoverEffect ">
                             {`Let's Started`}
                           </div>
                         </Link>
@@ -71,7 +70,7 @@ const Features = () => {
                             passHref
                             legacyBehavior
                           >
-                            <div className="customShadow animate mx-2 my-4 w-fit rounded-full bg-violet-600/30 p-4 font-bold text-white hover:bg-purple-500/70">
+                            <div className="customShadow animate mx-2 my-4 w-fit rounded-full p-4 font-bold text-white hoverEffect ">
                               {`Let's Started`}
                             </div>
                           </Link>

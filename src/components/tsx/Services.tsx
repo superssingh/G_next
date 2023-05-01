@@ -4,7 +4,7 @@ import { TagName } from '..'
 const Services = () => {
   return (
     <>
-      <div className="  py-5 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
+      <div className=" py-5 grid items-center md:justify-center  relative transition-all duration-500 showFromTop ">
         <div className="relative text-center  md:justify-center items-center text-slate-100 my-8">
           <h1 className="text-3xl text-slate-400 font-bold uppercase ">
             Our Services
@@ -21,7 +21,7 @@ const Services = () => {
                   <div className=" relative grid pl-2 transition-all duration-700 md:m-2 md:place-items-center ">
                     <div className="serviceCard z-2 w-full transition duration-700 md:h-60 md:w-60 md:rounded-md lg:h-60 lg:w-80 ">
                       <div className="grid w-full place-content-center md:grid ">
-                        <div className="service randomBG1 fancyRadius grid h-fit w-fit place-content-center place-self-center p-6 shadow-black md:p-8 md:hover:animate-pulse">
+                        <div className="service randomBG1 fancyRadius grid h-fit w-fit place-content-center place-self-center p-6  md:p-8 md:hover:animate-pulse">
                           <div className="relative grid h-8 w-full place-content-center place-self-center p-4 md:p-8">
                             {icon}
                           </div>

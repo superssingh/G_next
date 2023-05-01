@@ -45,7 +45,7 @@ const Comment = ({ comments }: CommentsProps) => {
   return (
     <>
       <div className="grid w-full p-4 ">
-        <>
+        <div>
           <SignedIn>
             {/* Mount the UserButton component */}
             <UserButton />
@@ -69,8 +69,8 @@ const Comment = ({ comments }: CommentsProps) => {
               </div>
             </form>
           </SignedIn>
-        </>
-        <>
+        </div>
+        <div>
           <SignedOut>
             <div className="grid w-full place-content-center place-items-center">
               <div className="flex  p-2 bg-black/30 rounded-full ">
@@ -84,7 +84,7 @@ const Comment = ({ comments }: CommentsProps) => {
               </div>
             </div>
           </SignedOut>
-        </>
+        </div>
       </div>
 
       {comments.length > 0 && (
