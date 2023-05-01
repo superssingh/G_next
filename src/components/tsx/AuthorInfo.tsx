@@ -1,6 +1,5 @@
 import Image from 'next/legacy/image'
 import { TagName, SocialWidget } from '..'
-
 import { FC } from 'react'
 
 const AuthorInfo: FC<any> = ({ author }) => {
