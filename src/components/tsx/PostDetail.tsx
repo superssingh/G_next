@@ -18,7 +18,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
             className="shadow-lg rounded-t-lg"
             src={post.featured_image[0]?.url}
             alt={post.title}
-            layout="fill"
+            layout="fill"            
             priority={true}
           />
         </div>
