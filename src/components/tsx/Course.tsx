@@ -24,7 +24,7 @@ const Course = () => {
                         <div className="text-slate-100 text-left text-base uppercase font-semibold md:text-center border-0">
                           {m.title}
                         </div>
-                        <div className="courseDesc bg-blue-200/80 w-full h-full text-slate-600 text-sm p-4 ">
+                        <div className="courseDesc bg-blue-100 w-full h-full text-slate-600 text-sm p-4 ">
                           {m.description}
                         </div>
                       </div>

@@ -9,7 +9,7 @@ const Back = ({ path = '/' }) => {
       >
         <div
           id="backButton"
-          className="absolute top-0 mt-[-1rem] grid h-10 w-10 rounded-full p-2 ml-2 md:h-12 md:w-12  "
+          className="absolute top-0 mt-[-1.5rem] grid h-10 w-10 rounded-full p-2 ml-2 md:h-12 md:w-12 bgColor "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
