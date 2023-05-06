@@ -17,7 +17,7 @@ const PostCard: React.FC<PostCardProps> = ({ posts }) => {
           passHref
           legacyBehavior
         >
-          <div className="card cardColor hover:bg-teal-500/50 ">
+          <div className="card bg-blue-200 hover:bg-green-200 ">
             <div className=" relative overflow-hidden h-52 w-full sm:w-52 sm:h-44 sm:shrink-0  lg:h-52 lg:w-full">
               <Image
                 src={post.featured_image[0].url}

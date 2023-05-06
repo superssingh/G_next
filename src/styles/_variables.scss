@@ -18,12 +18,12 @@ $violet-image: linear-gradient(
   
   $white-image: linear-gradient(
   0deg,
-  hsl(203, 50%, 78%) 0%,
-  hsl(203, 58%, 85%) 11%,
-  hsl(198, 53%, 87%) 22%,
-  hsl(214, 47%, 90%) 33%,
-  hsl(259, 46%, 92%) 44%,
-  hsl(260, 16%, 96%) 56%,
+  hsl(162, 52%, 76%) 0%,
+  hsl(168, 64%, 83%) 11%,
+  hsl(173, 62%, 85%) 22%,
+  hsl(192, 62%, 88%) 33%,
+  hsl(182, 61%, 89%) 44%,
+  hsl(177, 46%, 91%) 56%,
   );
 
   $blue-image: linear-gradient(
@@ -108,6 +108,7 @@ background-size: cover;
 $transparentBlack: rgba(13, 13, 13, 0.737);
 $whiteColor: rgba(252, 252, 252, 0.981);
 $GlassColor: rgba(24, 24, 24, 0.733);
+$mintColor:  rgb(148, 193, 217);
 
 //Basic Color
 $grayColor: rgb(75, 75, 75);
@@ -123,6 +124,7 @@ $fontColor: $blackColor;
 // $backgroundColor: $black-image;
 $backgroundColor: $blue-image;
 $menuColor: $background-image1;
+$cardColor: $mintColor;
 
 .menuColor{ 
   // background-color: #13ADFF;
@@ -141,7 +143,8 @@ $menusColors: $GradientTeal2;
 $menusTextColors: $whiteColor;
 $mobileNavColor: $transparentBlack;
 $underLineColor: $GradientGreenColor;
-$cardColor: $GradientLime;
+// $cardColor: $GradientLime;
+
 $SocialPicColor: linear-gradient(180deg, #fffdfcec 0%, #b54ae2c4 100%);
 $SocialBGColor: linear-gradient(0deg, #4e1165e2 0%, #a328b0dc 100%);
 

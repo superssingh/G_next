@@ -902,7 +902,7 @@ body {
 }
 
 .cardColor {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: rgb(148, 193, 217);
   transition: 0.5s ease-in-out;
 }
 
@@ -1006,7 +1006,7 @@ body {
 }
 
 .widget {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: rgb(148, 193, 217);
 }
 
 .gradientbg {
@@ -1030,7 +1030,7 @@ body {
 }
 
 .bgDefault {
-  background: linear-gradient(90deg, rgba(127, 173, 139, 0.7607843137), rgba(195, 249, 195, 0.7607843137), rgba(127, 173, 139, 0.7607843137));
+  background: rgb(148, 193, 217);
 }
 
 .contactLabel {
@@ -1168,15 +1168,6 @@ h1 {
   background: linear-gradient(-45deg, #fbf9f5, #fca8f3, #bea6f5, #baadf5);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  will-change: transform;
-  background: linear-gradient(-45deg, #fbf9f5, #fca8f3);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

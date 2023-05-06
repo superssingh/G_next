@@ -47,7 +47,7 @@ const FAQ = ({ faqList }: FAQProps) => {
           </label>
 
           <div className="answer relative col-span-8 grid w-full max-w-lg place-items-center justify-items-center px-2">
-            <div className=" m-2 w-full rounded-md px-4 py-2 text-justify text-base text-slate-100 shadow-md shadow-black/50 bg-teal-700">
+            <div className=" m-2 w-full rounded-md px-4 py-2 text-justify text-base text-slate-100 shadow-md shadow-black/50 bg-teal-600">
               {faq.comment}
             </div>
           </div>
