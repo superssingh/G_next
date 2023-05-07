@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/legacy/image'
-import { motion } from 'framer-motion'
 import { TagName, BrandName, Logo, SocialWidget } from '..'
-import { Navigation } from './Navbar/Navigation'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState(TagName.menus[0].name)
@@ -97,10 +96,14 @@ const Navbar = () => {
               >
                 <div
                   onClick={handleClicked}
-                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 text-white shadow-black transition-all duration-300 hover:bg-blue-400 hover:shadow-lg"
+                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
                 >
-                  {m.icon}
-                  <div className="w-full pl-4 text-base ">{m.name}</div>
+                  <div className="w-[24px] h-[24px] fill-white text-white ">
+                    {m.icon}
+                  </div>
+                  <div className="w-full pl-4 text-base text-white">
+                    {m.name}
+                  </div>
                 </div>
               </Link>
             ))}
