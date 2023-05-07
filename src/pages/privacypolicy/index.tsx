@@ -4,9 +4,9 @@ const Policy = (): JSX.Element => {
   return (
     <div className="grid relative w-full place-items-center place-content-center text-sm showSlow">
       <div className="gradientbg max-w-3xl shadow-lg drop-shadow-md border-y-2 border-slate-200/[.65] rounded-lg p-6 mb-6 md:mx-2">
-        <h1 className=" text-xl font-bold text-center  mb-2 uppercase  text-gray-200">
+        <div className="text-xl grid text-slate-300 font-bold uppercase w-full place-content-center ">
           Privacy Policy
-        </h1>
+        </div>
         <div className="policy rounded-lg text-xs">
           <div>
             At gogixer.com, accessible from http://www.gogixer.com, one of our

@@ -45,8 +45,8 @@ const Navbar = () => {
                     href={tab.path}
                     onClick={() => setActiveTab(tab.name)}
                     className={`${
-                      activeTab === tab.name ? '' : 'hover:text-white/70'
-                    }  relative rounded-full p-3 text-sm font-medium text-white outline-slate-100 transition animate focus-visible:outline-0 `}
+                      activeTab === tab.name ? '' : 'hover:text-black/50'
+                    }  relative rounded-full p-3 text-sm font-medium text-slate-200 outline-slate-100 transition animate focus-visible:outline-0 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',
                     }}
@@ -54,7 +54,7 @@ const Navbar = () => {
                     {activeTab === tab.name && (
                       <motion.div
                         layoutId="bubble"
-                        className="absolute py-2 inset-0 z-10 mix-blend-difference menuColor fancyRadius1 shadow-black hover:animate-pulse shadow-md active:stroke-white "
+                        className="absolute py-2 inset-0 z-10 mix-blend-difference menuColor fancyRadius1 shadow-black hover:animate-pulse shadow-md active:stroke-black "
                         transition={{
                           type: 'spring',
                           bounce: 0.3,
@@ -96,7 +96,7 @@ const Navbar = () => {
               >
                 <div
                   onClick={handleClicked}
-                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 shadow-black transition-all duration-300 hover:bg-teal-600 hover:shadow-lg"
+                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 shadow-black transition-all duration-300 hover:bg-emerald-500/70 hover:shadow-lg"
                 >
                   <div className="w-[24px] h-[24px] fill-white text-white ">
                     {m.icon}

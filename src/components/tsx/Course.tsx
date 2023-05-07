@@ -4,7 +4,9 @@ const Course = () => {
   return (
     <div className=" grid p-4 sm:justify-center items-center md:my-4 relative transition-all duration-500 showFromTop ">
       <div className="relative text-center md:justify-center items-center  ">
-        <h1 className="text-3xl font-bold uppercase ">Courses</h1>
+        <div className="text-xl text-slate-300 font-bold uppercase ">
+          Courses
+        </div>
         <div className="grid relative md:grid-cols-3 gap-4 mt-4 ">
           {TagName.courses.map((m: any) => {
             return (
@@ -15,16 +17,16 @@ const Course = () => {
                 legacyBehavior
               >
                 <div className="relative w-full transition-all duration-700 text-left sm:place-items-center">
-                  <div className="courseCard w-full h-fit md:w-fit md:h-52 rounded-lg bg-black/20 ">
+                  <div className="courseCard transition-all duration-500 w-full h-fit md:w-fit md:h-52 rounded-lg bg-black/30 hover:bg-emerald-500/70 ">
                     <div className="flex relative w-full h-full place-content-start md:grid md:w-60 md:place-content-center">
                       <div className="grid place-self-center place-content-center text-center place-items-center px-4 py-2 md:p-2 ">
                         {m.icon}
                       </div>
                       <div className="grid md:block relative h-full place-content-center ">
-                        <div className="text-slate-100 text-left text-base uppercase font-semibold md:text-center border-0">
+                        <div className="text-slate-100 text-left text-base uppercase font-semibold md:text-center border-0 md:py-3">
                           {m.title}
                         </div>
-                        <div className="courseDesc bg-blue-100 w-full h-full text-slate-600 text-sm p-4 ">
+                        <div className="courseDesc bg-blue-100 w-full h-full text-slate-600 text-sm px-4 py-2 ">
                           {m.description}
                         </div>
                       </div>

@@ -23,6 +23,7 @@ const Steps = () => {
                 <h3 className="text-lg font-semibold leading-7 text-gray-400 sm:py-4 ">
                   Learning Steps
                 </h3>
+
                 <FAQ faqList={TagName.steps} />
               </section>
             </div>
