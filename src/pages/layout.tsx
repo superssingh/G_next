@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
-        <div className="containerBox min-w-screen flex min-h-screen flex-col ">
+        <div className="containerBox min-w-screen flex min-h-screen flex-col caret-transparent ">
           <Navbar />
           <div className="pt-10">{children}</div>
           <Footer />

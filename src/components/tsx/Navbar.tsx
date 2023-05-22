@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/legacy/image'
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md">
+      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md caret-transparent">
         <div>
           <header className="flex py-3 place-items-center ">
             <Link
@@ -38,7 +39,7 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menus ">
+              <div className="flex space-x-1 place-items-center menus overflow-hidden ">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}
@@ -71,7 +72,7 @@ const Navbar = () => {
                 onClick={handleClicked}
                 className={`${
                   clicked ? TagName.HAMBURGER_OPEN : TagName.HAMBURGER_CLOSE
-                } z-30 `}
+                } z-30 caret-transparent`}
               >
                 <div>
                   <div className="hamburger_lines"></div>
