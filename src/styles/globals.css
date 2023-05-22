@@ -118,6 +118,13 @@
   background: linear-gradient(0deg, hsl(162, 54%, 84%) 0%, hsl(167, 64%, 87%) 11%, hsl(174, 51%, 85%) 22%, hsl(192, 62%, 88%) 33%, hsl(182, 61%, 89%) 44%, hsl(177, 46%, 91%) 56%);
 }
 
+.bgGreen {
+  background-color: #2ea77a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230781c7'/%3E%3Cstop offset='1' stop-color='%230781c7' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230d85cc'/%3E%3Cstop offset='1' stop-color='%230d85cc' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230e5887'/%3E%3Cstop offset='1' stop-color='%230e5887' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2313ADFF'/%3E%3Cstop offset='1' stop-color='%2313ADFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23095381'/%3E%3Cstop offset='1' stop-color='%23095381' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23135C8C'/%3E%3Cstop offset='1' stop-color='%23135C8C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-size: cover;
+  background: linear-gradient(0deg, rgb(7, 80, 59) 0%, rgb(13, 94, 66) 11%, rgb(21, 111, 84) 22%, rgb(31, 127, 97) 33%, rgb(42, 141, 110) 44%, rgb(56, 159, 130) 56%, rgb(70, 175, 136) 67%, rgb(85, 190, 158) 78%, rgb(105, 206, 164) 89%, rgb(124, 222, 194) 100%);
+}
+
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .randomBG {
@@ -1069,7 +1076,6 @@ body {
   }
   .serviceCard:hover .serviceDesc {
     display: block;
-    width: 100%;
     padding: 10px 14px;
     animation: 0.7s ease-out 0s 1 slideInBottom;
     border-radius: 10px;

@@ -177,8 +177,8 @@ export const categories = [
 
 export const services = [
   {
-    title: 'Blogging',
-    description: 'Blogs on programming and technology.',
+    title: 'Blog',
+    description: 'Blogs of trending web development stacks.',
     icon: (
       <svg
         version="1.1"
