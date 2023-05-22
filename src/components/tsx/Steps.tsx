@@ -3,7 +3,7 @@ import { TagName, FAQ } from '..'
 const Steps = () => {
   return (
     <>
-      <div className="bg-gray-800/50 p-4 my-4">
+      <div className="bg-gray-800/50 p-4 my-4 fancyRadius4 py-6">
         <section
           id="faqs"
           className="mx-auto w-full  px-4 sm:px-6 lg:px-8"
@@ -23,7 +23,6 @@ const Steps = () => {
                 <h3 className="text-lg font-semibold leading-7 text-gray-400 sm:py-4 ">
                   Learning Steps
                 </h3>
-
                 <FAQ faqList={TagName.steps} />
               </section>
             </div>

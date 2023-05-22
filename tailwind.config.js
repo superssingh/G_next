@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms', '@tailwindcss/line-clamp')],
+  plugins: [
+    require('@tailwindcss/forms', '@tailwindcss/line-clamp', 'daisyui'),
+  ],
   darkMode: 'class',
 }

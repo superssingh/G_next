@@ -827,7 +827,7 @@ export const courses = [
   },
 
   {
-    title: 'Full Stack Development',
+    title: 'Fullstack Development',
     description: 'Learn to build a full stack web app.',
     icon: (
       <svg
