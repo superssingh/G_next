@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md caret-transparent">
+      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md caret-transparent overflow-hidden ">
         <div>
           <header className="flex py-3 place-items-center ">
             <Link
@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menus overflow-hidden ">
+              <div className="flex space-x-1 place-items-center menus ">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}
