@@ -15,9 +15,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md caret-transparent overflow-hidden ">
+      <div className="w-full h-fit z-10 top-0 sticky backdrop-blur-md caret-transparent ">
         <div>
-          <header className="flex py-3 place-items-center ">
+          <header className="flex py-3 place-items-center md:overflow-hidden">
             <Link
               href="/"
               legacyBehavior
