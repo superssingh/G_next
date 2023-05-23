@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menus ">
+              <div className="flex space-x-1 place-items-center menus">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}
@@ -47,7 +47,7 @@ const Navbar = () => {
                     onClick={() => setActiveTab(tab.name)}
                     className={`${
                       activeTab === tab.name ? '' : 'hover:text-black/50'
-                    }  relative rounded-full p-3 text-sm font-medium text-slate-200 outline-slate-100 transition animate focus-visible:outline-0  `}
+                    }  relative rounded-full p-3 text-sm font-medium text-slate-200 outline-slate-100 transition animate focus-visible:outline-0 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',
                     }}
