@@ -99,7 +99,9 @@ const Navbar = () => {
               >
                 <div
                   onClick={handleClicked}
-                  className="mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 shadow-black transition-all duration-300 hover:bg-emerald-500/70 hover:shadow-lg"
+                  className={`${
+                    m.path === pathname ? 'bg-black/20' : ''
+                  } mobileMenu relative z-10 my-2 flex w-full rounded-full py-2 px-4 shadow-black transition-all duration-300 hover:bg-emerald-500/70 hover:shadow-lg`}
                 >
                   <div className="w-[24px] h-[24px] fill-white text-white ">
                     {m.icon}
