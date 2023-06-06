@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import { getPosts } from '../../components/js/services/getBlogData'
 import { useQuery } from '@tanstack/react-query'

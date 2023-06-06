@@ -4,10 +4,13 @@ import Link from 'next/link'
 import Image from 'next/legacy/image'
 import { TagName, BrandName, Logo, SocialWidget } from '..'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState(TagName.menus[0].name)
+  const pathname = usePathname()
   const [clicked, setClicked] = useState(false)
+
+  console.log('Pathname: ', pathname)
 
   const handleClicked = () => {
     setClicked(!clicked)
@@ -39,20 +42,19 @@ const Navbar = () => {
             </Link>
 
             <ul className="grid w-full place-items-end px-4">
-              <div className="flex space-x-1 place-items-center menus">
+              <div className="flex space-x-1 place-items-cener menus">
                 {TagName.menus.map((tab) => (
                   <Link
                     key={tab.name}
                     href={tab.path}
-                    onClick={() => setActiveTab(tab.name)}
                     className={`${
-                      activeTab === tab.name ? '' : 'hover:text-black/50'
+                      tab.path === pathname ? '' : 'hover:text-black/50'
                     }  relative rounded-full p-3 text-sm font-medium text-slate-200 outline-slate-100 transition animate focus-visible:outline-0 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',
                     }}
                   >
-                    {activeTab === tab.name && (
+                    {tab.path === pathname && (
                       <motion.div
                         layoutId="bubble"
                         className="absolute py-2 inset-0 z-10 mix-blend-difference menuColor fancyRadius1 shadow-black shadow-md stroke-violet-700"
