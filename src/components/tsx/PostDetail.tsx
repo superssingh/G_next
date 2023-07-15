@@ -74,7 +74,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
               <div className="relative">
                 {post.content.map((c, id) => (
                   <div
-                    className="PostContent relative my-6 text-[14px] md:text-base text-gray-600"
+                    className="PostContent relative my-6 text-base md:text-lg text-gray-600"
                     key={id}
                   >
                     <Markdown>{c.html}</Markdown>
