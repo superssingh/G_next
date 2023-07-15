@@ -21,6 +21,7 @@ html {
   height: 100%;
 }
 
+
 @layer components {
   .card {
     @apply transition-all duration-500 sm:flex sm:max-w-xl lg:grid lg:w-80 lg:mx-2  overflow-hidden rounded-lg mb-6 shadow-md shadow-black/[.3] hover:shadow-black hover:shadow-lg;
@@ -61,6 +62,7 @@ body {
   background-size: cover;
 
   color: $fontColor;  
+
 }
 
 
@@ -173,11 +175,11 @@ body {
 }
 
 .customShadow {    
-  box-shadow: 0px 6px 12px 1px rgb(2, 2, 2);
+  box-shadow: 0px 6px 12px 1px rgb(2, 2, 2);  
   transition: 0.5s ease;
   &:hover,
-  &:focus {
-    box-shadow: 0px 0px 1px 1px rgb(2, 2, 2);
+  &:focus {  
+    box-shadow: 0px 0px 6px 0px rgb(2, 2, 2);
   }
 }
 

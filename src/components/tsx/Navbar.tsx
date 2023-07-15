@@ -10,8 +10,6 @@ const Navbar = () => {
   const pathname = usePathname()
   const [clicked, setClicked] = useState(false)
 
-  console.log('Pathname: ', pathname)
-
   const handleClicked = () => {
     setClicked(!clicked)
   }
@@ -48,7 +46,7 @@ const Navbar = () => {
                     key={tab.name}
                     href={tab.path}
                     className={`${
-                      tab.path === pathname ? '' : 'hover:text-black/50'
+                      tab.path === pathname ? '' : 'hover:text-gray-700 '
                     }  relative rounded-full p-3 text-sm font-medium text-slate-200 outline-slate-100 transition animate focus-visible:outline-0 `}
                     style={{
                       WebkitTapHighlightColor: 'transparent',

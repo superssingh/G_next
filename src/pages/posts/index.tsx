@@ -28,6 +28,18 @@ const Posts = () => {
     enabled: true,
   })
 
+  if (isLoading && !error) {
+    return <Loading />
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>
+  }
+
+  if (data.length > 0) {
+    getLatestPosts(data)
+  }
+
   const handlePageChange = async (pageNumber: number) => {
     if (currentPage !== pageNumber) {
       setCurrentPage(pageNumber)
@@ -45,21 +57,6 @@ const Posts = () => {
     await setRecentPosts(recent)
     await handlePageChange(currentPage)
   }
-
-  useEffect(() => {
-    getLatestPosts(data)
-  }, [data, error])
-
-  if (isLoading && !error) {
-    return <Loading />
-  }
-
-  if (error) {
-    console.log(error)
-    return <div>Error: {error}</div>
-  }
-
-  if (data.length > 0) getLatestPosts(data)
 
   return (
     <div>

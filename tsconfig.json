@@ -33,7 +33,7 @@
     "src/**/*.tsx",
     "src/components/ts/*.ts",
     "src/components/tsx/*.tsx",
-    "src/pages/posts/index.tsx",
+    "src/pages/posts/page.tsx",
     "src/pages/courses/ui/ui.js",
     "src/components/js/abortController.js",
     "src/pages/courses/index.tsx",

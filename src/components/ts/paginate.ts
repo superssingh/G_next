@@ -6,9 +6,9 @@ type PaginateFn<T> = (
   pageSize: number
 ) => T[]
 
-const Paginate: PaginateFn<any> = (itemList, pageNumber, pageSize) => {
+const Paginate: PaginateFn<any> = (items, pageNumber, pageSize) => {
   const startIndex = (pageNumber - 1) * pageSize
-  return _(itemList).slice(startIndex).take(pageSize).value()
+  return _(items).slice(startIndex).take(pageSize).value()
 }
 
 export default Paginate

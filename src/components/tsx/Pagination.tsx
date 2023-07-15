@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import _ from 'lodash'
 
@@ -25,7 +26,7 @@ const Pagination: React.FC<Props> = ({
   }
 
   return (
-    <>
+    <div>
       <nav aria-label="Pagination">
         <nav className="bg-slate-200/10 p-4 place-content-center grid rounded-md">
           <ul className="inline-flex items-center align-middle -space-x-px">
@@ -108,7 +109,7 @@ const Pagination: React.FC<Props> = ({
           </ul>
         </nav>
       </nav>
-    </>
+    </div>
   )
 }
 

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {
   getPosts,
@@ -12,6 +14,7 @@ import {
 } from '../../components'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
+
 // import * as z from 'zod'
 
 const Post = () => {

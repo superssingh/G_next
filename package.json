@@ -23,6 +23,7 @@
     "@trpc/next": "^10.27.1",
     "@trpc/react-query": "^10.27.1",
     "@trpc/server": "^10.27.1",
+    "axios": "^1.4.0",
     "daisyui": "^2.51.6",
     "framer-motion": "^10.12.12",
     "graphql": "^16.6.0",
