@@ -5,6 +5,7 @@ import Image from 'next/legacy/image'
 import { TagName, BrandName, Logo, SocialWidget } from '..'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import { UserButton } from '@clerk/nextjs'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -38,6 +39,7 @@ const Navbar = () => {
                 />
               </div>
             </Link>
+            <UserButton />
 
             <ul className="grid w-full place-items-end px-4">
               <div className="flex space-x-1 place-items-cener menus">
