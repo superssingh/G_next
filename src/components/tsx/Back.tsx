@@ -1,10 +1,12 @@
 'use client'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+
 const Back = ({ path = '/' }) => {
-  const router = useRouter()
+  // const router = useRouter()
   return (
     <>
-      <button
+      {/* <button
         type="button"
         onClick={() => router.back()}
         id="backButton"
@@ -24,8 +26,8 @@ const Back = ({ path = '/' }) => {
             d="M10 19l-7-7m0 0l7-7m-7 7h18"
           />
         </svg>
-      </button>
-      {/* 
+      </button> */}
+
       <Link
         href={path}
         passHref
@@ -50,7 +52,7 @@ const Back = ({ path = '/' }) => {
             />
           </svg>
         </div>
-      </Link> */}
+      </Link>
     </>
   )
 }

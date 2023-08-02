@@ -14,7 +14,6 @@ import {
 } from '../../components'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
-import { UserButton } from '@clerk/nextjs'
 
 // import * as z from 'zod'
 
@@ -40,7 +39,6 @@ const Post = () => {
   return (
     <>
       <div className=" showSlow">
-        <UserButton />
         {(post?.data && (
           <div>
             <HeadTag post={post} />
@@ -48,9 +46,10 @@ const Post = () => {
               <div className="relative grid w-full place-content-center gap-x-6 gap-y-4 pb-4 md:px-4 lg:grid-cols-12 ">
                 <div className=" grid max-w-4xl content-center place-self-center md:col-span-8 ">
                   <PostDetail post={post.data} />
+
                   <Comment
                     comments={[]}
-                    path={'/' + slug}
+                    path={slug + ''}
                   />
                 </div>
                 <div className="grid w-full md:col-span-8 lg:col-span-4 lg:place-content-start place-items-center">

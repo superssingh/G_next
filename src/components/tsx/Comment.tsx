@@ -24,7 +24,7 @@ type CommentsProps = {
   path: string
 }
 
-const Comment = ({ comments }: CommentsProps) => {
+const Comment = ({ comments, path }: CommentsProps) => {
   const {
     register,
     handleSubmit,
@@ -50,7 +50,7 @@ const Comment = ({ comments }: CommentsProps) => {
         <div>
           <SignedIn>
             {/* Mount the UserButton component */}
-            <UserButton />
+            <UserButton afterSignOutUrl={'/posts/' + path} />
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:flex w-full place-content-center place-items-center rounded-md bg-black/20 p-4 text-white">
