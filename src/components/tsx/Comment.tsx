@@ -46,19 +46,20 @@ const Comment = ({ comments, path }: CommentsProps) => {
 
   return (
     <>
-      <div className="grid w-full p-4 ">
+      <div className="grid w-full  bg-white/[.30] text-slate-400 shadow-lg shadow-gray-700/[.35] drop-shadow-md border-b-2 border-white/[.45] rounded-lg p-4 my-3 ">
         <div>
           <SignedIn>
             {/* Mount the UserButton component */}
             <UserButton afterSignOutUrl={'/posts/' + path} />
 
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid md:flex w-full place-content-center place-items-center rounded-md bg-black/20 p-4 text-white">
+              <div className="grid md:flex w-full place-content-center place-items-center ">
                 <TextArea
                   name="comment"
                   label="Comment"
                   rows={2}
                   cols={100}
+                  focus={true}
                   required
                   error={errors.comment?.message}
                   register={register}

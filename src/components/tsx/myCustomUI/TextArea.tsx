@@ -6,6 +6,7 @@ interface TextAreaProps {
   rows?: number
   cols?: number
   error?: string
+  focus?: boolean
   required?: boolean
   register: any
 }
@@ -16,6 +17,7 @@ const TextArea: FC<TextAreaProps> = ({
   rows = 4,
   cols = 0,
   error,
+  focus = false,
   required = false,
   register,
 }) => {
@@ -28,6 +30,7 @@ const TextArea: FC<TextAreaProps> = ({
             rows={rows || 4}
             cols={cols || 0}
             placeholder={label}
+            autoFocus={focus}
             required
             {...register(name, {
               required,
