@@ -39,7 +39,7 @@ const Navbar = () => {
                 />
               </div>
             </Link>
-            <UserButton />
+            <UserButton afterSignOutUrl="/" />
 
             <ul className="grid w-full place-items-end px-4">
               <div className="flex space-x-1 place-items-cener menus">
