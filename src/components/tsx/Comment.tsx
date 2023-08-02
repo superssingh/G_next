@@ -1,3 +1,4 @@
+'use client'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -20,6 +21,7 @@ type FormData = z.infer<typeof CommentFormValidator>
 
 type CommentsProps = {
   comments: FormData[]
+  path: string
 }
 
 const Comment = ({ comments }: CommentsProps) => {
