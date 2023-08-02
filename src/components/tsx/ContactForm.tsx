@@ -129,6 +129,7 @@ const ContactForm = () => {
                       <InputText
                         name={'name'}
                         label="Name"
+                        focus={true}
                         error={errors.name?.message}
                         register={register}
                       />

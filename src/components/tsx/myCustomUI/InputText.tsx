@@ -3,6 +3,7 @@ interface InputTextProps {
   label: string
   type?: 'text' | 'email' | 'password' | 'number'
   error?: string
+  focus?: boolean
   required?: boolean
   register: any
 }
@@ -12,6 +13,7 @@ const InputText = ({
   label,
   type = 'text',
   error,
+  focus = false,
   required = false,
   register,
 }: InputTextProps) => {
@@ -23,6 +25,7 @@ const InputText = ({
             id={name}
             type={type}
             placeholder={label}
+            autoFocus={focus}
             required
             {...register(name, {
               required,
