@@ -57,6 +57,7 @@ const ContactForm = () => {
           )
           .then(
             (result) => {
+              console.log('email successStatus: ', result)
               setSuccess(true)
               toast.success('📧 Message sent! 🤩', {
                 position: 'bottom-left',
@@ -89,6 +90,7 @@ const ContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     if (success) return
+
     sendEmail(data)
     setSuccess(true)
   }
