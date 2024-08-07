@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser'
 import 'react-toastify/dist/ReactToastify.css'
 
 const schema = z.object({
-  name: z
+  from_name: z
     .string()
     .nonempty()
     .min(3)
@@ -17,7 +17,7 @@ const schema = z.object({
     .refine((val) => val.trim().length > 0, {
       message: 'Name field cannot be blank',
     }),
-  email: z.string().email(),
+  from_email: z.string().email(),
   message: z
     .string()
     .nonempty()
@@ -39,6 +39,7 @@ const EMAIL_SERVICE = {
 
 const ContactForm = () => {
   const [success, setSuccess] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
   const {
     register,
     handleSubmit,
@@ -46,53 +47,47 @@ const ContactForm = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) })
 
   const sendEmail = async (data: any) => {
+    if (success) return
+
     if (data) {
       try {
         await emailjs
           .sendForm(
             EMAIL_SERVICE.SERVICE_ID,
             EMAIL_SERVICE.TEMPLATE_ID,
-            data,
+            formRef.current || data,
             EMAIL_SERVICE.PUBLIC_KEY
           )
-          .then(
-            (result) => {
-              console.log('email successStatus: ', result)
-              setSuccess(true)
-              toast.success('📧 Message sent! 🤩', {
-                position: 'bottom-left',
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              })
-              return result
-            },
-            (error) => {
-              return toast.warn('Error : ' + error.text, {
-                position: 'bottom-left',
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              })
-            }
-          )
-      } catch (e) {
-        return e
+          .then((result) => {
+            console.log('email successStatus: ', result.text)
+            setSuccess(true)
+            return toast.success('📧 Message sent! 🤩', {
+              position: 'bottom-left',
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            })
+          })
+      } catch (error) {
+        console.log('Error:- ', error)
+        return toast.warn('Error : ' + error, {
+          position: 'bottom-left',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
       }
     }
   }
 
   const onSubmit = async (data: FormData) => {
-    if (success) return
-
     sendEmail(data)
-    setSuccess(true)
   }
 
   return (
@@ -100,23 +95,39 @@ const ContactForm = () => {
       <div className="grid place-content-center place-items-center">
         <div className="relative  w-fit place-content-center p-2 py-6 bg-black/50 shadow-black/[0.30] transition-all duration-700 text-gray-100 rounded-lg shadow-lg showFromBottom">
           {(success && (
-            <div className="flex showFromTop">
-              <div className=" text-green-400 pr-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+            <div className="p-4">
+              <div className="flex showFromTop">
+                <div className=" text-green-400 pr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div className=" font-medium text-lg ">
+                  Your message received!
+                </div>
               </div>
-              <div className=" font-medium text-lg ">
-                Message sent successfully.
+              <div className="mt-4  p-2 ">
+                <div className="text-center text-gray-400 text-[1rem] mb-2">
+                  <p>Thank you for contacting us.</p>
+                  <p>We will reply soon.</p>
+                  <div className="text-[2rem]">😇</div>
+                </div>
+
+                <div className="text-center text-gray-400 text-sm mb-2">
+                  Follow Us
+                </div>
+                <div className="grid ">
+                  <SocialWidget social={TagName.socialLinks} />
+                </div>
               </div>
             </div>
           )) || (
@@ -124,24 +135,27 @@ const ContactForm = () => {
               <div className="text-3xl mt-[-42px] mx-2 text-center">
                 Contact Us
               </div>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit(onSubmit)}
+              >
                 <div className="grid relative w-64 md:w-full pt-4 px-2 md:pt-4  place-content-center   ">
                   <div className="grid relative w-64 md:flex md:w-full ">
                     <div className=" relative p-2 mb-4 ">
                       <InputText
-                        name={'name'}
+                        name="from_name"
                         label="Name"
                         focus={true}
-                        error={errors.name?.message}
+                        error={errors.from_name?.message}
                         register={register}
                       />
                     </div>
                     <div className=" relative p-2 mb-4 ">
                       <InputText
-                        name={'email'}
+                        name="from_email"
                         label="Email"
                         type="email"
-                        error={errors.email?.message}
+                        error={errors.from_email?.message}
                         register={register}
                       />
                     </div>
@@ -166,19 +180,6 @@ const ContactForm = () => {
               </form>
             </div>
           )}
-          <div className="mt-4  p-2 ">
-            {success && (
-              <div className="text-center text-gray-400 text-[2rem] mb-2">
-                Ohh Yeah... <br></br>🥳
-              </div>
-            )}
-            <div className="text-center text-gray-400 text-xs mb-2">
-              Follow Us
-            </div>
-            <div className="grid ">
-              <SocialWidget social={TagName.socialLinks} />
-            </div>
-          </div>
         </div>
 
         <ToastContainer
